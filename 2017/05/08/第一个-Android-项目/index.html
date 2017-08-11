@@ -1,0 +1,1223 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="android," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="想想也是有点意思，自己的第一个相对完整的 Android 项目竟然是在金钱的诱惑下完成的。
+起因事情是这样，在前两天，在学校的某个群内，看到一个哥们找做课程设计。于是乎就拦下了。谈好价钱 120 。120 就把我给收买了。简单的看了一下需求文档。
+其实我也是个半吊子，从来没有这样完整的写过，之前都是一个个小 Demo 这样写的。所以，自己看了一下没敢全接，就答应了任务为1,2,3,4。现在看来，1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一个 Android 项目">
+<meta property="og:url" content="http://youngxhui.github.io/2017/05/08/第一个-Android-项目/index.html">
+<meta property="og:site_name" content="ISLAND">
+<meta property="og:description" content="想想也是有点意思，自己的第一个相对完整的 Android 项目竟然是在金钱的诱惑下完成的。
+起因事情是这样，在前两天，在学校的某个群内，看到一个哥们找做课程设计。于是乎就拦下了。谈好价钱 120 。120 就把我给收买了。简单的看了一下需求文档。
+其实我也是个半吊子，从来没有这样完整的写过，之前都是一个个小 Demo 这样写的。所以，自己看了一下没敢全接，就答应了任务为1,2,3,4。现在看来，1">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/KOJ%5B%7DEE9VE3_X%7B%29GBK45~%7B6.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/navagation.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/recycleView%E9%81%AE%E6%8C%A1.png">
+<meta property="og:updated_time" content="2017-08-02T12:43:48.258Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一个 Android 项目">
+<meta name="twitter:description" content="想想也是有点意思，自己的第一个相对完整的 Android 项目竟然是在金钱的诱惑下完成的。
+起因事情是这样，在前两天，在学校的某个群内，看到一个哥们找做课程设计。于是乎就拦下了。谈好价钱 120 。120 就把我给收买了。简单的看了一下需求文档。
+其实我也是个半吊子，从来没有这样完整的写过，之前都是一个个小 Demo 这样写的。所以，自己看了一下没敢全接，就答应了任务为1,2,3,4。现在看来，1">
+<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/KOJ%5B%7DEE9VE3_X%7B%29GBK45~%7B6.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://youngxhui.github.io/2017/05/08/第一个-Android-项目/"/>
+
+
+
+
+
+  <title> 第一个 Android 项目 | ISLAND </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97406003-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cf170cb9e5a06d54c1962ad8994f9b33";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ISLAND</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随心随性</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于/留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/05/08/第一个-Android-项目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨晓辉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ISLAND">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                第一个 Android 项目
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T20:36:07+08:00">
+                2017-05-08
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-02T20:43:48+08:00">
+                2017-08-02
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/08/第一个-Android-项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/08/第一个-Android-项目/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/08/第一个-Android-项目/" class="leancloud_visitors" data-flag-title="第一个 Android 项目">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  3,141
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  15
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>想想也是有点意思，自己的第一个相对完整的 Android 项目竟然是在金钱的诱惑下完成的。</p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>事情是这样，在前两天，在学校的某个群内，看到一个哥们找做课程设计。于是乎就拦下了。谈好价钱 120 。120 就把我给收买了。简单的看了一下需求文档。<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/KOJ%5B%7DEE9VE3_X%7B%29GBK45~%7B6.jpg" alt=""></p>
+<p>其实我也是个半吊子，从来没有这样完整的写过，之前都是一个个小 Demo 这样写的。所以，自己看了一下没敢全接，就答应了任务为1,2,3,4。现在看来，120的价格，赔的连内裤都没有了。</p>
+<p>从周五下午开始写的，到周一中午交付，计算一下也就是三天左右。每天估计要写近 <code>8 - 9</code> 小时左右,感觉自己的身体要被掏空了。</p>
+<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><p>其实就是三个功能，视频展示，计划展示，用户管理，每个不外乎就是 增删改查 四个功能。简单的分析过后，就开始动手编码。</p>
+<h1 id="编码阶段"><a href="#编码阶段" class="headerlink" title="编码阶段"></a>编码阶段</h1><p>说实话，之前从来没有写过 Android 数据库 <code>sqLite</code>，<code>recycleView</code>没有完全使用过，<code>NavagationView</code>没有使用过，视频获取播放没用过，不知道 <code>Android</code> 的开发模式，于是乎就开始边学边做模式,最后对我可以做出来，其实我也感到惊奇。</p>
+<p>果然</p>
+<blockquote>
+<p>有钱能使鬼推磨</p>
+</blockquote>
+<h2 id="NavigationView"><a href="#NavigationView" class="headerlink" title="NavigationView"></a>NavigationView</h2><p><code>NavigationView</code> 这个控件是 <code>Google</code> 的在 <code>MD</code> 设计中引入的滑动菜单，在 <code>Google</code> 自己的 App 上有很多应用。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/navagation.gif" alt=""></p>
+<p><code>NavigationView</code> 分为两部分。<code>menu</code> 和 <code>header</code> 。<code>menu</code>为下面的选项，<code>header</code> 上面整块。</p>
+<p>menu.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">menu</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">group</span> <span class="attr">android:checkableBehavior</span>=<span class="string">"single"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">item</span></span><br><span class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/nav_class"</span></span><br><span class="line">            <span class="attr">android:icon</span>=<span class="string">"@drawable/ic_format_list_bulleted_black_24dp"</span></span><br><span class="line">            <span class="attr">android:title</span>=<span class="string">"课程"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">item</span></span><br><span class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/nav_plan"</span></span><br><span class="line">            <span class="attr">android:icon</span>=<span class="string">"@drawable/ic_access_time_black_24dp"</span></span><br><span class="line">            <span class="attr">android:title</span>=<span class="string">"计划"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">group</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">group</span> <span class="attr">android:checkableBehavior</span>=<span class="string">"single"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">item</span></span><br><span class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/action_settings"</span></span><br><span class="line">            <span class="attr">android:icon</span>=<span class="string">"@drawable/ic_settings_black_24dp"</span></span><br><span class="line">            <span class="attr">android:title</span>=<span class="string">"修改密码"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">group</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">menu</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在 <code>menu</code> 中可以嵌套 <code>group</code> 和 <code>item</code>。group 可以看做一个组，我们可以对这个组里面的 <code>item</code> 定义属性，这里定义的是 <code>single</code> 表示每个 <code>item</code> 只能单选。</p>
+<p>下面定义 header</p>
+<p>header.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">android.support.constraint.ConstraintLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attr">xmlns:app</span>=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span><br><span class="line">    <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:background</span>=<span class="string">"@color/colorPrimary"</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">de.hdodenhof.circleimageview.CircleImageView</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/icon_image"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"120dp"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"120dp"</span></span><br><span class="line">        <span class="attr">android:src</span>=<span class="string">"@drawable/header"</span></span><br><span class="line">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintBottom_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintLeft_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintRight_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintTop_creator</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/icon_username"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_marginBottom</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginEnd</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginRight</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:textColor</span>=<span class="string">"@color/white"</span></span><br><span class="line">        <span class="attr">android:text</span>=<span class="string">"username"</span></span><br><span class="line">        <span class="attr">android:textSize</span>=<span class="string">"16sp"</span></span><br><span class="line">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintBottom_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintLeft_creator</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">android.support.constraint.ConstraintLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>header 表示上方的部分。我放了一个头像 ，头像使用了一个开源库 <code>compile &#39;de.hdodenhof:circleimageview:2.1.0&#39;</code>,这个库可以把图片转换为圆形。这个就是一个简单的布局，不过多介绍。</p>
+<p>当我们设置好 header 和 menu 的时候就可以进行 <code>NavigationVIew</code> 的设置。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">android.support.v4.widget.DrawerLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attr">xmlns:app</span>=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span><br><span class="line">    <span class="attr">android:id</span>=<span class="string">"@+id/drawer_layout"</span></span><br><span class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">android.support.design.widget.CoordinatorLayout</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--省略其他布局 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">android.support.design.widget.CoordinatorLayout</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">android.support.design.widget.NavigationView</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/nav_view"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span><br><span class="line">        <span class="attr">android:layout_gravity</span>=<span class="string">"start"</span></span><br><span class="line">        <span class="attr">app:headerLayout</span>=<span class="string">"@layout/nav_header"</span></span><br><span class="line">        <span class="attr">app:menu</span>=<span class="string">"@menu/nav_menu"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">android.support.design.widget.NavigationView</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">android.support.v4.widget.DrawerLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>NavigationView</code> 要放在 <code>DrawerLayout</code> 里面。<code>CoordinatorLayout</code>/<code>FrameLayout</code> 是在主布局内要显示的。 <code>NavigationView</code> 通过 <code>app:headerLayout</code> 加载 <code>header</code> 通过 <code>app:menu</code> 加载 <code>menu</code>。<br>刚刚开始的时候，在 <code>header</code> 里面设置一个 <code>ImageView</code> 然后把头像和文字放到 <code>ImageView</code> 中，这样做不是不可以，但是如果 <code>ImageView</code> 中是一个图片，会对性能造成很大的影响，滑动栏会很卡。建议把背景直接通过父布局直接加载。</p>
+<p>在布局中写完，下面需要进行 Java 代码。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = <span class="string">"MainActivity"</span>;</span><br><span class="line">    <span class="keyword">private</span> DrawerLayout drawerLayout;</span><br><span class="line">    <span class="keyword">private</span> TextView uname;</span><br><span class="line">    <span class="comment">//省略其他代码</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="comment">//省略其他代码</span></span><br><span class="line">        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);</span><br><span class="line">        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);</span><br><span class="line">        ActionBar actionBar = getSupportActionBar();</span><br><span class="line">        <span class="keyword">if</span> (actionBar != <span class="keyword">null</span>) &#123;</span><br><span class="line">            actionBar.setDisplayHomeAsUpEnabled(<span class="keyword">true</span>);</span><br><span class="line">            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);</span><br><span class="line">        &#125;</span><br><span class="line">        navigationView.setCheckedItem(R.id.nav_class);</span><br><span class="line">        navigationView.setNavigationItemSelectedListener(<span class="keyword">new</span> NavigationView.OnNavigationItemSelectedListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onNavigationItemSelected</span><span class="params">(@NonNull MenuItem item)</span> </span>&#123;</span><br><span class="line">                drawerLayout.closeDrawers();</span><br><span class="line">                <span class="keyword">switch</span> (item.getItemId())&#123;</span><br><span class="line">                    <span class="keyword">case</span> R.id.nav_plan:</span><br><span class="line">                        startActivity(<span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,PalnActivity.class));</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> R.id.action_settings:</span><br><span class="line">                        startActivity(<span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,ResetActivity.class));</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        View headerView = navigationView.getHeaderView(<span class="number">0</span>);</span><br><span class="line">        uname= (TextView) headerView.findViewById(R.id.icon_username);</span><br><span class="line">        uname.setText(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onOptionsItemSelected</span><span class="params">(MenuItem item)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> (item.getItemId()) &#123;</span><br><span class="line">            <span class="keyword">case</span> android.R.id.home:</span><br><span class="line">                drawerLayout.openDrawer(GravityCompat.START);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.action_settings:</span><br><span class="line">                drawerLayout.openDrawer(GravityCompat.START);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 省略其他代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过 <code>setCheckedItem</code> 表示当前选择的 <code>item</code> 。<code>setNavigationItemSelectedListener</code> 来设置每个 <code>item</code> 的点击事件。</p>
+<p>这个就是简单的 <code>NavigationView</code> 的简单使用。</p>
+<h2 id="RecyclerView"><a href="#RecyclerView" class="headerlink" title="RecyclerView"></a>RecyclerView</h2><p><code>RecyclerView</code> 在我刚刚开始学 <code>Android</code> 的时候就已经听说过，知道它比 <code>ListView</code> 优秀，所以说在做列表布局的时候直接想到了使用 <code>RecyclerView</code> 替代。</p>
+<p>使用 <code>RecyclerView</code> 首先用做一个布局，布局文件为每个 <code>item</code> 要展示的效果。</p>
+<p>我命名为 course_item</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">android.support.constraint.ConstraintLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attr">xmlns:app</span>=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span><br><span class="line">    <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">    <span class="attr">android:layout_margin</span>=<span class="string">"16dp"</span></span><br><span class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ImageView</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/img_video_rc"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"60dp"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"60dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginBottom</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"24dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginRight</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginStart</span>=<span class="string">"24dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginTop</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:contentDescription</span>=<span class="string">""</span></span><br><span class="line">        <span class="attr">android:src</span>=<span class="string">"@drawable/ic_slow_motion_video_black_24dp"</span></span><br><span class="line">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintHorizontal_bias</span>=<span class="string">"0.0"</span></span><br><span class="line">        <span class="attr">app:layout_constraintLeft_toLeftOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintVertical_bias</span>=<span class="string">"0.0"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintLeft_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintTop_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">android:layout_marginEnd</span>=<span class="string">"8dp"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/tx_classname_rc"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_marginTop</span>=<span class="string">"16dp"</span></span><br><span class="line">        <span class="attr">android:maxLines</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">android:text</span>=<span class="string">"title"</span></span><br><span class="line">        <span class="attr">android:textSize</span>=<span class="string">"18sp"</span></span><br><span class="line">        <span class="attr">app:layout_constraintHorizontal_bias</span>=<span class="string">"0.0"</span></span><br><span class="line">        <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@+id/img_video_rc"</span></span><br><span class="line">        <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintLeft_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">tools:layout_constraintTop_creator</span>=<span class="string">"1"</span></span><br><span class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginRight</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginStart</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginEnd</span>=<span class="string">"8dp"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/tx_classcontext_rc"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"0dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginRight</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginStart</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginTop</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:maxLines</span>=<span class="string">"2"</span></span><br><span class="line">        <span class="attr">android:text</span>=<span class="string">"context"</span></span><br><span class="line">        <span class="attr">app:layout_constraintHorizontal_bias</span>=<span class="string">"0.0"</span></span><br><span class="line">        <span class="attr">app:layout_constraintLeft_toRightOf</span>=<span class="string">"@+id/img_video_rc"</span></span><br><span class="line">        <span class="attr">app:layout_constraintRight_toRightOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">app:layout_constraintTop_toBottomOf</span>=<span class="string">"@+id/tx_classname_rc"</span></span><br><span class="line">        <span class="attr">tools:layout_conversion_absoluteHeight</span>=<span class="string">"0dp"</span></span><br><span class="line">        <span class="attr">tools:layout_conversion_absoluteWidth</span>=<span class="string">"47dp"</span></span><br><span class="line">        <span class="attr">tools:layout_conversion_absoluteX</span>=<span class="string">"5dp"</span></span><br><span class="line">        <span class="attr">tools:layout_conversion_absoluteY</span>=<span class="string">"42dp"</span></span><br><span class="line">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">"parent"</span></span><br><span class="line">        <span class="attr">android:layout_marginBottom</span>=<span class="string">"8dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginEnd</span>=<span class="string">"8dp"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">android.support.constraint.ConstraintLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个为列表里每个 <code>item</code> 的显示样式。不多介绍。</p>
+<p>在使用 <code>RecyclerView</code> 的时候，主要还是要有适配器。通过适配器来加载布局，绑定控件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CourseAdapter</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">Adapter</span>&lt;<span class="title">CourseAdapter</span>.<span class="title">ViewHolder</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;Course&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> Context context;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> View view = LayoutInflater.from(parent.getContext())</span><br><span class="line">                .inflate(R.layout.course_item, parent, <span class="keyword">false</span>);</span><br><span class="line">        <span class="keyword">final</span> ViewHolder holder = <span class="keyword">new</span> ViewHolder(view);</span><br><span class="line">        holder.courseView.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">               <span class="comment">//监听事件</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        holder.courseView.setOnLongClickListener(<span class="keyword">new</span> View.OnLongClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onLongClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//监听事件</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> holder;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(ViewHolder holder, <span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        Course cl = list.get(position);</span><br><span class="line">        holder.imageView.setImageResource(R.drawable.ic_slow_motion_video_black_24dp);</span><br><span class="line">        holder.title.setText(cl.getCourseName());</span><br><span class="line">        holder.context.setText(cl.getVideoContext());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> list.size();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> </span>&#123;</span><br><span class="line">        View courseView;</span><br><span class="line">        ImageView imageView;</span><br><span class="line">        TextView title;</span><br><span class="line">        TextView context;</span><br><span class="line"></span><br><span class="line">        ViewHolder(View itemView) &#123;</span><br><span class="line">            <span class="keyword">super</span>(itemView);</span><br><span class="line">            courseView = itemView;</span><br><span class="line">            imageView = (ImageView) itemView.findViewById(R.id.img_video_rc);</span><br><span class="line">            title = (TextView) itemView.findViewById(R.id.tx_classname_rc);</span><br><span class="line">            context = (TextView) itemView.findViewById(R.id.tx_classcontext_rc);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CourseAdapter</span><span class="params">(List&lt;Course&gt; courselist)</span> </span>&#123;</span><br><span class="line">        list = courselist;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>适配器继承了 <code>RecyclerView.Adapter</code> 主要有三个方法。<code>onCreateViewHolder</code> ，<code>onBindViewHolder</code> ，<code>getItemCount</code></p>
+<h3 id="onCreateViewHolder"><a href="#onCreateViewHolder" class="headerlink" title="onCreateViewHolder"></a>onCreateViewHolder</h3><p>这个方法是用来创建一个 <code>view</code>，负责绑定 <code>item</code> 布局，添加监听。</p>
+<h3 id="onBindViewHolder"><a href="#onBindViewHolder" class="headerlink" title="onBindViewHolder"></a>onBindViewHolder</h3><p>通过名字可以看出来，这是一个布局绑定的方法，主要用于 绑定我们写的 <code>item</code> 里面的布局文件。通过传入的 <code>positon</code> 获得每个 <code>item</code>的位置。然后对每个位置的 <code>item</code> 进行操作。</p>
+<h3 id="getItemCount"><a href="#getItemCount" class="headerlink" title="getItemCount"></a>getItemCount</h3><p>获得 <code>item</code> 长度，也就是你要展示出来多少个 <code>item</code> 。</p>
+<p>除了上述的三个方法，其中还有一个内部类，内部类主要是用绑定 <code>item</code> 的布局。适配器主要是将前面的 <code>list</code> 传入进行适配</p>
+<h3 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h3><p>我们在显示的 Activity 中，通过适配器将数据传入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;Course&gt; courseList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> CourseAdapter adapter;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="comment">//其他控件绑定</span></span><br><span class="line">        initClassList();</span><br><span class="line">        RecyclerView recyclerview = (RecyclerView) findViewById(R.id.rclv_list);</span><br><span class="line">        LinearLayoutManager layoutManger = <span class="keyword">new</span> LinearLayoutManager(<span class="keyword">this</span>);</span><br><span class="line">        recyclerview.setLayoutManager(layoutManger);</span><br><span class="line">        adapter = <span class="keyword">new</span> CourseAdapter(courseList);</span><br><span class="line">        recyclerview.setAdapter(adapter);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 省略其他代码 </span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initCourseList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Course&gt; courseDB = DataSupport.findAll(Course.class);</span><br><span class="line">        <span class="keyword">for</span> (Course cou : courseDB</span><br><span class="line">                ) &#123;</span><br><span class="line">            Course course = <span class="keyword">new</span> Course();</span><br><span class="line">            course.setId(cou.getId());</span><br><span class="line">            course.setCourseName(cou.getCourseName());</span><br><span class="line">            course.setVideoContext(cou.getVideoContext());</span><br><span class="line">            courseList.add(course);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>主要通过适配器将 <code>list</code> 进行传入。在 <code>initCourseList</code> 中通过获取到数据库中的值，然后进行遍历，将遍历的结果存到 <code>Course</code>  中，最后将  <code>Courese</code>  放到 <code>list</code> 中。</p>
+<p>在这里要说明一下，有可能 RecycleView 被其他控件遮挡，最后一个只能显示出一半。如下图。解决办法就是调整布局，应该是 <code>item</code> 的布局有问题。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/recycleView%E9%81%AE%E6%8C%A1.png" alt=""></p>
+<h2 id="数据库存取"><a href="#数据库存取" class="headerlink" title="数据库存取"></a>数据库存取</h2><p>这是我第一次使用 <code>Android</code> 数据库。对于 <code>Android</code> 的数据库想想就知道很麻烦，因为无法查看，要在真机上查看还比较方便，要是在模拟器上查看，还要打开 <code>Moniter</code> ，在从 <code>Moniter</code> 把数据库导出，然后在通过看数据库的软件看是否写入成功。不仅仅这个，还要看 SQL 语句是否写对了，想想都觉得很麻烦。</p>
+<p>在 《第一行代码(第二版)》中看到了 <code>Litepal</code> 这个框架，瞬间感觉到了压力减轻。在郭霖大神的博客里也很详细的介绍了这个框架的使用。</p>
+<p>具体使用就不多介绍了，请转跳郭霖大神博客 <a href="http://blog.csdn.net/guolin_blog/article/details/38083103" target="_blank" rel="external"><a href="http://blog.csdn.net/guolin_blog/article/details/38083103" target="_blank" rel="external">Android数据库高手秘籍(零)——前言</a></a></p>
+<p>在表关联的时候，一对多关联的时候，因为是更新表，所以曾经一度无法写入数据。例如 我创建的user表和plan表，在plan表中有一个 user_id 的字段，但是一度写不进去。后来查了资料，应该如下这样写。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">          String id = String.valueOf(MainActivity.userID);</span><br><span class="line">          User user = DataSupport.find(User.class, MainActivity.userID);</span><br><span class="line">          Plan plan = <span class="keyword">new</span> Plan();</span><br><span class="line">          plan.setPlanTitle(planTitle.getText().toString());</span><br><span class="line">          plan.setPlanContext(planContent.getText().toString());</span><br><span class="line">          String date1 = tv_startTime.getText().toString();</span><br><span class="line">          plan.setStartData(date1);</span><br><span class="line">          plan.setUser(user);</span><br><span class="line">          plan.save();</span><br><span class="line">          user.getPlanList().add(plan);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>关键在于<code>plan.setUser(user)</code>要先 <code>set</code>  User对象，在 save ，user.getPlanList().add()方法添加 plan ，这样在更新表的时候才会关联起来。</p>
+<h2 id="多媒体文件获取"><a href="#多媒体文件获取" class="headerlink" title="多媒体文件获取"></a>多媒体文件获取</h2><p>获取多媒体文件首先要获取权限，在配置文件中添加相应的权限。通过 intent 打开Android 的文件管理器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">chooseVideo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_GET_CONTENT);</span><br><span class="line">        intent.setType(<span class="string">"video/*"</span>);</span><br><span class="line">        intent.addCategory(Intent.CATEGORY_OPENABLE);</span><br><span class="line">        startActivityForResult(intent, <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这里的 video/<em> 是获取视频，同样修改可获取其他 比如任意文件 </em>/ * 等。</p>
+<p>之后的部分其实还不太懂，等搞明白在补全这块。</p>
+<h2 id="下拉刷新"><a href="#下拉刷新" class="headerlink" title="下拉刷新"></a>下拉刷新</h2><p>下拉刷新，使用的控件叫做  <code>SwipeRefreshLayout</code> ,然后对该控件添加监听事件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">swipeRefreshLayout.setOnRefreshListener(<span class="keyword">new</span> SwipeRefreshLayout.OnRefreshListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRefresh</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                refreshList();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<p>我们的  <code>refreshList</code> 中主要是开启一个新的线程来加载我们要展示的 <code>list</code>。</p>
+<p>在加载 <code>list</code> 之前我们一定要先清空它，否则会出现重复加载。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">refreshList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            runOnUiThread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                    courseList.clear();</span><br><span class="line">                    initCourseList();</span><br><span class="line">                    adapter.notifyDataSetChanged();</span><br><span class="line">                    swipeRefreshLayout.setRefreshing(<span class="keyword">false</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以获得刷新列表，重新读取数据库数据。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这个项目日后应该还会维护，添加一些新的功能，完善一些不足之处，比如添加点击的水波纹效果，点击浮动。添加获得视频的预览图等等。会不定期更新。</p>
+<p><a href="https://github.com/youngxhui/MyApplication" target="_blank" rel="external">源码地址</a></p>
+<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      杨晓辉
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://youngxhui.github.io/2017/05/08/第一个-Android-项目/" title="第一个 Android 项目">http://youngxhui.github.io/2017/05/08/第一个-Android-项目/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/android/" rel="tag"># android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/30/Git教程及使用经验/" rel="next" title="Git教程及使用经验">
+                <i class="fa fa-chevron-left"></i> Git教程及使用经验
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/22/python-实现微信打飞机/" rel="prev" title="python 实现微信打飞机">
+                python 实现微信打飞机 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="杨晓辉" />
+          <p class="site-author-name" itemprop="name">杨晓辉</p>
+           
+              <p class="site-description motion-element" itemprop="description">努力攒钱^ ^</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/youngxhui" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/young_xhui" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngxhui" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析"><span class="nav-number">2.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编码阶段"><span class="nav-number">3.</span> <span class="nav-text">编码阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NavigationView"><span class="nav-number">3.1.</span> <span class="nav-text">NavigationView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RecyclerView"><span class="nav-number">3.2.</span> <span class="nav-text">RecyclerView</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#onCreateViewHolder"><span class="nav-number">3.2.1.</span> <span class="nav-text">onCreateViewHolder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onBindViewHolder"><span class="nav-number">3.2.2.</span> <span class="nav-text">onBindViewHolder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getItemCount"><span class="nav-number">3.2.3.</span> <span class="nav-text">getItemCount</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Adapter"><span class="nav-number">3.2.4.</span> <span class="nav-text">Adapter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库存取"><span class="nav-number">3.3.</span> <span class="nav-text">数据库存取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多媒体文件获取"><span class="nav-number">3.4.</span> <span class="nav-text">多媒体文件获取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下拉刷新"><span class="nav-number">3.5.</span> <span class="nav-text">下拉刷新</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨晓辉</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'island-1';
+      var disqus_identifier = '2017/05/08/第一个-Android-项目/';
+
+      var disqus_title = "第一个 Android 项目";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

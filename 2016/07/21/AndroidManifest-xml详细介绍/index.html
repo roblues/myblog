@@ -1,0 +1,1409 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="android," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="#AndroidManifest.xml详细介绍
+基于Android Studio 2.1目录 
+一、关于AndroidManifest.xmlAndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文件。AndroidManifast.xml清单文件说明了该应用的名称，所使用的图标等。
+Androi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidManifest.xml详细介绍">
+<meta property="og:url" content="http://youngxhui.github.io/2016/07/21/AndroidManifest-xml详细介绍/index.html">
+<meta property="og:site_name" content="ISLAND">
+<meta property="og:description" content="#AndroidManifest.xml详细介绍
+基于Android Studio 2.1目录 
+一、关于AndroidManifest.xmlAndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文件。AndroidManifast.xml清单文件说明了该应用的名称，所使用的图标等。
+Androi">
+<meta property="og:updated_time" content="2017-04-26T03:03:36.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AndroidManifest.xml详细介绍">
+<meta name="twitter:description" content="#AndroidManifest.xml详细介绍
+基于Android Studio 2.1目录 
+一、关于AndroidManifest.xmlAndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文件。AndroidManifast.xml清单文件说明了该应用的名称，所使用的图标等。
+Androi">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://youngxhui.github.io/2016/07/21/AndroidManifest-xml详细介绍/"/>
+
+
+
+
+
+  <title> AndroidManifest.xml详细介绍 | ISLAND </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97406003-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cf170cb9e5a06d54c1962ad8994f9b33";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ISLAND</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随心随性</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于/留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/07/21/AndroidManifest-xml详细介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨晓辉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ISLAND">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                AndroidManifest.xml详细介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-21T12:28:37+08:00">
+                2016-07-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:03:36+08:00">
+                2017-04-26
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/07/21/AndroidManifest-xml详细介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/21/AndroidManifest-xml详细介绍/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/07/21/AndroidManifest-xml详细介绍/" class="leancloud_visitors" data-flag-title="AndroidManifest.xml详细介绍">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  5,686
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  23
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#AndroidManifest.xml详细介绍</p>
+<p><strong>基于Android Studio 2.1目录 </strong></p>
+<h2 id="一、关于AndroidManifest-xml"><a href="#一、关于AndroidManifest-xml" class="headerlink" title="一、关于AndroidManifest.xml"></a>一、关于AndroidManifest.xml</h2><p>AndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文件。AndroidManifast.xml清单文件说明了该应用的名称，所使用的图标等。</p>
+<p>AndroidManifest.xml清单文件通常包含以下的信息：</p>
+<blockquote>
+<p>1.应用程序的包名。</p>
+<ol>
+<li>应用所含的组件，如Activity，Service，BroadcastReceiver和ContentProvider等。</li>
+<li>应用程序兼容的最低版本。</li>
+<li>应用要使用的权限。<br>5.其他程序访问该应用需要的权限。</li>
+</ol>
+</blockquote>
+<h2 id="二、AndroidManifest-xml结构"><a href="#二、AndroidManifest-xml结构" class="headerlink" title="二、AndroidManifest.xml结构"></a>二、AndroidManifest.xml结构</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xmlversion="1.0"encoding="utf-8"?&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">activity</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">action</span>/&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">category</span>/&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">activity-alias</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br><span class="line">      </span><br><span class="line">       <span class="tag">&lt;<span class="name">service</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">receiver</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">provider</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">grant-uri-permission</span>/&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">provider</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">uses-library</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission-tree</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission-group</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">instrumentation</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-sdk</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-configuration</span>/&gt;</span> </span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-feature</span>/&gt;</span> </span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">supports-screens</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、各个节点的详细介绍"><a href="#三、各个节点的详细介绍" class="headerlink" title="三、各个节点的详细介绍"></a>三、各个节点的详细介绍</h2><p> 上面就是整个androidManifest.xml的结构，下面以外向内开始阐述～～</p>
+<h3 id="1、第一层-Manifest属性"><a href="#1、第一层-Manifest属性" class="headerlink" title="1、第一层:Manifest属性"></a>1、第一层:Manifest属性</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">manifest</span>  <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">          <span class="attr">package</span>=<span class="string">"com.woody.test"</span></span><br><span class="line">          <span class="attr">android:sharedUserId</span>=<span class="string">"string"</span></span><br><span class="line">          <span class="attr">android:sharedUserLabel</span>=<span class="string">"string resource"</span></span><br><span class="line">          <span class="attr">android:versionCode</span>=<span class="string">"integer"</span></span><br><span class="line">          <span class="attr">android:versionName</span>=<span class="string">"string"</span></span><br><span class="line">          <span class="attr">android:installLocation</span>=<span class="string">[</span>"<span class="attr">auto</span>" | "<span class="attr">internalOnly</span>" | "<span class="attr">preferExternal</span>"] &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>xmlns:android</li>
+</ul>
+<p>定义android命名空间，一般为<a href="http://schemas.android.com/apk/res/android，这样使得Android中各种标准属性能在文件中使用，提供了大部分元素中的数据。" target="_blank" rel="external">http://schemas.android.com/apk/res/android，这样使得Android中各种标准属性能在文件中使用，提供了大部分元素中的数据。</a></p>
+<ul>
+<li>package</li>
+</ul>
+<p>指定本应用内java主程序包的包名，它也是一个应用进程的默认名称</p>
+<ul>
+<li>sharedUserId</li>
+</ul>
+<p>表明数据权限，因为默认情况下，Android给每个APK分配一个唯一的UserID，所以是默认禁止不同APK访问共享数据的。若要共享数据，第一可以采用Share Preference方法，第二种就可以采用sharedUserId了，将不同APK的sharedUserId都设为一样，则这些APK之间就可以互相共享数据了。详见：<a href="http://wallage.blog.163.com/blog/static/17389624201011010539408/" target="_blank" rel="external">http://wallage.blog.163.com/blog/static/17389624201011010539408/</a></p>
+<ul>
+<li>sharedUserLabel</li>
+</ul>
+<p>一个共享的用户名，它只有在设置了sharedUserId属性的前提下才会有意义</p>
+<ul>
+<li>versionCode</li>
+</ul>
+<p>是给<strong>设备</strong>程序识别版本(升级)用的必须是一个interger值代表app更新过多少次，比如第一版一般为1，之后若要更新版本就设置为2，3等等。</p>
+<ul>
+<li>versionName</li>
+</ul>
+<p>这个名称是给<strong>用户</strong>看的，你可以将你的APP版本号设置为1.1版，后续更新版本设置为1.2、2.0版本等等。</p>
+<ul>
+<li>installLocation</li>
+</ul>
+<p>安装参数，是Android2.2中的一个新特性，installLocation有三个值可以选择：internalOnly、auto、preferExternal</p>
+<p>选择<strong>preferExternal</strong>,系统会优先考虑将APK安装到SD卡上(当然最终用户可以选择为内部ROM存储上，如果SD存储已满，也会安装到内部存储上)</p>
+<p>选择<strong>auto</strong>，系统将会根据存储空间自己去适应</p>
+<p>选择<strong>internalOnly</strong>是指必须安装到内部才能运行</p>
+<p><strong>注：需要进行后台类监控的APP最好安装在内部，而一些较大的游戏APP最好安装在SD卡上。现默认为安装在内部，如果把APP安装在SD卡上，首先得设置你的level为8，并且要配置android:installLocation这个参数的属性为preferExternal</strong></p>
+<h3 id="2、第二层-Application属性"><a href="#2、第二层-Application属性" class="headerlink" title="2、第二层:Application属性"></a>2、第二层:Application属性</h3><p>一个AndroidManifest.xml中必须含有一个Application标签，这个标签声明了每一个应用程序的组件及其属性(如icon,label,permission等)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span>  <span class="attr">android:allowClearUserData</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:allowTaskReparenting</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:backupAgent</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:debuggable</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:description</span>=<span class="string">"string resource"</span></span><br><span class="line">             <span class="attr">android:enabled</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:hasCode</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">             <span class="attr">android:killAfterRestore</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">             <span class="attr">android:manageSpaceActivity</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:permission</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:persistent</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:process</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:restoreAnyVersion</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:taskAffinity</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:theme</span>=<span class="string">"resource or theme"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>android:allowClearUserData(‘true’ or ‘false’)</li>
+</ul>
+<p>用户是否能选择自行清除数据，<strong>默认为true</strong>，程序管理器包含一个选择允许用户清除数据。当为true时，用户可自己清理用户数据，反之亦然</p>
+<ul>
+<li>android:allowTaskReparenting(‘true’ or ‘false’)</li>
+</ul>
+<p>是否允许activity更换从属的任务，比如从短信息任务切换到浏览器任务</p>
+<ul>
+<li>android:backupAgent</li>
+</ul>
+<p>这也是Android2.2中的一个新特性，设置该APP的备份，属性值应该是一个完整的类名，如com.project.TestCase，此属性并没有默认值，并且类名必须得指定(就是个备份工具，将数据备份到云端的操作)</p>
+<ul>
+<li>android:debuggable</li>
+</ul>
+<p>这个从字面上就可以看出是什么作用的，当设置为true时，表明该APP在手机上可以被调试。<strong>默认为false</strong>,在false的情况下调试该APP，就会报以下错误：</p>
+<p><em>Device XXX requires that applications explicitely declare themselves as debuggable in their manifest.</em></p>
+<p> <em>Application XXX does not have the attribute ‘debuggable’ set to TRUE in its manifest and cannot be debugged.</em></p>
+<ul>
+<li>android:description/android:label</li>
+</ul>
+<p>此两个属性都是为许可提供的，均为字符串资源，当用户去看许可列表(android:label)或者某个许可的详细信息(android:description)时，这些字符串资源就可以显示给用户。label应当尽量简短，之需要告知用户该许可是在保护什么功能就行。而description可以用于具体描述获取该许可的程序可以做哪些事情，实际上让用户可以知道如果他们同意程序获取该权限的话，该程序可以做什么。我们通常用两句话来描述许可，第一句描述该许可，第二句警告用户如果批准该权限会可能有什么不好的事情发生</p>
+<ul>
+<li>android:enabled</li>
+</ul>
+<p>Android系统是否能够实例化该应用程序的组件，如果为true，每个组件的enabled属性决定那个组件是否可以被 enabled。如果为false，它覆盖组件指定的值；所有组件都是disabled。</p>
+<ul>
+<li>android:hasCode(‘true’ or ‘false’)</li>
+</ul>
+<p>表示此APP是否包含任何的代码，<strong>默认为true</strong>，若为false，则系统在运行组件时，不会去尝试加载任何的APP代码</p>
+<p>一个应用程序自身不会含有任何的代码，除非内置组件类，比如Activity类，此类使用了AliasActivity类，当然这是个罕见的现象</p>
+<p>(在Android2.3可以用标准C来开发应用程序，可在androidManifest.xml中将此属性设置为false,因为这个APP本身已经不含有任何的JAVA代码了)</p>
+<ul>
+<li>android:icon</li>
+</ul>
+<p>整个APP的图标，图片一般都放在drawable文件夹下。</p>
+<ul>
+<li>android:killAfterRestore</li>
+</ul>
+<p>在执行全系统的恢复操作时，配置恢复后相关的应用程序是否要被终止。 单个包的恢复操作不会导致程序被关闭。 全系统的恢复操作一般只会发生一次，即第一次配置手机时。 第三方应用程序通常不需要用到本属性。<br>默认值是“true”，表示全系统恢复过程中，应用程序在处理完数据后将被关闭。</p>
+<ul>
+<li>android:manageSpaceActivity</li>
+</ul>
+<p>指定某个 Activity 子类的完全限定名称，系统可以启动此 Activity 来让用户管理应用程序占用的内存空间。 这个 Activity 必须已用<figure class="highlight plain"><figcaption><span>activity > ```元素进行了声明。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* android:name</span><br><span class="line"></span><br><span class="line">为应用程序所实现的Application子类的全名。当应用程序进程开始时，该类在所有应用程序组件之前被实例化。</span><br><span class="line"></span><br><span class="line">若该类(比方androidMain类)是在声明的package下，则可以直接声明android:name=&quot;androidMain&quot;,但此类是在package下面的子包的话，就必须声明为全路径或android:name=&quot;package名称.子包名成.androidMain&quot;</span><br><span class="line"></span><br><span class="line">* android:permission</span><br><span class="line"></span><br><span class="line">设置许可名，这个属性若在```&lt;application&gt;```上定义的话，是一个给应用程序的所有组件设置许可的便捷方式，当然它是被各组件设置的许可名所覆盖的</span><br><span class="line"></span><br><span class="line">* android:presistent</span><br><span class="line"></span><br><span class="line">该应用程序是否应该在任何时候都保持运行状态,默认为false。因为应用程序通常不应该设置本标识，持续模式仅仅应该设置给某些系统应用程序才是有意义的。</span><br><span class="line"></span><br><span class="line">* android:process</span><br><span class="line"></span><br><span class="line">应用程序运行的进程名，它的默认值为```&lt;manifest&gt;```元素里设置的包名，当然每个组件都可以通过设置该属性来覆盖默认值。如果你想两个应用程序共用一个进程的话，你可以设置他们的android:process相同，但前提条件是他们共享一个用户ID及被赋予了相同证书的时候</span><br><span class="line"></span><br><span class="line">* android:restoreAnyVersion</span><br><span class="line"></span><br><span class="line">同样也是android2.2的一个新特性，用来表明应用是否准备尝试恢复所有的备份，甚至该备份是比当前设备上更要新的版本，默认是false</span><br><span class="line"></span><br><span class="line">* android:taskAffinity</span><br><span class="line"></span><br><span class="line">拥有相同的affinity的Activity理论上属于相同的Task，应用程序默认的affinity的名字是&lt;manifest&gt;元素中设定的package名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* android:theme</span><br><span class="line"></span><br><span class="line">是一个资源的风格，它定义了一个默认的主题风格给所有的activity,当然也可以在自己的theme里面去设置它，有点类似style。</span><br><span class="line"></span><br><span class="line">### 3、第三层:Activity属性</span><br><span class="line"></span><br><span class="line">```xml</span><br><span class="line"></span><br><span class="line">        &lt;activity android:allowTaskReparenting=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:alwaysRetainTaskState=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:clearTaskOnLaunch=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:configChanges=[&quot;mcc&quot;, &quot;mnc&quot;, &quot;locale&quot;,</span><br><span class="line">                                         &quot;touchscreen&quot;, &quot;keyboard&quot;, &quot;keyboardHidden&quot;,</span><br><span class="line">                                         &quot;navigation&quot;, &quot;orientation&quot;, &quot;screenLayout&quot;,</span><br><span class="line">                                         &quot;fontScale&quot;, &quot;uiMode&quot;]</span><br><span class="line">                  android:enabled=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:excludeFromRecents=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:exported=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:finishOnTaskLaunch=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:icon=&quot;drawable resource&quot;</span><br><span class="line">                  android:label=&quot;string resource&quot;</span><br><span class="line">                  android:launchMode=[&quot;multiple&quot; | &quot;singleTop&quot; |</span><br><span class="line">                                      &quot;singleTask&quot; | &quot;singleInstance&quot;]</span><br><span class="line">                  android:multiprocess=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:name=&quot;string&quot;</span><br><span class="line">                  android:noHistory=[&quot;true&quot; | &quot;false&quot;]  </span><br><span class="line">                  android:permission=&quot;string&quot;</span><br><span class="line">                  android:process=&quot;string&quot;</span><br><span class="line">                  android:screenOrientation=[&quot;unspecified&quot; | &quot;user&quot; | &quot;behind&quot; |</span><br><span class="line">                                             &quot;landscape&quot; | &quot;portrait&quot; |</span><br><span class="line">                                             &quot;sensor&quot; | &quot;nosensor&quot;]</span><br><span class="line">                  android:stateNotNeeded=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:taskAffinity=&quot;string&quot;</span><br><span class="line">                  android:theme=&quot;resource or theme&quot;</span><br><span class="line">                  android:windowSoftInputMode=[&quot;stateUnspecified&quot;,</span><br><span class="line">                                               &quot;stateUnchanged&quot;, &quot;stateHidden&quot;,</span><br><span class="line">                                               &quot;stateAlwaysHidden&quot;, &quot;stateVisible&quot;,</span><br><span class="line">                                               &quot;stateAlwaysVisible&quot;, &quot;adjustUnspecified&quot;,</span><br><span class="line">                                               &quot;adjustResize&quot;, &quot;adjustPan&quot;] &gt;   </span><br><span class="line">    </span><br><span class="line">    &lt;/activity&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>android:alwaysRetainTaskState</li>
+</ul>
+<p><strong>是否保留状态不变</strong>， 比如切换回home, 再从新打开，activity处于最后的状态。比如一个浏览器拥有很多状态(当打开了多个TAB的时候)，用户并不希望丢失这些状态时，此时可将此属性设置为true</p>
+<ul>
+<li><p>android:clearTaskOnLaunch<br>比如 P 是 activity, Q 是被P 触发的 activity, 然后返回Home, 重新启动 P，是否显示 Q</p>
+</li>
+<li><p>android:configChanges</p>
+</li>
+</ul>
+<p>当配置list发生修改时， 是否调用 onConfigurationChanged() 方法  比如 “locale|navigation|orientation”.<br>这个我用过,主要用来看手机方向改变的. android手机在旋转后,layout会重新布局, 如何做到呢?<br>正常情况下. 如果手机旋转了.当前Activity后杀掉,然后根据方向重新加载这个Activity. 就会从onCreate开始重新加载.<br>如果你设置了 这个选项, 当手机旋转后,当前Activity之后调用onConfigurationChanged() 方法. 而不跑onCreate方法等.</p>
+<ul>
+<li>android:excludeFromRecents</li>
+</ul>
+<p>是否可被显示在最近打开的activity列表里，默认是false</p>
+<ul>
+<li>android:finishOnTaskLaunch</li>
+</ul>
+<p>当用户重新启动这个任务的时候，是否关闭已打开的activity，默认是false</p>
+<p><strong>如果这个属性和allowTaskReparenting都是true,这个属性就是王牌。Activity的亲和力将被忽略。该Activity已经被摧毁并非re-parented</strong></p>
+<ul>
+<li>android:launchMode(Activity加载模式)</li>
+</ul>
+<p>在多Activity开发中，有可能是自己应用之间的Activity跳转，或者夹带其他应用的可复用Activity。可能会希望跳转到原来某个Activity实例，而不是产生大量重复的Activity。这需要为Activity配置特定的加载模式，而不是使用默认的加载模式</p>
+<p>Activity有四种加载模式：</p>
+<p><strong>standard</strong>、<strong>singleTop</strong>、<strong>singleTask</strong>、<strong>singleInstance</strong>(其中前两个是一组、后两个是一组)，默认为standard </p>
+<ol>
+<li><p>standard：就是intent将发送给新的实例，所以每次跳转都会生成新的activity。</p>
+</li>
+<li><p>singleTop：也是发送新的实例，但不同standard的一点是，在请求的Activity正好位于栈顶时(配置成singleTop的Activity)，不会构造新的实例</p>
+</li>
+<li><p>singleTask：和后面的singleInstance都只创建一个实例，当intent到来，需要创建设置为singleTask的Activity的时候，系统会检查栈里面是否已经有该Activity的实例。如果有直接将intent发送给它。</p>
+</li>
+<li><p>singleInstance：首先说明一下task这个概念，Task可以认为是一个栈，可放入多个Activity。比如启动一个应用，那么Android就创建了一个Task，然后启动这个应用的入口Activity，那在它的界面上调用其他的Activity也只是在这个task里面。那如果在多个task中共享一个Activity的话怎么办呢。举个例来说，如果开启一个导游服务类的应用程序，里面有个Activity是开启GOOGLE地图的，当按下home键退回到主菜单又启动GOOGLE地图的应用时，显示的就是刚才的地图，实际上是同一个Activity，实际上这就引入了singleInstance。singleInstance模式就是将该Activity单独放入一个栈中，这样这个栈中只有这一个Activity，不同应用的intent都由这个Activity接收和展示，这样就做到了共享。当然前提是这些应用都没有被销毁，所以刚才是按下的HOME键，如果按下了返回键，则无效</p>
+</li>
+</ol>
+<ul>
+<li>android:multiprocess</li>
+</ul>
+<p>是否允许多进程，默认是false</p>
+<ul>
+<li>android:noHistory</li>
+</ul>
+<p>当用户从Activity上离开并且它在屏幕上不再可见时，Activity是否从Activity stack中清除并结束。默认是false。Activity不会留下历史痕迹</p>
+<ul>
+<li>android:screenOrientation</li>
+</ul>
+<p>activity显示的模式</p>
+<p>默认为unspecified：由系统自动判断显示方向</p>
+<p>landscape横屏模式，宽度比高度大</p>
+<p>portrait竖屏模式, 高度比宽度大</p>
+<p>user模式，用户当前首选的方向</p>
+<p>behind模式：和该Activity下面的那个Activity的方向一致(在Activity堆栈中的)</p>
+<p>sensor模式：有物理的感应器来决定。如果用户旋转设备这屏幕会横竖屏切换</p>
+<p>nosensor模式：忽略物理感应器，这样就不会随着用户旋转设备而更改了</p>
+<ul>
+<li>android:stateNotNeeded</li>
+</ul>
+<p>activity被销毁或者成功重启时是否保存状态</p>
+<ul>
+<li>android:windowSoftInputMode</li>
+</ul>
+<p>activity主窗口与软键盘的交互模式，可以用来避免输入法面板遮挡问题，Android1.5后的一个新特性。</p>
+<p>这个属性能影响两件事情：</p>
+<p>【A】当有焦点产生时，软键盘是隐藏还是显示</p>
+<p>【B】是否减少活动主窗口大小以便腾出空间放软键盘</p>
+<p>各值的含义：</p>
+<p>【A】stateUnspecified：软键盘的状态并没有指定，系统将选择一个合适的状态或依赖于主题的设置</p>
+<p>【B】stateUnchanged：当这个activity出现时，软键盘将一直保持在上一个activity里的状态，无论是隐藏还是显示</p>
+<p>【C】stateHidden：用户选择activity时，软键盘总是被隐藏</p>
+<p>【D】stateAlwaysHidden：当该Activity主窗口获取焦点时，软键盘也总是被隐藏的</p>
+<p>【E】stateVisible：软键盘通常是可见的</p>
+<p>【F】stateAlwaysVisible：用户选择activity时，软键盘总是显示的状态</p>
+<p>【G】adjustUnspecified：默认设置，通常由系统自行决定是隐藏还是显示</p>
+<p>【H】adjustResize：该Activity总是调整屏幕的大小以便留出软键盘的空间</p>
+<p>【I】adjustPan：当前窗口的内容将自动移动以便当前焦点从不被键盘覆盖和用户能总是看到输入内容的部分</p>
+<h3 id="4、第四层intent-filter"><a href="#4、第四层intent-filter" class="headerlink" title="4、第四层intent-filter"></a>4、第四层intent-filter</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">intent-filter</span>  <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">               <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">               <span class="attr">android:priority</span>=<span class="string">"integer"</span> &gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">action</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">category</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">data</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>intent-filter属性</p>
+<p>android:priority(解释：有序广播主要是按照声明的优先级别，如A的级别高于B，那么，广播先传给A，再传给B。优先级别就是用设置priority属性来确定，范围是从-1000～1000，<strong>数越大优先级别越高</strong>)</p>
+<p>Intent filter内会设定的资料包括action,data与category三种。也就是说filter只会与intent里的这三种资料作对比动作</p>
+<p>action属性</p>
+<p>action很简单，只有android:name这个属性。常见的android:name值为android.intent.action.MAIN，表明此activity是作为应用程序的入口。</p>
+<p>category属性</p>
+<p>category也只有android:name属性。常见的android:name值为android.intent.category.LAUNCHER(决定应用程序是否显示在程序列表里)</p>
+<p>data属性</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">data</span>  <span class="attr">android:host</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:mimeType</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:path</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:pathPattern</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:pathPrefix</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:port</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:scheme</span>=<span class="string">"string"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>每个<data>元素指定一个URI和数据类型（MIME类型）。它有四个属性scheme、host、port、path对应于URI的每个部分：<br>scheme://host:port/path</data></li>
+</ul>
+<p>scheme的值一般为”http”，host为包名，port为端口号，path为具体地址。如：<a href="http://com.test.project:200/folder/etc" target="_blank" rel="external">http://com.test.project:200/folder/etc</a></p>
+<p>其中host和port合起来构成URI的凭据(authority)，如果host没有指定，则port也会被忽略</p>
+<p>要让authority有意义，scheme也必须要指定。要让path有意义，scheme+authority也必须要指定</p>
+<ul>
+<li><p>mimeType（指定数据类型），若mimeType为’Image’，则会从content Provider的指定地址中获取image类型的数据。还有’video’啥的，若设置为video/mp4，则表示在指定地址中获取mp4格式的video文件</p>
+</li>
+<li><p>而pathPattern和PathPrefix主要是为了格式化path所使用的</p>
+</li>
+</ul>
+<p>5、第四层meta-data</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">           <span class="attr">android:resource</span>=<span class="string">"resource specification"</span></span><br><span class="line">           <span class="attr">android:value</span>=<span class="string">"string"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这是该元素的基本结构.可以包含在<activity> <activity-alias> <service> <receiver>四个元素中。</receiver></service></activity-alias></activity></p>
+<p>android:name（解释：元数据项的名字，为了保证这个名字是唯一的，采用java风格的命名规范，如com.woody.project.fried)</p>
+<p>android:resource(解释：资源的一个引用，指定给这个项的值是该资源的id。该id可以通过方法Bundle.getInt()来从meta-data中找到。)</p>
+<p>android:value(解释：指定给这一项的值。可以作为值来指定的数据类型并且组件用来找回那些值的Bundle方法：[getString],[getInt],[getFloat],[getString],[getBoolean])</p>
+<p>6、第三层<activity-alias>属性<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity-alias</span> <span class="attr">android:enabled</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                <span class="attr">android:exported</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">                <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">                <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">                <span class="attr">android:permission</span>=<span class="string">"string"</span></span><br><span class="line">                <span class="attr">android:targetActivity</span>=<span class="string">"string"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">intent-filter</span>/&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br></pre></td></tr></table></figure></activity-alias></p>
+<p><activity-alias>是为activity创建快捷方式的，如下实例：</activity-alias></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".shortcut"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">activity-alias</span> <span class="attr">android:name</span>=<span class="string">".CreateShortcuts"</span> <span class="attr">android:targetActivity</span>=<span class="string">".shortcut"</span> <span class="attr">android:label</span>=<span class="string">"@string/shortcut"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line">             <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.CREATE_SHORTCUT"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">             <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中android.targetActivity是指向对应快捷方式的activity,如上述的shortcut(此Activity名)</p>
+<p>android:label是指快捷方式的名称，而快捷方式的图标默认是给定的application图标</p>
+<p>7、第三层 service</p>
+<p>【1】service与activity同级，与activity不同的是，它不能自己启动的，运行在后台的程序，如果我们退出应用时，Service进程并没有结束，它仍然在后台运行。比如听音乐，网络下载数据等，都是由service运行的</p>
+<p>【2】service生命周期：Service只继承了onCreate(),onStart(),onDestroy()三个方法，第一次启动Service时，先后调用了onCreate(),onStart()这两个方法，当停止Service时，则执行onDestroy()方法，如果Service已经启动了，当我们再次启动Service时，不会在执行onCreate()方法，而是直接执行onStart()方法</p>
+<p>【3】service与activity间的通信</p>
+<p>Service后端的数据最终还是要呈现在前端Activity之上的，因为启动Service时，系统会重新开启一个新的进程，这就涉及到不同进程间通信的问题了(AIDL)，Activity与service间的通信主要用IBinder负责。<br>【4】</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">android:enabled</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line"></span><br><span class="line">         <span class="attr">android:exported</span>[=<span class="string">"true"</span> | "<span class="attr">false</span>"]</span><br><span class="line"></span><br><span class="line">         <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:permission</span>=<span class="string">"string"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:process</span>=<span class="string">"string"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>service标签内的属性之前已有描述，在此不重复了～</p>
+<p>8、第三层<receiver></receiver></p>
+<p>receiver的属性与service一样，这里就不显示了</p>
+<p>BroadcastReceiver：用于发送广播，broadcast是在应用程序之间传输信息的一种机制，而BroadcastReceiver是对发送出来的 Broadcast进行过滤接受并响应的一类组件。<br>9、第三层<provider>属性</provider></p>
+<provider android:authorities="list" android:enabled="["true"" |="" "false"]="" android:exported="["true"" android:granturipermissions="["true"" android:icon="drawable resource" android:initorder="integer" android:label="string resource" android:multiprocess="["true"" android:name="string" android:permission="string" android:process="string" android:readpermission="string" android:syncable="["true"" android:writepermission="string"><br><br>           <grant-uri-permission><br><br>           <meta-data><br><br></meta-data></grant-uri-permission></provider>
+
+<p>contentProvider(数据存储)</p>
+<p>【1】android:authorities：</p>
+<p>标识这个ContentProvider，调用者可以根据这个标识来找到它</p>
+<p>【2】android:grantUriPermission：</p>
+<p>对某个URI授予的权限</p>
+<p>【3】android:initOrder</p>
+<p>10、第三层<uses-library></uses-library></p>
+<p>用户库，可自定义。所有android的包都可以引用</p>
+<p>11、第一层<supports-screens></supports-screens></p>
+<supports-screens android:smallscreens="["true"" |="" "false"]="" android:normalscreens="["true"" android:largescreens="["true"" android:anydensity="["true"">
+
+<p>这是在android1.6以后的新特性，支持多屏幕机制</p>
+<p>各属性含义：这四个属性，是否支持大屏，是否支持中屏，是否支持小屏，是否支持多种不同密度</p>
+<p>12、第二层 uses-configuration 与uses-feature性能都差不多</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-configuration</span>  <span class="attr">android:reqFiveWayNav</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"] </span><br><span class="line">                    <span class="attr">android:reqHardKeyboard</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                    <span class="attr">android:reqKeyboardType</span>=<span class="string">[</span>"<span class="attr">undefined</span>" | "<span class="attr">nokeys</span>" | "<span class="attr">qwerty</span>" |   "<span class="attr">twelvekey</span>"]</span><br><span class="line">                    <span class="attr">android:reqNavigation</span>=<span class="string">[</span>"<span class="attr">undefined</span>" | "<span class="attr">nonav</span>" | "<span class="attr">dpad</span>" |  "<span class="attr">trackball</span>" | "<span class="attr">wheel</span>"]</span><br><span class="line">                    <span class="attr">android:reqTouchScreen</span>=<span class="string">[</span>"<span class="attr">undefined</span>" | "<span class="attr">notouch</span>" | "<span class="attr">stylus</span>" | "<span class="attr">finger</span>"] /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-feature</span> <span class="attr">android:glEsVersion</span>=<span class="string">"integer"</span></span><br><span class="line">              <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">              <span class="attr">android:required</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"] /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这两者都是在描述应用所需要的硬件和软件特性，以便防止应用在没有这些特性的设备上安装。</p>
+<p>13、第二层uses-sdk<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">"integer"</span></span><br><span class="line">          <span class="attr">android:targetSdkVersion</span>=<span class="string">"integer"</span></span><br><span class="line">          <span class="attr">android:maxSdkVersion</span>=<span class="string">"integer"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>描述应用所需的api level，就是版本，目前是android 2.2 = 8，android2.1 = 7，android1.6 = 4，android1.5=3</p>
+<p>在此属性中可以指定支持的最小版本，目标版本以及最大版本</p>
+<p>14、第二层instrumentation<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">instrumentation</span> <span class="attr">android:functionalTest</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                 <span class="attr">android:handleProfiling</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                 <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">                 <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">                 <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">                 <span class="attr">android:targetPackage</span>=<span class="string">"string"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p> 定义一些用于探测和分析应用性能等等相关的类，可以监控程序。在各个应用程序的组件之前instrumentation类被实例化</p>
+<p>android:functionalTest(解释：instrumentation类是否能运行一个功能测试，默认为false)</p>
+<p>15、<em>permission</em>、<em>uses-permission</em>、<em>permission-tree</em> 、<em>permission-group</em> 区别～</p>
+<p>最常用的当属<uses-permission>，当我们需要获取某个权限的时候就必须在我们的manifest文件中声明，此<uses-permission>与<application>同级，具体权限列表请看此处</application></uses-permission></uses-permission></p>
+<p>通常情况下我们不需要为自己的应用程序声明某个权限，除非你提供了供其他应用程序调用的代码或者数据。这个时候你才需要使用<permission> 这个标签。很显然这个标签可以让我们声明自己的权限。比如：</permission></p>
+<permission android:name="com.teleca.project.MY_SECURITY" .="">
+
+<p>那么在activity中就可以声明该自定义权限了，如：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span> <span class="attr">.</span> <span class="attr">.</span> <span class="attr">.</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">"XXX"</span> <span class="attr">.</span> <span class="attr">.</span> <span class="attr">.</span> &gt;</span></span><br><span class="line"></span><br><span class="line">                  android:permission="com.teleca.project.MY_SECURITY"&gt; <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当然自己声明的permission也不能随意的使用，还是需要使用<uses-permission>来声明你需要该权限</uses-permission></p>
+<p><permission-group> 就是声明一个标签，该标签代表了一组permissions，而<permission-tree>是为一组permissions声明了一个namespace。这两个标签可以看之前的系列文章。</permission-tree></permission-group></p>
+<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
+
+
+</permission></supports-screens>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      杨晓辉
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://youngxhui.github.io/2016/07/21/AndroidManifest-xml详细介绍/" title="AndroidManifest.xml详细介绍">http://youngxhui.github.io/2016/07/21/AndroidManifest-xml详细介绍/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/android/" rel="tag"># android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/17/如何提高Android虚拟机的运行速度/" rel="next" title="如何提高Android虚拟机的运行速度">
+                <i class="fa fa-chevron-left"></i> 如何提高Android虚拟机的运行速度
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/05/FlaotActionButton详解/" rel="prev" title="FlaotActionButton详解">
+                FlaotActionButton详解 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="杨晓辉" />
+          <p class="site-author-name" itemprop="name">杨晓辉</p>
+           
+              <p class="site-description motion-element" itemprop="description">努力攒钱^ ^</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/youngxhui" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/young_xhui" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngxhui" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、关于AndroidManifest-xml"><span class="nav-number">1.</span> <span class="nav-text">一、关于AndroidManifest.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、AndroidManifest-xml结构"><span class="nav-number">2.</span> <span class="nav-text">二、AndroidManifest.xml结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、各个节点的详细介绍"><span class="nav-number">3.</span> <span class="nav-text">三、各个节点的详细介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、第一层-Manifest属性"><span class="nav-number">3.1.</span> <span class="nav-text">1、第一层:Manifest属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、第二层-Application属性"><span class="nav-number">3.2.</span> <span class="nav-text">2、第二层:Application属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、第四层intent-filter"><span class="nav-number">3.3.</span> <span class="nav-text">4、第四层intent-filter</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨晓辉</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'island-1';
+      var disqus_identifier = '2016/07/21/AndroidManifest-xml详细介绍/';
+
+      var disqus_title = "AndroidManifest.xml详细介绍";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

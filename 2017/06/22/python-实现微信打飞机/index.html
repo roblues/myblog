@@ -1,0 +1,1351 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="微信打飞机 python 实现所用技术和软件python 2.7
+pygame 1.9.3
+pyCharm
+准备工作
+安装好 pygame 在第一次使用 pygame 的时候，pyCharm 会自动 install pygame。
+下载好使用的素材。
+
+技术实现初始化 pygame首先要初始化 pygame ，之后设定一些基本的要点，比如窗口大小（尽量避免魔法数字），窗口标题以及背景图像。pyga">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 实现微信打飞机">
+<meta property="og:url" content="http://youngxhui.github.io/2017/06/22/python-实现微信打飞机/index.html">
+<meta property="og:site_name" content="ISLAND">
+<meta property="og:description" content="微信打飞机 python 实现所用技术和软件python 2.7
+pygame 1.9.3
+pyCharm
+准备工作
+安装好 pygame 在第一次使用 pygame 的时候，pyCharm 会自动 install pygame。
+下载好使用的素材。
+
+技术实现初始化 pygame首先要初始化 pygame ，之后设定一些基本的要点，比如窗口大小（尽量避免魔法数字），窗口标题以及背景图像。pyga">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/flyerroe.png">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/shoot.png">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/flyplayer.png">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/surfaceposition.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/bulletShow.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/bulletShow2.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/playerflyshoot.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/playerflyshoot2.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/enemy.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/enemyshow.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/enemyMove.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/penz.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/gameover2.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/finish1.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/coll.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/coll2.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/scoreShow.jpg">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/end.jpg">
+<meta property="og:updated_time" content="2017-07-16T04:45:35.141Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python 实现微信打飞机">
+<meta name="twitter:description" content="微信打飞机 python 实现所用技术和软件python 2.7
+pygame 1.9.3
+pyCharm
+准备工作
+安装好 pygame 在第一次使用 pygame 的时候，pyCharm 会自动 install pygame。
+下载好使用的素材。
+
+技术实现初始化 pygame首先要初始化 pygame ，之后设定一些基本的要点，比如窗口大小（尽量避免魔法数字），窗口标题以及背景图像。pyga">
+<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/flyerroe.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://youngxhui.github.io/2017/06/22/python-实现微信打飞机/"/>
+
+
+
+
+
+  <title> python 实现微信打飞机 | ISLAND </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97406003-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cf170cb9e5a06d54c1962ad8994f9b33";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ISLAND</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随心随性</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于/留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/06/22/python-实现微信打飞机/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨晓辉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ISLAND">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                python 实现微信打飞机
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T10:27:42+08:00">
+                2017-06-22
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-16T12:45:35+08:00">
+                2017-07-16
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/06/22/python-实现微信打飞机/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/06/22/python-实现微信打飞机/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/06/22/python-实现微信打飞机/" class="leancloud_visitors" data-flag-title="python 实现微信打飞机">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  4,661
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  20
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="微信打飞机-python-实现"><a href="#微信打飞机-python-实现" class="headerlink" title="微信打飞机 python 实现"></a>微信打飞机 python 实现</h1><h1 id="所用技术和软件"><a href="#所用技术和软件" class="headerlink" title="所用技术和软件"></a>所用技术和软件</h1><p>python 2.7</p>
+<p>pygame 1.9.3</p>
+<p>pyCharm</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ol>
+<li>安装好 pygame 在第一次使用 pygame 的时候，pyCharm 会自动 install pygame。</li>
+<li>下载好使用的素材。</li>
+</ol>
+<h1 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h1><h2 id="初始化-pygame"><a href="#初始化-pygame" class="headerlink" title="初始化 pygame"></a>初始化 pygame</h2><p>首先要初始化 pygame ，之后设定一些基本的要点，比如窗口大小（尽量避免魔法数字），窗口标题以及背景图像。pygame 通过加载图片，最后返回一个 surface 对象，我们不需要关系图片的格式。但是通过 <code>convert()</code> 这个函数，会使我们的图片转换效率提高。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"></span><br><span class="line">WIDTH = <span class="number">480</span></span><br><span class="line">HEIGHT = <span class="number">800</span></span><br><span class="line"></span><br><span class="line">pygame.init()</span><br><span class="line"></span><br><span class="line">screen = pygame.display.set_mode((WIDTH, HEIGHT))</span><br><span class="line"></span><br><span class="line">pygame.display.set_caption(<span class="string">'飞机大战'</span>)</span><br><span class="line"></span><br><span class="line">background = pygame.image.load(<span class="string">'resources/image/background.png'</span>).convert()</span><br><span class="line"></span><br><span class="line">screen.fill(<span class="number">0</span>)</span><br><span class="line">screen.blit(background, (<span class="number">0</span>, <span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<p>默认图片左上角为原点 (0,0)。</p>
+<h2 id="显示窗口"><a href="#显示窗口" class="headerlink" title="显示窗口"></a>显示窗口</h2><p>如果我们这样设定，当我们运行的时候，窗口会一闪而过，并不会出现我们想象的画面。因为窗口只是运行一下就会关闭，所以我们要写一个循环，使窗口一直保持出现。当然如果我们简单的写一个 while True那么我们的程序就出现了死循环，卡死。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/flyerroe.png" alt=""></p>
+<p>所以还需要写个退出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    screen.fill(<span class="number">0</span>)</span><br><span class="line">    screen.blit(background, (<span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> event <span class="keyword">in</span> pygame.event.get():</span><br><span class="line">        <span class="keyword">if</span> event.type == pygame.QUIT:</span><br><span class="line">            pygame.quit()</span><br><span class="line">            exit()</span><br></pre></td></tr></table></figure>
+<h2 id="显示飞机"><a href="#显示飞机" class="headerlink" title="显示飞机"></a>显示飞机</h2><p>首先我们要初始化我们的主角飞机</p>
+<p>仍旧需要加载我们需要的资源，我们的资源文件里已经准备好各种各样的飞机，但是他们都在一张切图上。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/shoot.png" alt=""></p>
+<p>同时我们的资源文件里还有一个叫做 <code>shoot.pack</code> 的文件，里面记录了每个图片所在的位置。</p>
+<p>我们通过下面的代码加载资源图片，并且获得我们需要的主角飞机。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plane_img = pygame.image.load(<span class="string">'resources/image/shoot.png'</span>)</span><br><span class="line"></span><br><span class="line">player = plane_img.subsurface(pygame.Rect(<span class="number">0</span>, <span class="number">99</span>, <span class="number">102</span>, <span class="number">126</span>))</span><br></pre></td></tr></table></figure>
+<p>将 player 显示在屏幕上，并且刷新屏幕</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">screen.blit(player, [<span class="number">100</span>, <span class="number">400</span>])</span><br><span class="line"></span><br><span class="line">pygame.display.update()</span><br></pre></td></tr></table></figure>
+<p>效果如下</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/flyplayer.png" alt=""></p>
+<h2 id="让飞机-“飞”-起来"><a href="#让飞机-“飞”-起来" class="headerlink" title="让飞机 “飞” 起来"></a>让飞机 “飞” 起来</h2><p>飞机已经出现在我们的屏幕上了，现在需要让飞机动起来让他可以上下左右的移动。</p>
+<p>首先要获取键盘事件，获取键盘上什么按键被按下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">key_pressed = pygame.key.get_pressed()</span><br></pre></td></tr></table></figure>
+<p>通过 <code>key_pressed</code> 获取当前的键盘按键。并进行判断，这里写了四个函数进行对 <code>player</code> 移动。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_w] <span class="keyword">or</span> key_pressed[pygame.K_UP]:</span><br><span class="line">    player.moveUp()</span><br><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_s] <span class="keyword">or</span> key_pressed[pygame.K_DOWN]:</span><br><span class="line">    player.moveDown()</span><br><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_a] <span class="keyword">or</span> key_pressed[pygame.K_LEFT]:</span><br><span class="line">    player.moveLeft()</span><br><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_d] <span class="keyword">or</span> key_pressed[pygame.K_RIGHT]:</span><br><span class="line">    player.moveRight()</span><br></pre></td></tr></table></figure>
+<p>下一步就是完善这四个方法。</p>
+<p>简单的说就是按下方向键的时候(w,a,s,d)飞机向四周移动，但是不能移动离开屏幕。</p>
+<p>此时我们就应该把我们的飞机形成一个类，类里面有控制飞机的方法。</p>
+<p>这里写类比较麻烦一点</p>
+<h3 id="Player的出现"><a href="#Player的出现" class="headerlink" title="Player的出现"></a>Player的出现</h3><p>首先要明确一点，这个类需要什么。</p>
+<p>我们之前对 <code>player</code> 有什么操作？定义了他的图片和他出现的位置。所以我们的构造方法就要初始化这些值。<br>所有的这些对象，我们在 <code>pygame</code> 里叫做精灵(sprite)，这个概念也在其他游戏开发中使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Player</span><span class="params">(pygame.sprite.Sprite)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, plane_img, player_rect, player_position)</span>:</span></span><br><span class="line">        pygame.sprite.Sprite.__init__(self)</span><br><span class="line">        self.img = plane_img.subsurface(player_rect)</span><br><span class="line">        self.rect = player_rect</span><br><span class="line">        self.rect.topleft = player_position</span><br></pre></td></tr></table></figure>
+<p>简单的说就是获取飞机的图片，初始化飞机的矩形区域。<code>rect</code> 该属性会获得四个值。分别是左上角 <code>x</code> ,<code>y</code> 坐标，矩形的宽度。<code>topleft</code> 初始化飞机的左上角坐标，也就是飞机出现的位置。如下图所示。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/surfaceposition.jpg" alt=""></p>
+<h3 id="player的控制"><a href="#player的控制" class="headerlink" title="player的控制"></a>player的控制</h3><p>当飞机出现了，我们就应该实现我们在循环里写的方法。我们首先要判断它还在不在屏幕内，不能让飞机飞出屏幕。可以通过 <code>rect.top</code>,<code>rect.bottom</code>,<code>rect.left</code>,<code>rect.right</code>四个方法获取飞机图片的上下左右四个边界值。</p>
+<p>这样我们就能对飞机进行判断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">moveUp</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> self.rect.top &lt;= <span class="number">0</span>:</span><br><span class="line">        self.rect.top = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        self.rect.top -= self.move</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">moveDown</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> self.rect.bottom &gt;= HEIGHT:</span><br><span class="line">        self.rect.bottom = HEIGHT</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        self.rect.bottom += self.move</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">moveLeft</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> self.rect.left &lt;= <span class="number">0</span>:</span><br><span class="line">        self.rect.left = <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        self.rect.left -= self.move</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">moveRight</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> self.rect.right &gt;= WIDTH:</span><br><span class="line">        self.rect.right = WIDTH</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        self.rect.right += self.move</span><br></pre></td></tr></table></figure>
+<p>这里的 <code>move</code> 是我们对飞机的移动的位移定义的常量。</p>
+<h2 id="让子弹飞"><a href="#让子弹飞" class="headerlink" title="让子弹飞"></a>让子弹飞</h2><p>子弹要沿着发射方向射出去。可以在屏幕上一直移动，直到移出屏幕。<br>我们只要有定义一个子弹对象，让这个对象显示在屏幕上就可以。<br>先定义飞机子弹类，基本和定义 <code>player</code> 一样，获得图片，裁剪图片，设置图片初始位置，在屏幕上显示图片<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bullet</span><span class="params">(pygame.sprite.Sprite)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, bullet_image, bullet_position)</span>:</span></span><br><span class="line">        pygame.sprite.Sprite.__init__(self)</span><br><span class="line">        self.image = bullet_image</span><br><span class="line">        self.rect = self.image.get_rect()</span><br><span class="line">        self.rect.midbottom = bullet_position</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="comment"># 省略其他代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载子弹图片</span></span><br><span class="line">bullet_rect = pygame.Rect(<span class="number">69</span>, <span class="number">78</span>, <span class="number">9</span>, <span class="number">21</span>)</span><br><span class="line">bullet_img = plane_img.subsurface(bullet_rect)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 省略其他代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 省略其他代码</span></span><br><span class="line">    </span><br><span class="line">    screen.blit(bullet.img, bullet.rect)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 省略其他代码</span></span><br></pre></td></tr></table></figure></p>
+<p>运行结果<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/bulletShow.jpg" alt=""></p>
+<p>下一步就是让飞机的子弹跟随飞机。<br>我们需要在 Player 类里面添加方法。<br>首先我们规定，按下空格发射子弹。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_SPACE]:</span><br><span class="line">    player.shoot()</span><br></pre></td></tr></table></figure></p>
+<p>完善shoot方法。子弹类已经有了，我们每次只要在按下空格的时候创建一个对象就好。<br>首先要每次传入一个子弹的图像，然后还有出现位置，这样子弹才能跟随飞机。<br>定义一个<code>pygame.sprite.Group()</code> 来存放精灵组。这样我们就能把我们的子弹都放进去。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">shoot</span><span class="params">(self, bullet_img)</span>:</span></span><br><span class="line">   bullet = Bullet(bullet_img, self.rect.midtop)</span><br><span class="line">   self.bullets.add(bullet)</span><br></pre></td></tr></table></figure>
+<p>每次按下空格的时候传入一个子弹图片</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_SPACE]:</span><br><span class="line">    player.shoot(bullet_img)</span><br></pre></td></tr></table></figure>
+<p>最后我们只需要在屏幕上进行子弹的绘制即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">player.bullets.draw(screen)</span><br></pre></td></tr></table></figure>
+<p>这样我们的子弹就会跟随飞机出现。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/bulletShow2.jpg" alt=""></p>
+<p>下一步就是让子弹在屏幕上移动。</p>
+<p>创建移动的方法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.rect.top -= self.move</span><br></pre></td></tr></table></figure>
+<p>因为我们的子弹在 bullets 里，所以我们仅需要一个循环，遍历每个子弹，之后移动即可。当子弹移出屏幕的时候我们只要在 <code>bullets</code> 中移出就可以。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">for</span> bullet <span class="keyword">in</span> player.bullets:</span><br><span class="line">    bullet.bulletMove()</span><br><span class="line">    <span class="keyword">if</span> bullet.rect.bottom &lt; <span class="number">0</span>:</span><br><span class="line">        player.bullets.remove(bullet)</span><br></pre></td></tr></table></figure>
+<p>结果<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/playerflyshoot.gif" alt=""></p>
+<p>这个和我们的预期还是有差别的，频率太快了。</p>
+<p>关于pygame 的键盘重复事件 官方好像并没有这个设置。那么我们只能在添加一个计数器，通过计算器的数值来判断子弹是否发射。这里的数值是多次测试后，自己感觉一个比较满意的频率。可以自己调整。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 省略其他代码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 子弹频率</span></span><br><span class="line">SHOOT_PC = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>在键盘事件中我们需要判断频率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_SPACE]:</span><br><span class="line">    SHOOT_PC = SHOOT_PC + <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> SHOOT_PC % <span class="number">400</span> == <span class="number">0</span>:</span><br><span class="line">        player.shoot(bullet_img)</span><br></pre></td></tr></table></figure>
+<p>player 的飞机就算基本绘制好了</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/playerflyshoot2.gif" alt=""></p>
+<h2 id="绘制敌机"><a href="#绘制敌机" class="headerlink" title="绘制敌机"></a>绘制敌机</h2><p>下一步就是绘制敌机。敌机是从屏幕上方移动到屏幕下方。我们任就需要一个类来设置敌机。设置类任就和我们前面的差不多，加载资源，设置 <code>rect</code>，设置位置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 加载敌机图片</span></span><br><span class="line"></span><br><span class="line">enemy_rect = pygame.Rect(<span class="number">267</span>, <span class="number">347</span>, <span class="number">57</span>, <span class="number">51</span>)</span><br><span class="line">enemy_img = plane_img.subsurface(enemy_rect)</span><br><span class="line">enemy_position = [<span class="number">200</span>, <span class="number">200</span>]</span><br><span class="line">enemy = Enemy(enemy_img, enemy_position)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 敌机类</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Enemy</span><span class="params">(pygame.sprite.Sprite)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, enemy_img, enemy_position)</span>:</span></span><br><span class="line">        pygame.sprite.Sprite.__init__(self)</span><br><span class="line">        self.image = enemy_img</span><br><span class="line">        self.rect = self.image.get_rect()</span><br><span class="line">        self.rect.topleft = enemy_position</span><br></pre></td></tr></table></figure>
+<p>最后在屏幕显示出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen.blit(enemy_img, enemy_rect)</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/enemy.jpg" alt=""></p>
+<p>现在我们就应该想想敌机的特点了，其实他和子弹的特点基本一直，只不过方向不一样而已。还有一点是敌机是随机生成的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 敌机计数器</span></span><br><span class="line">EnEMY_PC = <span class="number">0</span></span><br><span class="line"><span class="comment"># 省略代码</span></span><br><span class="line">enemy_position = [random.randint(<span class="number">0</span>, WIDTH - enemy_rect.width), <span class="number">0</span>]</span><br><span class="line">        enemy = Enemy(enemy_img, enemy_position)</span><br><span class="line">        enemies.add(enemy)</span><br></pre></td></tr></table></figure>
+<p>我们随机在顶部生成飞机。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/enemyshow.gif" alt=""></p>
+<p>这个方式的情况和子弹其实差不多，我们应该给出现敌机确定一个频率。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if EnEMY_PC % 500 == 0:</span><br><span class="line">    enemy_position = [random.randint(0, WIDTH - enemy_rect.width), 0]</span><br><span class="line">    enemy = Enemy(enemy_img, enemy_position)</span><br><span class="line">    enemies.add(enemy)</span><br><span class="line"></span><br><span class="line">EnEMY_PC = EnEMY_PC + 1</span><br></pre></td></tr></table></figure>
+<p>这样的话出现情况就变得缓慢。下一步实现敌机的移动。敌机的移动原理和子弹的移动其实也是一样的。不多解释</p>
+<p>移动方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enemyMove</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.rect.top += self.move</span><br></pre></td></tr></table></figure></p>
+<p>移动实现<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> enemy <span class="keyword">in</span> enemies:</span><br><span class="line">       enemy.enemyMove()</span><br><span class="line">       <span class="keyword">if</span> enemy.rect.top &gt; HEIGHT:</span><br><span class="line">           enemies.remove(enemy)</span><br><span class="line"></span><br><span class="line">   enemies.draw(screen)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/enemyMove.gif" alt=""></p>
+<h2 id="碰撞检测"><a href="#碰撞检测" class="headerlink" title="碰撞检测"></a>碰撞检测</h2><p>飞机和敌机还有子弹都有了，我们现在需要进行完成碰撞检测。有下面几种场景。</p>
+<ol>
+<li>敌机和玩家碰撞在一起</li>
+<li>子弹和敌机碰撞在一起</li>
+</ol>
+<p>无论是那种情况的碰撞，其实就是两张图片有了交集。<br>如图<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/penz.jpg" alt=""><br>pygame 给我们提供了碰撞检测的方法。首先两个对象必须是 <code>sprite</code> 。通过 <code>pygame.sprite.collide_rect()</code> 进行碰撞检测。</p>
+<p>我们先进行一个测试<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> pygame.sprite.collide_rect(enemy, player):</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'检测成功'</span></span><br></pre></td></tr></table></figure></p>
+<p>结果</p>
+<blockquote>
+<p> 检测成功</p>
+</blockquote>
+<p>此时我们就可以完成,当玩家和敌机发生碰撞,游戏结束,当子弹和敌机碰撞,敌机消失。</p>
+<p>同样的 pygame 给我们提供了一个 <code>pygame.sprite.groupcollide()</code> 用于 <code>Group</code> 之间的碰撞检测.当发生碰撞的时候这两个对象都会在 <code>Group</code> 中移出。</p>
+<p>用于检测敌机和子弹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pygame.sprite.groupcollide(enemies, player.bullets, 1, 1)</span><br></pre></td></tr></table></figure></p>
+<p>敌机和子弹的关系已经和好的处理。<br>处理敌机和玩家飞机的关系。</p>
+<p>我们需要在 <code>Player</code> 里添加一个属性判断当前玩家是否被击中的 <code>boolean</code> 值.当集中的时候把属性改为 <code>True</code>.当为 <code>True</code> 的时候游戏结束.也就是我们一开始设置的循环就会结束.所以我们需要更改之前写的一些代码,使它更加完善。</p>
+<p>在 Player 类里面添加是否击中属性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.is_hit = <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<p>修改循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">RUN = <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> RUN:</span><br><span class="line">    <span class="comment"># 省略代码</span></span><br><span class="line">        <span class="keyword">if</span> pygame.sprite.collide_rect(enemy, player):</span><br><span class="line">        player.is_hit = <span class="keyword">True</span></span><br><span class="line">        RUN = <span class="keyword">False</span></span><br><span class="line">    <span class="comment"># 省略代码</span></span><br></pre></td></tr></table></figure>
+<p>执行结果</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/gameover2.gif" alt=""></p>
+<p>当玩家被击中的时候,在显示一张 GameOver 图片提示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">gameOver = pygame.image.load(&apos;resources/image/gameover.png&apos;)</span><br><span class="line"></span><br><span class="line">while GAMEOVER:</span><br><span class="line">    screen.fill(0)</span><br><span class="line">    screen.blit(gameOver, (0, 0))</span><br><span class="line"></span><br><span class="line">    pygame.display.update()</span><br><span class="line"></span><br><span class="line">    # 退出程序</span><br><span class="line">    for event in pygame.event.get():</span><br><span class="line">        if event.type == pygame.QUIT:</span><br><span class="line">            pygame.quit()</span><br><span class="line">            exit()</span><br></pre></td></tr></table></figure>
+<p>做到这里基本算是实现了飞机大战.但是还有很多细节处理。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/finish1.gif" alt=""></p>
+<h1 id="细节处理"><a href="#细节处理" class="headerlink" title="细节处理"></a>细节处理</h1><h2 id="精细的碰撞检测"><a href="#精细的碰撞检测" class="headerlink" title="精细的碰撞检测"></a>精细的碰撞检测</h2><p>从图上看,当敌机看似还没有和我们接触时,但是已经 GameOver 了。<br>实际情况是这样的,所有的图片都是矩形,当两张图片的矩形边框线碰撞的时候,就算两个对象碰撞,所以我们要更加精细的使用碰撞检测。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/coll.jpg" alt=""></p>
+<p>我们可以按着图片中心的某个长度为半径，在这个半径内发生碰撞才是碰撞。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/coll2.jpg" alt=""></p>
+<p>pygame 给我们提供了这样的方法。<code>pygame.sprite.collide_circle_ratio()</code> 可以自己算出一个半径，作为检测半径。并且可以做出一个有效检测的百分比。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> pygame.sprite.collide_circle_ratio(<span class="number">0.6</span>)(player, enemy):</span><br><span class="line">    player.is_hit = <span class="keyword">True</span></span><br><span class="line">    RUN = <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<p>同样，子弹和敌机也可以修改，让碰撞检测更加精细。<br>修改后面的两个参数，使得碰撞检测更加精细。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pygame.sprite.groupcollide(enemies, player.bullets, <span class="number">0.6</span>, <span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>做了怎么就，感觉它没有一点动效，感觉死气沉沉的。无论是飞机飞行，还是飞机被击中，都没有一个明确的反馈。<br>对于2d游戏，动画其实就是一张一张的图片不停的变化。就和电影的原理类似。要想让我们的飞机动起来，我们需要定义一个列表来存放这些图片，然后写个循环，让他一直不停的更换图片就好。</p>
+<p>首先我们更改我们的主角 <code>Player</code><br>任就是老套路，加载图片。把加载的图片放到list 里。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">player_rect = [pygame.Rect(<span class="number">0</span>, <span class="number">99</span>, <span class="number">102</span>, <span class="number">126</span>),</span><br><span class="line">               pygame.Rect(<span class="number">165</span>, <span class="number">360</span>, <span class="number">102</span>, <span class="number">126</span>),</span><br><span class="line">               pygame.Rect(<span class="number">165</span>, <span class="number">234</span>, <span class="number">102</span>, <span class="number">126</span>),</span><br><span class="line">               pygame.Rect(<span class="number">330</span>, <span class="number">624</span>, <span class="number">102</span>, <span class="number">126</span>), </span><br><span class="line">               pygame.Rect(<span class="number">330</span>, <span class="number">498</span>, <span class="number">102</span>, <span class="number">126</span>), </span><br><span class="line">               pygame.Rect(<span class="number">432</span>, <span class="number">624</span>, <span class="number">102</span>, <span class="number">126</span>)]</span><br><span class="line"></span><br><span class="line">player_position = [<span class="number">100</span>, <span class="number">400</span>]</span><br><span class="line">player = Player(plane_img, player_rect, player_position)</span><br></pre></td></tr></table></figure>
+<p>之后在 <code>Player</code> 添加循环的方法。获取图片。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Player</span><span class="params">(pygame.sprite.Sprite)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, plane_img, player_rect, player_position)</span>:</span></span><br><span class="line">        pygame.sprite.Sprite.__init__(self)</span><br><span class="line">        self.image = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(player_rect)):</span><br><span class="line">            self.image.append(plane_img.subsurface(player_rect[i]).convert_alpha())</span><br><span class="line">        self.rect = player_rect[<span class="number">0</span>]</span><br><span class="line">        self.rect.topleft = player_position</span><br><span class="line">        self.img_index = <span class="number">0</span></span><br><span class="line">        self.move = <span class="number">1</span></span><br><span class="line">        self.bullets = pygame.sprite.Group()</span><br><span class="line">        self.is_hit = <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<p>飞机正常飞行的图片只有两张。所以我们要循环变化这两张图片。所以每发射一个子弹，图片变化两张。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">screen.blit(player.image[player.img_index], player.rect)</span><br><span class="line">player.img_index = SHOOT_PC / <span class="number">248</span></span><br><span class="line"><span class="comment"># 省略代码</span></span><br><span class="line"><span class="keyword">if</span> key_pressed[pygame.K_SPACE]:</span><br><span class="line">    <span class="keyword">if</span> SHOOT_PC % <span class="number">495</span> == <span class="number">0</span>:</span><br><span class="line">        player.shoot(bullet_img)</span><br><span class="line">    SHOOT_PC = SHOOT_PC + <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> SHOOT_PC &gt;= <span class="number">495</span>:</span><br><span class="line">        SHOOT_PC = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>正常发射子弹的动画效果已经做完。我们还需要进行被击中爆炸的动画效果。</p>
+<p>击中的原理和正常也一样。只不过先要判断当前飞机状态，是否被击中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> player.is_hit:</span><br><span class="line">    screen.blit(player.image[player.img_index], player.rect)</span><br><span class="line">    player.img_index = SHOOT_PC / <span class="number">248</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    player.img_index = player_shoot / <span class="number">248</span></span><br><span class="line">    screen.blit(player.image[player.img_index], player.rect)</span><br><span class="line">    player_shoot += <span class="number">30</span></span><br><span class="line">    <span class="keyword">if</span> player_shoot &gt; <span class="number">495</span>:</span><br><span class="line">        RUN = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 省略代码</span></span><br><span class="line"><span class="keyword">if</span> pygame.sprite.collide_circle_ratio(<span class="number">0.6</span>)(player, enemy):</span><br><span class="line">    player.is_hit = <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<p><code>248</code>，<code>30</code>，<code>495</code>，<code>1457</code> 这些数字是什么？如何计算出来的。先说 <code>495</code> 这个数字。<br>495 这个数字很随便，只是控制子弹的发射间隔。完全可以自定义。但是495这个数字一旦确定，其他三个数字基本确定。<br>248 为 495 的一半，因为发射一个子弹，图片要变化两张。<br>30 这个数字基本也是自定义的，只要比1大就好，他影响了结束动画出现的时间。</p>
+<p>1488 这个数字是通过 248 确定的，是 248 的 6倍，因为飞机被射击后会有四张图片的显示。<br>同理，把敌机接触子弹的动画写出来。</p>
+<p>加载图片<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enemies_shoot_img = [plane_img.subsurface(pygame.Rect(<span class="number">267</span>, <span class="number">347</span>, <span class="number">57</span>, <span class="number">43</span>)),</span><br><span class="line">                     plane_img.subsurface(pygame.Rect(<span class="number">873</span>, <span class="number">697</span>, <span class="number">57</span>, <span class="number">43</span>)),</span><br><span class="line">                     plane_img.subsurface(pygame.Rect(<span class="number">267</span>, <span class="number">296</span>, <span class="number">57</span>, <span class="number">43</span>)),</span><br><span class="line">                     plane_img.subsurface(pygame.Rect(<span class="number">930</span>, <span class="number">697</span>, <span class="number">57</span>, <span class="number">43</span>))]</span><br></pre></td></tr></table></figure></p>
+<p>同样我们需要创建 Group() 来存放被击中的敌机。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">enemies_shoot = pygame.sprite.Group()</span><br></pre></td></tr></table></figure></p>
+<p>之后的处理逻辑基本相似，不多介绍<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> enemy <span class="keyword">in</span> enemies:</span><br><span class="line">    enemy.enemyMove()</span><br><span class="line">    <span class="keyword">if</span> pygame.sprite.collide_circle_ratio(<span class="number">0.6</span>)(player, enemy):</span><br><span class="line">        enemies_shoot.add(enemy)</span><br><span class="line">        enemies.remove(enemy)</span><br><span class="line">        player.is_hit = <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> enemy.rect.top &gt; HEIGHT:</span><br><span class="line">        enemies.remove(enemy)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> enemy_shoots <span class="keyword">in</span> enemies_shoot:</span><br><span class="line">    <span class="keyword">if</span> enemy_shoots.shoot_index == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="keyword">if</span> enemy_shoots.shoot_index &gt; <span class="number">70</span>:</span><br><span class="line">        enemies_shoot.remove(enemy_shoots)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    screen.blit(enemy_shoots.shoot_imgs[enemy_shoots.shoot_index / <span class="number">20</span>], enemy_shoots.rect)</span><br><span class="line">    enemy_shoots.shoot_index += <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>这样的话基本完成了动画效果。</p>
+<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><p>有了动画还的有音乐。</p>
+<p>音乐的处理只要在特定的地方播放音乐就好，比如子弹发射的时候，背景音乐，被击中的时候，游戏结束的时候，等等。他们的处理逻辑都一样。先加载资源，然后在播放。</p>
+<p>背景音乐的播放。</p>
+<p> <code>pygame</code> 在处理背景音乐的时候都在 <code>pygame.mixer</code> 方法中。其中播放音乐的play中的参数，第一个为播放几次，-1 为循环播放，后面的浮点表示 从第几秒开始播放。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">backgroundMusic = pygame.mixer.music.load(<span class="string">'resources/sound/game_music.mp3'</span>)</span><br><span class="line">pygame.mixer.music.play(<span class="number">-1</span>, <span class="number">0.0</span>)</span><br></pre></td></tr></table></figure>
+<p>其他的音乐先加载资源，在需要的地方播放。</p>
+<p>发射子弹</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">shoot</span><span class="params">(self, bullet_img)</span>:</span></span><br><span class="line">       shootMusic = pygame.mixer.Sound(<span class="string">'resources/sound/bullet.mp3'</span>)</span><br><span class="line">       bullet = Bullet(bullet_img, self.rect.midtop)</span><br><span class="line">       self.bullets.add(bullet)</span><br><span class="line">       shootMusic.play()</span><br></pre></td></tr></table></figure>
+<p>其他音乐处理一样，不多解释。</p>
+<h2 id="分数-amp-等级"><a href="#分数-amp-等级" class="headerlink" title="分数&amp;等级"></a>分数&amp;等级</h2><h3 id="分数"><a href="#分数" class="headerlink" title="分数"></a>分数</h3><p>首先绘制得分情况，在屏幕上显示多少分。</p>
+<p>绘制字体基本和绘制精灵是差不多的。首先要生成字体<br>两个参数分别是字体和字号<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">score_font = pygame.font.Font(<span class="keyword">None</span>, <span class="number">36</span>)</span><br></pre></td></tr></table></figure></p>
+<p>有了字体那么需要写点字。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">score_font.render(<span class="string">"分数"</span>,<span class="keyword">True</span>,(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>),(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br></pre></td></tr></table></figure>
+<p>第一个参数是写的文字；第二个参数是个布尔值，以为这是否开启抗锯齿，就是说True的话字体会比较平滑，不过相应的速度有一点点影响；第三个参数是字体的颜色；第四个是背景色，如果你想没有背景色（也就是透明），那么可以不加这第四个参数<br>字体也有了，文本也有了，下一步就是绘制。通过 <code>get_rect()</code> 获得矩形，之后绘制和精灵绘制方法一样</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">score_font = pygame.font.Font(<span class="keyword">None</span>, <span class="number">36</span>)</span><br><span class="line">score_text = score_font.render(<span class="string">'分数：0'</span>, <span class="keyword">True</span>, (<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>))</span><br><span class="line">text_rect = score_text.get_rect()</span><br><span class="line">text_rect.topleft = [<span class="number">10</span>, <span class="number">10</span>]</span><br><span class="line">screen.blit(score_text, text_rect)</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/scoreShow.jpg" alt=""></p>
+<p>分数已经显示了，就可以积分。我们每击落一个飞机增加 100 分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> enemy_shoots.shoot_index &gt; <span class="number">70</span>:</span><br><span class="line">           enemies_shoot.remove(enemy_shoots)</span><br><span class="line">           score += <span class="number">100</span></span><br><span class="line">           <span class="keyword">continue</span></span><br></pre></td></tr></table></figure>
+<p>我们还需要在文本的地方强制转换为 str 。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">score_text = score_font.render(str(score), <span class="keyword">True</span>, (<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="等级"><a href="#等级" class="headerlink" title="等级"></a>等级</h3><p>有了分数，那么再加点等级会使游戏更加有趣味性。</p>
+<p>同样的先绘制等级。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">level_font = pygame.font.Font(<span class="keyword">None</span>, <span class="number">42</span>)</span><br><span class="line">level_text = level_font.render(<span class="string">'Level '</span>+str(level), <span class="keyword">True</span>, (<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>))</span><br><span class="line">level_rect = level_text.get_rect()</span><br><span class="line">level_rect.midtop = [<span class="number">240</span>, <span class="number">10</span>]</span><br><span class="line">screen.blit(level_text, level_rect)</span><br></pre></td></tr></table></figure>
+<p>下一步就是写等级函数。<br>随着分数的增加，等级增加，飞机变多，等等。<br>首先写分数和等级的关系。<br>随便瞎写的函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> score == <span class="number">100</span> * (level ** <span class="number">2</span> + level):</span><br><span class="line">       level += <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>这个是控制敌机数量的，我们可以设定一个变量，使敌机越来越多。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ENEMY_PC % 500 == 0:</span><br></pre></td></tr></table></figure></p>
+<p>每增加一级，就添加敌机数量。等级也不能一直增加，所以当等级是摸个值的时候，就算最高级别了。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> score == <span class="number">100</span> * (level ** <span class="number">2</span> +  level):</span><br><span class="line">    level += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> level != <span class="number">10</span>:</span><br><span class="line">        enemy_add -= <span class="number">20</span></span><br></pre></td></tr></table></figure></p>
+<p>基本到这里算是写了一个相对完整的游戏。</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/end.jpg" alt=""></p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a href="https://github.com/youngxhui/PlaneWars" target="_blank" rel="external">Github地址</a></p>
+<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      杨晓辉
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://youngxhui.github.io/2017/06/22/python-实现微信打飞机/" title="python 实现微信打飞机">http://youngxhui.github.io/2017/06/22/python-实现微信打飞机/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/08/第一个-Android-项目/" rel="next" title="第一个 Android 项目">
+                <i class="fa fa-chevron-left"></i> 第一个 Android 项目
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/23/vim-基础学习/" rel="prev" title="vim 基础学习">
+                vim 基础学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="杨晓辉" />
+          <p class="site-author-name" itemprop="name">杨晓辉</p>
+           
+              <p class="site-description motion-element" itemprop="description">努力攒钱^ ^</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/youngxhui" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/young_xhui" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngxhui" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微信打飞机-python-实现"><span class="nav-number">1.</span> <span class="nav-text">微信打飞机 python 实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#所用技术和软件"><span class="nav-number">2.</span> <span class="nav-text">所用技术和软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">3.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术实现"><span class="nav-number">4.</span> <span class="nav-text">技术实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化-pygame"><span class="nav-number">4.1.</span> <span class="nav-text">初始化 pygame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示窗口"><span class="nav-number">4.2.</span> <span class="nav-text">显示窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示飞机"><span class="nav-number">4.3.</span> <span class="nav-text">显示飞机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让飞机-“飞”-起来"><span class="nav-number">4.4.</span> <span class="nav-text">让飞机 “飞” 起来</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Player的出现"><span class="nav-number">4.4.1.</span> <span class="nav-text">Player的出现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#player的控制"><span class="nav-number">4.4.2.</span> <span class="nav-text">player的控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让子弹飞"><span class="nav-number">4.5.</span> <span class="nav-text">让子弹飞</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制敌机"><span class="nav-number">4.6.</span> <span class="nav-text">绘制敌机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#碰撞检测"><span class="nav-number">4.7.</span> <span class="nav-text">碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#细节处理"><span class="nav-number">5.</span> <span class="nav-text">细节处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#精细的碰撞检测"><span class="nav-number">5.1.</span> <span class="nav-text">精细的碰撞检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画"><span class="nav-number">5.2.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#音乐"><span class="nav-number">5.3.</span> <span class="nav-text">音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分数-amp-等级"><span class="nav-number">5.4.</span> <span class="nav-text">分数&等级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分数"><span class="nav-number">5.4.1.</span> <span class="nav-text">分数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等级"><span class="nav-number">5.4.2.</span> <span class="nav-text">等级</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">6.</span> <span class="nav-text">代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨晓辉</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'island-1';
+      var disqus_identifier = '2017/06/22/python-实现微信打飞机/';
+
+      var disqus_title = "python 实现微信打飞机";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
