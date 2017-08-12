@@ -324,7 +324,7 @@
             目前共计 18 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/GitHub/" style="font-size: 24px; color: #4f4f4f">GitHub</a> <a href="/tags/Kotlin/" style="font-size: 12px; color: #ccc">Kotlin</a> <a href="/tags/LeetCode/" style="font-size: 27px; color: #303030">LeetCode</a> <a href="/tags/Maven/" style="font-size: 12px; color: #ccc">Maven</a> <a href="/tags/MyBatis/" style="font-size: 12px; color: #ccc">MyBatis</a> <a href="/tags/Python/" style="font-size: 15px; color: #adadad">Python</a> <a href="/tags/Spring/" style="font-size: 15px; color: #adadad">Spring</a> <a href="/tags/Vim/" style="font-size: 12px; color: #ccc">Vim</a> <a href="/tags/android/" style="font-size: 24px; color: #4f4f4f">android</a> <a href="/tags/java/" style="font-size: 30px; color: #111">java</a> <a href="/tags/windows/" style="font-size: 12px; color: #ccc">windows</a> <a href="/tags/加密/" style="font-size: 12px; color: #ccc">加密</a> <a href="/tags/博客/" style="font-size: 12px; color: #ccc">博客</a> <a href="/tags/工具/" style="font-size: 18px; color: #8e8e8e">工具</a> <a href="/tags/测试/" style="font-size: 12px; color: #ccc">测试</a> <a href="/tags/生活/" style="font-size: 21px; color: #6f6f6f">生活</a> <a href="/tags/算法/" style="font-size: 12px; color: #ccc">算法</a> <a href="/tags/蓝桥杯/" style="font-size: 15px; color: #adadad">蓝桥杯</a>
+          <a href="/tags/GitHub/" style="font-size: 24px; color: #4f4f4f">GitHub</a> <a href="/tags/Kotlin/" style="font-size: 15px; color: #adadad">Kotlin</a> <a href="/tags/LeetCode/" style="font-size: 27px; color: #303030">LeetCode</a> <a href="/tags/Maven/" style="font-size: 12px; color: #ccc">Maven</a> <a href="/tags/MyBatis/" style="font-size: 12px; color: #ccc">MyBatis</a> <a href="/tags/Python/" style="font-size: 15px; color: #adadad">Python</a> <a href="/tags/Spring/" style="font-size: 15px; color: #adadad">Spring</a> <a href="/tags/Vim/" style="font-size: 12px; color: #ccc">Vim</a> <a href="/tags/android/" style="font-size: 24px; color: #4f4f4f">android</a> <a href="/tags/java/" style="font-size: 30px; color: #111">java</a> <a href="/tags/windows/" style="font-size: 12px; color: #ccc">windows</a> <a href="/tags/加密/" style="font-size: 12px; color: #ccc">加密</a> <a href="/tags/博客/" style="font-size: 12px; color: #ccc">博客</a> <a href="/tags/工具/" style="font-size: 18px; color: #8e8e8e">工具</a> <a href="/tags/测试/" style="font-size: 12px; color: #ccc">测试</a> <a href="/tags/生活/" style="font-size: 21px; color: #6f6f6f">生活</a> <a href="/tags/算法/" style="font-size: 12px; color: #ccc">算法</a> <a href="/tags/蓝桥杯/" style="font-size: 15px; color: #adadad">蓝桥杯</a>
         </div>
       </div>
     
@@ -371,7 +371,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -766,6 +766,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
