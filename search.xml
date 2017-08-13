@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Next Greater Element I(#496)]]></title>
+      <url>%2F2017%2F08%2F13%2FLeetCode-Next-Greater-Element-I-496%2F</url>
+      <content type="text"><![CDATA[Next Greater Element I(#496) 编号 名称 等级 496 Next Greater Element I easy 思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。 代码1234567891011121314151617181920212223public class Solution &#123; public int[] nextGreaterElement(int[] findNums, int[] nums) &#123; int[] out = new int[findNums.length]; for (int i = 0; i &lt; findNums.length; i++) &#123; for (int j = 0; j &lt; nums.length; j++) &#123; if (findNums[i] == nums[j]) &#123; for (int k = 1; k &lt; nums.length - j; k++) &#123; if (j + 1 &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123; out[i] = nums[j + k]; findNums[i] = 0; break; &#125; &#125; if (findNums[i] != 0) &#123; out[i] = -1; break; &#125; &#125; &#125; &#125; return out; &#125;&#125; 这个代码在前面的测试数据可以过去，但是当测试数据到了后面的数的时候就 gg 了。 然后又又又看大神的代码。 通过 Stack 和 Map 进行操作。 代码123456789101112public int[] nextGreaterElement(int[] findNums, int[] nums) &#123; Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(); Stack&lt;Integer&gt; stack = new Stack&lt;&gt;(); for (int num : nums) &#123; while (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num) map.put(stack.pop(), num); stack.push(num); &#125; for (int i = 0; i &lt; findNums.length; i++) findNums[i] = map.getOrDefault(findNums[i], -1); return findNums;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[LeetCode:Nim Game(#292)]]></title>
       <url>%2F2017%2F08%2F13%2FLeetCode-Nim-Game-292%2F</url>
       <content type="text"><![CDATA[Nim Game(#292) 编号 名称 等级 292 Nim Game easy 思路这个题是让算几个石头的情况下会赢和会输。参考了一下大神答案，其中有一个很有趣，也很通俗易懂。 巧妙的找到了规律，只要是 4 的倍数，就会输。 代码123456public class Solution &#123; public boolean canWinNim(int n) &#123; if (n &lt;= 0) return false; return n % 4 != 0; &#125;&#125;]]></content>
