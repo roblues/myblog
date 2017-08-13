@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Nim Game(#292)]]></title>
+      <url>%2F2017%2F08%2F13%2FLeetCode-Nim-Game-292%2F</url>
+      <content type="text"><![CDATA[Nim Game(#292) 编号 名称 等级 292 Nim Game easy 思路这个题是让算几个石头的情况下会赢和会输。参考了一下大神答案，其中有一个很有趣，也很通俗易懂。 巧妙的找到了规律，只要是 4 的倍数，就会输。 代码123456public class Solution &#123; public boolean canWinNim(int n) &#123; if (n &lt;= 0) return false; return n % 4 != 0; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Kotlin 扩展函数/属性]]></title>
       <url>%2F2017%2F08%2F12%2FKotlin-%E6%89%A9%E5%B1%95%E5%87%BD%E6%95%B0-%E5%B1%9E%E6%80%A7%2F</url>
-      <content type="text"><![CDATA[前沿扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。 扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。 对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。 123456class Book(val name: String, var price: Int) &#123; val ISBN: Int = 123456789 fun add() &#123; println("Add a book,name is $name,price is $price,ISBN is $ISBN") &#125;&#125; 1fun Book.show() = add() 这样我们便完成了对 Book 类进行扩展。 在扩展函数中，可以使用原有类的方法，变量。 1234fun main(args: Array&lt;String&gt;) &#123; val book = Book("红楼梦", 50) book.show()&#125; 扩展是静态解析的扩展不能真正的修改他们所扩展的类。通过定义一个扩展，你并没有在一个类中插入新成员， 仅仅是可以通过该类型的变量用点表达式去调用这个新函数。 扩展属性扩展属性不能初始化器,所以只能是使用显示 get/set 方法进行定义。 任就采用上面的例子。给 Book 添加一个 profit 属性。 像这个样子，我们就定义了这个类的扩展属性 12val Book.profit: Int get() = price - 20 12345fun main(args: Array&lt;String&gt;) &#123; val book = Book("红楼梦", 50) book.show() println("book's profit is $&#123;book.profit&#125;")&#125; 更多关于扩展函数/方法的例子可以参考官方网站 kotlin官方文档(中文) kotlin官方文档(英文)]]></content>
+      <content type="text"><![CDATA[前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。 扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。 对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。 123456class Book(val name: String, var price: Int) &#123; val ISBN: Int = 123456789 fun add() &#123; println("Add a book,name is $name,price is $price,ISBN is $ISBN") &#125;&#125; 1fun Book.show() = add() 这样我们便完成了对 Book 类进行扩展。 在扩展函数中，可以使用原有类的方法，变量。 1234fun main(args: Array&lt;String&gt;) &#123; val book = Book("红楼梦", 50) book.show()&#125; 扩展是静态解析的扩展不能真正的修改他们所扩展的类。通过定义一个扩展，你并没有在一个类中插入新成员， 仅仅是可以通过该类型的变量用点表达式去调用这个新函数。 扩展属性扩展属性不能初始化器,所以只能是使用显示 get/set 方法进行定义。 任就采用上面的例子。给 Book 添加一个 profit 属性。 像这个样子，我们就定义了这个类的扩展属性 12val Book.profit: Int get() = price - 20 12345fun main(args: Array&lt;String&gt;) &#123; val book = Book("红楼梦", 50) book.show() println("book's profit is $&#123;book.profit&#125;")&#125; 更多关于扩展函数/方法的例子可以参考官方网站 kotlin官方文档(中文) kotlin官方文档(英文)]]></content>
     </entry>
 
     
