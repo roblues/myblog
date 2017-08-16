@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Judge Route Circle(#657)]]></title>
+      <url>%2F2017%2F08%2F16%2FLeetCode-Judge-Route-Circle-657%2F</url>
+      <content type="text"><![CDATA[Judge Route Circle(#657) 编号 名称 等级 521 Judge Route Circle easy 思路这个题先上图 终于有一次 前10% 了 （也许是人少而已），总体来说这个题其实很水。 判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的路一样就肯定在原点。所以只要统计一下就好。 代码12345678910111213141516171819202122232425262728293031public class Solution &#123; public boolean judgeCircle(String moves) &#123; int lCount = 0; int rCount = 0; int dCount = 0; int uCount = 0; char step[] = moves.toCharArray(); for (int i = 0; i &lt; step.length; i++) &#123; switch(step[i]) &#123; case 'L': lCount++; break; case 'R': rCount++; break; case 'U': uCount++; break; case 'D': dCount++; break; &#125; &#125; if (lCount == rCount &amp;&amp; uCount == dCount) &#123; return true; &#125;else&#123; return false; &#125; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[LeetCode:Longest Uncommon Subsequence I(#521)]]></title>
+      <url>%2F2017%2F08%2F16%2FLeetCode-Longest-Uncommon-Subsequence-I-521%2F</url>
+      <content type="text"><![CDATA[LeetCode:Longest Uncommon Subsequence I(#521) 编号 名称 等级 521 Longest Uncommon Subsequence easy 思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。 代码123456789public class Solution &#123; public int findLUSlength(String a, String b) &#123; if (a.equals(b))&#123; return -1; &#125;else&#123; return a.length() &gt; b.length() ? a.length() : b.length(); &#125; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[LeetCode:Next Greater Element I(#496)]]></title>
       <url>%2F2017%2F08%2F13%2FLeetCode-Next-Greater-Element-I-496%2F</url>
       <content type="text"><![CDATA[Next Greater Element I(#496) 编号 名称 等级 496 Next Greater Element I easy 思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。 代码1234567891011121314151617181920212223public class Solution &#123; public int[] nextGreaterElement(int[] findNums, int[] nums) &#123; int[] out = new int[findNums.length]; for (int i = 0; i &lt; findNums.length; i++) &#123; for (int j = 0; j &lt; nums.length; j++) &#123; if (findNums[i] == nums[j]) &#123; for (int k = 1; k &lt; nums.length - j; k++) &#123; if (j + 1 &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123; out[i] = nums[j + k]; findNums[i] = 0; break; &#125; &#125; if (findNums[i] != 0) &#123; out[i] = -1; break; &#125; &#125; &#125; &#125; return out; &#125;&#125; 这个代码在前面的测试数据可以过去，但是当测试数据到了后面的数的时候就 gg 了。 然后又又又看大神的代码。 通过 Stack 和 Map 进行操作。 代码123456789101112public int[] nextGreaterElement(int[] findNums, int[] nums) &#123; Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(); Stack&lt;Integer&gt; stack = new Stack&lt;&gt;(); for (int num : nums) &#123; while (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num) map.put(stack.pop(), num); stack.push(num); &#125; for (int i = 0; i &lt; findNums.length; i++) findNums[i] = map.getOrDefault(findNums[i], -1); return findNums;&#125;]]></content>
@@ -89,7 +103,7 @@
     <entry>
       <title><![CDATA[LeetCode:Two Sum (#1)]]></title>
       <url>%2F2017%2F08%2F01%2FLeetCode-Two-Sum-1%2F</url>
-      <content type="text"><![CDATA[Two Sum(#1) 编号 名称 等级 561 Array Partition I easy 思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。 这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。 代码1234567891011121314public class Solution &#123; public int[] twoSum(int[] nums, int target) &#123; int[] sum=new int[2]; for(int i=0;i&lt;nums.length;i++)&#123; for (int j = i+1; j&lt;nums.length;j++)&#123; if(target == nums[i] + nums [j])&#123; sum[0] = i; sum[1] = j; &#125; &#125; &#125; return sum; &#125;&#125;]]></content>
+      <content type="text"><![CDATA[Two Sum(#1) 编号 名称 等级 1 Two Sum easy 思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。 这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。 代码1234567891011121314public class Solution &#123; public int[] twoSum(int[] nums, int target) &#123; int[] sum=new int[2]; for(int i=0;i&lt;nums.length;i++)&#123; for (int j = i+1; j&lt;nums.length;j++)&#123; if(target == nums[i] + nums [j])&#123; sum[0] = i; sum[1] = j; &#125; &#125; &#125; return sum; &#125;&#125;]]></content>
     </entry>
 
     
