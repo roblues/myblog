@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 
 
@@ -10,13 +10,6 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
 
 
 
@@ -75,7 +68,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -87,7 +80,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -111,9 +104,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -123,8 +115,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -137,11 +129,24 @@
 
 
 
-  <title>ISLAND</title>
+  <title> ISLAND </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
 
 
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97406003-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
   <script type="text/javascript">
@@ -157,9 +162,11 @@
 
 
 
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+
+
 
   
   
@@ -243,21 +250,45 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
             
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            公益404
+            搜索
           </a>
         </li>
-      
-
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -281,17 +312,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/08/05/FlaotActionButton详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -304,8 +331,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/08/05/FlaotActionButton详解/" itemprop="url">FlaotActionButton详解</a></h1>
+                <a class="post-title-link" href="/2016/08/05/FlaotActionButton详解/" itemprop="url">
+                  FlaotActionButton详解
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -323,24 +358,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-02T20:43:57+08:00">
+                2017-08-02
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/05/FlaotActionButton详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/08/05/FlaotActionButton详解/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -352,7 +388,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -361,6 +397,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  374
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -368,9 +434,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -379,42 +443,34 @@
       
         
           
-            <pre><code>今天把Android的学习的一些东西记录一下，方便日后使用。
-</code></pre><h1 id="FlaotActionButton详解"><a href="#FlaotActionButton详解" class="headerlink" title="FlaotActionButton详解"></a>FlaotActionButton详解</h1><p>FlaotActionButton是android的一个很好用的控件。<br>在看了很多源码后逐步掌握一些知识了。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/5798408d91ee074073000000.gif" alt=""></p>
-<h2 id="导入依赖项"><a href="#导入依赖项" class="headerlink" title="导入依赖项"></a>导入依赖项</h2><p>首先要在build.gradle中导入依赖项</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(<span class="keyword">include</span>: [<span class="string">'*.jar'</span>], dir: <span class="string">'libs'</span>)</span><br><span class="line">    testCompile <span class="string">'junit:junit:4.12'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:appcompat-v7:24.1.1'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:design:24.1.1'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'com.getbase:floatingactionbutton:1.10.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="https://github.com/futuresimple/android-floating-action-button" target="_blank" rel="external">GitHub地址</a></p>
-<p>代码</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">com.getbase.floatingactionbutton.FloatingActionsMenu</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_alignParentBottom</span>=<span class="string">"true"</span></span><br><span class="line">        <span class="attr">android:layout_alignParentEnd</span>=<span class="string">"true"</span></span><br><span class="line">        <span class="attr">android:layout_marginBottom</span>=<span class="string">"31dp"</span></span><br><span class="line">        <span class="attr">android:layout_marginEnd</span>=<span class="string">"32dp"</span></span><br><span class="line">        <span class="attr">app:fab_addButtonSize</span>=<span class="string">"normal"</span></span><br><span class="line">        <span class="attr">app:fab_labelStyle</span>=<span class="string">"@style/menu_labels_style"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">com.getbase.floatingactionbutton.FloatingActionButton</span></span><br><span class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/fab_carm"</span></span><br><span class="line">            <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">            <span class="attr">app:backgroundTint</span>=<span class="string">"@color/colorPrimary"</span></span><br><span class="line">            <span class="attr">app:fabSize</span>=<span class="string">"mini"</span></span><br><span class="line">            <span class="attr">app:fab_title</span>=<span class="string">"拍照"</span></span><br><span class="line">            <span class="attr">fab:fab_icon</span>=<span class="string">"@drawable/ic_add_a_photo_black_24dp"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">com.getbase.floatingactionbutton.FloatingActionButton</span></span><br><span class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/fab_etid"</span></span><br><span class="line">            <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">            <span class="attr">app:fabSize</span>=<span class="string">"mini"</span></span><br><span class="line">            <span class="attr">app:fab_title</span>=<span class="string">"录入"</span></span><br><span class="line">            <span class="attr">fab:fab_icon</span>=<span class="string">"@drawable/ic_border_color_black_24dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">com.getbase.floatingactionbutton.FloatingActionButton</span></span><br><span class="line">            <span class="attr">android:id</span>=<span class="string">"@+id/fab_pic"</span></span><br><span class="line">            <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">            <span class="attr">app:fabSize</span>=<span class="string">"mini"</span></span><br><span class="line">            <span class="attr">app:fab_title</span>=<span class="string">"识别图片"</span></span><br><span class="line">            <span class="attr">fab:fab_icon</span>=<span class="string">"@drawable/ic_photo_black_24dp"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">com.getbase.floatingactionbutton.FloatingActionsMenu</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>要适配<code>menu_labels_style</code>才可以使用FloatingActionsMenu<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"menu_labels_style"</span>&gt;</span><span class="xml"></span><br><span class="line">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:background"</span>&gt;</span>@drawable/fab_label_background<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:textColor"</span>&gt;</span>@color/white<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>适配<code>fab_label_background</code></p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
-    &lt;solid android:color=&quot;@color/black_semi_transparent&quot;/&gt;
-    &lt;padding
-        android:left=&quot;16dp&quot;
-        android:top=&quot;4dp&quot;
-        android:right=&quot;16dp&quot;
-        android:bottom=&quot;4dp&quot;/&gt;
-    &lt;corners
-        android:radius=&quot;2dp&quot;/&gt;
-&lt;/shape&gt;
-</code></pre><h2 id="解析FloatActionButton代码"><a href="#解析FloatActionButton代码" class="headerlink" title="解析FloatActionButton代码"></a>解析FloatActionButton代码</h2><p>FloatActionButton中<br>通过<strong>app:fabSize</strong>来确定大小<strong>normal</strong>，<strong>mini</strong>，<strong>auto</strong>。<br>通过<strong>app:fab_title</strong>设置文字。<br><strong>fab:fab_icon</strong>设置图标。</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          今天把Android的学习的一些东西记录一下，方便日后使用。
+FlaotActionButton详解FlaotActionButton是android的一个很好用的控件。在看了很多源码后逐步掌握一些知识了。
+
+导入依赖项首先要在build.gradle中导入依赖项
+12345678dependenc
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/05/FlaotActionButton详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -428,10 +484,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -444,17 +496,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/07/21/AndroidManifest-xml详细介绍/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -467,8 +515,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/07/21/AndroidManifest-xml详细介绍/" itemprop="url">AndroidManifest.xml详细介绍</a></h1>
+                <a class="post-title-link" href="/2016/07/21/AndroidManifest-xml详细介绍/" itemprop="url">
+                  AndroidManifest.xml详细介绍
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -486,24 +542,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:03:36+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/21/AndroidManifest-xml详细介绍/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/21/AndroidManifest-xml详细介绍/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -515,7 +572,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -524,6 +581,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  5,686
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  23
+                </span>
+              
+            </div>
+          
 
           
 
@@ -531,9 +618,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -542,269 +627,32 @@
       
         
           
-            <p>#AndroidManifest.xml详细介绍</p>
-<p><strong>基于Android Studio 2.1目录 </strong></p>
-<h2 id="一、关于AndroidManifest-xml"><a href="#一、关于AndroidManifest-xml" class="headerlink" title="一、关于AndroidManifest.xml"></a>一、关于AndroidManifest.xml</h2><p>AndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文件。AndroidManifast.xml清单文件说明了该应用的名称，所使用的图标等。</p>
-<p>AndroidManifest.xml清单文件通常包含以下的信息：</p>
-<blockquote>
-<p>1.应用程序的包名。</p>
-<ol>
-<li>应用所含的组件，如Activity，Service，BroadcastReceiver和ContentProvider等。</li>
-<li>应用程序兼容的最低版本。</li>
-<li>应用要使用的权限。<br>5.其他程序访问该应用需要的权限。</li>
-</ol>
-</blockquote>
-<h2 id="二、AndroidManifest-xml结构"><a href="#二、AndroidManifest-xml结构" class="headerlink" title="二、AndroidManifest.xml结构"></a>二、AndroidManifest.xml结构</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xmlversion="1.0"encoding="utf-8"?&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">activity</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">action</span>/&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">category</span>/&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">activity-alias</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br><span class="line">      </span><br><span class="line">       <span class="tag">&lt;<span class="name">service</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">receiver</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">provider</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">grant-uri-permission</span>/&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">provider</span>&gt;</span></span><br><span class="line"></span><br><span class="line">       <span class="tag">&lt;<span class="name">uses-library</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission-tree</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">permission-group</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">instrumentation</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-sdk</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-configuration</span>/&gt;</span> </span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-feature</span>/&gt;</span> </span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">supports-screens</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="三、各个节点的详细介绍"><a href="#三、各个节点的详细介绍" class="headerlink" title="三、各个节点的详细介绍"></a>三、各个节点的详细介绍</h2><p> 上面就是整个androidManifest.xml的结构，下面以外向内开始阐述～～</p>
-<h3 id="1、第一层-Manifest属性"><a href="#1、第一层-Manifest属性" class="headerlink" title="1、第一层:Manifest属性"></a>1、第一层:Manifest属性</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">manifest</span>  <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">          <span class="attr">package</span>=<span class="string">"com.woody.test"</span></span><br><span class="line">          <span class="attr">android:sharedUserId</span>=<span class="string">"string"</span></span><br><span class="line">          <span class="attr">android:sharedUserLabel</span>=<span class="string">"string resource"</span></span><br><span class="line">          <span class="attr">android:versionCode</span>=<span class="string">"integer"</span></span><br><span class="line">          <span class="attr">android:versionName</span>=<span class="string">"string"</span></span><br><span class="line">          <span class="attr">android:installLocation</span>=<span class="string">[</span>"<span class="attr">auto</span>" | "<span class="attr">internalOnly</span>" | "<span class="attr">preferExternal</span>"] &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>xmlns:android</li>
-</ul>
-<p>定义android命名空间，一般为<a href="http://schemas.android.com/apk/res/android，这样使得Android中各种标准属性能在文件中使用，提供了大部分元素中的数据。" target="_blank" rel="external">http://schemas.android.com/apk/res/android，这样使得Android中各种标准属性能在文件中使用，提供了大部分元素中的数据。</a></p>
-<ul>
-<li>package</li>
-</ul>
-<p>指定本应用内java主程序包的包名，它也是一个应用进程的默认名称</p>
-<ul>
-<li>sharedUserId</li>
-</ul>
-<p>表明数据权限，因为默认情况下，Android给每个APK分配一个唯一的UserID，所以是默认禁止不同APK访问共享数据的。若要共享数据，第一可以采用Share Preference方法，第二种就可以采用sharedUserId了，将不同APK的sharedUserId都设为一样，则这些APK之间就可以互相共享数据了。详见：<a href="http://wallage.blog.163.com/blog/static/17389624201011010539408/" target="_blank" rel="external">http://wallage.blog.163.com/blog/static/17389624201011010539408/</a></p>
-<ul>
-<li>sharedUserLabel</li>
-</ul>
-<p>一个共享的用户名，它只有在设置了sharedUserId属性的前提下才会有意义</p>
-<ul>
-<li>versionCode</li>
-</ul>
-<p>是给<strong>设备</strong>程序识别版本(升级)用的必须是一个interger值代表app更新过多少次，比如第一版一般为1，之后若要更新版本就设置为2，3等等。</p>
-<ul>
-<li>versionName</li>
-</ul>
-<p>这个名称是给<strong>用户</strong>看的，你可以将你的APP版本号设置为1.1版，后续更新版本设置为1.2、2.0版本等等。</p>
-<ul>
-<li>installLocation</li>
-</ul>
-<p>安装参数，是Android2.2中的一个新特性，installLocation有三个值可以选择：internalOnly、auto、preferExternal</p>
-<p>选择<strong>preferExternal</strong>,系统会优先考虑将APK安装到SD卡上(当然最终用户可以选择为内部ROM存储上，如果SD存储已满，也会安装到内部存储上)</p>
-<p>选择<strong>auto</strong>，系统将会根据存储空间自己去适应</p>
-<p>选择<strong>internalOnly</strong>是指必须安装到内部才能运行</p>
-<p><strong>注：需要进行后台类监控的APP最好安装在内部，而一些较大的游戏APP最好安装在SD卡上。现默认为安装在内部，如果把APP安装在SD卡上，首先得设置你的level为8，并且要配置android:installLocation这个参数的属性为preferExternal</strong></p>
-<h3 id="2、第二层-Application属性"><a href="#2、第二层-Application属性" class="headerlink" title="2、第二层:Application属性"></a>2、第二层:Application属性</h3><p>一个AndroidManifest.xml中必须含有一个Application标签，这个标签声明了每一个应用程序的组件及其属性(如icon,label,permission等)</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span>  <span class="attr">android:allowClearUserData</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:allowTaskReparenting</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:backupAgent</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:debuggable</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:description</span>=<span class="string">"string resource"</span></span><br><span class="line">             <span class="attr">android:enabled</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:hasCode</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">             <span class="attr">android:killAfterRestore</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">             <span class="attr">android:manageSpaceActivity</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:permission</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:persistent</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:process</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:restoreAnyVersion</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">             <span class="attr">android:taskAffinity</span>=<span class="string">"string"</span></span><br><span class="line">             <span class="attr">android:theme</span>=<span class="string">"resource or theme"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>android:allowClearUserData(‘true’ or ‘false’)</li>
-</ul>
-<p>用户是否能选择自行清除数据，<strong>默认为true</strong>，程序管理器包含一个选择允许用户清除数据。当为true时，用户可自己清理用户数据，反之亦然</p>
-<ul>
-<li>android:allowTaskReparenting(‘true’ or ‘false’)</li>
-</ul>
-<p>是否允许activity更换从属的任务，比如从短信息任务切换到浏览器任务</p>
-<ul>
-<li>android:backupAgent</li>
-</ul>
-<p>这也是Android2.2中的一个新特性，设置该APP的备份，属性值应该是一个完整的类名，如com.project.TestCase，此属性并没有默认值，并且类名必须得指定(就是个备份工具，将数据备份到云端的操作)</p>
-<ul>
-<li>android:debuggable</li>
-</ul>
-<p>这个从字面上就可以看出是什么作用的，当设置为true时，表明该APP在手机上可以被调试。<strong>默认为false</strong>,在false的情况下调试该APP，就会报以下错误：</p>
-<p><em>Device XXX requires that applications explicitely declare themselves as debuggable in their manifest.</em></p>
-<p> <em>Application XXX does not have the attribute ‘debuggable’ set to TRUE in its manifest and cannot be debugged.</em></p>
-<ul>
-<li>android:description/android:label</li>
-</ul>
-<p>此两个属性都是为许可提供的，均为字符串资源，当用户去看许可列表(android:label)或者某个许可的详细信息(android:description)时，这些字符串资源就可以显示给用户。label应当尽量简短，之需要告知用户该许可是在保护什么功能就行。而description可以用于具体描述获取该许可的程序可以做哪些事情，实际上让用户可以知道如果他们同意程序获取该权限的话，该程序可以做什么。我们通常用两句话来描述许可，第一句描述该许可，第二句警告用户如果批准该权限会可能有什么不好的事情发生</p>
-<ul>
-<li>android:enabled</li>
-</ul>
-<p>Android系统是否能够实例化该应用程序的组件，如果为true，每个组件的enabled属性决定那个组件是否可以被 enabled。如果为false，它覆盖组件指定的值；所有组件都是disabled。</p>
-<ul>
-<li>android:hasCode(‘true’ or ‘false’)</li>
-</ul>
-<p>表示此APP是否包含任何的代码，<strong>默认为true</strong>，若为false，则系统在运行组件时，不会去尝试加载任何的APP代码</p>
-<p>一个应用程序自身不会含有任何的代码，除非内置组件类，比如Activity类，此类使用了AliasActivity类，当然这是个罕见的现象</p>
-<p>(在Android2.3可以用标准C来开发应用程序，可在androidManifest.xml中将此属性设置为false,因为这个APP本身已经不含有任何的JAVA代码了)</p>
-<ul>
-<li>android:icon</li>
-</ul>
-<p>整个APP的图标，图片一般都放在drawable文件夹下。</p>
-<ul>
-<li>android:killAfterRestore</li>
-</ul>
-<p>在执行全系统的恢复操作时，配置恢复后相关的应用程序是否要被终止。 单个包的恢复操作不会导致程序被关闭。 全系统的恢复操作一般只会发生一次，即第一次配置手机时。 第三方应用程序通常不需要用到本属性。<br>默认值是“true”，表示全系统恢复过程中，应用程序在处理完数据后将被关闭。</p>
-<ul>
-<li>android:manageSpaceActivity</li>
-</ul>
-<p>指定某个 Activity 子类的完全限定名称，系统可以启动此 Activity 来让用户管理应用程序占用的内存空间。 这个 Activity 必须已用<figure class="highlight plain"><figcaption><span>activity > ```元素进行了声明。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* android:name</span><br><span class="line"></span><br><span class="line">为应用程序所实现的Application子类的全名。当应用程序进程开始时，该类在所有应用程序组件之前被实例化。</span><br><span class="line"></span><br><span class="line">若该类(比方androidMain类)是在声明的package下，则可以直接声明android:name=&quot;androidMain&quot;,但此类是在package下面的子包的话，就必须声明为全路径或android:name=&quot;package名称.子包名成.androidMain&quot;</span><br><span class="line"></span><br><span class="line">* android:permission</span><br><span class="line"></span><br><span class="line">设置许可名，这个属性若在```&lt;application&gt;```上定义的话，是一个给应用程序的所有组件设置许可的便捷方式，当然它是被各组件设置的许可名所覆盖的</span><br><span class="line"></span><br><span class="line">* android:presistent</span><br><span class="line"></span><br><span class="line">该应用程序是否应该在任何时候都保持运行状态,默认为false。因为应用程序通常不应该设置本标识，持续模式仅仅应该设置给某些系统应用程序才是有意义的。</span><br><span class="line"></span><br><span class="line">* android:process</span><br><span class="line"></span><br><span class="line">应用程序运行的进程名，它的默认值为```&lt;manifest&gt;```元素里设置的包名，当然每个组件都可以通过设置该属性来覆盖默认值。如果你想两个应用程序共用一个进程的话，你可以设置他们的android:process相同，但前提条件是他们共享一个用户ID及被赋予了相同证书的时候</span><br><span class="line"></span><br><span class="line">* android:restoreAnyVersion</span><br><span class="line"></span><br><span class="line">同样也是android2.2的一个新特性，用来表明应用是否准备尝试恢复所有的备份，甚至该备份是比当前设备上更要新的版本，默认是false</span><br><span class="line"></span><br><span class="line">* android:taskAffinity</span><br><span class="line"></span><br><span class="line">拥有相同的affinity的Activity理论上属于相同的Task，应用程序默认的affinity的名字是&lt;manifest&gt;元素中设定的package名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* android:theme</span><br><span class="line"></span><br><span class="line">是一个资源的风格，它定义了一个默认的主题风格给所有的activity,当然也可以在自己的theme里面去设置它，有点类似style。</span><br><span class="line"></span><br><span class="line">### 3、第三层:Activity属性</span><br><span class="line"></span><br><span class="line">```xml</span><br><span class="line"></span><br><span class="line">        &lt;activity android:allowTaskReparenting=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:alwaysRetainTaskState=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:clearTaskOnLaunch=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:configChanges=[&quot;mcc&quot;, &quot;mnc&quot;, &quot;locale&quot;,</span><br><span class="line">                                         &quot;touchscreen&quot;, &quot;keyboard&quot;, &quot;keyboardHidden&quot;,</span><br><span class="line">                                         &quot;navigation&quot;, &quot;orientation&quot;, &quot;screenLayout&quot;,</span><br><span class="line">                                         &quot;fontScale&quot;, &quot;uiMode&quot;]</span><br><span class="line">                  android:enabled=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:excludeFromRecents=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:exported=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:finishOnTaskLaunch=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:icon=&quot;drawable resource&quot;</span><br><span class="line">                  android:label=&quot;string resource&quot;</span><br><span class="line">                  android:launchMode=[&quot;multiple&quot; | &quot;singleTop&quot; |</span><br><span class="line">                                      &quot;singleTask&quot; | &quot;singleInstance&quot;]</span><br><span class="line">                  android:multiprocess=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:name=&quot;string&quot;</span><br><span class="line">                  android:noHistory=[&quot;true&quot; | &quot;false&quot;]  </span><br><span class="line">                  android:permission=&quot;string&quot;</span><br><span class="line">                  android:process=&quot;string&quot;</span><br><span class="line">                  android:screenOrientation=[&quot;unspecified&quot; | &quot;user&quot; | &quot;behind&quot; |</span><br><span class="line">                                             &quot;landscape&quot; | &quot;portrait&quot; |</span><br><span class="line">                                             &quot;sensor&quot; | &quot;nosensor&quot;]</span><br><span class="line">                  android:stateNotNeeded=[&quot;true&quot; | &quot;false&quot;]</span><br><span class="line">                  android:taskAffinity=&quot;string&quot;</span><br><span class="line">                  android:theme=&quot;resource or theme&quot;</span><br><span class="line">                  android:windowSoftInputMode=[&quot;stateUnspecified&quot;,</span><br><span class="line">                                               &quot;stateUnchanged&quot;, &quot;stateHidden&quot;,</span><br><span class="line">                                               &quot;stateAlwaysHidden&quot;, &quot;stateVisible&quot;,</span><br><span class="line">                                               &quot;stateAlwaysVisible&quot;, &quot;adjustUnspecified&quot;,</span><br><span class="line">                                               &quot;adjustResize&quot;, &quot;adjustPan&quot;] &gt;   </span><br><span class="line">    </span><br><span class="line">    &lt;/activity&gt;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>android:alwaysRetainTaskState</li>
-</ul>
-<p><strong>是否保留状态不变</strong>， 比如切换回home, 再从新打开，activity处于最后的状态。比如一个浏览器拥有很多状态(当打开了多个TAB的时候)，用户并不希望丢失这些状态时，此时可将此属性设置为true</p>
-<ul>
-<li><p>android:clearTaskOnLaunch<br>比如 P 是 activity, Q 是被P 触发的 activity, 然后返回Home, 重新启动 P，是否显示 Q</p>
-</li>
-<li><p>android:configChanges</p>
-</li>
-</ul>
-<p>当配置list发生修改时， 是否调用 onConfigurationChanged() 方法  比如 “locale|navigation|orientation”.<br>这个我用过,主要用来看手机方向改变的. android手机在旋转后,layout会重新布局, 如何做到呢?<br>正常情况下. 如果手机旋转了.当前Activity后杀掉,然后根据方向重新加载这个Activity. 就会从onCreate开始重新加载.<br>如果你设置了 这个选项, 当手机旋转后,当前Activity之后调用onConfigurationChanged() 方法. 而不跑onCreate方法等.</p>
-<ul>
-<li>android:excludeFromRecents</li>
-</ul>
-<p>是否可被显示在最近打开的activity列表里，默认是false</p>
-<ul>
-<li>android:finishOnTaskLaunch</li>
-</ul>
-<p>当用户重新启动这个任务的时候，是否关闭已打开的activity，默认是false</p>
-<p><strong>如果这个属性和allowTaskReparenting都是true,这个属性就是王牌。Activity的亲和力将被忽略。该Activity已经被摧毁并非re-parented</strong></p>
-<ul>
-<li>android:launchMode(Activity加载模式)</li>
-</ul>
-<p>在多Activity开发中，有可能是自己应用之间的Activity跳转，或者夹带其他应用的可复用Activity。可能会希望跳转到原来某个Activity实例，而不是产生大量重复的Activity。这需要为Activity配置特定的加载模式，而不是使用默认的加载模式</p>
-<p>Activity有四种加载模式：</p>
-<p><strong>standard</strong>、<strong>singleTop</strong>、<strong>singleTask</strong>、<strong>singleInstance</strong>(其中前两个是一组、后两个是一组)，默认为standard </p>
-<ol>
-<li><p>standard：就是intent将发送给新的实例，所以每次跳转都会生成新的activity。</p>
-</li>
-<li><p>singleTop：也是发送新的实例，但不同standard的一点是，在请求的Activity正好位于栈顶时(配置成singleTop的Activity)，不会构造新的实例</p>
-</li>
-<li><p>singleTask：和后面的singleInstance都只创建一个实例，当intent到来，需要创建设置为singleTask的Activity的时候，系统会检查栈里面是否已经有该Activity的实例。如果有直接将intent发送给它。</p>
-</li>
-<li><p>singleInstance：首先说明一下task这个概念，Task可以认为是一个栈，可放入多个Activity。比如启动一个应用，那么Android就创建了一个Task，然后启动这个应用的入口Activity，那在它的界面上调用其他的Activity也只是在这个task里面。那如果在多个task中共享一个Activity的话怎么办呢。举个例来说，如果开启一个导游服务类的应用程序，里面有个Activity是开启GOOGLE地图的，当按下home键退回到主菜单又启动GOOGLE地图的应用时，显示的就是刚才的地图，实际上是同一个Activity，实际上这就引入了singleInstance。singleInstance模式就是将该Activity单独放入一个栈中，这样这个栈中只有这一个Activity，不同应用的intent都由这个Activity接收和展示，这样就做到了共享。当然前提是这些应用都没有被销毁，所以刚才是按下的HOME键，如果按下了返回键，则无效</p>
-</li>
-</ol>
-<ul>
-<li>android:multiprocess</li>
-</ul>
-<p>是否允许多进程，默认是false</p>
-<ul>
-<li>android:noHistory</li>
-</ul>
-<p>当用户从Activity上离开并且它在屏幕上不再可见时，Activity是否从Activity stack中清除并结束。默认是false。Activity不会留下历史痕迹</p>
-<ul>
-<li>android:screenOrientation</li>
-</ul>
-<p>activity显示的模式</p>
-<p>默认为unspecified：由系统自动判断显示方向</p>
-<p>landscape横屏模式，宽度比高度大</p>
-<p>portrait竖屏模式, 高度比宽度大</p>
-<p>user模式，用户当前首选的方向</p>
-<p>behind模式：和该Activity下面的那个Activity的方向一致(在Activity堆栈中的)</p>
-<p>sensor模式：有物理的感应器来决定。如果用户旋转设备这屏幕会横竖屏切换</p>
-<p>nosensor模式：忽略物理感应器，这样就不会随着用户旋转设备而更改了</p>
-<ul>
-<li>android:stateNotNeeded</li>
-</ul>
-<p>activity被销毁或者成功重启时是否保存状态</p>
-<ul>
-<li>android:windowSoftInputMode</li>
-</ul>
-<p>activity主窗口与软键盘的交互模式，可以用来避免输入法面板遮挡问题，Android1.5后的一个新特性。</p>
-<p>这个属性能影响两件事情：</p>
-<p>【A】当有焦点产生时，软键盘是隐藏还是显示</p>
-<p>【B】是否减少活动主窗口大小以便腾出空间放软键盘</p>
-<p>各值的含义：</p>
-<p>【A】stateUnspecified：软键盘的状态并没有指定，系统将选择一个合适的状态或依赖于主题的设置</p>
-<p>【B】stateUnchanged：当这个activity出现时，软键盘将一直保持在上一个activity里的状态，无论是隐藏还是显示</p>
-<p>【C】stateHidden：用户选择activity时，软键盘总是被隐藏</p>
-<p>【D】stateAlwaysHidden：当该Activity主窗口获取焦点时，软键盘也总是被隐藏的</p>
-<p>【E】stateVisible：软键盘通常是可见的</p>
-<p>【F】stateAlwaysVisible：用户选择activity时，软键盘总是显示的状态</p>
-<p>【G】adjustUnspecified：默认设置，通常由系统自行决定是隐藏还是显示</p>
-<p>【H】adjustResize：该Activity总是调整屏幕的大小以便留出软键盘的空间</p>
-<p>【I】adjustPan：当前窗口的内容将自动移动以便当前焦点从不被键盘覆盖和用户能总是看到输入内容的部分</p>
-<h3 id="4、第四层intent-filter"><a href="#4、第四层intent-filter" class="headerlink" title="4、第四层intent-filter"></a>4、第四层intent-filter</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">intent-filter</span>  <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">               <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">               <span class="attr">android:priority</span>=<span class="string">"integer"</span> &gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">action</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">category</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">data</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>intent-filter属性</p>
-<p>android:priority(解释：有序广播主要是按照声明的优先级别，如A的级别高于B，那么，广播先传给A，再传给B。优先级别就是用设置priority属性来确定，范围是从-1000～1000，<strong>数越大优先级别越高</strong>)</p>
-<p>Intent filter内会设定的资料包括action,data与category三种。也就是说filter只会与intent里的这三种资料作对比动作</p>
-<p>action属性</p>
-<p>action很简单，只有android:name这个属性。常见的android:name值为android.intent.action.MAIN，表明此activity是作为应用程序的入口。</p>
-<p>category属性</p>
-<p>category也只有android:name属性。常见的android:name值为android.intent.category.LAUNCHER(决定应用程序是否显示在程序列表里)</p>
-<p>data属性</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">data</span>  <span class="attr">android:host</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:mimeType</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:path</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:pathPattern</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:pathPrefix</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:port</span>=<span class="string">"string"</span></span><br><span class="line">      <span class="attr">android:scheme</span>=<span class="string">"string"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>每个<data>元素指定一个URI和数据类型（MIME类型）。它有四个属性scheme、host、port、path对应于URI的每个部分：<br>scheme://host:port/path</data></li>
-</ul>
-<p>scheme的值一般为”http”，host为包名，port为端口号，path为具体地址。如：<a href="http://com.test.project:200/folder/etc" target="_blank" rel="external">http://com.test.project:200/folder/etc</a></p>
-<p>其中host和port合起来构成URI的凭据(authority)，如果host没有指定，则port也会被忽略</p>
-<p>要让authority有意义，scheme也必须要指定。要让path有意义，scheme+authority也必须要指定</p>
-<ul>
-<li><p>mimeType（指定数据类型），若mimeType为’Image’，则会从content Provider的指定地址中获取image类型的数据。还有’video’啥的，若设置为video/mp4，则表示在指定地址中获取mp4格式的video文件</p>
-</li>
-<li><p>而pathPattern和PathPrefix主要是为了格式化path所使用的</p>
-</li>
-</ul>
-<p>5、第四层meta-data</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">           <span class="attr">android:resource</span>=<span class="string">"resource specification"</span></span><br><span class="line">           <span class="attr">android:value</span>=<span class="string">"string"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这是该元素的基本结构.可以包含在<activity> <activity-alias> <service> <receiver>四个元素中。</receiver></service></activity-alias></activity></p>
-<p>android:name（解释：元数据项的名字，为了保证这个名字是唯一的，采用java风格的命名规范，如com.woody.project.fried)</p>
-<p>android:resource(解释：资源的一个引用，指定给这个项的值是该资源的id。该id可以通过方法Bundle.getInt()来从meta-data中找到。)</p>
-<p>android:value(解释：指定给这一项的值。可以作为值来指定的数据类型并且组件用来找回那些值的Bundle方法：[getString],[getInt],[getFloat],[getString],[getBoolean])</p>
-<p>6、第三层<activity-alias>属性<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity-alias</span> <span class="attr">android:enabled</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                <span class="attr">android:exported</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">                <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">                <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">                <span class="attr">android:permission</span>=<span class="string">"string"</span></span><br><span class="line">                <span class="attr">android:targetActivity</span>=<span class="string">"string"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">intent-filter</span>/&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">meta-data</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br></pre></td></tr></table></figure></activity-alias></p>
-<p><activity-alias>是为activity创建快捷方式的，如下实例：</activity-alias></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".shortcut"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">activity-alias</span> <span class="attr">android:name</span>=<span class="string">".CreateShortcuts"</span> <span class="attr">android:targetActivity</span>=<span class="string">".shortcut"</span> <span class="attr">android:label</span>=<span class="string">"@string/shortcut"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line">             <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.CREATE_SHORTCUT"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">             <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">activity-alias</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其中android.targetActivity是指向对应快捷方式的activity,如上述的shortcut(此Activity名)</p>
-<p>android:label是指快捷方式的名称，而快捷方式的图标默认是给定的application图标</p>
-<p>7、第三层 service</p>
-<p>【1】service与activity同级，与activity不同的是，它不能自己启动的，运行在后台的程序，如果我们退出应用时，Service进程并没有结束，它仍然在后台运行。比如听音乐，网络下载数据等，都是由service运行的</p>
-<p>【2】service生命周期：Service只继承了onCreate(),onStart(),onDestroy()三个方法，第一次启动Service时，先后调用了onCreate(),onStart()这两个方法，当停止Service时，则执行onDestroy()方法，如果Service已经启动了，当我们再次启动Service时，不会在执行onCreate()方法，而是直接执行onStart()方法</p>
-<p>【3】service与activity间的通信</p>
-<p>Service后端的数据最终还是要呈现在前端Activity之上的，因为启动Service时，系统会重新开启一个新的进程，这就涉及到不同进程间通信的问题了(AIDL)，Activity与service间的通信主要用IBinder负责。<br>【4】</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">android:enabled</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line"></span><br><span class="line">         <span class="attr">android:exported</span>[=<span class="string">"true"</span> | "<span class="attr">false</span>"]</span><br><span class="line"></span><br><span class="line">         <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:permission</span>=<span class="string">"string"</span></span><br><span class="line"></span><br><span class="line">         <span class="attr">android:process</span>=<span class="string">"string"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>service标签内的属性之前已有描述，在此不重复了～</p>
-<p>8、第三层<receiver></receiver></p>
-<p>receiver的属性与service一样，这里就不显示了</p>
-<p>BroadcastReceiver：用于发送广播，broadcast是在应用程序之间传输信息的一种机制，而BroadcastReceiver是对发送出来的 Broadcast进行过滤接受并响应的一类组件。<br>9、第三层<provider>属性</provider></p>
-<provider android:authorities="list" android:enabled="["true"" |="" "false"]="" android:exported="["true"" android:granturipermissions="["true"" android:icon="drawable resource" android:initorder="integer" android:label="string resource" android:multiprocess="["true"" android:name="string" android:permission="string" android:process="string" android:readpermission="string" android:syncable="["true"" android:writepermission="string"><br><br>           <grant-uri-permission><br><br>           <meta-data><br><br></meta-data></grant-uri-permission></provider>
-
-<p>contentProvider(数据存储)</p>
-<p>【1】android:authorities：</p>
-<p>标识这个ContentProvider，调用者可以根据这个标识来找到它</p>
-<p>【2】android:grantUriPermission：</p>
-<p>对某个URI授予的权限</p>
-<p>【3】android:initOrder</p>
-<p>10、第三层<uses-library></uses-library></p>
-<p>用户库，可自定义。所有android的包都可以引用</p>
-<p>11、第一层<supports-screens></supports-screens></p>
-<supports-screens android:smallscreens="["true"" |="" "false"]="" android:normalscreens="["true"" android:largescreens="["true"" android:anydensity="["true"">
-
-<p>这是在android1.6以后的新特性，支持多屏幕机制</p>
-<p>各属性含义：这四个属性，是否支持大屏，是否支持中屏，是否支持小屏，是否支持多种不同密度</p>
-<p>12、第二层 uses-configuration 与uses-feature性能都差不多</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-configuration</span>  <span class="attr">android:reqFiveWayNav</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"] </span><br><span class="line">                    <span class="attr">android:reqHardKeyboard</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                    <span class="attr">android:reqKeyboardType</span>=<span class="string">[</span>"<span class="attr">undefined</span>" | "<span class="attr">nokeys</span>" | "<span class="attr">qwerty</span>" |   "<span class="attr">twelvekey</span>"]</span><br><span class="line">                    <span class="attr">android:reqNavigation</span>=<span class="string">[</span>"<span class="attr">undefined</span>" | "<span class="attr">nonav</span>" | "<span class="attr">dpad</span>" |  "<span class="attr">trackball</span>" | "<span class="attr">wheel</span>"]</span><br><span class="line">                    <span class="attr">android:reqTouchScreen</span>=<span class="string">[</span>"<span class="attr">undefined</span>" | "<span class="attr">notouch</span>" | "<span class="attr">stylus</span>" | "<span class="attr">finger</span>"] /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-feature</span> <span class="attr">android:glEsVersion</span>=<span class="string">"integer"</span></span><br><span class="line">              <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">              <span class="attr">android:required</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"] /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这两者都是在描述应用所需要的硬件和软件特性，以便防止应用在没有这些特性的设备上安装。</p>
-<p>13、第二层uses-sdk<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">android:minSdkVersion</span>=<span class="string">"integer"</span></span><br><span class="line">          <span class="attr">android:targetSdkVersion</span>=<span class="string">"integer"</span></span><br><span class="line">          <span class="attr">android:maxSdkVersion</span>=<span class="string">"integer"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>描述应用所需的api level，就是版本，目前是android 2.2 = 8，android2.1 = 7，android1.6 = 4，android1.5=3</p>
-<p>在此属性中可以指定支持的最小版本，目标版本以及最大版本</p>
-<p>14、第二层instrumentation<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">instrumentation</span> <span class="attr">android:functionalTest</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                 <span class="attr">android:handleProfiling</span>=<span class="string">[</span>"<span class="attr">true</span>" | "<span class="attr">false</span>"]</span><br><span class="line">                 <span class="attr">android:icon</span>=<span class="string">"drawable resource"</span></span><br><span class="line">                 <span class="attr">android:label</span>=<span class="string">"string resource"</span></span><br><span class="line">                 <span class="attr">android:name</span>=<span class="string">"string"</span></span><br><span class="line">                 <span class="attr">android:targetPackage</span>=<span class="string">"string"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p> 定义一些用于探测和分析应用性能等等相关的类，可以监控程序。在各个应用程序的组件之前instrumentation类被实例化</p>
-<p>android:functionalTest(解释：instrumentation类是否能运行一个功能测试，默认为false)</p>
-<p>15、<em>permission</em>、<em>uses-permission</em>、<em>permission-tree</em> 、<em>permission-group</em> 区别～</p>
-<p>最常用的当属<uses-permission>，当我们需要获取某个权限的时候就必须在我们的manifest文件中声明，此<uses-permission>与<application>同级，具体权限列表请看此处</application></uses-permission></uses-permission></p>
-<p>通常情况下我们不需要为自己的应用程序声明某个权限，除非你提供了供其他应用程序调用的代码或者数据。这个时候你才需要使用<permission> 这个标签。很显然这个标签可以让我们声明自己的权限。比如：</permission></p>
-<permission android:name="com.teleca.project.MY_SECURITY" .="">
-
-<p>那么在activity中就可以声明该自定义权限了，如：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span> <span class="attr">.</span> <span class="attr">.</span> <span class="attr">.</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">"XXX"</span> <span class="attr">.</span> <span class="attr">.</span> <span class="attr">.</span> &gt;</span></span><br><span class="line"></span><br><span class="line">                  android:permission="com.teleca.project.MY_SECURITY"&gt; <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>当然自己声明的permission也不能随意的使用，还是需要使用<uses-permission>来声明你需要该权限</uses-permission></p>
-<p><permission-group> 就是声明一个标签，该标签代表了一组permissions，而<permission-tree>是为一组permissions声明了一个namespace。这两个标签可以看之前的系列文章。</permission-tree></permission-group></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-
-
-
-</permission></supports-screens>
-          
+          #AndroidManifest.xml详细介绍
+基于Android Studio 2.1目录 
+一、关于AndroidManifest.xmlAndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/21/AndroidManifest-xml详细介绍/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -818,10 +666,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -834,17 +678,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/07/17/如何提高Android虚拟机的运行速度/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -857,8 +697,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/07/17/如何提高Android虚拟机的运行速度/" itemprop="url">如何提高Android虚拟机的运行速度</a></h1>
+                <a class="post-title-link" href="/2016/07/17/如何提高Android虚拟机的运行速度/" itemprop="url">
+                  如何提高Android虚拟机的运行速度
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -876,24 +724,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:03:08+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/17/如何提高Android虚拟机的运行速度/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/17/如何提高Android虚拟机的运行速度/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -905,7 +754,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -914,6 +763,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  343
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -921,9 +800,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -932,54 +809,32 @@
       
         
           
-            <h1 id="关于Android-virtual-Device"><a href="#关于Android-virtual-Device" class="headerlink" title="关于Android virtual Device"></a>关于Android virtual Device</h1><p>Android virtual Device（AVD）是Google推出的可以在x86,x64,AMD设备上运行的虚拟机。我们可以在Android Studio中创建并且使用。</p>
-<p><img src="" alt="AVD Manager"></p>
-<p>在我们一般创建时，都再用默认的设置，这样会导致AVD使用时很卡，卡到爆……</p>
-<p>下面我们就来一起设置，使它流畅的运行起来。</p>
-<h1 id="下载安装Intel-HAXM"><a href="#下载安装Intel-HAXM" class="headerlink" title="下载安装Intel HAXM"></a>下载安装Intel HAXM</h1><ol>
-<li><p>打开SDK Manger，在SDK Tools目录下，选择并下载Intel HAXM。</p>
-<p><img src="leanote://file/getImage?fileId=5782246bc2c9522ae1000001" alt="Inter HAXM"></p>
-</li>
-<li><p>下载好并不代表安装，我们需要打卡SDK目录进行安装。</p>
-</li>
-</ol>
-<blockquote>
-<p>…\extras\intel\Hardware_Accelerated_Execution_Manager\intelhaxm-android.exe</p>
-</blockquote>
-<p>安装只需要next就好。也可以适当的分配一点大的内存。</p>
-<ol>
-<li>重启你的电脑。</li>
-</ol>
-<h1 id="添加AVD"><a href="#添加AVD" class="headerlink" title="添加AVD"></a>添加AVD</h1><p>我们打开AVD Manager。行创建一个AVD</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/16-7-17/68978086.jpg" alt=""></p>
-<p>行创建一个AVD</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/16-7-17/27837587.jpg" alt=""></p>
-<p>选择一个你喜欢的机型，我在这里选择6P。</p>
-<p><img src="leanote://file/getImage?fileId=578226dbc2c9522ae1000004" alt=""></p>
-<p>按照你的电脑选择API和ABI</p>
-<p><img src="leanote://file/getImage?fileId=57822739c2c9522ae1000005" alt=""></p>
-<p>Next-&gt;Finish</p>
-<p>此时我们就添加好一个虚拟机了。</p>
-<h2 id="运行并修改参数"><a href="#运行并修改参数" class="headerlink" title="运行并修改参数"></a>运行并修改参数</h2><p>我们点击运行<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/16-7-17/59566680.jpg" alt=""></p>
-<p>此时我们需要观察Android Studio的输出日志。其中有一条值得我们注意</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/16-7-17/65640645.jpg" alt=""></p>
-<p>这一条警告提示我们VM heap低于最低值384M，要求我们去设置为384M。</p>
-<p>此时我们打开编辑，修改VM heap为他所要求的值，我们的AVD就可以流畅的运行了。</p>
-<p><strong>基于Android　Studio 2.1，Intel X64 RAM 8G</strong></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          关于Android virtual DeviceAndroid virtual Device（AVD）是Google推出的可以在x86,x64,AMD设备上运行的虚拟机。我们可以在Android Studio中创建并且使用。
+
+在我们一般创建时，都再用默认的设置，这样会导致AVD使用时很卡，卡到爆…
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/17/如何提高Android虚拟机的运行速度/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -993,10 +848,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1009,17 +860,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/07/04/Activity启动的两种方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1032,8 +879,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/07/04/Activity启动的两种方式/" itemprop="url">Activity启动的两种方式</a></h1>
+                <a class="post-title-link" href="/2016/07/04/Activity启动的两种方式/" itemprop="url">
+                  Activity启动的两种方式
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1051,24 +906,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:03:27+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/04/Activity启动的两种方式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/07/04/Activity启动的两种方式/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1080,7 +936,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1089,6 +945,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  986
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1096,9 +982,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1107,61 +991,32 @@
       
         
           
-            <p>今天学习Android的Intent的使用</p>
-<h2 id="显示使用"><a href="#显示使用" class="headerlink" title="显示使用"></a>显示使用</h2><p>显示Intent就是指定Activity。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.content.Intent;</span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        findViewById(R.id.btnStartMyAty).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">                startActivity(<span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>, MyAty.class));</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过Intent直接指定一个Activity</p>
-<h2 id="隐式Intent"><a href="#隐式Intent" class="headerlink" title="隐式Intent"></a>隐式Intent</h2><p>创建一个Intent，但是并不指定启动的Activiy，有很多启动方式。</p>
-<h3 id="配置AndroidManiFest-xml中的activity"><a href="#配置AndroidManiFest-xml中的activity" class="headerlink" title="配置AndroidManiFest.xml中的activity"></a>配置AndroidManiFest.xml中的activity</h3><blockquote>
-<p>AndroidManiFest.xml</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attr">package</span>=<span class="string">"com.example.myapplication"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span></span><br><span class="line">        <span class="attr">android:allowBackup</span>=<span class="string">"true"</span></span><br><span class="line">        <span class="attr">android:icon</span>=<span class="string">"@mipmap/ic_launcher"</span></span><br><span class="line">        <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span></span><br><span class="line">        <span class="attr">android:supportsRtl</span>=<span class="string">"true"</span></span><br><span class="line">        <span class="attr">android:theme</span>=<span class="string">"@style/AppTheme"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MainActivity"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MyAty"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"asdasd"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在AndroidManiFest.xml中配置文件，添加intent-filter标签，并添加一个字符串。</p>
-<blockquote>
-<p>MainActivity.java</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.content.Intent;</span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        findViewById(R.id.btnStartMyAty).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//直接通过字符串启动</span></span><br><span class="line">                startActivity(<span class="keyword">new</span> Intent(<span class="string">"asdasd"</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p><strong>注意</strong><br><strong>这里的字符串虽然可以说是任意格式，但是有一个约定俗成的规定</strong><br><strong>包名.intent.action.Action名</strong></p>
-<hr>
-<p>所以上述的<em>asdasd</em>我们应该命名为<em>com.example.myapplication.intent.activity.MyAty</em><br>为了方便，我们不出错。<br>我们会在代码的前面的添加一个静态常量。</p>
-<blockquote>
-<p>MyAty.java</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.app.Activity;</span><br><span class="line"><span class="keyword">import</span> android.os.PersistableBundle;</span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAty</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String ACTION = <span class="string">"com.example.myapplication.intent.activity.MyAty"</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState, PersistableBundle persistentState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState, persistentState);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_my_aty);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>MainActivity.java</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.myapplication;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.content.Intent;</span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        findViewById(R.id.btnStartMyAty).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">                startActivity(<span class="keyword">new</span> Intent(MyAty.ACTION));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就很方便的使用，让我们不出错。</p>
-<p>优势：<br>可以启动其他应用的页面，如在A应用中启动B应用中的某个Actio。<br>Demo</p>
-<p>新建一个Module。</p>
-<blockquote>
-<p>MainActivity.java</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.app1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.content.Intent;</span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        findViewById(R.id.btnStartMyaty).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">            <span class="comment">// 通过字符串直接启动另一个app的页面。</span></span><br><span class="line">                startActivity(<span class="keyword">new</span> Intent(<span class="string">"com.example.myapplication.intent.activity.MyAty"</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Intent过滤器"><a href="#Intent过滤器" class="headerlink" title="Intent过滤器"></a>Intent过滤器</h2><p>多个Activity拥有同一个Intent Action<br>新建Activity命名为MyAct1<br>之后的代码一样</p>
-<blockquote>
-<p>AndroidManiFest.xml</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line">&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"</span><br><span class="line">    package="com.example.myapplication"&gt;</span><br><span class="line"></span><br><span class="line">    &lt;application</span><br><span class="line">        android:allowBackup="true"</span><br><span class="line">        android:icon="@mipmap/ic_launcher"</span><br><span class="line">        android:label="@string/app_name"</span><br><span class="line">        android:supportsRtl="true"</span><br><span class="line">        android:theme="@style/AppTheme"&gt;</span><br><span class="line">        &lt;activity android:name=".MainActivity"&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;action android:name="android.intent.action.MAIN" /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">        &lt;activity android:name=".MyAty"</span><br><span class="line">            android:label="MyAty"&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;category android:name="android.intent.category.DEFAULT" /&gt;</span><br><span class="line"></span><br><span class="line">                &lt;action android:name="com.example.myapplication.intent.activity.MyAty" /&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">        &lt;activity android:name=".MyAty1"</span><br><span class="line">            android:label="@string/title_activity_my_aty1"&gt;</span><br><span class="line">            &lt;intent-filter&gt;</span><br><span class="line">                &lt;category android:name="android.intent.category.DEFAULT"&gt;&lt;/category&gt;</span><br><span class="line">                &lt;action android:name="com.example.myapplication.intent.activity.MyAty"&gt;&lt;/action&gt;</span><br><span class="line">            &lt;/intent-filter&gt;</span><br><span class="line">        &lt;/activity&gt;</span><br><span class="line">    &lt;/application&gt;</span><br><span class="line"></span><br><span class="line">&lt;/manifest&gt;</span><br></pre></td></tr></table></figure>
-<p>此时我们在运行启动。<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/16-7-4/10084251.jpg" alt=""></p>
-<p>会弹出提示，让我们选择启动哪一个Activity。</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          今天学习Android的Intent的使用
+显示使用显示Intent就是指定Activity。
+123456789101112131415161718192021222324package com.example.myapplication;import android.content.Intent
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/04/Activity启动的两种方式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1175,10 +1030,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1191,17 +1042,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/05/23/Java集合遍历/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1214,8 +1061,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/05/23/Java集合遍历/" itemprop="url">Java集合遍历</a></h1>
+                <a class="post-title-link" href="/2016/05/23/Java集合遍历/" itemprop="url">
+                  Java集合遍历
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1233,24 +1088,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:04:23+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/05/23/Java集合遍历/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/05/23/Java集合遍历/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1262,7 +1118,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1271,6 +1127,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  586
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1278,9 +1164,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1289,40 +1173,34 @@
       
         
           
-            <h1 id="集合的遍历"><a href="#集合的遍历" class="headerlink" title="集合的遍历"></a>集合的遍历</h1><h2 id="使用Iterator"><a href="#使用Iterator" class="headerlink" title="使用Iterator"></a>使用Iterator</h2><p>Iterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。</p>
-<hr>
-<h3 id="Iterator提供的四个方法"><a href="#Iterator提供的四个方法" class="headerlink" title="Iterator提供的四个方法"></a>Iterator提供的四个方法</h3><ul>
-<li>boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。</li>
-<li>Object next():返回集合里的下一个元素。</li>
-<li>void remove():删除集合里上一次next方法返回的元素。</li>
-<li>void forEachRemaining(Consumer action)：这个是java 8为Iterator新增的默认方法，该方法可使用Lambda表达式遍历所有的集合元素。</li>
-</ul>
-<hr>
-<h3 id="next方法"><a href="#next方法" class="headerlink" title="next方法"></a>next方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by 晓辉 on 2016/5/23.</span><br><span class="line"> * 使用jdk8中的iterator遍历集合；</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteraorTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List books=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        books.add(<span class="string">"fengk"</span>);</span><br><span class="line">        books.add(<span class="string">"niaho"</span>);</span><br><span class="line">        Iterator it=books.iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">            it.next();</span><br><span class="line">            <span class="keyword">if</span>(books.equals(<span class="string">"fengk"</span>))&#123;</span><br><span class="line">                it.remove();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(it.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&gt; 输出结果</span><br><span class="line">&gt;niaho</span><br></pre></td></tr></table></figure>
-<p>Iterator只用于遍历集合，本身本身并不具有承装对象的能力。如果需要就要创建Iterator对象，则必须有一个被迭代的集合。Iterator必须依附于Collection对象，若有一个Iterator对象，则必然有一个与之关联的Collection对象。</p>
-<h2 id="使用Lambda表达式遍历Iterator"><a href="#使用Lambda表达式遍历Iterator" class="headerlink" title="使用Lambda表达式遍历Iterator"></a>使用Lambda表达式遍历Iterator</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by 晓辉 on 2016/5/23.</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorEach</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个集合</span></span><br><span class="line">        Collection books=<span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        books.add(<span class="string">"java"</span>);</span><br><span class="line">        books.add(<span class="string">"c#"</span>);</span><br><span class="line">        Iterator it=books.iterator();</span><br><span class="line">        <span class="comment">// 使用Lambda表达式遍历所有的集合</span></span><br><span class="line">        it.forEachRemaining(obj-&gt;System.out.println(obj));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>输出结果<br>c#<br>java</p>
-</blockquote>
-<p><strong>注意：</strong>这里的输出是倒序。</p>
-<hr>
-<p>##使用foreach遍历集合元素<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ForeachTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个集合</span></span><br><span class="line">        Collection books=<span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        books.add(<span class="string">"java"</span>);</span><br><span class="line">        books.add(<span class="string">"c#"</span>);</span><br><span class="line">        <span class="keyword">for</span>(Object obj:books)&#123;</span><br><span class="line"><span class="comment">//            此处的books变量也不是集合的本身元素</span></span><br><span class="line">            String book=(String)obj;</span><br><span class="line">            System.out.println(book);</span><br><span class="line">            <span class="keyword">if</span> (book.equals(<span class="string">"java"</span>))&#123;</span><br><span class="line">                books.remove(book);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(books);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>for循环中的迭代变量也不是集合元素本身，系统只是以此把集合元素的值赋值给迭代变量，因此for循环中修改的迭代变量的值是也是没有任何意义。</p>
-<hr>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。
+
+Iterator提供的四个方法
+boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。
+Object next():返回集合里的下
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/05/23/Java集合遍历/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1336,10 +1214,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1352,17 +1226,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/05/15/GitHub-for-windows使用教程（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1375,8 +1245,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/05/15/GitHub-for-windows使用教程（三）/" itemprop="url">GitHub for windows使用教程（三）</a></h1>
+                <a class="post-title-link" href="/2016/05/15/GitHub-for-windows使用教程（三）/" itemprop="url">
+                  GitHub for windows使用教程（三）
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1394,24 +1272,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:04:05+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/05/15/GitHub-for-windows使用教程（三）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/05/15/GitHub-for-windows使用教程（三）/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1423,7 +1302,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1432,6 +1311,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  2,193
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1439,9 +1348,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1450,122 +1357,34 @@
       
         
           
-            <h1 id="团队协作流程"><a href="#团队协作流程" class="headerlink" title="团队协作流程"></a>团队协作流程</h1><h2 id="认识Flow"><a href="#认识Flow" class="headerlink" title="认识Flow"></a>认识Flow</h2><p><strong><a href="https://guides.github.com/introduction/flow/" target="_blank" rel="external">GitHub Flow</a></strong>是一个轻量级的，基于分支的工作流程，支持团队和部署在那里的定期做项目。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/1.png" alt=""></p>
-<h2 id="为团队成员写入权限"><a href="#为团队成员写入权限" class="headerlink" title="为团队成员写入权限"></a>为团队成员写入权限</h2><p>在我们的队友添加一个写的权限，这样我们的队友才能很好的修改代码。<br>我们打开网页上的<a href="http://www.github.com" target="_blank" rel="external">GitHub</a>,点击<strong>settings</strong>,</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/2.png" alt=""></p>
-<p>之后我们找到<strong>collaborators</strong>，这里会让我们验证密码，之后就有添加合作者的选项。这样我们就能添加我们的小伙伴了！</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/3.png" alt=""></p>
-<p>这样我们就添加了新的小伙伴，新的小伙伴有着同样的权限去修改和管理代码。<br>此时我们就会看到我的小伙伴wevan的github主页上就会出现关于我创建的First的各种通知。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/9.png" alt=""></p>
-<h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>在我们创建一个叫<strong>add new function</strong>的分支。</p>
-<p> 创建一个分支</p>
-<blockquote>
-<p><em>Create a branch</em></p>
-</blockquote>
-<p>当你工作的一个项目，你会在任何给定的时间有一堆不同的功能或正在进行的想法 - 其中一些是蓄势待发，而另一些则不是。分支的存在是为了帮助你管理这个工作流程。</p>
-<blockquote>
-<p><em>When you’re working on a project, you’re going to have a bunch of different features or ideas in progress at any given time – some of which are ready to go, and others which are not. Branching exists to help you manage this workflow.</em></p>
-</blockquote>
-<p>当您在项目中创建一个分支，你创造一个环境，在那里你可以尝试新的想法。你让一个分支的更改不会影响主分支，让你可以自由进行实验，并提交更改，在你的分支将不会被合并，直到它准备好知识安全的人所正在与合作进行审查。</p>
-<blockquote>
-<p><em>When you create a branch in your project, you’re creating an environment where you can try out new ideas. Changes you make on a branch don’t affect the master branch, so you’re free to experiment and commit changes, safe in the knowledge that your branch won’t be merged until it’s ready to be reviewed by someone you’re collaborating with.</em></p>
-</blockquote>
-<p><strong>ProTip</strong></p>
-<p>分支在Git中是一个核心概念，整个GitHub的流量是基于它。这里只有一个规则：在任何主分支总是部署。</p>
-<blockquote>
-<p><em>Branching is a core concept in Git, and the entire GitHub Flow is based upon it. There’s only one rule: anything in the master branch is always deployable.</em></p>
-</blockquote>
-<p>正因为如此，这是非常重要的一个功能或修复工作时，你的新分支关老爷的创建。您的分支名应该是描述（例如，重构的身份验证，用户的内容缓存键，使视网膜-化身），以便其他人可以看到正在处理。</p>
-<blockquote>
-<p><em>Because of this, it’s extremely important that your new branch is created off of master when working on a feature or a fix. Your branch name should be descriptive (e.g., refactor-authentication, user-content-cache-key, make-retina-avatars), so that others can see what is being worked on.</em><br><strong><a href="https://guides.github.com/introduction/flow/" target="_blank" rel="external">来自GitHub Flow</a></strong></p>
-</blockquote>
-<h2 id="添加提交"><a href="#添加提交" class="headerlink" title="添加提交"></a>添加提交</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/4.png" alt=""></p>
-<p>我们首先把分支切换到新的分支上<strong>add new function</strong></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/5.png" alt=""></p>
-<p>修改新的版本</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/6.png" alt=""></p>
-<p>填写好新的<strong>Summary</strong>和<strong>Description</strong>，提交新的版本并同步。<br>这样小伙伴登陆到<strong>GitHub</strong>上就看到了就可以清楚的看到一切的修改。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/7.png" alt=""></p>
-<p>添加提交</p>
-<blockquote>
-<p><em>Add commits</em></p>
-</blockquote>
-<p> 一旦你的分支已经建立，现在是时候开始进行更改。无论何时添加，编辑或删除一个文件，你作出承诺，并将其添加到您的分支。提交加入这一过程保持你的进步轨迹，你在一个特性分支工作。</p>
-<blockquote>
-<p><em>Once your branch has been created, it’s time to start making changes. Whenever you add, edit, or delete a file, you’re making a commit, and adding them to your branch. This process of adding commits keeps track of your progress as you work on a feature branch.</em></p>
-</blockquote>
-<p>还承诺创建工作的透明历史，其他人可以按照理解你做了什么，以及为什么。每次提交都有一个关联的提交信息，这是解释为什么一个特定的变化作出了说明。此外，每次提交被认为是变革的一个独立单元。这使您可以回滚的变化，如果发现错误，或者如果你决定在一个不同的方向前进。</p>
-<blockquote>
-<p><em>Commits also create a transparent history of your work that others can follow to understand what you’ve done and why. Each commit has an associated commit message, which is a description explaining why a particular change was made. Furthermore, each commit is considered a separate unit of change. This lets you roll back changes if a bug is found, or if you decide to head in a different direction.</em></p>
-</blockquote>
-<p><strong>ProTip</strong></p>
-<p>提交信息是重要的，特别是因为Git跟踪更改，然后将它们显示为承诺一旦他们推到服务器。通过字迹清晰提交信息，你可以更容易为其他人跟着，并提供反馈。</p>
-<blockquote>
-<p><em>Commit messages are important, especially since Git tracks your changes and then displays them as commits once they’re pushed to the server. By writing clear commit messages, you can make it easier for other people to follow along and provide feedback.</em><br><strong><a href="https://guides.github.com/introduction/flow/" target="_blank" rel="external">来自GitHub Flow</a></strong></p>
-</blockquote>
-<h2 id="打开一个pull请求"><a href="#打开一个pull请求" class="headerlink" title="打开一个pull请求"></a>打开一个pull请求</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/8.png" alt=""><br>这个是整个流程中比较关键的一步，发布<strong>Pull Request</strong>。<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/10.png" alt=""><br>点击客户端或者网页上的<strong>Pull Request</strong>发布。<br>我们这里点击<strong>Pull Request</strong><br><img src="http://7xt81u.com1.z0.glb.clouddn.com/11.png" alt="客户端/网页版"><br>我们填写好必要的说明性文字<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/12.png" alt=""><br>点击<strong>Send Pull Request</strong><br><img src="http://7xt81u.com1.z0.glb.clouddn.com/13.png" alt=""><br>他既然让我们到GitHub上看，我们就听他的，点击，进入。<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/14.png" alt=""><br>我们发现小伙伴已经在下面留言了！</p>
-<h3 id="讨论和审核你的代码"><a href="#讨论和审核你的代码" class="headerlink" title="讨论和审核你的代码"></a>讨论和审核你的代码</h3><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/15.png" alt=""><br>你的小伙伴开始对你的代码讨论，修改，迭代。</p>
-<p>讨论和审查你的代码</p>
-<blockquote>
-<p><em>Discuss and review your code</em></p>
-</blockquote>
-<p>一旦拉入请求已被打开，人或团队审查您的变化可能有疑问或意见。也许编码风格不匹配项目的指导方针，改变缺少单元测试，或者也许一切看起来不错，道具都是为了。引入请求旨在鼓励并捕获这种类型的对话。</p>
-<blockquote>
-<p><em>Once a Pull Request has been opened, the person or team reviewing your changes may have questions or comments. Perhaps the coding style doesn’t match project guidelines, the change is missing unit tests, or maybe everything looks great and props are in order. Pull Requests are designed to encourage and capture this type of conversation.</em></p>
-</blockquote>
-<p>您还可以继续推送到你的分支在你提交的讨论和反馈光。如果有人评论说，你忘了做某件事，或者如果在代码中的错误，你可以在你的分支修复它，推高的变化。GitHub上会显示新的提交和其他任何意见，你可能会收到统一拉请求视图。</p>
-<blockquote>
-<p><em>You can also continue to push to your branch in light of discussion and feedback about your commits. If someone comments that you forgot to do something or if there is a bug in the code, you can fix it in your branch and push up the change. GitHub will show your new commits and any additional feedback you may receive in the unified Pull Request view.</em></p>
-</blockquote>
-<p><strong>ProTip</strong></p>
-<p>拉请求的意见都写在降价，所以你可以插入图片和表情符，使用预先格式化的文本块，等轻质格式。</p>
-<blockquote>
-<p><em>Pull Request comments are written in Markdown, so you can embed images and emoji, use pre-formatted text blocks, and other lightweight formatting.</em></p>
-</blockquote>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/16.png" alt=""></p>
-<p>部署</p>
-<blockquote>
-<p><em>Deploy</em></p>
-</blockquote>
-<p>一旦你拉的请求进行了审查和部门通过你的测试，您可以部署您的更改，以验证他们的生产。如果你的分支造成的问题，您可以通过部署现有的主投产回滚</p>
-<blockquote>
-<p><em>Once your pull request has been reviewed and the branch passes your tests, you can deploy your changes to verify them in production. If your branch causes issues, you can roll it back by deploying the existing master into production.</em></p>
-</blockquote>
-<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/17.png" alt=""><br>合并分支我们之前已经说过，这里就不再赘述。</p>
-<p>合并</p>
-<blockquote>
-<p><em>Merge</em></p>
-</blockquote>
-<p>现在，您的更改在生产中得到了验证，现在是时候你的代码合并到主分支。</p>
-<blockquote>
-<p><em>Now that your changes have been verified in production, it is time to merge your code into the master branch.</em></p>
-</blockquote>
-<p>合并后，引入请求保护的历史变迁到您的代码记录。因为他们是搜索的，他们不让任何人回去的时间理解为什么以及如何决定了。</p>
-<blockquote>
-<p><em>Once merged, Pull Requests preserve a record of the historical changes to your code. Because they’re searchable, they let anyone go back in time to understand why and how a decision was made.</em></p>
-</blockquote>
-<p><strong>ProTip</strong></p>
-<p>通过将某些关键字到您的拉请求的文本，你可以用代码相关联的问题。当你拉入请求合并，相关问题也将被关闭。例如，输入短语关闭＃32将关闭在仓库中发行数量32。欲了解更多信息，请查看我们的帮助文章。</p>
-<blockquote>
-<p><em>By incorporating certain keywords into the text of your Pull Request, you can associate issues with code. When your Pull Request is merged, the related issues are also closed. For example, entering the phrase Closes #32 would close issue number 32 in the repository. For more information, check out our help article.</em></p>
-</blockquote>
-<p><strong>注意：英文翻译为机器翻译，可能有翻译错误的地方，建议大家尽可能看英文</strong></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>基本的GitHub教程就算写完了，已有如果在有就是一些GitHub上的一些使用小技巧了。</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          团队协作流程认识FlowGitHub Flow是一个轻量级的，基于分支的工作流程，支持团队和部署在那里的定期做项目。
+
+为团队成员写入权限在我们的队友添加一个写的权限，这样我们的队友才能很好的修改代码。我们打开网页上的GitHub,点击settings,
+
+之后我们找到collaborators，这
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/05/15/GitHub-for-windows使用教程（三）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1579,10 +1398,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1595,17 +1410,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/05/13/GitHub-for-Windows使用教程(二)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1618,8 +1429,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/05/13/GitHub-for-Windows使用教程(二)/" itemprop="url">GitHub for Windows使用教程(二)</a></h1>
+                <a class="post-title-link" href="/2016/05/13/GitHub-for-Windows使用教程(二)/" itemprop="url">
+                  GitHub for Windows使用教程(二)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1637,24 +1456,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:03:59+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/05/13/GitHub-for-Windows使用教程(二)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/05/13/GitHub-for-Windows使用教程(二)/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1666,7 +1486,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1675,6 +1495,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  434
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1682,9 +1532,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1693,42 +1541,34 @@
       
         
           
-            <h1 id="分支的使用"><a href="#分支的使用" class="headerlink" title="分支的使用"></a>分支的使用</h1><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>我们创建第一个分支取名为<strong>“new masterh”</strong>,点击<strong>Create new branch</strong>创建第一个分支。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.png" alt=""></p>
-<p>我们发现此时的分支已经切换到了我们刚刚创建的分支<strong>new masterch</strong></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E5%88%87%E6%8D%A2%E5%88%86%E6%94%AF.png" alt=""></p>
-<p>我们来修改<strong>new masterch</strong>分支上的内容。<br>我们仍旧打开<strong>FirstDemo.txt</strong>进行编辑。输入以下内容</p>
-<blockquote>
-<p>创建的第一个分支。</p>
-</blockquote>
-<p>打开github进行，填写<strong>Summary</strong>和<strong>Description</strong></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E4%BF%AE%E6%94%B9%E5%88%86%E6%94%AF%E5%86%85%E5%AE%B9.png" alt=""></p>
-<p>之后我们点击<strong>Commit to new-master</strong><br>在<strong>History</strong>目录下，我们可以看到会有两条主线，分别是<strong>master</strong>和<strong>new-master</strong>并且在<strong>new-master</strong>的分支下又一个蓝色的<strong>实线空心圈</strong>和一个<strong>虚线空心圈</strong>。<br><strong>实线圈</strong>表示当前的节点，<strong>空心圈</strong>表示下一次修改时的节点。<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%8E%A8%E9%80%81%E5%88%86%E6%94%AF.png" alt=""><br><strong>红线</strong>标示的部分就是当前的分支<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%BA%A2%E7%BA%BF%E5%BC%BA%E8%B0%83.png" alt=""></p>
-<h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><p>点击<strong>红色</strong>划线部分就会出现分支的列表<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/5d9c09b750eec11d.png" alt=""><br>我们点击<strong>master</strong>就会切换到<strong>master</strong>分支。</p>
-<h2 id="上传-同步分支"><a href="#上传-同步分支" class="headerlink" title="上传/同步分支"></a>上传/同步分支</h2><p>这个操作和同步仓库是一个操作，点击<strong>Publish/Sync</strong>上传或同步分支。</p>
-<h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><p>首先要把分支切换到你要删除的分支下，如我们要删除<strong>new master</strong>，将分支切换到<strong>new master</strong>点击右上角齿轮就会出现<strong>Delete new master</strong></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF.png" alt=""></p>
-<p>点击<strong>Delete new master</strong>就会弹出一个对话框，询问删除的内容。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%A1%AE%E8%AE%A4%E5%88%A0%E9%99%A4.png" alt=""></p>
-<p>第一个<strong>yes ，Delete both</strong>是将本地与网页全部删除；<br>第二个<strong>Delete local only</strong>仅仅是删除本地。<br>第三个是取消。</p>
-<h2 id="合并两个分支"><a href="#合并两个分支" class="headerlink" title="合并两个分支"></a>合并两个分支</h2><p>将一个分支与<strong>master</strong>分支进行合并。<br>我们首先把分支切换到<strong>master</strong>下，点击<strong>Update from new-branch</strong>进行分支的合并。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C.png" alt=""></p>
-<p>此时我们查看<strong>history</strong>目录下就会</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF.png" alt=""></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          分支的使用创建分支我们创建第一个分支取名为“new masterh”,点击Create new branch创建第一个分支。
+
+我们发现此时的分支已经切换到了我们刚刚创建的分支new masterch
+
+我们来修改new masterch分支上的内容。我们仍旧打开FirstDemo.txt进行编辑。
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/05/13/GitHub-for-Windows使用教程(二)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1742,10 +1582,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1758,17 +1594,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/05/03/GitHub-for-Windows使用教程(一)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1781,8 +1613,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/05/03/GitHub-for-Windows使用教程(一)/" itemprop="url">GitHub for Windows使用教程（一）</a></h1>
+                <a class="post-title-link" href="/2016/05/03/GitHub-for-Windows使用教程(一)/" itemprop="url">
+                  GitHub for Windows使用教程（一）
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1800,24 +1640,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:04:16+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/05/03/GitHub-for-Windows使用教程(一)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/05/03/GitHub-for-Windows使用教程(一)/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1829,7 +1670,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1838,6 +1679,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  1,202
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1845,9 +1716,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1856,73 +1725,30 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>鉴于网上目前的教材都太落后，github for windows已经更新了多个版本，好多界面都发生了变化，所以来写这个教程。目的是为了帮助和我一样初学github，但是苦于找不到教程的同学，为了写最详细的教程。配备了大量的图文介绍。该教程是基于<strong>GitHub for windows (3.0.17.0)</strong></p>
-<h1 id="什么是Github"><a href="#什么是Github" class="headerlink" title="什么是Github"></a>什么是Github</h1><p>说到什么事github，我们先看wikipedia的描述“<a href="https://zh.wikipedia.org/wiki/GitHub" target="_blank" rel="external">GitHub是一个利用Git进行版本控制、专门用于存放软件代码与内容的共享虚拟主机服务。它由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。</a>”</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ol>
-<li><p>下载<a href="https://desktop.github.com/" target="_blank" rel="external">github for windows</a>，安装这里不赘述。</p>
-</li>
-<li><p><a href="https://github.com/" target="_blank" rel="external">注册github账号</a></p>
-</li>
-</ol>
-<p><img src="http://i3.piimg.com/2513fb0c843f35c9.png" alt=""></p>
-<ol>
-<li>登陆到github for windows。</li>
-</ol>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%99%BB%E9%99%86.png" alt=""></p>
-<hr>
-<p>准备工作都完了，我们开始正式学习。^_^</p>
-<h1 id="创建第一个代码库"><a href="#创建第一个代码库" class="headerlink" title="创建第一个代码库"></a>创建第一个代码库</h1><h2 id="认识界面"><a href="#认识界面" class="headerlink" title="认识界面"></a>认识界面</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E4%BB%93%E5%BA%93%E7%95%8C%E9%9D%A2.png" alt=""></p>
-<p>github for windows的界面非常清爽，的确符合geek的性质，个人表示非常喜欢。<br>我们来建立第一个仓库，点击左上角的<strong>+号</strong>，初次建立他会有一圈圈的涟漪，非常漂亮哦。<br>打开之后有三个选项，Add，Create，Clone。<br><img src="http://i3.piimg.com/cf0b5eb355dfb4cf.png" alt=""><br>我们分别来介绍一下这三个功能。</p>
-<h3 id="Add功能"><a href="#Add功能" class="headerlink" title="Add功能"></a>Add功能</h3><p>如果本地有工程，就可以使用Add添加</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/Add%E5%8A%9F%E8%83%BD.png" alt=""></p>
-<h3 id="Clone功能"><a href="#Clone功能" class="headerlink" title="Clone功能"></a>Clone功能</h3><p>这个功能其实最好理解了，克隆这名字通俗易懂好理解。<br>如何使用Clone功能呢？</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/clone%E5%8A%9F%E8%83%BD.png" alt=""></p>
-<p>就是将在浏览器上已经创建好的项目导入到本地，换句话说就是下载到本地。</p>
-<h3 id="Create功能"><a href="#Create功能" class="headerlink" title="Create功能"></a>Create功能</h3><p>创建一个代码库，<br>Name填写你的仓库名字。Local path写你将要保存在本地路径。我们主要从这个功能开始github之旅。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/create%E5%8A%9F%E8%83%BD.png" alt=""></p>
-<p>我们在这里填写First，来创建第一个我们自己的repository。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E5%88%9B%E5%BB%BAfrist.png" alt=""></p>
-<h1 id="开始使用第一个代码库"><a href="#开始使用第一个代码库" class="headerlink" title="开始使用第一个代码库"></a>开始使用第一个代码库</h1><h2 id="修改第一个代码库中内容"><a href="#修改第一个代码库中内容" class="headerlink" title="修改第一个代码库中内容"></a>修改第一个代码库中内容</h2><p>我们来找到刚刚创建的代码库在本地的位置。就是刚刚在local path的地址路径，当然如果你忘了，请右键点击First。<br><img src="http://i3.piimg.com/0e76cd4dde922713.png" alt=""><br>选择Open in Explorer。这样我们就可以转到刚刚的路径下。<br>我们新建一个文本文档。在里面编辑。<br>如下<br><img src="http://i3.piimg.com/ce9841870311a76d.png" alt=""><br>此时的github就会变成这个样子(Changs)：<br><img src="http://i3.piimg.com/2f8f72a1976e5986.png" alt=""><br>你会发现此时github会出现刚刚编辑的内容。</p>
-<ol>
-<li>这个是测试文本</li>
-<li>你好<br>并且前面会有<strong>蓝色标识</strong>，那么这个<strong>蓝色标识</strong>是什么用呢？<br>其实这个蓝色标识是提示你会上改变的文本。比如我第一次只想改变<br><strong>这个是测试文本</strong>并不想把<strong>你好</strong>上传。<br>这时我们点击一下<strong>你好</strong>的前面的<strong>蓝色标识</strong>。</li>
-</ol>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC.png" alt=""></p>
-<p>你会发现<strong>你好</strong>前面的蓝色标识没有了。<br>我们填写好<strong>Summer</strong>和<strong>Description</strong><br>Summer就是这次改动的总结，我们也可以理解为标题<em>（必填）</em>，而Description可以理解为详细概况<em>（选填）</em></p>
-<hr>
-<p>我们这里只选择第一个修改对象，也就是<strong>这个是测试文本</strong>就行修改。summer我们填写为<em>第一次修改</em>，Description我们填写为<em>增加了这个是测试文本</em>的内容，之后点击<strong>Commit to master</strong>。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E8%BF%99%E6%98%AF%E8%BF%99%E6%98%AF%E6%96%87%E6%9C%AC.png" alt=""></p>
-<p>切换到<strong>History</strong>目录下</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/History%E7%9B%AE%E5%BD%95.png" alt=""></p>
-<p>我们会发现他改变了。<br>这次我们把<strong>你好</strong>进行添加。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%AC%AC%E4%BA%8C%E6%AC%A1.png" alt=""></p>
-<p>在<strong>History</strong>目录下发生了这样的改变。会在<strong>History</strong>目录下形成一天时间线，来指出每一次的修改标题和内容，同时会把修改的内容用<strong>绿色标识</strong>标出。<br>我们打开本地的文本，删除刚刚添加的第一行<strong>这个是测试文本</strong>。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E8%BF%99%E4%B8%AA%E6%98%AF%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC.png" alt=""></p>
-<p>此时你就会发现github发生了变化。<br>很多人说这里会出现乱码,这个是编码问题,如果不修改编码,只是在客户端上显示乱码,但是上传后不会出现乱码,为了保险起见,建议大家还是把文本编码修改为 utf-8 .<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E5%88%A0%E9%99%A4%E7%BA%A2%E8%89%B2%E6%A0%87%E8%AF%86.png" alt=""></p>
-<p>此时的<strong>红色标识</strong>标识删除。我们写好Summer和Description并点击Commit to master。<br>这样我们就删除了第一行。同时在<strong>History</strong>目录下又多了一条时间轴。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%BA%A2%E8%89%B2%E6%A0%87%E8%AF%86.png" alt=""></p>
-<p>这样我们就完成了删除。</p>
-<h2 id="上传与同步"><a href="#上传与同步" class="headerlink" title="上传与同步"></a>上传与同步</h2><h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>此时，当我们打开github网页，就会发现此时你的修改的内容并没有出现在这里。这是因为你没有进行同步，仅仅是在本地就行了修改。此时我们仅仅需要点击右上角的<strong>publish</strong></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E4%B8%8A%E4%BC%A0.png" alt=""></p>
-<p>此时你就会本地内容已经上传到网页上。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%BD%91%E9%A1%B5.png" alt=""></p>
-<h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><p>当你的代码库上传后就会发现，原来的<strong>publish</strong>以及变为了<strong>Sync</strong>。</p>
-<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-5-3/66610926.jpg" alt=""></p>
-<p>点击<strong>Sync</strong>同步代码库！</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          前言鉴于网上目前的教材都太落后，github for windows已经更新了多个版本，好多界面都发生了变化，所以来写这个教程。目的是为了帮助和我一样初学github，但是苦于找不到教程的同学，为了写最详细的教程。配备了大量的图文介绍。该教程是基于GitHub for windows (3.0.17
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/05/03/GitHub-for-Windows使用教程(一)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1936,10 +1762,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1952,17 +1774,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/04/27/大学？大学？大学？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1975,8 +1793,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/04/27/大学？大学？大学？/" itemprop="url">大学？大学？大学？</a></h1>
+                <a class="post-title-link" href="/2016/04/27/大学？大学？大学？/" itemprop="url">
+                  大学？大学？大学？
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1994,24 +1820,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-01T19:00:35+08:00">
+                2017-08-01
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/04/27/大学？大学？大学？/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/04/27/大学？大学？大学？/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -2023,7 +1850,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -2032,6 +1859,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  609
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -2039,9 +1896,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -2050,26 +1905,32 @@
       
         
           
-            <h1 id="大学？大学？-大学？"><a href="#大学？大学？-大学？" class="headerlink" title="大学？大学？ 大学？"></a>大学？大学？ 大学？</h1><p><strong>仅仅写给自己</strong></p>
-<hr>
-<h2 id="第一篇"><a href="#第一篇" class="headerlink" title="第一篇"></a>第一篇</h2><p>生活在这个大学里那种迷茫有时候只有自己知道，有时候的动力其实是为0的，只能按照自己的想法去走，可是一个人搞了两个晚上的东西，还是没有成功，有些事情只能自己去做，没人会对自己的事情感兴趣，更不会去帮你。当一个问题查阅了百度，google后仍旧没有解决，那种失落或许没人能懂！<br>连续两个晚上都在弄，看来百度，查了google，连youtube上的视频看了，然而问题依旧，只能靠自己慢慢去搞。然而MinwgM，Cmake对于一个刚刚接触软件工程的人来说，没有任何人的帮助，自己慢慢的去看，略知皮毛，然而Clion的报错让我已经筋疲力尽。</p>
-<p>昨晚开始配置Clion，从MinWG开始，然后是Cmake，都是一个个的新名词，一次又一次的失败W，刚刚开始连Cmake都无法使用，后来helloworld都无法运行。这次是MinGM的报错，百度了，google了，看了youtube，这个问题不是我一个人遇到，然而我却看不到解决的方法，满是英文的屏幕看的非常吃力，当没有答案时，只能自己去创造答案。自己一个人去看报错的文档，然而我又一次高估了自己的能力……晦涩难懂的英文和路径，一头雾水。<br>同时IDEA也让我感到了无力，深深的无力。为什么，他们家的IDE要让开发者把时间都放在大量的配置上去。最后还是投靠了eclipse。但让clion我会继续研究下去的。</p>
-<hr>
-<p>或许有时候是太高估自己了，要走和别人不一样的道路，就用个编译器都要标新立异。从github+hexo的博客搭建到今天的Clion和Idea，真的很浪费时间，收获感觉微乎其微，达不到什么实质性的东西，包括现在学习github，好像是一个错误的想法，而且重要的是把别人往沟里带，让别人按自己的想法走，多可笑啊。是该好好整理一下自己的想法了，有时候该问问那些过来的人，多听听他们的建议，不要给自己多走弯路。</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          大学？大学？ 大学？仅仅写给自己
+
+第一篇生活在这个大学里那种迷茫有时候只有自己知道，有时候的动力其实是为0的，只能按照自己的想法去走，可是一个人搞了两个晚上的东西，还是没有成功，有些事情只能自己去做，没人会对自己的事情感兴趣，更不会去帮你。当一个问题查阅了百度，google后仍旧没有解决，那种失落
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/27/大学？大学？大学？/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -2083,10 +1944,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -2099,17 +1956,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/04/23/LinkList特有的方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -2122,8 +1975,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2016/04/23/LinkList特有的方法/" itemprop="url">LinkList特有的方法</a></h1>
+                <a class="post-title-link" href="/2016/04/23/LinkList特有的方法/" itemprop="url">
+                  LinkList特有的方法
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -2141,24 +2002,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:04:35+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/04/23/LinkList特有的方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/04/23/LinkList特有的方法/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -2170,7 +2032,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -2179,6 +2041,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  143
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -2186,9 +2078,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -2197,52 +2087,41 @@
       
         
           
-            <h1 id="LinkList特有的方法"><a href="#LinkList特有的方法" class="headerlink" title="LinkList特有的方法"></a>LinkList特有的方法</h1><blockquote>
-<p>addFirst();<br>addLast();</p>
-</blockquote>
-<p>添加元素，第一个或最后一个。</p>
-<hr>
-<blockquote>
-<p>getList();<br>getFirst();</p>
-</blockquote>
-<p>获取元素，但是不会删除。如果集合中没有元素，会抛出<strong>NoSuchElementException</strong>。</p>
-<hr>
-<blockquote>
-<p>removeFirst();<br>removeLast();</p>
-</blockquote>
-<p>获取元素，但是元素被删除。如果集合中没有元素，就会出现<strong>NoSuchElementException</strong>。</p>
-<hr>
-<p>在jdk1.6中出现了替代的方法：</p>
-<blockquote>
-<p>offerFirst();<br> offerLast();</p>
-</blockquote>
-<p>添加元素。</p>
-<hr>
-<blockquote>
-<p>peekFirst();<br>peekLast();</p>
-</blockquote>
-<p>获取元素，但是元素不被删除。如果集合中没有元素，会返回<strong>null</strong>。</p>
-<hr>
-<blockquote>
-<p>pollFirst();<br>pollLast();</p>
-</blockquote>
-<p>获取元素，但是元素被删除。如果集合中没有元素，会返回<strong>null</strong>。</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+          LinkList特有的方法
+addFirst();addLast();
+
+添加元素，第一个或最后一个。
 
 
-          
+getList();getFirst();
+
+获取元素，但是不会删除。如果集合中没有元素，会抛出NoSuchElementException。
+
+
+removeFirst();removeLa
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/04/23/LinkList特有的方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -2256,10 +2135,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -2292,7 +2167,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -2302,7 +2176,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://obhl5boin.bkt.clouddn.com/avtar.png"
+               src="/images/avatar.png"
                alt="杨晓辉" />
           <p class="site-author-name" itemprop="name">杨晓辉</p>
            
@@ -2341,13 +2215,29 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/Wevan" target="_blank" title="Github">
+                <a href="http://weibo.com/youngxhui" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
-                    
-                      Github
-                    
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/young_xhui" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngxhui" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
                 </a>
               </span>
             
@@ -2364,6 +2254,28 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -2387,37 +2299,47 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2016 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">杨晓辉</span>
-
-  
 </div>
 
 
-  <div class="powered-by">
-    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-  </div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
 
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">
-    主题 &mdash;
-    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Mist
-    </a>
-  </div>
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
 
-
-
-
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
 
 
         
@@ -2454,14 +2376,6 @@
 
 
 
-
-
-
-
-
-
-
-
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -2484,38 +2398,27 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
-
-  
-  
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+  
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
   
 
 
-  
-
-    
-      <script id="dsq-count-scr" src="https://islet.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -2534,11 +2437,6 @@
 
 
 
-
-
-
-
-
   
 
 
@@ -2547,9 +2445,148 @@
 
   
 
+
+
+
+
+
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("JA27xsMi9lrA6z9imd0pGsSD-gzGzoHsz", "DRrv1wL2T7c5v4PkDSpmwmoA");</script>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -2653,10 +2690,6 @@
   </script>
 
 
-
-  
-
-  
 
   
 

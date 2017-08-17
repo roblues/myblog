@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 
 
@@ -10,13 +10,6 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
 
 
 
@@ -75,7 +68,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -87,7 +80,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -111,9 +104,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -123,8 +115,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -137,11 +129,24 @@
 
 
 
-  <title>ISLAND</title>
+  <title> ISLAND </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
 
 
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97406003-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
   <script type="text/javascript">
@@ -157,9 +162,11 @@
 
 
 
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+
+
 
   
   
@@ -243,21 +250,45 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
             
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            公益404
+            搜索
           </a>
         </li>
-      
-
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -281,17 +312,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/30/Git教程及使用经验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -304,8 +331,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/04/30/Git教程及使用经验/" itemprop="url">Git教程及使用经验</a></h1>
+                <a class="post-title-link" href="/2017/04/30/Git教程及使用经验/" itemprop="url">
+                  Git教程及使用经验
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -323,24 +358,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-10T18:27:32+08:00">
+                2017-08-10
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/30/Git教程及使用经验/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/30/Git教程及使用经验/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -352,7 +388,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -361,6 +397,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  990
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
 
           
 
@@ -368,9 +434,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -379,52 +443,34 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经过一周的准备，完成了 Git 的一些使用经验及教程。</p>
-<p>主要是从命令行的角度来讲解。</p>
-<h1 id="Git-是什么"><a href="#Git-是什么" class="headerlink" title="Git 是什么"></a>Git 是什么</h1><p>git 在维基百科上的解释是这样的</p>
-<blockquote>
-<p>git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。应注意的是，这与GNU Interactive Tools（一个类似Norton Commander界面的文件管理器）有所不同。 </p>
-</blockquote>
-<p>在我看来 Git 是一个 版本控制工具 和 团队协作 软件。</p>
-<h1 id="Git-版本控制"><a href="#Git-版本控制" class="headerlink" title="Git 版本控制"></a>Git 版本控制</h1><p>简单的使用看这个博客 <a href="http://youngxhui.github.io/2016/08/13/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">Git教程操作</a></p>
-<p>这个博客会在这个基础上更加详细的讲解命令行的使用，以及一些操作原理。</p>
-<h2 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h2><p>当我们通过 <code>git add</code> 命令添加文件到 git 中的时候，可以通过 <code>git status</code> 来了解当前代码库的情况。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20status.png" alt=""></p>
-<p>通过 <code>git status</code>这个命令我们可以知道当前代码库的状态</p>
-<h2 id="git-add"><a href="#git-add" class="headerlink" title="git add -?"></a>git add -?</h2><p>为什么每次都要使用 <code>git add</code> 把修改文件添加，之后在提交。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%E4%BB%93%E5%BA%93.png" alt=""></p>
-<p>这就是 git 的一个原理图。</p>
-<p>git 工作时候分为工作区和版本库。工作区就是我们自己本地编辑的区域。而代码库又有一个 暂存区/缓存区。我们每次提交版本(<code>commit</code>) 都是在暂存区向代码库提交。所以我们每次都要通过 <code>add</code> 命令进行对修改的添加。</p>
-<p>在给 git 添加文件的时候，我们使用的是 <code>git add &lt;filename&gt;</code>,但是当我们要添加大量的文件的时候，采用 <code>git add</code> 不仅浪费时间，而且还容易出错。此时我们使用 <code>git add -A</code> 会把所更改(包括文件的添加，删除，修改)的文件添加到代码库中。</p>
-<p><code>git add -i</code> 会进入一个命令的子系统，提供我们选择。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20add%20-i.png" alt=""></p>
-<h2 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h2><p><code>git diff</code> 是一个比较代码的命令，如果不加参数表示本次和上一次的比较。我们可以添加要比较的两个版本的哈希值。</p>
-<p><code>git diff 01df58 6e1baa</code></p>
-<h1 id="Git-协作开发"><a href="#Git-协作开发" class="headerlink" title="Git 协作开发"></a>Git 协作开发</h1><p>之前的 Git 是用来用做简单的 版本控制，记录了每一个版本。下面我们进行团队协作开发。</p>
-<h2 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h2><p>当一个人开发功能 A 而另一个人开发功能 B ，之后代码进行整合的时候，使代码既有功能 A 也有功能 B 。在 Git 中，Git 给了我们分支的概念。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20branch-a.png" alt=""></p>
-<p>分支可以使用我们快速的开发协作，并且快速的合并。</p>
-<h2 id="分支的使用"><a href="#分支的使用" class="headerlink" title="分支的使用"></a>分支的使用</h2><p>通过命令 <code>git branch</code> 来查看分支情况，当前分支会前面带 * 标识。<code>git branch &lt;branch name&gt;</code> 来创建分支。<br>分支创建会拷贝当前的内容到新的分支。通过 <code>git checkout &lt;branch name&gt;</code> 来切换到我们需要切换的分支。</p>
-<p>我们也可以通过 <code>git checkout -b &lt;filename&gt;</code> 来创建分支并且切换到该分支。</p>
-<h2 id="分支的合并"><a href="#分支的合并" class="headerlink" title="分支的合并"></a>分支的合并</h2><p>当我们创建出新的分支的时候，就可以对这个分支进行版本的迭代。当我们做完版本迭代，版本更新的时候，就会向我们的 <code>master</code> 分支上就行合并。</p>
-<p>如果我们要向 <code>master</code> 分支上合并我们新创建的分支叫 <code>dev</code> ，那么我们先切换分支到 <code>master</code>，在通过 <code>git merge dev</code> 进行合并两个分支。期间会有合并冲突，通过修改来进行保留。</p>
-<h1 id="Git-flow"><a href="#Git-flow" class="headerlink" title="Git flow"></a>Git flow</h1><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20flow.png" alt=""></p>
-<p>如上图，git flow 是 <code>git</code> 给我们的一个协作的开发流程，<code>master</code> 分支一般是用于上线产品的发布，<code>develop</code> 分支使用开发， 在他的支线上我们一般会创建功能分支。我们在功能分支上开发完成后合并到 <code>develop</code> 分支上。这样就完成了我们的 git flow 开发。</p>
-<p><a href="http://7xt81u.com1.z0.glb.clouddn.com/Git&amp;Github.pptx" target="_blank" rel="external">PPT下载</a></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          前言经过一周的准备，完成了 Git 的一些使用经验及教程。
+主要是从命令行的角度来讲解。
+Git 是什么git 在维基百科上的解释是这样的
+
+git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/30/Git教程及使用经验/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -438,10 +484,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -454,17 +496,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/20/博客一周年/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -477,8 +515,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/04/20/博客一周年/" itemprop="url">博客一周年</a></h1>
+                <a class="post-title-link" href="/2017/04/20/博客一周年/" itemprop="url">
+                  博客一周年
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -496,24 +542,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:02:12+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/20/博客一周年/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/20/博客一周年/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -525,7 +572,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -534,6 +581,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  179
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -541,9 +618,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -552,37 +627,35 @@
       
         
           
-            <p>2016年4月20日完成了博客搭建，今天2017年4月20日，博客已经维护运行一年。<br>博客由 Github+Hexo 搭建，托管于 Github 。</p>
-<p>在一年中，在 <code>Github</code> 上<strong>commits:179</strong> ，<strong>star:5</strong>, <strong>fork:6</strong></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/github%E7%BB%9F%E8%AE%A1.png" alt=""></p>
-<p>更新博客 <strong>30</strong> 篇。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170420_200335.png" alt=""></p>
-<p>其中访问量最大的是 <strong><a href="http://youngxhui.github.io/tags/GitHub/">Github 使用教程</a></strong> 系列。大多数的访问量都来源于这个系列博客。</p>
-<p>总计评论为 <strong>46</strong> 条(可惜多说要关闭了，现在评论迁移到 <strong>disqus</strong>，国内IP无法访问)</p>
-<p>截至十九点十分，百度统计最后统计 <strong>PV</strong> 为 <strong>39706</strong> ，<strong>UV</strong> 为 <strong>13484</strong> </p>
-<p>下图为 <code>百度统计</code></p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A11.png" alt=""></p>
-<p>其中文章的阅读量为 <strong>27000</strong> 下图为 <code>leancould</code> 统计</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/leancould1.png" alt=""></p>
-<p>有来自 <strong>32</strong> 个国家或地区的IP</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A12.png" alt=""></p>
-<p>HAPPY BIRTHDAY</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/timg.jpg" alt=""></p>
-<p><a href="youngxhui.github.io">ISLAND</a></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          2016年4月20日完成了博客搭建，今天2017年4月20日，博客已经维护运行一年。博客由 Github+Hexo 搭建，托管于 Github 。
+在一年中，在 Github 上commits:179 ，star:5, fork:6
+
+更新博客 30 篇。
+
+其中访问量最大的是 Github 使用教
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/20/博客一周年/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -596,10 +669,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -612,17 +681,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/17/Mybatis入门基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -635,8 +700,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/04/17/Mybatis入门基础/" itemprop="url">MyBatis入门基础</a></h1>
+                <a class="post-title-link" href="/2017/04/17/Mybatis入门基础/" itemprop="url">
+                  MyBatis入门基础
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -654,24 +727,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:05:01+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/17/Mybatis入门基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/17/Mybatis入门基础/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -683,7 +757,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -692,6 +766,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  428
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -699,9 +803,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -710,54 +812,34 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。</p>
-<p>在 <a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="external">Github</a> 的主页上写到 </p>
-<blockquote>
-<p>MyBatis SQL Mapper Framework for Java</p>
-<p>The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented applications. MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or annotations. Simplicity is the biggest advantage of the MyBatis data mapper over object relational mapping tools.</p>
-</blockquote>
-<p>之前没有学过 Hibernate 据了解是不用写 Sql 语句的，有时间会去看看。之前用过 Spring的 JdbcTemperature 充分感觉到了这些框架比起之前直接写 SQL 语句的便利性。</p>
-<h1 id="MyBatis-历史"><a href="#MyBatis-历史" class="headerlink" title="MyBatis 历史"></a>MyBatis 历史</h1><p>MyBatis项目是iBATIS 3.0的子公司，由包括iBATIS原创创始人的团队维护。<br>该项目于2010年5月19日创建，当时Apache iBATIS 3.0发布，该团队宣布，Google Code将以新名称和新主页继续发展。<br>2013年11月10日，该项目宣布迁往Github 。</p>
-<h1 id="MyBatis-配置"><a href="#MyBatis-配置" class="headerlink" title="MyBatis 配置"></a>MyBatis 配置</h1><h2 id="Jar包"><a href="#Jar包" class="headerlink" title="Jar包"></a>Jar包</h2><ul>
-<li><p>mybatis-3.x.x.jar<a href="http://mvnrepository.com/artifact/org.mybatis/mybatis" target="_blank" rel="external">Maven Repository</a><br>当前最新版本为 3.4.4</p>
-</li>
-<li><p>mysql 驱动包</p>
-</li>
-</ul>
-<h2 id="XML配置"><a href="#XML配置" class="headerlink" title="XML配置"></a>XML配置</h2><ul>
-<li>需要一个 xml 文件来作为 MyBatis 的全局配置文件。</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="meta">&lt;!DOCTYPE configuration</span><br><span class="line">        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"</span><br><span class="line">        "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"cacheEnabled"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"defaultStatementTimeout"</span> <span class="attr">value</span>=<span class="string">"3000"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"mapUnderscoreToCamelCase"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"useGeneratedKeys"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"development"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"development"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"Pooled"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/mysql2"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"1234"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"mapper/User.xml"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>configuration 配置<ul>
-<li>setting 设置</li>
-<li>environments 环境<ul>
-<li>environment 环境变量</li>
-<li>transactionManager 事务管理</li>
-<li>dataSource 数据库源<ul>
-<li>property 数据库配置</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>未完待续</strong></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。
+在 Github 的主页上写到 
+
+MyBatis SQL Mapper Framework for Java
+The MyBatis SQL mapper framework
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/17/Mybatis入门基础/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -771,10 +853,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -787,17 +865,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/15/2017蓝桥杯/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -810,8 +884,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/04/15/2017蓝桥杯/" itemprop="url">2017蓝桥杯</a></h1>
+                <a class="post-title-link" href="/2017/04/15/2017蓝桥杯/" itemprop="url">
+                  2017蓝桥杯
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -829,24 +911,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-02T20:43:53+08:00">
+                2017-08-02
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/15/2017蓝桥杯/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/15/2017蓝桥杯/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -858,7 +941,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -867,6 +950,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  1,702
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
 
           
 
@@ -874,9 +987,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -885,63 +996,31 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是第二年参加蓝桥杯了。一年过去了，还是没有好好的学习算法。今年才意识到算法的重要性，所以立下一个 <strong>flag</strong>—手头这个项目做完就开始系统的学习一下算法。</p>
-<p>相比于去年的 蓝桥杯，今年感觉提醒有点变化，不在是一味的暴力。数据量变大了，但是个人感觉没有意义。第一道题完全是个水题，按照出题意思应该是要从文件读取数据吧。可是我用了 Excel 。一分钟秒出答案。就连我这样的菜鸟都能做出来，不说了。</p>
-<h1 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h1><blockquote>
-<p>题目：<br>用扑克牌 A,2,3,4,5,6,7,8,9组成一个三角形,使每条边的和相同<br>三角形如下</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E8%93%9D%E6%A1%A5%E6%9D%AFjavab2.png" alt=""></p>
-<p>A代表1，符合三边之和相等的一共有多少种情况？经过翻转，镜像为同一种的算一种！</p>
-</blockquote>
-<p>这个题首先要考虑的是镜像和翻转的情况.<br>如图 这个为镜像</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E9%95%9C%E5%83%8F.png" alt=""> </p>
-<p>在考虑翻转和镜像问题后,同样的排列就会产生6种情况,我们需要在最后的结果除以6。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tra</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">boolean</span>[] flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">9</span>];</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">9</span>];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        dfs(<span class="number">0</span>);</span><br><span class="line">        System.out.println(count / <span class="number">6</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index == <span class="number">9</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> b1 = a[<span class="number">0</span>] + a[<span class="number">1</span>] + a[<span class="number">3</span>] + a[<span class="number">5</span>];</span><br><span class="line">            <span class="keyword">int</span> b2 = a[<span class="number">0</span>] + a[<span class="number">2</span>] + a[<span class="number">4</span>] + a[<span class="number">8</span>];</span><br><span class="line">            <span class="keyword">int</span> b3 = a[<span class="number">5</span>] + a[<span class="number">6</span>] + a[<span class="number">7</span>] + a[<span class="number">8</span>];</span><br><span class="line">            <span class="keyword">if</span> (b1 == b2 &amp;&amp; b1 == b3) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (flag[i]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            flag[i] = <span class="keyword">true</span>;</span><br><span class="line">            a[index] = i;</span><br><span class="line">            dfs(index + <span class="number">1</span>);</span><br><span class="line">            flag[i] = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>答案:144</p>
-<h1 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h1><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/3%E9%87%91%E5%AD%97%E5%A1%94.png" alt=""></p>
-<p>又是一个数据量比较大的题，这个题是没有做出来的，回头自己再慢慢题解研究一下吧。这个题应该也是要从文件读取，而且当时没有找出什么规律。</p>
-<h1 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h1><p>还是不会，一个拧魔方的题，要求是二阶魔方，目前还没有找到题，找到题后补上。</p>
-<h1 id="代码填空"><a href="#代码填空" class="headerlink" title="代码填空"></a>代码填空</h1><p>代码填空题略过，一般我做代码填空题是在所需要填写的位置打断点，根据 DEBUG 和输出要求来进行试探性的填写，一般不需要读懂全部代码，只需要知道部分代码即可，做题速度比较快。<br>可惜，一不小心翻船了。</p>
-<h2 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h2><p>所填写的空 f(x/10,k)</p>
-<h2 id="第六题"><a href="#第六题" class="headerlink" title="第六题"></a>第六题</h2><p>答案 a[i-1][j-1]+1</p>
-<p>船翻在了第六题，但是直接填写了 <code>i</code> 答案是测试是正常输出的。不知道给不给分。排除这个模棱两可的答案，前面一共做对了三道题。比去年是有点进步，但是发现还是很差啊。。。。。一定要好好研究算法。</p>
-<h1 id="第七题"><a href="#第七题" class="headerlink" title="第七题"></a>第七题</h1><blockquote>
-<p>标题：日期问题<br>小明正在整理一批历史文献。这些历史文献中出现了很多日期。小明知道这些日期都在1960年1月1日至2059年12月31日。令小明头疼的是，这些日期采用的格式非常不统一，有采用年/月/日的，有采用月/日/年的，还有采用日/月/年的。更加麻烦的是，年份也都省略了前两位，使得文献上的一个日期，存在很多可能的日期与其对应。<br>比如02/03/04，可能是2002年03月04日、2004年02月03日或2004年03月02日。<br>给出一个文献上的日期，你能帮助小明判断有哪些可能的日期对其对应吗？</p>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>一个日期，格式是”AA/BB/CC”。  (0 &lt;= A, B, C &lt;= 9)</p>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>输出若干个不相同的日期，每个日期一行，格式是”yyyy-MM-dd”。多个日期按从早到晚排列</p>
-<h2 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h2><p>02/03/04</p>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>2002-03-04<br>2004-02-03<br>2004-03-02<br>资源约定：<br>峰值内存消耗（含虚拟机） &lt; 256M<br>CPU消耗  &lt; 1000ms<br>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。</p>
-</blockquote>
-<p>这个题说实话，其实不难，关键是考虑各种情况，比如是否闰年，年，月，日格式是否合法，最后还要有个排序。我没有写完，当时越写越烦，最后就成了能过多少测试过多少测试，完全成了骗分。</p>
-<h1 id="第八题"><a href="#第八题" class="headerlink" title="第八题"></a>第八题</h1><blockquote>
-<p>标题：包子凑数</p>
-<p>小明几乎每天早晨都会在一家包子铺吃早餐。他发现这家包子铺有N种蒸笼，其中第i种蒸笼恰好能放Ai个包子。每种&gt; 蒸笼都有非常多笼，可以认为是无限笼。</p>
-<p>每当有顾客想买X个包子，卖包子的大叔就会迅速选出若干笼包子来，使得这若干笼中恰好一共有X个包子。比如一共有&gt; 3种蒸笼，分别能放3、4和5个包子。当顾客想买11个包子时，大叔就会选2笼3个的再加1笼5个的（也可能选出1笼3个&gt; 的再加2笼4个的）。</p>
-<p>当然有时包子大叔无论如何也凑不出顾客想买的数量。比如一共有3种蒸笼，分别能放4、5和6个包子。而顾客想买7个&gt; 包子时，大叔就凑不出来了。</p>
-<p>小明想知道一共有多少种数目是包子大叔凑不出来的。</p>
-<h2 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h2><p>第一行包含一个整数N。(1 &lt;= N &lt;= 100)<br>以下N行每行包含一个整数Ai。(1 &lt;= Ai &lt;= 100)</p>
-<h2 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h2><p>一个整数代表答案。如果凑不出的数目有无限多个，输出INF。</p>
-<p>例如，<br>输入：<br>2<br>4<br>5   </p>
-<p>程序应该输出：<br>6  </p>
-<p>再例如，<br>输入：<br>2<br>4<br>6    </p>
-<p>程序应该输出：<br>INF</p>
-<p>样例解释：<br>对于样例1，凑不出的数目包括：1, 2, 3, 6, 7, 11。<br>对于样例2，所有奇数都凑不出来，所以有无限多个。  </p>
-</blockquote>
-<p>刚刚开始的时候想的这个题使用除法，比如输入4和5两种包子，分别枚举出1~1000，用每个数去除以包子的情况，如果有余数，就用余数接着除。但是很快发现了不对。然后就叒变成了一个骗分题。把输入是偶数的情况先输出 <code>INF</code>。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>最后的试题就写到了第八题，感觉今年的题应该是要比去年难的，明显不是暴力杯了。成绩很快出来了，省二。钱还没有白交，剩下就看看能不能申请学校的单项奖学金了。钱不是重要的，重要的是靠前的一周备考中还是学会了 DFS 。之前是不会这个算法的。有收获就好，记得自己立下的 Flag 。</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          前言这是第二年参加蓝桥杯了。一年过去了，还是没有好好的学习算法。今年才意识到算法的重要性，所以立下一个 flag—手头这个项目做完就开始系统的学习一下算法。
+相比于去年的 蓝桥杯，今年感觉提醒有点变化，不在是一味的暴力。数据量变大了，但是个人感觉没有意义。第一道题完全是个水题，按照出题意思应该是要从
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/15/2017蓝桥杯/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -955,10 +1034,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -971,17 +1046,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/04/计蒜客蓝桥杯模拟赛-5-试题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -994,8 +1065,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/04/04/计蒜客蓝桥杯模拟赛-5-试题/" itemprop="url">计蒜客蓝桥杯模拟赛(5)试题</a></h1>
+                <a class="post-title-link" href="/2017/04/04/计蒜客蓝桥杯模拟赛-5-试题/" itemprop="url">
+                  计蒜客蓝桥杯模拟赛(5)试题
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1013,24 +1092,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:02:56+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/04/计蒜客蓝桥杯模拟赛-5-试题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/04/计蒜客蓝桥杯模拟赛-5-试题/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1042,7 +1122,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1051,6 +1131,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  568
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1058,9 +1168,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1069,39 +1177,34 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>这是近期 计蒜客 的一个关于蓝桥杯的算法模拟赛。每个题进行一下简单的计算。</p>
-<h1 id="试题"><a href="#试题" class="headerlink" title="试题"></a>试题</h1><h2 id="试题一"><a href="#试题一" class="headerlink" title="试题一"></a>试题一</h2><blockquote>
-<p>某君的年龄是个两位数，如果把他年龄的两位数字交换位置后与原数字相加和为 x，与原数字相减差的绝对值为 y。已知 x 比 y 大 32。请你计算 y 的值是多少。</p>
-</blockquote>
-<p>这个试题很明显是一个送分题。通过手算就可以计算出这个答案。</p>
-<p>答案：45</p>
-<h2 id="试题二"><a href="#试题二" class="headerlink" title="试题二"></a>试题二</h2><blockquote>
-<p>给出方程组：<br>   11x+13y+17z=2471<br>   13x+17y+11z=2739</p>
-<p>   已知 x，y，z 均为正整数，请你计算 x，y，z相加和最小为多少</p>
-</blockquote>
-<p>这个题也是一个送分题,写个简单的暴力就可以算出。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; <span class="number">1000</span>; x++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; <span class="number">1000</span>; y++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> z = <span class="number">0</span>; z &lt; <span class="number">1000</span>; z++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="number">11</span> * x + <span class="number">13</span> * y + <span class="number">17</span> * z == <span class="number">2471</span> &amp;&amp; <span class="number">13</span> * x + <span class="number">17</span> * y + <span class="number">11</span> * z == <span class="number">2739</span>) &#123;</span><br><span class="line">                        sum = x + y + z;</span><br><span class="line">                        System.out.println(sum);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>答案：181</p>
-<h2 id="试题三"><a href="#试题三" class="headerlink" title="试题三"></a>试题三</h2><blockquote>
-<p>将数字 1…9 填入一个3×3 的九宫格中，使得格子中每一横行和的值全部相等，每一竖列和的值全部相等。请你计    算有多少种填数字的方案。</p>
-</blockquote>
-<p>这个还是一个暴力</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">9</span>];</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (a[<span class="number">0</span>] = <span class="number">1</span>; a[<span class="number">0</span>] &lt; <span class="number">10</span>; a[<span class="number">0</span>]++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (a[<span class="number">1</span>] = <span class="number">1</span>; a[<span class="number">1</span>] &lt; <span class="number">10</span>; a[<span class="number">1</span>]++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (a[<span class="number">2</span>] = <span class="number">1</span>; a[<span class="number">2</span>] &lt; <span class="number">10</span>; a[<span class="number">2</span>]++) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (a[<span class="number">3</span>] = <span class="number">1</span>; a[<span class="number">3</span>] &lt; <span class="number">10</span>; a[<span class="number">3</span>]++) &#123;</span><br><span class="line">                        <span class="keyword">for</span> (a[<span class="number">4</span>] = <span class="number">1</span>; a[<span class="number">4</span>] &lt; <span class="number">10</span>; a[<span class="number">4</span>]++) &#123;</span><br><span class="line">                            <span class="keyword">for</span> (a[<span class="number">5</span>] = <span class="number">1</span>; a[<span class="number">5</span>] &lt; <span class="number">10</span>; a[<span class="number">5</span>]++) &#123;</span><br><span class="line">                                <span class="keyword">for</span> (a[<span class="number">6</span>] = <span class="number">1</span>; a[<span class="number">6</span>] &lt; <span class="number">10</span>; a[<span class="number">6</span>]++) &#123;</span><br><span class="line">                                    <span class="keyword">for</span> (a[<span class="number">7</span>] = <span class="number">1</span>; a[<span class="number">7</span>] &lt; <span class="number">10</span>; a[<span class="number">7</span>]++) &#123;</span><br><span class="line">                                        <span class="keyword">for</span> (a[<span class="number">8</span>] = <span class="number">1</span>; a[<span class="number">8</span>] &lt; <span class="number">10</span>; a[<span class="number">8</span>]++) &#123;</span><br><span class="line">                                            <span class="keyword">int</span> row1 = a[<span class="number">0</span>] + a[<span class="number">1</span>] + a[<span class="number">2</span>];</span><br><span class="line">                                            <span class="keyword">int</span> row2 = a[<span class="number">3</span>] + a[<span class="number">4</span>] + a[<span class="number">5</span>];</span><br><span class="line">                                            <span class="keyword">int</span> row3 = a[<span class="number">6</span>] + a[<span class="number">7</span>] + a[<span class="number">8</span>];</span><br><span class="line">                                            <span class="keyword">int</span> col1 = a[<span class="number">0</span>] + a[<span class="number">3</span>] + a[<span class="number">6</span>];</span><br><span class="line">                                            <span class="keyword">int</span> col2 = a[<span class="number">1</span>] + a[<span class="number">4</span>] + a[<span class="number">7</span>];</span><br><span class="line">                                            <span class="keyword">int</span> col3 = a[<span class="number">2</span>] + a[<span class="number">5</span>] + a[<span class="number">8</span>];</span><br><span class="line">                                            <span class="keyword">if</span> (col1 == col2 &amp;&amp; col2 == col3 &amp;&amp; row1 == row2 &amp;&amp; row1 == row3 &amp;&amp; col1 == row1) &#123;</span><br><span class="line">                                                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">                                                    set.add(a[i]);</span><br><span class="line">                                                &#125;</span><br><span class="line">                                                <span class="keyword">if</span> (set.size() == <span class="number">9</span>) &#123;</span><br><span class="line">                                                    count++;</span><br><span class="line">                                                &#125;</span><br><span class="line">                                                set.clear();</span><br><span class="line">                                            &#125;</span><br><span class="line">                                        &#125;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>答案：72</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          简介这是近期 计蒜客 的一个关于蓝桥杯的算法模拟赛。每个题进行一下简单的计算。
+试题试题一
+某君的年龄是个两位数，如果把他年龄的两位数字交换位置后与原数字相加和为 x，与原数字相减差的绝对值为 y。已知 x 比 y 大 32。请你计算 y 的值是多少。
+
+这个试题很明显是一个送分题。通过手算就可以计
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/04/计蒜客蓝桥杯模拟赛-5-试题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1115,10 +1218,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1131,17 +1230,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/03/python爬取斗鱼图片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1154,8 +1249,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/04/03/python爬取斗鱼图片/" itemprop="url">python爬取斗鱼图片</a></h1>
+                <a class="post-title-link" href="/2017/04/03/python爬取斗鱼图片/" itemprop="url">
+                  python爬取斗鱼图片
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1173,24 +1276,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:05:06+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/03/python爬取斗鱼图片/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/03/python爬取斗鱼图片/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1202,7 +1306,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1211,6 +1315,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  365
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1218,9 +1352,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1229,45 +1361,42 @@
       
         
           
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。</p>
-<ul>
-<li>编辑工具：Visual Studio Code</li>
-<li>Python 版本：2.7</li>
-<li>使用的库：urllib</li>
-</ul>
-<hr>
-<p>Visual Studio Code插件</p>
-<ul>
-<li>Code Runner</li>
-<li>Python</li>
-<li>Python for VSCode</li>
-<li>MagicPython</li>
-</ul>
-<h1 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h1><p>首先要打开地址，并且获取该网页的代码。</p>
-<p>从代码里获得你要图片。这里我们需要简单的分析一下该网页。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%96%97%E9%B1%BC%E5%9B%BE%E7%89%87.png" alt=""></p>
-<p>当我们把鼠标移到地址上的时候就会出现该图片，这个就是我们要爬取的图片。</p>
-<p>这个图片是在 <code>data-original</code> 后面，我们就需要进行匹配，通过正则表达式很快就可以达到目的。</p>
-<p>网页代码片段</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-original</span>=<span class="string">"https://rpic.douyucdn.cn/a1704/03/15/1032029_170403155245.jpg"</span> <span class="attr">src</span>=<span class="string">"https://rpic.douyucdn.cn/a1704/03/15/1032029_170403155245.jpg"</span> <span class="attr">width</span>=<span class="string">"283"</span> <span class="attr">height</span>=<span class="string">"163"</span> <span class="attr">style</span>=<span class="string">"display: block;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>正则表达式 <code>data-original=&quot;(.*?\.(jpg|png))</code></p>
-<p>这样我们就获取到了这个页面上所有的 jpg 和 png 图片。</p>
-<p>最后通过 urlretrieve 这个方法把图片保存到你想要放的地方。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf8</span></span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> <span class="comment"># 通过filename设置路径和名字</span></span><br><span class="line">response=urllib.urlopen(<span class="string">'https://www.douyu.com/directory/game/TVgame'</span>)</span><br><span class="line">html=response.read()</span><br><span class="line"><span class="keyword">print</span> html</span><br><span class="line">imglist=re.findall(<span class="string">r'data-original="(.*?\.(jpg|png))"'</span>,html)</span><br><span class="line"><span class="keyword">print</span> imglist</span><br><span class="line">x=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> imgurl <span class="keyword">in</span> imglist:</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'下载图片 %s'</span>%imgurl[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">if</span> imgurl[<span class="number">1</span>]==<span class="string">'gif'</span>:</span><br><span class="line">        urllib.urlretrieve(imgurl[<span class="number">0</span>],filename=<span class="string">'G:\PythonCode\pic\%d.gif'</span>%x)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        urllib.urlretrieve(imgurl[<span class="number">0</span>],filename=<span class="string">'G:\PythonCode\pic\%d.jpg'</span>%x)</span><br><span class="line">    x+=<span class="number">1</span></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。
+
+编辑工具：Visual Studio Code
+Python 版本：2.7
+使用的库：urllib
+
+
+Visual Studio Code插件
+
+Code Runner
+Python
+Python for VSCode
+MagicPy
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/03/python爬取斗鱼图片/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1281,10 +1410,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1297,17 +1422,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/03/02/Spring学习记录-二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1320,8 +1441,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/03/02/Spring学习记录-二/" itemprop="url">Spring学习记录(二)</a></h1>
+                <a class="post-title-link" href="/2017/03/02/Spring学习记录-二/" itemprop="url">
+                  Spring学习记录(二)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1339,24 +1468,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:05:19+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/02/Spring学习记录-二/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/02/Spring学习记录-二/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1368,7 +1498,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1377,6 +1507,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  1,729
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1384,9 +1544,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1395,197 +1553,34 @@
       
         
           
-            <h1 id="AOP简述"><a href="#AOP简述" class="headerlink" title="AOP简述"></a>AOP简述</h1><p>面向切面编程，扩展功能不修改源代码实现。AOP采用横向抽取机制，取代了传统的纵向继承体系重复代码。</p>
-<h1 id="AOP底层原理"><a href="#AOP底层原理" class="headerlink" title="AOP底层原理"></a>AOP底层原理</h1><h1 id="AOP操作相关术语"><a href="#AOP操作相关术语" class="headerlink" title="AOP操作相关术语"></a>AOP操作相关术语</h1><ul>
-<li>链接点：类里面的被增强的方法。</li>
-<li>切入点：类里面的增强的方法，在实际操作中，实际增强的方法叫切入点。</li>
-<li>通知/增强：增强的逻辑，称为增强，比如扩展日志功能，这个日志功能称为增强。<br> 前置通知：在方法之前执行<br> 后置通知：在方法之后执行<br> 异常通知：出现异之后执行<br> 最终通知：在后置之后执行<br> 环绕通知：在方法之前和之后执行</li>
-<li>切面：把增强应用到具体的方法上面，这个过程称为切面。把增强用到切入点的过程。</li>
-</ul>
-<h1 id="Spring的AOP操作"><a href="#Spring的AOP操作" class="headerlink" title="Spring的AOP操作"></a>Spring的AOP操作</h1><h2 id="Aspectj框架"><a href="#Aspectj框架" class="headerlink" title="Aspectj框架"></a>Aspectj框架</h2><p>在Spring进行aop操作，使用<code>Aspectj</code>框架，这个框架本身不是Spring的一部分，只是一起使用进行AOP操作。</p>
-<ul>
-<li>版本在2.0以后支持切点表达式支持。</li>
-</ul>
-<h2 id="基于Aspectj实现AOP操作"><a href="#基于Aspectj实现AOP操作" class="headerlink" title="基于Aspectj实现AOP操作"></a>基于Aspectj实现AOP操作</h2><ul>
-<li>相关ja包</li>
-</ul>
-<blockquote>
-<p><code>aopalliance</code>,<code>aspectjweaver</code>,<code>spring-aop</code>,<code>spring-aspects</code></p>
-</blockquote>
-<ul>
-<li>创建Spring核心配置文件导入AOP约束。<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span><br><span class="line">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">       <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></span><br><span class="line">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans</span><br><span class="line">       http://www.springframework.org/schema/beans/spring-beans.xsd</span><br><span class="line">       http://www.springframework.org/schema/aop</span><br><span class="line">       http://www.springframework.org/schema/aop/spring-aop.xsd"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="基于Aspectj的xml实现"><a href="#基于Aspectj的xml实现" class="headerlink" title="基于Aspectj的xml实现"></a>基于Aspectj的xml实现</h3><ul>
-<li>常用表达式<br>通过<code>execution</code>函数表达式实现。</li>
-</ul>
-<blockquote>
-<p>execution(&lt;访问修饰符&gt;?&lt;返回类型&gt;&lt;方法名&gt;(&lt;参数&gt;)&lt;异常&gt;)</p>
-</blockquote>
-<ul>
-<li>execution(<em> /增强方法的全路径/): </em>代表任意修饰符，空格后跟随增强方法的全路径。</li>
-<li>execution(<em> com.Hello.</em>):代表该类的所有方法</li>
-<li>execution(<em> </em>.*(..))</li>
-<li>execution(<em> save</em>(..)) 表示以<code>save</code>开头的方法进行增强。</li>
-</ul>
-<p>xml配置代码<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--1.配置类--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"book"</span> <span class="attr">class</span>=<span class="string">"aop.Book"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myBook"</span> <span class="attr">class</span>=<span class="string">"aop.MyBook"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--2.配置aop操作--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--2.1配置切入点--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">"pointcut1"</span> <span class="attr">expression</span>=<span class="string">"execution(* aop.Book.add())"</span>/&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--2.2配置切面--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"myBook"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"before1"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="基于Aspectj的注解实现"><a href="#基于Aspectj的注解实现" class="headerlink" title="基于Aspectj的注解实现"></a>基于Aspectj的注解实现</h3><p>创建类的对象，在spring的配置文件中开启aop操作。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span>&gt;</span> <span class="tag">&lt;/<span class="name">aop:aspectj-autoproxy</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>通过注解来实现。</p>
-<p>在增强类上<br><code>@Aspect</code>注解类，<code>@Before</code>注解方法(前置通知)。</p>
-<ul>
-<li>@Before</li>
-<li>@AfterReturning</li>
-<li>@Around</li>
-<li>@AfterThrowing</li>
-<li>@After</li>
-</ul>
-<h1 id="Spring的JdbcTemplate操作"><a href="#Spring的JdbcTemplate操作" class="headerlink" title="Spring的JdbcTemplate操作"></a>Spring的JdbcTemplate操作</h1><p><code>Spring</code>在<code>dao</code>层，使用<code>JdbcTemplate</code>，Spring为各种支持的持久化技术，都提供了简单操作的模板和回调。</p>
-<table>
-<thead>
-<tr>
-<th>ORM持久化技术</th>
-<th>模板类</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JDBC</td>
-<td>org.springframework.jdbc.core.JdbcTemplate</td>
-</tr>
-<tr>
-<td>Hibemate5.0</td>
-<td>org.springframework.orm.hibernate5.HibernateTemplate</td>
-</tr>
-<tr>
-<td>IBatis(MyBatis)</td>
-<td>org.springframework.orm.ibatis.sqlMapClientTempate</td>
-</tr>
-<tr>
-<td>JPA</td>
-<td>org.springframework.orm.jpa.JpaTempate</td>
-</tr>
-</tbody>
-</table>
-<h2 id="JdbcTemplate使用"><a href="#JdbcTemplate使用" class="headerlink" title="JdbcTemplate使用"></a>JdbcTemplate使用</h2><p>都是对数据库进行<code>crud</code>操作。</p>
-<ul>
-<li>导入JdbcTemplate相关jar包</li>
-</ul>
-<blockquote>
-<p><code>spring-jdbc</code> <code>spring-tx</code></p>
-</blockquote>
-<ul>
-<li>创建对象设置数据库信息，比如：加载驱动，设置url，用户名，密码等。<br>实例代码</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DriverManagerDataSource dataSource = <span class="keyword">new</span> DriverManagerDataSource();</span><br><span class="line">        dataSource.setDriverClassName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">        dataSource.setUsername(<span class="string">"root"</span>);</span><br><span class="line">        dataSource.setUrl(<span class="string">"jdbc:mysql://localhost:3306/JdbcDemo"</span>);</span><br><span class="line">        dataSource.setPassword(<span class="string">"12qwaszx"</span>);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>创建JdbcTemplate模板对象，设置数据源。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JdbcTemplate jdbcTemplate = <span class="keyword">new</span> JdbcTemplate(dataSource);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>调用JdbcTemplate对象里面的方法实现操作。</p>
-</li>
-</ul>
-<h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="string">"INSERT INTO jdbcTest (id, name, password) VALUES (?,?,?)"</span>;</span><br><span class="line">jdbcTemplate.update(sql, <span class="string">"1"</span>, <span class="string">"lucy"</span>, <span class="string">"1234"</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="string">"UPDATE jdbcTest\n"</span> +</span><br><span class="line">            <span class="string">"SET name = ?\n"</span> +</span><br><span class="line">            <span class="string">"WHERE id=?"</span>;</span><br><span class="line">jdbcTemplate.update(sql,<span class="string">"cat"</span>,<span class="string">"1"</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="string">"DELETE FROM jdbcTest WHERE name=?"</span>;</span><br><span class="line">jdbcTemplate.update(sql,<span class="string">"cat"</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p><code>JdbcTemplate</code>实现查询，有接口<code>RowMapper</code>,<br><code>JdbcTemplate</code>针对这个接口美欧提供实现类，等到不同的类型数据需要自己封装</p>
-<ul>
-<li><p>查询一个值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//查询返回某值</span><br><span class="line">        String sql1=&quot;SELECT count(*) FROM jdbcTest&quot;;</span><br><span class="line">        int count=template.queryForObject(sql1,Integer.class);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>返回对象</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询返回对象</span></span><br><span class="line">        String sql2 = <span class="string">"select * from jdbcTest where name=?"</span>;</span><br><span class="line">        <span class="comment">//调用jdbcTemplate方法</span></span><br><span class="line">        User user=template.queryForObject(sql2,<span class="keyword">new</span> MyRowMapper() , <span class="string">"tom"</span>);</span><br><span class="line">        System.out.println(user);</span><br></pre></td></tr></table></figure>
-<p>要自己封装这个类<br>其中querForObject这个方法的第二个值为RowMapper，需要自己进行封装。<br>MyRowMapper.class<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyRowMapper</span> <span class="keyword">implements</span> <span class="title">RowMapper</span>&lt;<span class="title">User</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line"><span class="comment">//        从结果集里面把数据得到</span></span><br><span class="line">        String username = resultSet.getString(<span class="string">"name"</span>);</span><br><span class="line">        String password = resultSet.getString(<span class="string">"password"</span>);</span><br><span class="line"><span class="comment">//        把数据封装到对象里面</span></span><br><span class="line">        User user = <span class="keyword">new</span> User();</span><br><span class="line">        user.setName(username);</span><br><span class="line">        user.setPassword(password);</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>返回list集合</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String sql3 = &quot;select * from jdbcTest&quot;;</span><br><span class="line">List&lt;User&gt; list = template.query(sql3, new MyRowMapper());</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure>
-<h2 id="Spring配置连接池和dao使用JdbcTemplate"><a href="#Spring配置连接池和dao使用JdbcTemplate" class="headerlink" title="Spring配置连接池和dao使用JdbcTemplate"></a>Spring配置连接池和dao使用JdbcTemplate</h2><h3 id="配置c3p0连接池"><a href="#配置c3p0连接池" class="headerlink" title="配置c3p0连接池"></a>配置c3p0连接池</h3><ol>
-<li>导入jar包 <code>c3p0</code>和<code>mchange-commons-java</code></li>
-<li>在Spring的配置文件配置连接池</li>
-<li>在dao中使用</li>
-</ol>
-<h3 id="dao使用jdbctemplate"><a href="#dao使用jdbctemplate" class="headerlink" title="dao使用jdbctemplate"></a>dao使用jdbctemplate</h3><ol>
-<li>在Service中注入Dao。</li>
-<li>在Dao中注入jdbc模板。</li>
-<li>在模板中注入连接池。</li>
-<li>在连接池中写配置。</li>
-</ol>
-<p>示例代码</p>
-<p>UserService.class</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.c3p0;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by youngxhui</span><br><span class="line"> * Time is 17-2-19.</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> UserDao userDao;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserDao</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.userDao = userDao;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>&#123;</span><br><span class="line">        userDao.add();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>UserDao.class</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.c3p0;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by youngxhui</span><br><span class="line"> * Time is 17-2-19.</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String sql=<span class="string">"INSERT INTO jdbcTest (id, name, password) VALUES (?,?,?)"</span>;</span><br><span class="line">        jdbcTemplate.update(sql, <span class="number">5</span>, <span class="string">"lili"</span>, <span class="string">"123456"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setJdbcTemplate</span><span class="params">(JdbcTemplate jdbcTemplate)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.jdbcTemplate = jdbcTemplate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>SpringContext.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span><br><span class="line">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置c3p0的连接池--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"comboPooledDataSource"</span> <span class="attr">class</span>=<span class="string">"com.mchange.v2.c3p0.ComboPooledDataSource"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClass"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"jdbcUrl"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/JdbcDemo"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"user"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"12qwaszx"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userService"</span> <span class="attr">class</span>=<span class="string">"com.c3p0.UserService"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"userDao"</span> <span class="attr">ref</span>=<span class="string">"userDao"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.c3p0.UserDao"</span> <span class="attr">id</span>=<span class="string">"userDao"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"jdbcTemplate"</span> <span class="attr">ref</span>=<span class="string">"jdbcTemplate"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.core.JdbcTemplate"</span> <span class="attr">id</span>=<span class="string">"jdbcTemplate"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"comboPooledDataSource"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="Spring事务管理"><a href="#Spring事务管理" class="headerlink" title="Spring事务管理"></a>Spring事务管理</h1><h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><p>事务是访问数据库的一个操作序列，数据库应用系统通过事务集来完成对数据库的存取。事务的正确执行使得数据库从一种状态转换成另一种状态。</p>
-<h2 id="事务特性"><a href="#事务特性" class="headerlink" title="事务特性"></a>事务特性</h2><ul>
-<li>原子性（atomicity）</li>
-<li>一致性（consistency</li>
-<li>隔离性 （isolation）</li>
-<li>持久性（durability）</li>
-</ul>
-<h2 id="Sping事务管理api"><a href="#Sping事务管理api" class="headerlink" title="Sping事务管理api"></a>Sping事务管理api</h2><p>spring对事务管理的两种方式</p>
-<ul>
-<li>编程式事务管理(不用)</li>
-<li>声明式事务管理<ul>
-<li>基于xml配置文件实现</li>
-<li>基于注解实现</li>
-</ul>
-</li>
-</ul>
-<h3 id="api介绍"><a href="#api介绍" class="headerlink" title="api介绍"></a>api介绍</h3><p>Spring事务管理高层抽象主要包含3个接口</p>
-<ul>
-<li>PlatformTransactionManager事务管理器</li>
-<li>TransactionDefinition事务定义信息</li>
-<li>TransactionStatus事务具体运行状态</li>
-</ul>
-<p>PlatformTransactionManager针对不同的dao层，提供了不同的接口实现类</p>
-<table>
-<thead>
-<tr>
-<th>事务</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>org.springframework.idbc.datasource.DataSourceTransactionManager</td>
-<td>使用Spring JDBC或iBatis进行持久化数据时使用</td>
-</tr>
-<tr>
-<td>org.springframework.orm.hibernate5.HibernateTransactionManger</td>
-<td>使用Hibernate5.0版本进行持久化数据时使用</td>
-</tr>
-<tr>
-<td>org.springframework.orm.jpa.JpaTransactionManager</td>
-<td>使用JPA进行持久化</td>
-</tr>
-<tr>
-<td>org.springframework.jdo.JdoTransactionManager</td>
-<td>当持久化机制是Jdo时使用</td>
-</tr>
-<tr>
-<td>org.springframework.transaction.ita.JtaTransactionManager</td>
-<td>使用一个JTA实现来管理事务，在一个事务跨越多个资源时必须使用</td>
-</tr>
-</tbody>
-</table>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          AOP简述面向切面编程，扩展功能不修改源代码实现。AOP采用横向抽取机制，取代了传统的纵向继承体系重复代码。
+AOP底层原理AOP操作相关术语
+链接点：类里面的被增强的方法。
+切入点：类里面的增强的方法，在实际操作中，实际增强的方法叫切入点。
+通知/增强：增强的逻辑，称为增强，比如扩展日志功能，这个
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/02/Spring学习记录-二/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1599,10 +1594,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1615,17 +1606,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/02/19/Log4j使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1638,8 +1625,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/02/19/Log4j使用/" itemprop="url">Log4j使用</a></h1>
+                <a class="post-title-link" href="/2017/02/19/Log4j使用/" itemprop="url">
+                  Log4j使用
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1657,24 +1652,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:04:43+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/19/Log4j使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/02/19/Log4j使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1686,7 +1682,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1695,6 +1691,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  186
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1702,9 +1728,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1713,32 +1737,36 @@
       
         
           
-            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>通过log4j可以看到程序运行时候更加详细的信息。</p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><ol>
-<li>导入log4j的jar包</li>
-<li>复制log4j的配置文件</li>
-</ol>
-<p>一个简单的log4j的配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">### 设置日志等级 ###</span><br><span class="line">log4j.rootLogger=info, stdout</span><br><span class="line">### 输出到控制台 ###</span><br><span class="line">log4j.appender.stdout=org.apache.log4j.ConsoleAppender</span><br><span class="line">log4j.appender.stdout.Target=System.err</span><br><span class="line">#log4j.appender.stdout=System.err</span><br><span class="line">log4j.appender.stdout.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.stdout.layout.ConversionPattern=%d&#123;ABSOLUTE&#125; %5p %c&#123;1&#125;:%L - %m%n</span><br><span class="line">### 输出到日至文件</span><br><span class="line">log4j.appender.file=org.apache.log4j.FileAppender</span><br><span class="line">log4j.appender.file.File=/home/youngxhui/IdeaProjects/SpringDemo/spring-aop-xml/src/mylog.log</span><br><span class="line">log4j.appender.file.layout=org.apache.log4j.PatternLayout</span><br><span class="line">log4j.appender.file.layout.ConversionPattern=%&#123;ABSOLUTE&#125; %5p %c&#123;1&#125;:%L - %m%n</span><br></pre></td></tr></table></figure>
-<h1 id="设置日志级别"><a href="#设置日志级别" class="headerlink" title="设置日志级别"></a>设置日志级别</h1><ul>
-<li>info：基本信息</li>
-<li>debug：更详细的信息</li>
-</ul>
-<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/log4j.png" alt=""></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          简介通过log4j可以看到程序运行时候更加详细的信息。
+使用
+导入log4j的jar包
+复制log4j的配置文件
+
+一个简单的log4j的配置文件
+12345678910111213### 设置日志等级 ###log4j.rootLogger=info, stdout### 输出到控制台 ###lo
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/19/Log4j使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1752,10 +1780,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1768,17 +1792,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/02/08/Spring学习-一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1791,8 +1811,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/02/08/Spring学习-一/" itemprop="url">Spring学习(一)</a></h1>
+                <a class="post-title-link" href="/2017/02/08/Spring学习-一/" itemprop="url">
+                  Spring学习(一)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1810,24 +1838,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:05:13+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/08/Spring学习-一/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/02/08/Spring学习-一/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1839,7 +1868,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1848,6 +1877,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  1,484
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1855,9 +1914,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1866,187 +1923,34 @@
       
         
           
-            <p>Spring学习笔记，仅供自己参考。</p>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ol>
-<li>Spring是开源的轻量级框架。</li>
-<li>Spring核心主要为两部分：<br>(1).AOP:面向切面编程<br>(2).IOC：控制反转：<br> 把对象的创建不是通过new的方式实现，而是交给spring配置创建类对象</li>
-<li>Spring是一站式框架。<br>Spring在JavaEE三层结构中，每一层都提供不同的解决技术。<ul>
-<li>web层：SpringMVC</li>
-<li>service层：Spring的ioc</li>
-<li>dao层：Spring的jdbcTemplate</li>
-</ul>
-</li>
-<li>Spring版本：4.x</li>
-</ol>
-<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><ul>
-<li>用于沟通的中介勿的抽象化。</li>
-<li>对外声明。</li>
-<li>Java 8中接口可以拥有方法体。</li>
-</ul>
-<h1 id="面向接口编程"><a href="#面向接口编程" class="headerlink" title="面向接口编程"></a>面向接口编程</h1><ul>
-<li>结构设计中，分清层次及调用关系，每层只能向外提供一组功能接口，更层次仅依赖接口而非实现类。</li>
-<li>接口实现的变动不影响各层的调用。</li>
-<li>隐藏具体实现和实现多态性的组件。</li>
-</ul>
-<h1 id="IOC-控制反转"><a href="#IOC-控制反转" class="headerlink" title="IOC 控制反转"></a>IOC 控制反转</h1><h2 id="什么是IOC"><a href="#什么是IOC" class="headerlink" title="什么是IOC"></a>什么是IOC</h2><p>控制权的转移，应用程序本身不负责依赖对象的创建和维护，而是由外部容器负责创建和维护。<br>把对象的创建交给spring进行管理</p>
-<h2 id="IOC操作的两种操作"><a href="#IOC操作的两种操作" class="headerlink" title="IOC操作的两种操作"></a>IOC操作的两种操作</h2><ul>
-<li>IOC的基于配置文件方式</li>
-<li>IOC的注解方式</li>
-</ul>
-<h2 id="IOC的底层原理"><a href="#IOC的底层原理" class="headerlink" title="IOC的底层原理"></a>IOC的底层原理</h2><ol>
-<li>xml的配置文件</li>
-<li>dom4j解决xml</li>
-<li>工厂设计模式</li>
-<li>反射</li>
-</ol>
-<h2 id="IOC案例"><a href="#IOC案例" class="headerlink" title="IOC案例"></a>IOC案例</h2><ol>
-<li>导入jar包</li>
-</ol>
-<ul>
-<li>核心jar包<br><code>Beans</code> <code>Core</code> <code>Context</code>, <code>SpEL</code></li>
-<li>支持日志输出的jar包</li>
-</ul>
-<ol>
-<li>创建类，在类里面创建方法</li>
-<li>创建spring的配置文件，配置创建类</li>
-</ol>
-<ul>
-<li>建议放到src下面 </li>
-</ul>
-<ol>
-<li>测试对象创建</li>
-</ol>
-<h2 id="Spring的Bean管理-xml"><a href="#Spring的Bean管理-xml" class="headerlink" title="Spring的Bean管理(xml)"></a>Spring的Bean管理(xml)</h2><h3 id="实例化三种方式"><a href="#实例化三种方式" class="headerlink" title="实例化三种方式"></a>实例化三种方式</h3><ul>
-<li>使用类的无参构造(主要使用方式)</li>
-<li>静态工厂创建</li>
-<li>实例工厂创建</li>
-</ul>
-<h3 id="Bean标签常用属性"><a href="#Bean标签常用属性" class="headerlink" title="Bean标签常用属性"></a>Bean标签常用属性</h3><ul>
-<li>id属性<br> 起名称，id的属性值可以是任意命名，但是不能包含特殊符号</li>
-<li>class属性<br> 创建对象所在类的全路径  </li>
-<li>name属性<br> 功能和id属性是一样的，但是name属性可以包含特殊符号。  </li>
-<li>scope属性<br> <code>singleton</code>:默认值，单例对象。<br> <code>prototupe</code>:多例。<br> <code>request</code>:创建了对象，把对象放到request域里面。<br> <code>session</code>:创建对象，把对象放到session里面。<br> <code>globalSession</code>:创建对象，把对象放到globalSession里面。</li>
-</ul>
-<h2 id="Spring的Bean的管理-注解"><a href="#Spring的Bean的管理-注解" class="headerlink" title="Spring的Bean的管理(注解)"></a>Spring的Bean的管理(注解)</h2><h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><ul>
-<li>代码里面的特殊标记，使用注解可以完成功能。</li>
-<li>注解写法<code>@注解名称(属性名称=属性值)</code>。</li>
-<li>注解使用在类上面，方法上面和属性上面。</li>
-</ul>
-<p>在<code>xml</code>需要配置一下<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.young.anno"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Bean管理常用注解"><a href="#Bean管理常用注解" class="headerlink" title="Bean管理常用注解"></a>Bean管理常用注解</h3><ul>
-<li>Component<br>– 在Spring中提供的<code>@Component</code>三个衍生注解<ul>
-<li>@Controller WEB层</li>
-<li>@Service    业务层</li>
-<li>@Repository 持久层<br>这四个注解目前的功能是一样的，都是创建对象。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(value = <span class="string">"user"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"add...."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Scope<br>用于单例与多例等配置,写在<code>Component</code>的下面。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(value = <span class="string">"user"</span>)</span><br><span class="line"><span class="meta">@Scope</span>(value = <span class="string">"prototype"</span>) </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"add...."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>Autowired<br>注入属性</p>
-</li>
-<li><p>Resource<br>name属性写创建dao对象的value值</p>
-</li>
-</ul>
-<h1 id="DI-依赖注入"><a href="#DI-依赖注入" class="headerlink" title="DI 依赖注入"></a>DI 依赖注入</h1><p>创建对象并且组装对象之间的关系</p>
-<h2 id="有参构造注入"><a href="#有参构造注入" class="headerlink" title="有参构造注入"></a>有参构造注入</h2><p>采用<code>constructor-arg</code>来进行,<code>name</code>和<code>value</code>进行对构造器的值进行注入。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"preperty"</span> <span class="attr">class</span>=<span class="string">"com.young.property.PrepertyDemo1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"zhangsan"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="set方法注入"><a href="#set方法注入" class="headerlink" title="set方法注入"></a>set方法注入</h2><p>使用<code>property</code>标签进行注入，<code>name</code>定义类里面定义的属性的名称，<code>value</code>设置具体的值</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"book"</span> <span class="attr">class</span>=<span class="string">"com.young.property.Book"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"bookname"</span> <span class="attr">value</span>=<span class="string">"one"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>spring框架只支持set方法注入和构造器注入 </li>
-</ul>
-<h2 id="注入对象类型属性"><a href="#注入对象类型属性" class="headerlink" title="注入对象类型属性"></a>注入对象类型属性</h2><ul>
-<li>创建service类dao类</li>
-<li>在service把dao作为类型属性</li>
-<li>生成dao类型的set方法</li>
-</ul>
-<h3 id="xml配置方式"><a href="#xml配置方式" class="headerlink" title="xml配置方式"></a>xml配置方式</h3><ul>
-<li>UserService.java</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> UserDao userDao;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"service"</span>);</span><br><span class="line">        userDao.add();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserDao</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.userDao = userDao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>配置文件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"service"</span> <span class="attr">class</span>=<span class="string">"com.young.ioc.UserService"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--不能写value属性，要写ref,dao配置bean标签的id值--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"userDao"</span> <span class="attr">ref</span>=<span class="string">"userdao"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userdao"</span> <span class="attr">class</span>=<span class="string">"com.young.ioc.UserDao"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="注解注入方式"><a href="#注解注入方式" class="headerlink" title="注解注入方式"></a>注解注入方式</h3><ol>
-<li>Autowired</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span>(value = <span class="string">"userservice"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserDao userDao;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"service"</span>);</span><br><span class="line">        userDao.add();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>Resure</li>
-</ol>
-<p>UserDao.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(value = <span class="string">"userdao"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"UserDao"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="复杂类型注入"><a href="#复杂类型注入" class="headerlink" title="复杂类型注入"></a>复杂类型注入</h2><ul>
-<li><p>数组</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--数组类型--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"args"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>小马<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>小宋<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>小王<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>小李子<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>list类型</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>李四<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>map类型</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">map</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"a"</span> <span class="attr">value</span>=<span class="string">"张三"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>properties</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"properties"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">props</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"name"</span>&gt;</span>root<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">props</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="xml和注解比较"><a href="#xml和注解比较" class="headerlink" title="xml和注解比较"></a>xml和注解比较</h2><table>
-<thead>
-<tr>
-<th>比较项</th>
-<th>xml</th>
-<th>注解</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>添加</td>
-<td><code>&lt;Bean id=&quot;&quot; class=&quot;&quot;/&gt;</code></td>
-<td>@Component</td>
-</tr>
-<tr>
-<td>多例/单例</td>
-<td><code>&lt;Bean scope=&quot;prototype/&gt;&quot;</code></td>
-<td>@Scope</td>
-</tr>
-<tr>
-<td>对象类型注入</td>
-<td><code>&lt;bean id=&quot;&quot; class=&quot;&quot;&gt;  &lt;property name=&quot;&quot;ref=&quot;&quot;&gt;&lt;/property&gt;&lt;/bean&gt;</code></td>
-<td>@Resource</td>
-</tr>
-</tbody>
-</table>
-<h2 id="配置文件与注解混合使用"><a href="#配置文件与注解混合使用" class="headerlink" title="配置文件与注解混合使用"></a>配置文件与注解混合使用</h2><p>案例：</p>
-<p>BookDao.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BookDao</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">book</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"bookDao"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>OrderDao.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BookDao</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">book</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"bookDao"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>BookService.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BookService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span>(name = <span class="string">"bookDao"</span>)</span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line">    <span class="meta">@Resource</span>(name = <span class="string">"ordlerDao"</span>)</span><br><span class="line">    <span class="keyword">private</span> OrderDao ordersDao;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"service"</span>);</span><br><span class="line">        bookDao.book();</span><br><span class="line">        ordersDao.buy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>配置文件</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span><br><span class="line">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">       <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></span><br><span class="line">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.young.xmlanno"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"bookservice"</span> <span class="attr">class</span>=<span class="string">"com.young.xmlanno.BookService"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"bookDao"</span> <span class="attr">class</span>=<span class="string">"com.young.xmlanno.BookDao"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"ordlerDao"</span> <span class="attr">class</span>=<span class="string">"com.young.xmlanno.OrderDao"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>测试类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="meta">@org</span>.junit.<span class="function">Test</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testxmlAnno</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ApplicationContext context =</span><br><span class="line">                <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"bea2.xml"</span>);</span><br><span class="line">        BookService bookService= (BookService) context.getBean(<span class="string">"bookservice"</span>);</span><br><span class="line">        bookService.service();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          Spring学习笔记，仅供自己参考。
+概述
+Spring是开源的轻量级框架。
+Spring核心主要为两部分：(1).AOP:面向切面编程(2).IOC：控制反转： 把对象的创建不是通过new的方式实现，而是交给spring配置创建类对象
+Spring是一站式框架。Spring在JavaEE三层结构中
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/08/Spring学习-一/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -2060,10 +1964,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -2076,17 +1976,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/01/19/Junit单元测试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -2099,8 +1995,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/01/19/Junit单元测试/" itemprop="url">Junit单元测试</a></h1>
+                <a class="post-title-link" href="/2017/01/19/Junit单元测试/" itemprop="url">
+                  Junit单元测试
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -2118,24 +2022,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-04-26T11:04:29+08:00">
+                2017-04-26
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/19/Junit单元测试/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/01/19/Junit单元测试/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -2147,7 +2052,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -2156,6 +2061,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  497
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -2163,9 +2098,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -2174,43 +2107,31 @@
       
         
           
-            <h1 id="什么是Junit"><a href="#什么是Junit" class="headerlink" title="什么是Junit"></a>什么是Junit</h1><p>什么是Junit，Junit是用于java代码单元测试的框架。</p>
-<h1 id="为什么要用Junit"><a href="#为什么要用Junit" class="headerlink" title="为什么要用Junit"></a>为什么要用Junit</h1><p>简单的说，我们在写java代码的时候每次写完一个类，都要写一个<code>public static void main(String args[])</code>的方法来进行方法的调用，写完之后再删除，如果类比较多那么我们所创建的方法也比较多，操作起来比较麻烦。而Junit就是为了解决这种情况，他可以在一个类里面创建多个可运行的方法，来进行测试，这便是我们所使用Junit的原因。</p>
-<h1 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h1><p>我们在我们的项目中使用Junit需要先下载<code>junit.jar</code>包和<code>hamcrest-core.jar</code>并添加<a href="https://github.com/junit-team/junit4/wiki/Download-and-Install" target="_blank" rel="external">Github地址</a>。<br>这样我们就可以进行使用了。</p>
-<h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><p>我们创建了一个<code>HelloWorld</code>的类，类里面有<code>sayHello</code>这个方法，我们要对这个方法进行测试。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>我们写一个类进行测试。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        HelloWorld helloWorld = <span class="keyword">new</span> HelloWorld();</span><br><span class="line">        helloWorld.sayHello();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>我们可以这样对<code>sayHello</code>方法就行测试。</p>
-<p>但是，我们创建这个方法要满足一下要求。</p>
-<ol>
-<li>方法必须是公用且无返回值(<code>public void</code>)</li>
-<li>方法必须可以抛出异常<code>throws Exception</code></li>
-<li>方法必须用<code>@test</code>注解</li>
-</ol>
-<p>这样我们就创建好了一个测试方法，并且我们可以在该类下写无数个这个的方法用于不同的测试。</p>
-<h1 id="IDEA演示"><a href="#IDEA演示" class="headerlink" title="IDEA演示"></a>IDEA演示</h1><ul>
-<li>版本IDEA U 2016.3.1</li>
-</ul>
-<p>首先我们先写好我们的<code>HelloWorld</code>类<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/helloworld.png" alt=""><br>针对我们的sayHello方法进行测试，快捷键<code>ctrl+shift+t</code><br><img src="http://7xt81u.com1.z0.glb.clouddn.com/GIF.gif" alt=""><br>这样我们就可以测试我们的方法了。</p>
-<p>一般为了方便，我们会新建一个test文件夹。标记为test目录，这样自动生成的test类就会放到test目录中，不影响我们正常编写的代码。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%A0%87%E8%AE%B0%E7%9B%AE%E5%BD%95.png" alt=""></p>
-<p>结果如下<br><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E7%94%9F%E6%88%90test.png" alt=""></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-
-
-          
+          什么是Junit什么是Junit，Junit是用于java代码单元测试的框架。
+为什么要用Junit简单的说，我们在写java代码的时候每次写完一个类，都要写一个public static void main(String args[])的方法来进行方法的调用，写完之后再删除，如果类比较多那么我们所
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/01/19/Junit单元测试/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -2224,10 +2145,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -2260,7 +2177,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -2270,7 +2186,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://obhl5boin.bkt.clouddn.com/avtar.png"
+               src="/images/avatar.png"
                alt="杨晓辉" />
           <p class="site-author-name" itemprop="name">杨晓辉</p>
            
@@ -2309,13 +2225,29 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/Wevan" target="_blank" title="Github">
+                <a href="http://weibo.com/youngxhui" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
-                    
-                      Github
-                    
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/young_xhui" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngxhui" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
                 </a>
               </span>
             
@@ -2332,6 +2264,28 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -2355,37 +2309,47 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2016 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">杨晓辉</span>
-
-  
 </div>
 
 
-  <div class="powered-by">
-    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-  </div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
 
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">
-    主题 &mdash;
-    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Mist
-    </a>
-  </div>
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
 
-
-
-
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
 
 
         
@@ -2422,14 +2386,6 @@
 
 
 
-
-
-
-
-
-
-
-
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -2452,38 +2408,27 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
-
-  
-  
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+  
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
   
 
 
-  
-
-    
-      <script id="dsq-count-scr" src="https://islet.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -2502,11 +2447,6 @@
 
 
 
-
-
-
-
-
   
 
 
@@ -2515,9 +2455,148 @@
 
   
 
+
+
+
+
+
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("JA27xsMi9lrA6z9imd0pGsSD-gzGzoHsz", "DRrv1wL2T7c5v4PkDSpmwmoA");</script>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -2621,10 +2700,6 @@
   </script>
 
 
-
-  
-
-  
 
   
 

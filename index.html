@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 
 
@@ -10,13 +10,6 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
 
 
 
@@ -75,7 +68,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -87,7 +80,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -111,9 +104,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -123,8 +115,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -137,11 +129,24 @@
 
 
 
-  <title>ISLAND</title>
+  <title> ISLAND </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
 
 
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-97406003-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
   <script type="text/javascript">
@@ -157,9 +162,11 @@
 
 
 
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+
+
 
   
   
@@ -243,21 +250,45 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
             
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            公益404
+            搜索
           </a>
         </li>
-      
-
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -281,17 +312,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/16/LeetCode-Judge-Route-Circle-657/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -304,8 +331,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/16/LeetCode-Judge-Route-Circle-657/" itemprop="url">LeetCode:Judge Route Circle(#657)</a></h1>
+                <a class="post-title-link" href="/2017/08/16/LeetCode-Judge-Route-Circle-657/" itemprop="url">
+                  LeetCode:Judge Route Circle(#657)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -323,24 +358,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-17T11:04:11+08:00">
+                2017-08-17
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/16/LeetCode-Judge-Route-Circle-657/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/16/LeetCode-Judge-Route-Circle-657/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -352,7 +388,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -361,6 +397,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  180
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -368,9 +434,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -379,42 +443,49 @@
       
         
           
-            <h1 id="Judge-Route-Circle-657"><a href="#Judge-Route-Circle-657" class="headerlink" title="Judge Route Circle(#657)"></a>Judge Route Circle(#657)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>657</td>
-<td>Judge Route Circle</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题先上图</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/leetcode.png" alt=""></p>
-<p>终于有一次 <strong>前10%</strong> 了 <del>（也许是人少而已）</del>，总体来说这个题其实很水。</p>
-<p>判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的路一样就肯定在原点。所以只要统计一下就好。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">judgeCircle</span><span class="params">(String moves)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> rCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> uCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> step[] = moves.toCharArray();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; step.length; i++) &#123;</span><br><span class="line">            <span class="keyword">switch</span>(step[i]) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'L'</span>:</span><br><span class="line">                    lCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'R'</span>:</span><br><span class="line">                    rCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'U'</span>:</span><br><span class="line">                    uCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'D'</span>:</span><br><span class="line">                    dCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        (lCount == rCount &amp;&amp; uCount == dCount) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+          Judge Route Circle(#657)
 
-          
+
+编号
+名称
+等级
+
+
+
+
+657
+Judge Route Circle
+easy  
+
+
+
+思路这个题先上图
+
+终于有一次 前10% 了 （也许是人少而已），总体来说这个题其实很水。
+判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/16/LeetCode-Judge-Route-Circle-657/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -428,10 +499,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -444,17 +511,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -467,8 +530,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/" itemprop="url">LeetCode:Longest Uncommon Subsequence I(#521)</a></h1>
+                <a class="post-title-link" href="/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/" itemprop="url">
+                  LeetCode:Longest Uncommon Subsequence I(#521)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -486,24 +557,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-16T19:51:27+08:00">
+                2017-08-16
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -515,7 +587,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -524,6 +596,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  100
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  0
+                </span>
+              
+            </div>
+          
 
           
 
@@ -531,9 +633,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -542,38 +642,46 @@
       
         
           
-            <h1 id="LeetCode-Longest-Uncommon-Subsequence-I-521"><a href="#LeetCode-Longest-Uncommon-Subsequence-I-521" class="headerlink" title="LeetCode:Longest Uncommon Subsequence I(#521)"></a>LeetCode:Longest Uncommon Subsequence I(#521)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>521</td>
-<td>Longest Uncommon Subsequence</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 <code>-1</code> 否则输出最长的。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLUSlength</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (a.equals(b))&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a.length() &gt; b.length() ? a.length() : b.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          LeetCode:Longest Uncommon Subsequence I(#521)
+
+
+编号
+名称
+等级
+
+
+
+
+521
+Longest Uncommon Subsequence
+easy  
+
+
+
+思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -587,10 +695,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -603,17 +707,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/13/LeetCode-Next-Greater-Element-I-496/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -626,8 +726,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/13/LeetCode-Next-Greater-Element-I-496/" itemprop="url">LeetCode:Next Greater Element I(#496)</a></h1>
+                <a class="post-title-link" href="/2017/08/13/LeetCode-Next-Greater-Element-I-496/" itemprop="url">
+                  LeetCode:Next Greater Element I(#496)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -645,24 +753,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-13T20:28:30+08:00">
+                2017-08-13
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/13/LeetCode-Next-Greater-Element-I-496/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/13/LeetCode-Next-Greater-Element-I-496/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -674,7 +783,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -683,6 +792,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  291
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -690,9 +829,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -701,42 +838,47 @@
       
         
           
-            <h1 id="Next-Greater-Element-I-496"><a href="#Next-Greater-Element-I-496" class="headerlink" title="Next Greater Element I(#496)"></a>Next Greater Element I(#496)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>496</td>
-<td>Next Greater Element I</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] out = <span class="keyword">new</span> <span class="keyword">int</span>[findNums.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (findNums[i] == nums[j]) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; nums.length - j; k++) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (j + <span class="number">1</span> &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123;</span><br><span class="line">                            out[i] = nums[j + k];</span><br><span class="line">                            findNums[i] = <span class="number">0</span>;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (findNums[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                        out[i] = -<span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> out;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个代码在前面的测试数据可以过去，但是当测试数据到了后面的数的时候就 gg 了。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170813_184225.png" alt=""></p>
-<p>然后又又又看大神的代码。</p>
-<p>通过 Stack 和 Map 进行操作。</p>
-<h1 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </span><br><span class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num)</span><br><span class="line">            map.put(stack.pop(), num);</span><br><span class="line">        stack.push(num);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++)</span><br><span class="line">        findNums[i] = map.getOrDefault(findNums[i], -<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> findNums;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
+          Next Greater Element I(#496)
+
+
+编号
+名称
+等级
+
+
+
+
+496
+Next Greater Element I
+easy  
+
+
+
+思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。
+代码123456
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/13/LeetCode-Next-Greater-Element-I-496/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -750,10 +892,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -766,17 +904,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/13/LeetCode-Nim-Game-292/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -789,8 +923,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/13/LeetCode-Nim-Game-292/" itemprop="url">LeetCode:Nim Game(#292)</a></h1>
+                <a class="post-title-link" href="/2017/08/13/LeetCode-Nim-Game-292/" itemprop="url">
+                  LeetCode:Nim Game(#292)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -808,24 +950,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-13T18:26:16+08:00">
+                2017-08-13
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/13/LeetCode-Nim-Game-292/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/13/LeetCode-Nim-Game-292/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -837,7 +980,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -846,6 +989,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  98
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  0
+                </span>
+              
+            </div>
+          
 
           
 
@@ -853,9 +1026,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -864,38 +1035,48 @@
       
         
           
-            <h1 id="Nim-Game-292"><a href="#Nim-Game-292" class="headerlink" title="Nim Game(#292)"></a>Nim Game(#292)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>292</td>
-<td>Nim Game</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题是让算几个石头的情况下会赢和会输。参考了一下大神答案，其中有一个很有趣，也很通俗易懂。</p>
-<p>巧妙的找到了规律，只要是 <code>4</code> 的倍数，就会输。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canWinNim</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">0</span>)  <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> n % <span class="number">4</span> != <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
+          Nim Game(#292)
+
+
+编号
+名称
+等级
+
+
+
+
+292
+Nim Game
+easy  
+
+
+
+思路这个题是让算几个石头的情况下会赢和会输。参考了一下大神答案，其中有一个很有趣，也很通俗易懂。
+巧妙的找到了规律，只要是 4 的倍数，就会输。
+代码123456public class Sol
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/13/LeetCode-Nim-Game-292/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -909,10 +1090,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -925,17 +1102,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/12/Kotlin-扩展函数-属性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -948,8 +1121,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/12/Kotlin-扩展函数-属性/" itemprop="url">Kotlin 扩展函数/属性</a></h1>
+                <a class="post-title-link" href="/2017/08/12/Kotlin-扩展函数-属性/" itemprop="url">
+                  Kotlin 扩展函数/属性
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -967,24 +1148,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-13T21:19:37+08:00">
+                2017-08-13
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/12/Kotlin-扩展函数-属性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/12/Kotlin-扩展函数-属性/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -996,7 +1178,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1005,6 +1187,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  440
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1012,9 +1224,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1023,39 +1233,32 @@
       
         
           
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。</p>
-<h1 id="扩展函数"><a href="#扩展函数" class="headerlink" title="扩展函数"></a>扩展函数</h1><p>声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。</p>
-<p>对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span></span>(<span class="keyword">val</span> name: String, <span class="keyword">var</span> price: <span class="built_in">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">val</span> ISBN: <span class="built_in">Int</span> = <span class="number">123456789</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">add</span><span class="params">()</span></span> &#123;</span><br><span class="line">        println(<span class="string">"Add a book,name is <span class="subst">$name</span>,price is <span class="subst">$price</span>,ISBN is <span class="subst">$ISBN</span>"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> Book.<span class="title">show</span><span class="params">()</span></span> = add()</span><br></pre></td></tr></table></figure>
-<p>这样我们便完成了对 Book 类进行扩展。</p>
-<p>在扩展函数中，可以使用原有类的方法，变量。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> book = Book(<span class="string">"红楼梦"</span>, <span class="number">50</span>)</span><br><span class="line">    book.show()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>扩展是静态解析的</strong><br>扩展不能真正的修改他们所扩展的类。通过定义一个扩展，你并没有在一个类中插入新成员， 仅仅是可以通过该类型的变量用点表达式去调用这个新函数。</p>
-</blockquote>
-<h1 id="扩展属性"><a href="#扩展属性" class="headerlink" title="扩展属性"></a>扩展属性</h1><p>扩展属性不能初始化器,所以只能是使用显示 <code>get/set</code> 方法进行定义。</p>
-<p>任就采用上面的例子。给 <code>Book</code> 添加一个 <code>profit</code> 属性。</p>
-<p>像这个样子，我们就定义了这个类的扩展属性</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> Book.profit: <span class="built_in">Int</span></span><br><span class="line">    <span class="keyword">get</span>() = price - <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> book = Book(<span class="string">"红楼梦"</span>, <span class="number">50</span>)</span><br><span class="line">    book.show()</span><br><span class="line">    println(<span class="string">"book's profit is <span class="subst">$&#123;book.profit&#125;</span>"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>更多关于扩展函数/方法的例子可以参考官方网站</p>
-<p><a href="https://www.kotlincn.net/docs/reference/extensions.html" target="_blank" rel="external">kotlin官方文档(中文)</a></p>
-<p><a href="https://kotlinlang.org/docs/reference/extensions.html" target="_blank" rel="external">kotlin官方文档(英文)</a></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。
+扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。
+对 Book 这个类进行扩展，这个类只有一个方法，在我
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/12/Kotlin-扩展函数-属性/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1069,10 +1272,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1085,17 +1284,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/11/Kotlin初步学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1108,8 +1303,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/11/Kotlin初步学习/" itemprop="url">Kotlin初步学习</a></h1>
+                <a class="post-title-link" href="/2017/08/11/Kotlin初步学习/" itemprop="url">
+                  Kotlin初步学习
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1127,24 +1330,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-13T21:19:32+08:00">
+                2017-08-13
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/11/Kotlin初步学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/11/Kotlin初步学习/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1156,7 +1360,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1165,6 +1369,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  525
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1172,9 +1406,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1183,39 +1415,32 @@
       
         
           
-            <p>最近项目逐渐使用 <code>Kotlin</code> 代替 <code>Java</code> 。</p>
-<h1 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h1><p>关于 <code>Kotlin</code> 的最大的感受就是：代码少写了很多。</p>
-<h1 id="相遇"><a href="#相遇" class="headerlink" title="相遇"></a>相遇</h1><p>最开始知道这个语言是在使用 <code>IDEA</code> 的时候，当时只是知道，并没有过多的关心，也并没有取了解，更不要说是使用了。直到今年的 <strong>Google I/O</strong> 提出来 <code>Kotlin</code> 被上升到 <code>Android</code> 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 <code>Kotlin</code> 是什么？当然也包括我。</p>
-<h1 id="相识"><a href="#相识" class="headerlink" title="相识"></a>相识</h1><p><code>Kotlin</code> 的学习使我感觉到了欣喜，为什么这么说呢？语法简洁，和 <code>Java</code> 基本兼容。也就是 <code>Kotlin</code> 一出生便是站在 <code>Java</code> 的肩膀上。很好的融入了 <code>Java</code> 生态，基本上说 <code>Java</code> 能做的 <code>Kotlin</code> 都能做，而且在代码方面更加简洁高效。</p>
-<p>从 <code>Kotlin</code> 诞生开始，便有了 <code>JetBrains</code> 的编译器支持，毕竟是自己家的语言，而且 <code>IDEA</code> 也一直宣传做 <code>Capable and Emic IDE rgonofor JVM</code> ，而且目前还有了  <code>Google</code> 的支持。前两天 <code>Jake Wharton</code>  加入了 <code>Google</code> 的 <code>Android Formwork</code> 的 <code>Kotlin</code> 团队。 就当前情况看来 <code>Kotlin</code> 会又一个不错的发展。</p>
-<h1 id="相遇-1"><a href="#相遇-1" class="headerlink" title="相遇"></a>相遇</h1><p>前面说了 <code>Kotlin</code> 从一诞生就有强大的编译器支持。刚刚开始不会 <code>Kotlin</code> 的时候，全靠 <code>IDEA</code> 的 <code>Java</code> 转 <code>Kotlin</code> </p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/javatokotlin.png" alt=""></p>
-<p>通过对比 <code>Java</code> 和 <code>Kotlin</code> 的语法，也就慢慢的掌握了 <code>Kotlin</code> 的语法规则。</p>
-<p>后来开始使用 <code>Kotlin</code> 写了一下 <code>struts2</code>,表示完全兼容。</p>
-<p>尝试用 Kotlin 写了一下 <code>SpringMVC 4</code> 应该是不兼容或者是我的打开方式不对， 在 <code>Controller</code> 发生错误，不过其他层并没有错误。好的是 <code>Spring 5</code> 已经支持 <code>Kotlin</code> 。 </p>
-<p>在 Android 方面(并没有使用 Anko)，只是简单的使用了扩展。</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'Kotlin-android-extensions'</span></span><br></pre></td></tr></table></figure>
-<p>再也不用写 <code>findViewById()</code>,直接用控件 <code>id</code> 就可以完成操作。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>慢慢尝试一些 <strong>黑魔法</strong> 😝</p>
-<p>待补充(毕竟我也才开始慢慢学习)</p>
-<h1 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a>学习资源推荐</h1><p><a href="http://Kotlinlang.org/docs/reference/" target="_blank" rel="external">官方文档(英文)</a></p>
-<p><a href="https://www.Kotlincn.net/docs/reference/" target="_blank" rel="external">官方文档(中文)</a></p>
-<p><a href="http://ice1000.org/" target="_blank" rel="external">冰封博客</a></p>
-<p><a href="https://Kotliner.cn" target="_blank" rel="external">Kotlin 社区</a></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          最近项目逐渐使用 Kotlin 代替 Java 。
+感受关于 Kotlin 的最大的感受就是：代码少写了很多。
+相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有取了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 And
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/11/Kotlin初步学习/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1229,10 +1454,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1245,17 +1466,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/08/LeetCode-Island-Perimeter-463/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1268,8 +1485,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/08/LeetCode-Island-Perimeter-463/" itemprop="url">LeetCode:Island Perimeter(#463)</a></h1>
+                <a class="post-title-link" href="/2017/08/08/LeetCode-Island-Perimeter-463/" itemprop="url">
+                  LeetCode:Island Perimeter(#463)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1287,24 +1512,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-08T20:36:43+08:00">
+                2017-08-08
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/08/LeetCode-Island-Perimeter-463/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/08/LeetCode-Island-Perimeter-463/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1316,7 +1542,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1325,6 +1551,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  195
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1332,9 +1588,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1343,39 +1597,47 @@
       
         
           
-            <h1 id="Island-Perimeter-463"><a href="#Island-Perimeter-463" class="headerlink" title="Island Perimeter(#463)"></a>Island Perimeter(#463)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>463</td>
-<td>Island Perimeter</td>
-<td>easy</td>
-</tr>
-</tbody>
-</table>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。</p>
-<p>首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">islandPerimeter</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[<span class="number">0</span>].length; j ++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(grid[i][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                    p += <span class="number">4</span>;</span><br><span class="line">                    <span class="keyword">if</span>(i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i - <span class="number">1</span>][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                        p -= <span class="number">2</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i][j - <span class="number">1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">                        p -= <span class="number">2</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          Island Perimeter(#463)
+
+
+编号
+名称
+等级
+
+
+
+
+463
+Island Perimeter
+easy
+
+
+
+思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。
+首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/08/LeetCode-Island-Perimeter-463/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1389,10 +1651,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1405,17 +1663,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/04/LeetCode-Fizz-Buzz-412/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1428,8 +1682,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/04/LeetCode-Fizz-Buzz-412/" itemprop="url">LeetCode:Fizz Buzz(#412)</a></h1>
+                <a class="post-title-link" href="/2017/08/04/LeetCode-Fizz-Buzz-412/" itemprop="url">
+                  LeetCode:Fizz Buzz(#412)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1447,24 +1709,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-04T18:25:18+08:00">
+                2017-08-04
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/04/LeetCode-Fizz-Buzz-412/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/04/LeetCode-Fizz-Buzz-412/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1476,7 +1739,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1485,6 +1748,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  132
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1492,9 +1785,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1503,38 +1794,47 @@
       
         
           
-            <h1 id="Fizz-Buzz-412"><a href="#Fizz-Buzz-412" class="headerlink" title="Fizz Buzz(#412)"></a>Fizz Buzz(#412)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>412</td>
-<td>Fizz Buzz</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>该题就是 当是三的倍数 输出 <code>Fizz</code> ，五的倍数输出 <code>Buzz</code> ，十五的倍数是 <code>Fizz Buzz</code>。 这题好水，唯一要注意的是先判断 15 在判断其他。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">fizzBuzz</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n ; i ++ )&#123;</span><br><span class="line">            <span class="keyword">if</span>(i % <span class="number">15</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                list.add(<span class="string">"FizzBuzz"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                list.add(<span class="string">"Fizz"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i % <span class="number">5</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                list.add(<span class="string">"Buzz"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                list.add(String.valueOf(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          Fizz Buzz(#412)
+
+
+编号
+名称
+等级
+
+
+
+
+412
+Fizz Buzz
+easy  
+
+
+
+思路该题就是 当是三的倍数 输出 Fizz ，五的倍数输出 Buzz ，十五的倍数是 Fizz Buzz。 这题好水，唯一要注意的是先判断 15 在判断其他。
+代码1234567891011
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/04/LeetCode-Fizz-Buzz-412/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1548,10 +1848,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1564,17 +1860,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1587,8 +1879,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/04/LeetCode-Reverse-String-344/" itemprop="url">LeetCode:Reverse String(#344)</a></h1>
+                <a class="post-title-link" href="/2017/08/04/LeetCode-Reverse-String-344/" itemprop="url">
+                  LeetCode:Reverse String(#344)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1606,24 +1906,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-04T18:31:02+08:00">
+                2017-08-04
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/04/LeetCode-Reverse-String-344/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/04/LeetCode-Reverse-String-344/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1635,7 +1936,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1644,6 +1945,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  47
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  0
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1651,9 +1982,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1662,38 +1991,47 @@
       
         
           
-            <h1 id="Reverse-String-344"><a href="#Reverse-String-344" class="headerlink" title="Reverse String(#344)"></a>Reverse String(#344)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>344</td>
-<td>Reverse String</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>解题思路请看 <a href="http://youngxhui.github.io/2017/08/02/LeetCode-Reverse-Words-in-a-String-III-557/">#557 Reverse Words In a String III</a></p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">reverseString</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span>  <span class="keyword">new</span> StringBuilder(s).reverse().toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          Reverse String(#344)
+
+
+编号
+名称
+等级
+
+
+
+
+344
+Reverse String
+easy  
+
+
+
+思路解题思路请看 #557 Reverse Words In a String III
+代码12345public class Solution &#123;    pu
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/04/LeetCode-Reverse-String-344/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1707,10 +2045,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1723,17 +2057,13 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/04/LeetCode-Merge-Two-Binary-Trees-617/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨晓辉">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://obhl5boin.bkt.clouddn.com/avtar.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1746,8 +2076,16 @@
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+              
                 
-                <a class="post-title-link" href="/2017/08/04/LeetCode-Merge-Two-Binary-Trees-617/" itemprop="url">LeetCode:Merge Two Binary Trees(#617)</a></h1>
+                <a class="post-title-link" href="/2017/08/04/LeetCode-Merge-Two-Binary-Trees-617/" itemprop="url">
+                  LeetCode:Merge Two Binary Trees(#617)
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
@@ -1765,24 +2103,25 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-08-04T18:28:30+08:00">
+                2017-08-04
+              </time>
             
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/04/LeetCode-Merge-Two-Binary-Trees-617/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/04/LeetCode-Merge-Two-Binary-Trees-617/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1794,7 +2133,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
+                 <span class="post-meta-item-text">阅读次数 </span>
                
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -1803,6 +2142,36 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数</span>
+                
+                <span title="字数">
+                  151
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1810,9 +2179,7 @@
       </header>
     
 
-    
-    
-    
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -1821,39 +2188,47 @@
       
         
           
-            <h1 id="Merge-Two-Binary-Trees-617"><a href="#Merge-Two-Binary-Trees-617" class="headerlink" title="Merge Two Binary Trees(#617)"></a>Merge Two Binary Trees(#617)</h1><table>
-<thead>
-<tr>
-<th>编号</th>
-<th>名称</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>617</td>
-<td>Merge Two Binary Trees</td>
-<td>easy  </td>
-</tr>
-</tbody>
-</table>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>试题已经给出了 TreeNode 的数据结构。就是将数据的每一项都加起来。通过递归可以完成。</p>
-<p>需要注意的是 <code>t1</code> 或者 <code>t2</code> 可能为空。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * public class TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode left;</span><br><span class="line"> *     TreeNode right;</span><br><span class="line"> *     TreeNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">mergeTrees</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (t1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t1;</span><br><span class="line">        &#125;</span><br><span class="line">        t1.val += t2.val;</span><br><span class="line">        t1.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">        t1.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">        <span class="keyword">return</span> t1;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-          
+          Merge Two Binary Trees(#617)
+
+
+编号
+名称
+等级
+
+
+
+
+617
+Merge Two Binary Trees
+easy  
+
+
+
+思路试题已经给出了 TreeNode 的数据结构。就是将数据的每一项都加起来。通过递归可以完成。
+需要注意的是 t1 或者 t2 可能为空
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/04/LeetCode-Merge-Two-Binary-Trees-617/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
-    
-    
-    
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
-    
+    <div>
+      
+    </div>
 
     <footer class="post-footer">
       
@@ -1867,10 +2242,6 @@
         <div class="post-eof"></div>
       
     </footer>
-  </div>
-  
-  
-  
   </article>
 
 
@@ -1903,7 +2274,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -1913,7 +2283,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://obhl5boin.bkt.clouddn.com/avtar.png"
+               src="/images/avatar.png"
                alt="杨晓辉" />
           <p class="site-author-name" itemprop="name">杨晓辉</p>
            
@@ -1952,13 +2322,29 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/Wevan" target="_blank" title="Github">
+                <a href="http://weibo.com/youngxhui" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
-                    
-                      Github
-                    
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/young_xhui" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/youngxhui" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
                 </a>
               </span>
             
@@ -1975,6 +2361,28 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -1998,37 +2406,47 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2016 - 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">杨晓辉</span>
-
-  
 </div>
 
 
-  <div class="powered-by">
-    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-  </div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
 
-  <span class="post-meta-divider">|</span>
-
-  <div class="theme-info">
-    主题 &mdash;
-    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-      NexT.Mist
-    </a>
-  </div>
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  
+    <span class="site-uv">
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
 
-
-
-
+  
+    <span class="site-pv">
+      总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
 
 
         
@@ -2065,14 +2483,6 @@
 
 
 
-
-
-
-
-
-
-
-
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -2095,38 +2505,27 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
-
-  
-  
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+  
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
   
 
 
-  
-
-    
-      <script id="dsq-count-scr" src="https://islet.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -2145,11 +2544,6 @@
 
 
 
-
-
-
-
-
   
 
 
@@ -2158,9 +2552,148 @@
 
   
 
+
+
+
+
+
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("JA27xsMi9lrA6z9imd0pGsSD-gzGzoHsz", "DRrv1wL2T7c5v4PkDSpmwmoA");</script>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz", "4MGIGqTGkgtvx4uMDXH8IRr8");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -2264,10 +2797,6 @@
   </script>
 
 
-
-  
-
-  
 
   
 
