@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Single Number(#136)]]></title>
+      <url>%2F2017%2F08%2F27%2FLeetCode-Single-Number-136%2F</url>
+      <content type="text"><![CDATA[Single Number(#136) 编号 名称 等级 136 Single Number easy 思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。 按位异或 N ^ N = 00 ^ N = N 通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本事，就会直到最后的结论。 代码123456789class Solution &#123; public int singleNumber(int[] nums) &#123; int ans = 0; for(int i = 0; i &lt; nums.length;i++) &#123; ans ^= nums[i]; &#125; return ans; &#125;&#125; 扩展这种方法还适用于字符串中的唯一一个元素。 代码123456789101112131415class Main &#123; public static void main(String[] args) &#123; char[] chars = new char[]&#123;'a', 'a', 'b'&#125;; System.out.println(singleChar(chars)); &#125; // 该程序是判断 数字/字符/字符串。toArrayChar 中的唯一存在的字符 // 主要方法位 N ^ 0 = N; N ^ N = N private static char singleChar(char[] chars) &#123; int ans = 0; for (int aChar : chars) &#123; ans ^= aChar; &#125; return (char) ans; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[LeetCode:Move Zeroes(#283)]]></title>
+      <url>%2F2017%2F08%2F27%2FLeetCode-Move-Zeroes-283%2F</url>
+      <content type="text"><![CDATA[Move Zeroes(#283) 编号 名称 等级 283 Move Zeroes easy 思路该题要求如果数组中含有 0 ，就把 0 放置到最后，采用简单的排序手法，只是不是在比较大小，而是判断是否为 0 ，如果是 0 就与下一个发生交换。 代码12345678910111213public class Solution &#123; public void moveZeroes(int[] nums) &#123; for (int i = 0; i &lt; nums.length; i++) &#123; for (int j = i + 1; j &lt; nums.length; j++)&#123; if(nums[i] == 0)&#123; int tem = nums[j]; nums[j] = nums[i]; nums[i] = tem; &#125; &#125; &#125; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[LeetCode:Judge Route Circle(#657)]]></title>
       <url>%2F2017%2F08%2F16%2FLeetCode-Judge-Route-Circle-657%2F</url>
       <content type="text"><![CDATA[Judge Route Circle(#657) 编号 名称 等级 657 Judge Route Circle easy 思路这个题先上图 终于有一次 前10% 了 （也许是人少而已），总体来说这个题其实很水。 判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的路一样就肯定在原点。所以只要统计一下就好。 代码1234567891011121314151617181920212223242526public class Solution &#123; public boolean judgeCircle(String moves) &#123; int lCount = 0; int rCount = 0; int dCount = 0; int uCount = 0; char step[] = moves.toCharArray(); for (int i = 0; i &lt; step.length; i++) &#123; switch(step[i]) &#123; case 'L': lCount++; break; case 'R': rCount++; break; case 'U': uCount++; break; case 'D': dCount++; break; &#125; &#125; (lCount == rCount &amp;&amp; uCount == dCount) ? true : false; &#125;&#125;]]></content>
