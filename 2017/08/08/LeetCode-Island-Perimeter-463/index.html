@@ -137,7 +137,7 @@ easy
 思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。
 首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。
 代码12345678">
-<meta property="og:updated_time" content="2017-08-08T12:36:43.783Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Island Perimeter(#463)">
 <meta name="twitter:description" content="Island Perimeter(#463)
@@ -490,7 +490,7 @@ easy
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。</p>
 <p>首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">islandPerimeter</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[<span class="number">0</span>].length; j ++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(grid[i][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                    p += <span class="number">4</span>;</span><br><span class="line">                    <span class="keyword">if</span>(i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i - <span class="number">1</span>][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                        p -= <span class="number">2</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i][j - <span class="number">1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">                        p -= <span class="number">2</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -502,31 +502,26 @@ easy
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -736,6 +731,28 @@ easy
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -787,9 +804,9 @@ easy
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -863,8 +880,6 @@ easy
   
 
 
-  
-
 
 
 
@@ -892,9 +907,6 @@ easy
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

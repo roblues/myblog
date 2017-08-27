@@ -109,7 +109,7 @@
 作者wevanyoungxhui
 概况一个可变的字符序列。此类提供一个与 StringBuffer 兼容的 API，但不保证同步。该类被设计用作 StringBuffer 的一个简易替换，用在字符串缓冲区被单个线程使用的时候（这种情况很普遍）。如果可能，建议优先采用该类，因为在大多数实现中，它比 StringBuffer 要快。 
 签名123public f">
-<meta property="og:updated_time" content="2017-04-26T03:05:34.858Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="StringBuilder源码分析">
 <meta name="twitter:description" content="#StringBuilder源码分析
@@ -471,7 +471,7 @@
 <h2 id="replace-方法"><a href="#replace-方法" class="headerlink" title="replace()方法"></a>replace()方法</h2><p><code>replace</code> 方法仍旧继承了父类的 <code>replace</code> 方法,是替换字符<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> StringBuilder <span class="title">replace</span><span class="params">(<span class="keyword">int</span> start, <span class="keyword">int</span> end, String str)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">super</span>.replace(start, end, str);</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="insert-方法"><a href="#insert-方法" class="headerlink" title="insert()方法"></a>insert()方法</h2><p>该方法是插入字符串。该方法重载了12个方法。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>该类所有的方法都是通过父类( <code>AbstractStringBuilder</code> )来实现。该方法与<code>String</code>和<code>StringBuffer</code>的区别在于，<code>String</code>是不可修改的，<code>StringBuffer</code>和<code>StringBuilder</code>是可以修改的，但是<code>StringBuffer</code>是线程安全的，<code>StringBuilder</code>是线程不安全的，但是在效率上， <code>StringBuffer</code> 因为对方法做了同步，所以一般是低于 <code>StringBuilder</code>的.</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -483,31 +483,26 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -717,6 +712,28 @@
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -768,9 +785,9 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -844,8 +861,6 @@
   
 
 
-  
-
 
 
 
@@ -873,9 +888,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

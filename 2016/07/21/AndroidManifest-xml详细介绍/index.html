@@ -107,7 +107,7 @@ Androi">
 基于Android Studio 2.1目录 
 一、关于AndroidManifest.xmlAndroidManifest.xml是每个android程序中必须的文件。是一个清单文件。它位项目的manifes目录，它是整个Android应用的描述文件。AndroidManifast.xml清单文件说明了该应用的名称，所使用的图标等。
 Androi">
-<meta property="og:updated_time" content="2017-04-26T03:03:36.148Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidManifest.xml详细介绍">
 <meta name="twitter:description" content="#AndroidManifest.xml详细介绍
@@ -671,10 +671,6 @@ Androi">
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span> <span class="attr">.</span> <span class="attr">.</span> <span class="attr">.</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">"XXX"</span> <span class="attr">.</span> <span class="attr">.</span> <span class="attr">.</span> &gt;</span></span><br><span class="line"></span><br><span class="line">                  android:permission="com.teleca.project.MY_SECURITY"&gt; <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>当然自己声明的permission也不能随意的使用，还是需要使用<uses-permission>来声明你需要该权限</uses-permission></p>
 <p><permission-group> 就是声明一个标签，该标签代表了一组permissions，而<permission-tree>是为一组permissions声明了一个namespace。这两个标签可以看之前的系列文章。</permission-tree></permission-group></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
-
-
-
 </permission></supports-screens>
       
     </div>
@@ -687,31 +683,26 @@ Androi">
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -921,6 +912,28 @@ Androi">
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -972,9 +985,9 @@ Androi">
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -1048,8 +1061,6 @@ Androi">
   
 
 
-  
-
 
 
 
@@ -1077,9 +1088,6 @@ Androi">
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

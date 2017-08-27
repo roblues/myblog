@@ -115,7 +115,7 @@
 答案：45
 试题二
 给出方程组：   11x+13y+17z=2471   13x+">
-<meta property="og:updated_time" content="2017-04-26T03:02:56.077Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计蒜客蓝桥杯模拟赛(5)试题">
 <meta name="twitter:description" content="简介这是近期 计蒜客 的一个关于蓝桥杯的算法模拟赛。每个题进行一下简单的计算。
@@ -457,7 +457,7 @@
 <p>这个还是一个暴力</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">9</span>];</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (a[<span class="number">0</span>] = <span class="number">1</span>; a[<span class="number">0</span>] &lt; <span class="number">10</span>; a[<span class="number">0</span>]++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (a[<span class="number">1</span>] = <span class="number">1</span>; a[<span class="number">1</span>] &lt; <span class="number">10</span>; a[<span class="number">1</span>]++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (a[<span class="number">2</span>] = <span class="number">1</span>; a[<span class="number">2</span>] &lt; <span class="number">10</span>; a[<span class="number">2</span>]++) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (a[<span class="number">3</span>] = <span class="number">1</span>; a[<span class="number">3</span>] &lt; <span class="number">10</span>; a[<span class="number">3</span>]++) &#123;</span><br><span class="line">                        <span class="keyword">for</span> (a[<span class="number">4</span>] = <span class="number">1</span>; a[<span class="number">4</span>] &lt; <span class="number">10</span>; a[<span class="number">4</span>]++) &#123;</span><br><span class="line">                            <span class="keyword">for</span> (a[<span class="number">5</span>] = <span class="number">1</span>; a[<span class="number">5</span>] &lt; <span class="number">10</span>; a[<span class="number">5</span>]++) &#123;</span><br><span class="line">                                <span class="keyword">for</span> (a[<span class="number">6</span>] = <span class="number">1</span>; a[<span class="number">6</span>] &lt; <span class="number">10</span>; a[<span class="number">6</span>]++) &#123;</span><br><span class="line">                                    <span class="keyword">for</span> (a[<span class="number">7</span>] = <span class="number">1</span>; a[<span class="number">7</span>] &lt; <span class="number">10</span>; a[<span class="number">7</span>]++) &#123;</span><br><span class="line">                                        <span class="keyword">for</span> (a[<span class="number">8</span>] = <span class="number">1</span>; a[<span class="number">8</span>] &lt; <span class="number">10</span>; a[<span class="number">8</span>]++) &#123;</span><br><span class="line">                                            <span class="keyword">int</span> row1 = a[<span class="number">0</span>] + a[<span class="number">1</span>] + a[<span class="number">2</span>];</span><br><span class="line">                                            <span class="keyword">int</span> row2 = a[<span class="number">3</span>] + a[<span class="number">4</span>] + a[<span class="number">5</span>];</span><br><span class="line">                                            <span class="keyword">int</span> row3 = a[<span class="number">6</span>] + a[<span class="number">7</span>] + a[<span class="number">8</span>];</span><br><span class="line">                                            <span class="keyword">int</span> col1 = a[<span class="number">0</span>] + a[<span class="number">3</span>] + a[<span class="number">6</span>];</span><br><span class="line">                                            <span class="keyword">int</span> col2 = a[<span class="number">1</span>] + a[<span class="number">4</span>] + a[<span class="number">7</span>];</span><br><span class="line">                                            <span class="keyword">int</span> col3 = a[<span class="number">2</span>] + a[<span class="number">5</span>] + a[<span class="number">8</span>];</span><br><span class="line">                                            <span class="keyword">if</span> (col1 == col2 &amp;&amp; col2 == col3 &amp;&amp; row1 == row2 &amp;&amp; row1 == row3 &amp;&amp; col1 == row1) &#123;</span><br><span class="line">                                                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">                                                    set.add(a[i]);</span><br><span class="line">                                                &#125;</span><br><span class="line">                                                <span class="keyword">if</span> (set.size() == <span class="number">9</span>) &#123;</span><br><span class="line">                                                    count++;</span><br><span class="line">                                                &#125;</span><br><span class="line">                                                set.clear();</span><br><span class="line">                                            &#125;</span><br><span class="line">                                        &#125;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>答案：72</p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -469,31 +469,26 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -703,6 +698,28 @@
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -754,9 +771,9 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -830,8 +847,6 @@
   
 
 
-  
-
 
 
 
@@ -859,9 +874,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

@@ -115,7 +115,7 @@
 
 基本原理MD5就是byte值和一个int的255进行与运算，得到一个int值，再将这个int值转化为十六进制的值，这样就完成了一个MD5加密。
 特点只能从明文加">
-<meta property="og:updated_time" content="2017-04-26T03:04:55.175Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.562Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MD5加密">
 <meta name="twitter:description" content="什么是MD5加密MD5加密即Message-Digest Algorithm5，历经了MD2，MD4发展，在1991年提出。
@@ -456,7 +456,7 @@
 <h2 id="银行系统MD5加密方式"><a href="#银行系统MD5加密方式" class="headerlink" title="银行系统MD5加密方式"></a>银行系统MD5加密方式</h2><p>这种是银行等系统要求安全性非常高的系统，一般会对加密后的密文再次进行一次MD5加密，这样进行10-30次，达到一个无法破解的密文。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.security.MessageDigest;</span><br><span class="line"><span class="keyword">import</span> java.security.NoSuchAlgorithmException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MD5Utils</span> </span>&#123;</span><br><span class="line">    <span class="comment">//银行 银行卡 6位数 将密码进行十到三十次MD5加密</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String passWord = <span class="string">"123456"</span>;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            MessageDigest messageDigest = MessageDigest.getInstance(<span class="string">"MD5"</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> h = <span class="number">0</span>; h &lt; <span class="number">10</span>; h++) &#123; <span class="comment">//进行多次循环加密</span></span><br><span class="line">                <span class="keyword">byte</span>[] digest = messageDigest.digest(passWord.getBytes());</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; digest.length; i++) &#123;</span><br><span class="line">                    <span class="keyword">int</span> result = digest[i] &amp; <span class="number">0xff</span>;</span><br><span class="line">                    String hexString = Integer.toHexString(result)+<span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">if</span> (hexString.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">                        sb.append(<span class="string">"0"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    sb.append(hexString);</span><br><span class="line">                &#125;</span><br><span class="line">                passWord = sb.toString();</span><br><span class="line">                sb.delete(<span class="number">0</span>, sb.length());</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(passWord);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>加密后结果：<br><code>6912c1901801301e61951b01281ca1f21ca1dd1dc17e12a1</code></p>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -468,31 +468,26 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -704,6 +699,28 @@
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -755,9 +772,9 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -831,8 +848,6 @@
   
 
 
-  
-
 
 
 
@@ -860,9 +875,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

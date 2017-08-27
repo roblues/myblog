@@ -135,7 +135,7 @@ easy
 
 思路没思路
 为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
-<meta property="og:updated_time" content="2017-08-02T13:09:56.268Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Number Complement(#476)">
 <meta name="twitter:description" content="Number Complement(#476)
@@ -488,7 +488,6 @@ easy
 <p>为什么大神说这个显而易见的呢？严重怀疑我的智商。<br><code>Math.pow()</code> 是用来将二进制转化为十进制。但是为什么是 <code>i&lt;num</code> ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 <code>101</code> 和 反码 <code>010</code> 相加为 <code>111</code> 为 7。 所以用相加的值减去原来的值就是 <strong>反码</strong> 的值</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码为 <a href="https://discuss.leetcode.com/topic/75605/java-very-simple-code-and-self-evident-explanation" target="_blank" rel="external">Description</a> 中的。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findComplement</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; num)&#123;</span><br><span class="line">            i += Math.pow(<span class="number">2</span>, j);</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i - num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
 
       
     </div>
@@ -501,31 +500,26 @@ easy
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -735,6 +729,28 @@ easy
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -786,9 +802,9 @@ easy
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -862,8 +878,6 @@ easy
   
 
 
-  
-
 
 
 
@@ -891,9 +905,6 @@ easy
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

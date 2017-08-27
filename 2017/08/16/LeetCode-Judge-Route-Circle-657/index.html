@@ -142,7 +142,7 @@ easy
 判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的路一样就肯定在原点。所以只要统计一下就好。
 代码12345678910111213141516171">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/leetcode.png">
-<meta property="og:updated_time" content="2017-08-17T03:04:11.347Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Judge Route Circle(#657)">
 <meta name="twitter:description" content="Judge Route Circle(#657)
@@ -500,7 +500,6 @@ easy
 <p>终于有一次 <strong>前10%</strong> 了 <del>（也许是人少而已）</del>，总体来说这个题其实很水。</p>
 <p>判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的路一样就肯定在原点。所以只要统计一下就好。</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">judgeCircle</span><span class="params">(String moves)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> rCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> uCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> step[] = moves.toCharArray();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; step.length; i++) &#123;</span><br><span class="line">            <span class="keyword">switch</span>(step[i]) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'L'</span>:</span><br><span class="line">                    lCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'R'</span>:</span><br><span class="line">                    rCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'U'</span>:</span><br><span class="line">                    uCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'D'</span>:</span><br><span class="line">                    dCount++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        (lCount == rCount &amp;&amp; uCount == dCount) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
 
       
     </div>
@@ -513,31 +512,26 @@ easy
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -747,6 +741,28 @@ easy
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -798,9 +814,9 @@ easy
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -874,8 +890,6 @@ easy
   
 
 
-  
-
 
 
 
@@ -903,9 +917,6 @@ easy
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

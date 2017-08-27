@@ -112,7 +112,7 @@
 布局代码
 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051&amp;lt;RelativeLay">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/S60805-173456.jpg">
-<meta property="og:updated_time" content="2017-04-26T03:02:44.827Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="底部导航按钮">
 <meta name="twitter:description" content="关于底部按钮的实现关于底部导航按钮网上实现底部按钮的方法有很多，在这里RadioGroup+ViewPager+fragmnt实现的。
@@ -445,7 +445,7 @@
 <p>FragmentPagerAdapter数据适配器</p>
 <p>MyFragmentPagerAdapter</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFragmentPagerAdapter</span> <span class="keyword">extends</span> <span class="title">FragmentPagerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> PAGER_COUNT = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">private</span> DocFRAG docFRAG = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">private</span> CameraFRAG cameraFRAG = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">private</span> UserFRAG userFRAG = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyFragmentPagerAdapter</span><span class="params">(FragmentManager fm)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(fm);</span><br><span class="line">        docFRAG = <span class="keyword">new</span> DocFRAG();</span><br><span class="line">        cameraFRAG = <span class="keyword">new</span> CameraFRAG();</span><br><span class="line">        userFRAG = <span class="keyword">new</span> UserFRAG();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> PAGER_COUNT;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">instantiateItem</span><span class="params">(ViewGroup vg, <span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.instantiateItem(vg, position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroyItem</span><span class="params">(ViewGroup container, <span class="keyword">int</span> position, Object object)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"position Destory"</span> + position);</span><br><span class="line">        <span class="keyword">super</span>.destroyItem(container, position, object);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Fragment <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        Fragment fragment = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">switch</span> (position) &#123;</span><br><span class="line">            <span class="keyword">case</span> MainActivity.PAGE_ONE:</span><br><span class="line">                fragment = docFRAG;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> MainActivity.PAGE_TWO:</span><br><span class="line">                fragment = cameraFRAG;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> MainActivity.PAGE_THREE:</span><br><span class="line">                fragment = userFRAG;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fragment;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -457,31 +457,26 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -691,6 +686,28 @@
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -742,9 +759,9 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -818,8 +835,6 @@
   
 
 
-  
-
 
 
 
@@ -847,9 +862,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

@@ -105,7 +105,7 @@ AbstractList该接口的作用是用于 AbstractList 提供了 List 接口的默
 <meta property="og:description" content="概况ArrayList 是我们常用的一种数据结构。仔细分析 ArrayList 这个类和类所包含的方法。
 签名ArrayList继承了AbstractList 和使用了List RandomAccess Cloneable和Serializable四个接口。
 AbstractList该接口的作用是用于 AbstractList 提供了 List 接口的默认实现，在AbstractList中已经使用">
-<meta property="og:updated_time" content="2017-04-26T03:03:43.996Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArrayList源码分析">
 <meta name="twitter:description" content="概况ArrayList 是我们常用的一种数据结构。仔细分析 ArrayList 这个类和类所包含的方法。
@@ -510,7 +510,7 @@ const      float      native       super       while
 <h2 id="replaceAll"><a href="#replaceAll" class="headerlink" title="replaceAll()"></a><del>replaceAll()</del></h2><p>这个方法是用来替换所有的匹配项</p>
 <p>传入的参数是<code>UnaryOperator</code>是在java 8引入的lambda表达式，具体如何使用以后再说。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">replaceAll</span><span class="params">(UnaryOperator&lt;E&gt; operator)</span> </span>&#123;</span><br><span class="line">     Objects.requireNonNull(operator);</span><br><span class="line">     <span class="keyword">final</span> <span class="keyword">int</span> expectedModCount = modCount;</span><br><span class="line">     <span class="keyword">final</span> <span class="keyword">int</span> size = <span class="keyword">this</span>.size;</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; modCount == expectedModCount &amp;&amp; i &lt; size; i++) &#123;</span><br><span class="line">         elementData[i] = operator.apply((E) elementData[i]);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span> (modCount != expectedModCount) &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> ConcurrentModificationException();</span><br><span class="line">     &#125;</span><br><span class="line">     modCount++;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a><del>sort()</del></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparator&lt;? <span class="keyword">super</span> E&gt; c)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">int</span> expectedModCount = modCount;</span><br><span class="line">       Arrays.sort((E[]) elementData, <span class="number">0</span>, size, c);</span><br><span class="line">       <span class="keyword">if</span> (modCount != expectedModCount) &#123;</span><br><span class="line">           <span class="keyword">throw</span> <span class="keyword">new</span> ConcurrentModificationException();</span><br><span class="line">       &#125;</span><br><span class="line">       modCount++;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -522,31 +522,26 @@ const      float      native       super       while
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -756,6 +751,28 @@ const      float      native       super       while
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -807,9 +824,9 @@ const      float      native       super       while
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -883,8 +900,6 @@ const      float      native       super       while
   
 
 
-  
-
 
 
 
@@ -912,9 +927,6 @@ const      float      native       super       while
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   

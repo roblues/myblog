@@ -137,7 +137,7 @@ easy
 思路试题已经给出了 TreeNode 的数据结构。就是将数据的每一项都加起来。通过递归可以完成。
 需要注意的是 t1 或者 t2 可能为空。
 代码123456789101112131415161718192021222324/** * D">
-<meta property="og:updated_time" content="2017-08-04T10:28:30.784Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Merge Two Binary Trees(#617)">
 <meta name="twitter:description" content="Merge Two Binary Trees(#617)
@@ -490,7 +490,7 @@ easy
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>试题已经给出了 TreeNode 的数据结构。就是将数据的每一项都加起来。通过递归可以完成。</p>
 <p>需要注意的是 <code>t1</code> 或者 <code>t2</code> 可能为空。</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * public class TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode left;</span><br><span class="line"> *     TreeNode right;</span><br><span class="line"> *     TreeNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">mergeTrees</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (t1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t1;</span><br><span class="line">        &#125;</span><br><span class="line">        t1.val += t2.val;</span><br><span class="line">        t1.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">        t1.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">        <span class="keyword">return</span> t1;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<center><br><iframe src="\donate\index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"><br></iframe><br></center>
+
       
     </div>
     
@@ -502,31 +502,26 @@ easy
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
+  <div>博主都要吃土了😥</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
+    <span>打赏</span>
   </button>
   <div id="QR" style="display: none;">
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="杨晓辉 WeChat Pay"/>
-        <p>WeChat Pay</p>
+        <img id="wechat_qr" src="/images/WeChanQR.png" alt="杨晓辉 WeChat Pay"/>
+        <p>微信打赏</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="杨晓辉 Alipay"/>
-        <p>Alipay</p>
+        <img id="alipay_qr" src="/images/AliPayQR.png" alt="杨晓辉 Alipay"/>
+        <p>支付宝打赏</p>
       </div>
     
 
-    
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="杨晓辉 Bitcoin"/>
-        <p>Bitcoin</p>
-      </div>
     
 
   </div>
@@ -736,6 +731,28 @@ easy
 
         
         
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://Wevan.github.io/" title="Wevan" target="_blank">Wevan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.netcan666.com/" title="Netcan" target="_blank">Netcan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.iots.vip/" title="Alliot's bolg" target="_blank">Alliot's bolg</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
         
 
@@ -787,9 +804,9 @@ easy
       <i class="fa fa-area-chart"></i>
     </span>
     
-      <span class="post-meta-item-text">Site words total count&#58;</span>
+      <span class="post-meta-item-text">总计文字：&#58;</span>
     
-    <span title="Site words total count">
+    <span title="总计文字：">
       47.2k
     </span>
   
@@ -863,8 +880,6 @@ easy
   
 
 
-  
-
 
 
 
@@ -892,9 +907,6 @@ easy
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
