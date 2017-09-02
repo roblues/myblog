@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[协同过滤算法]]></title>
+      <url>%2F2017%2F09%2F01%2F%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[前言案例目前有五个用户对商品1和商品2的喜爱程度，分析用户之间的关系。 用户 商品1 商品2 1 3.3 6.5 2 5.8 2.6 3 3.6 6.3 4 3.4 5.8 5 5.2 3.1 寻找他们的相似度 通过离散图来进行表示 可以看出用户1 用户3 用户4 之间是存在关系的。 123456789101112131415161718192021222324252627282930# coding = utf8import matplotlib.pyplot as pltimport numpy as np# 散点图分析五个用户之间的相关程度# x轴为对于商品 1 的喜欢程度# y轴是对于商品 2 的喜欢程度# 数据如下#商品1 [3.3, 5.8, 3.6, 3.4, 5.2]#商品2 [6.5, 2.6, 6.3, 5.8, 3.1]x1 = 3.3 y1 = 6.5 plt.scatter(x1, y1, c='r', marker='o')x2 = 5.8y2 = 2.6plt.scatter(x2, y2, c='b', marker='o')x3 = 3.6y3 = 6.3plt.scatter(x3, y3, c='c', marker='o')x4 = 3.4y4 = 5.8plt.scatter(x4, y4, c='g', marker='o')x5 = 5.2y5 = 3.1plt.scatter(x5, y5, c='k', marker='o')plt.xlim(0, 10)plt.ylim(0, 10)plt.ylabel("shopping 2")plt.xlabel("shopping 1")plt.legend('12345')plt.show() 欧几里得距离\sqrt{\sum{1}^{n}(p{i}-q_{i})^2} 通过计算两点之间的距离来表示他们之间的相关程度。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[LeetCode:Reverse Integer(#7)]]></title>
       <url>%2F2017%2F08%2F28%2FLeetCode-Reverse-Integer-7%2F</url>
       <content type="text"><![CDATA[Reverse Integer(#7) 编号 名称 等级 7 Reverse Integer Easy 思路这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。其实是个人很垃圾。 主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(Reverse String(#344))。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。 判断正负，如果是负数，因为在后面进行绝对值的时候会无法进行正负判断，从而无法获取到正确的结果。 判断字符取绝对值后是否越界，在这里有个问题 如果使用 Math.abs() 这个方法的话,传入整型则返回整型，如果整型越界，则不变。 判断翻转后是否越界。 总的来说就这个三个步骤。 代码中的 f 是为了判断是否为负数，将传入的数转化为 long 类型有助于后期，防止 int 越界。 代码1234567891011121314class Solution &#123; public int reverse(int x) &#123; boolean f = x &lt; 0; long a = x; StringBuilder sb = new StringBuilder(); a = a &lt; 0 ? -a : a; sb.append(a); long out = f ? -Long.parseLong(sb.reverse().toString()) : Long.parseLong(sb.reverse().toString()); if (out &gt;= Integer.MAX_VALUE || out &lt;= Integer.MIN_VALUE) &#123; return 0; &#125; return (int) out; &#125;&#125;]]></content>
