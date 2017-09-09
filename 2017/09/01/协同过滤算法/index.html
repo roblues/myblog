@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,推荐系统," />
+  <meta name="keywords" content="Python,推荐系统," />
 
 
 
@@ -117,7 +117,12 @@
 所以一般是不会使用基于用户的协同过滤，但是并不">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/shopping.png">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/render.gif">
-<meta property="og:updated_time" content="2017-09-09T13:36:58.870Z">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person1.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person2.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
+<meta property="og:updated_time" content="2017-09-09T14:02:36.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="协同过滤算法/未完">
 <meta name="twitter:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。
@@ -416,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  734
+                  891
                 </span>
               
 
@@ -489,12 +494,13 @@
 <p>寻找他们的相似度</p>
 <p>通过离散图来进行表示</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/shopping.png" alt=""></p>
-<p>可以看出用户1 用户3 用户4 之间是存在关系的。</p>
+<p>可以看出 <code>用户1</code> <code>用户3</code> <code>用户4</code> 之间是存在关系的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding = utf8</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 散点图分析五个用户之间的相关程度</span></span><br><span class="line"><span class="comment"># x轴为对于商品 1 的喜欢程度</span></span><br><span class="line"><span class="comment"># y轴是对于商品 2 的喜欢程度</span></span><br><span class="line"><span class="comment"># 数据如下</span></span><br><span class="line"><span class="comment"># 商品1 [3.3, 5.8, 3.6, 3.4, 5.2]</span></span><br><span class="line"><span class="comment"># 商品2 [6.5, 2.6, 6.3, 5.8, 3.1]</span></span><br><span class="line"></span><br><span class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</span><br><span class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</span><br><span class="line">color = [<span class="string">'r'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'g'</span>, <span class="string">'y'</span>, <span class="string">'k'</span>, <span class="string">'m'</span>, <span class="string">'0xff0012'</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1)):</span><br><span class="line">    plt.scatter(shop1[i], shop2[i], c=color[i])</span><br><span class="line">plt.xlim(<span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">plt.ylim(<span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">plt.ylabel(<span class="string">"shopping 2"</span>)</span><br><span class="line">plt.xlabel(<span class="string">"shopping 1"</span>)</span><br><span class="line">plt.legend(<span class="string">'12345'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h2 id="欧几里得距离"><a href="#欧几里得距离" class="headerlink" title="欧几里得距离"></a>欧几里得距离</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/render.gif" alt=""></p>
+<h2 id="欧几里得距离"><a href="#欧几里得距离" class="headerlink" title="欧几里得距离"></a>欧几里得距离</h2><p>欧几里得距离是最常用的距离公式,用于计算两点之间的距离。公式如下：</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/render.gif" alt=""></p>
 <p>通过计算两点之间的距离来表示他们之间的相关程度。</p>
-<p>我们通过 python 计算 欧几里得距离。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding = utf8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#        1    2     3   4   5</span></span><br><span class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</span><br><span class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</span><br><span class="line">destance = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1) - <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(shop2)):</span><br><span class="line">        distance = (shop1[i] - shop1[j]) ** <span class="number">2</span> + (shop2[i] - shop2[j]) ** <span class="number">2</span></span><br><span class="line">        correlation = <span class="number">1</span> / (<span class="number">1</span> + distance) <span class="comment"># 将范围缩小至0 ~ 1 之间</span></span><br><span class="line">        <span class="keyword">if</span> correlation &gt; <span class="number">0.60</span>:  <span class="comment"># 根据需求更换相关系数</span></span><br><span class="line">            print(<span class="string">"第 &#123;&#125; and &#123;&#125;  distance is &#123;&#125;"</span>.format(i + <span class="number">1</span>, j + <span class="number">1</span>, correlation))</span><br></pre></td></tr></table></figure>
+<p>我们通过 <code>python</code> 计算 欧几里得距离。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding = utf8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#        1    2     3   4   5</span></span><br><span class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</span><br><span class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1) - <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(shop2)):</span><br><span class="line">        distance = (shop1[i] - shop1[j]) ** <span class="number">2</span> + (shop2[i] - shop2[j]) ** <span class="number">2</span></span><br><span class="line">        correlation = <span class="number">1</span> / (<span class="number">1</span> + distance) <span class="comment"># 将范围缩小至0 ~ 1 之间</span></span><br><span class="line">        <span class="keyword">if</span> correlation &gt; <span class="number">0.60</span>:  <span class="comment"># 根据需求更换相关系数</span></span><br><span class="line">            print(<span class="string">"第 &#123;&#125; and &#123;&#125;  distance is &#123;&#125;"</span>.format(i + <span class="number">1</span>, j + <span class="number">1</span>, correlation))</span><br></pre></td></tr></table></figure>
 <p>得出结论</p>
 <hr>
 <blockquote>
@@ -511,6 +517,27 @@
 </blockquote>
 <hr>
 <p>这样就可以根据需求来判断用户之间的相似度。</p>
+<h2 id="皮尔逊相关系数"><a href="#皮尔逊相关系数" class="headerlink" title="皮尔逊相关系数"></a>皮尔逊相关系数</h2><p>皮尔逊相关系数同样也是计算距离的一种方式</p>
+<p>通过相关系数可以计算出他们的相关程度。</p>
+<p>皮尔逊相关系数公式有四个</p>
+<p>公式一：</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person1.gif" alt=""></p>
+<p>公式二：</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person2.gif" alt=""></p>
+<p>公式三：</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif" alt=""></p>
+<p>公式四：</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p>
+<p>相关系数</p>
+<ul>
+<li>0.8-1.0     极强相关</li>
+<li>0.6-0.8     强相关</li>
+<li>0.4-0.6     中等程度相关</li>
+<li>0.2-0.4     弱相关</li>
+<li>0.0-0.2     极弱相关或无相关</li>
+</ul>
+<p>我们通过第四个公式进行计算</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p>
 
       
     </div>
@@ -575,7 +602,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
             <a href="/tags/推荐系统/" rel="tag"># 推荐系统</a>
           
@@ -690,7 +717,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -788,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似度计算"><span class="nav-number">3.</span> <span class="nav-text">相似度计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散图表示"><span class="nav-number">3.1.</span> <span class="nav-text">离散图表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得距离"><span class="nav-number">3.2.</span> <span class="nav-text">欧几里得距离</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似度计算"><span class="nav-number">3.</span> <span class="nav-text">相似度计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散图表示"><span class="nav-number">3.1.</span> <span class="nav-text">离散图表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得距离"><span class="nav-number">3.2.</span> <span class="nav-text">欧几里得距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#皮尔逊相关系数"><span class="nav-number">3.3.</span> <span class="nav-text">皮尔逊相关系数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -826,7 +853,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      48.3k
+      48.4k
     </span>
   
 </div>
