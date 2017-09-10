@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
-<meta property="og:updated_time" content="2017-09-09T14:02:36.409Z">
+<meta property="og:updated_time" content="2017-09-09T14:07:12.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="协同过滤算法/未完">
 <meta name="twitter:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  891
+                  905
                 </span>
               
 
@@ -501,7 +501,7 @@
 <p>通过计算两点之间的距离来表示他们之间的相关程度。</p>
 <p>我们通过 <code>python</code> 计算 欧几里得距离。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding = utf8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#        1    2     3   4   5</span></span><br><span class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</span><br><span class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1) - <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(shop2)):</span><br><span class="line">        distance = (shop1[i] - shop1[j]) ** <span class="number">2</span> + (shop2[i] - shop2[j]) ** <span class="number">2</span></span><br><span class="line">        correlation = <span class="number">1</span> / (<span class="number">1</span> + distance) <span class="comment"># 将范围缩小至0 ~ 1 之间</span></span><br><span class="line">        <span class="keyword">if</span> correlation &gt; <span class="number">0.60</span>:  <span class="comment"># 根据需求更换相关系数</span></span><br><span class="line">            print(<span class="string">"第 &#123;&#125; and &#123;&#125;  distance is &#123;&#125;"</span>.format(i + <span class="number">1</span>, j + <span class="number">1</span>, correlation))</span><br></pre></td></tr></table></figure>
-<p>得出结论</p>
+<p>计算结果</p>
 <hr>
 <blockquote>
 <p>第 1 和 2  相关系数是 0.04452359750667854</p>
@@ -516,6 +516,7 @@
 <p>第 4 和 5  相关系数是 0.08673026886383348</p>
 </blockquote>
 <hr>
+<p>得出结论，基本和离散图相似。</p>
 <p>这样就可以根据需求来判断用户之间的相似度。</p>
 <h2 id="皮尔逊相关系数"><a href="#皮尔逊相关系数" class="headerlink" title="皮尔逊相关系数"></a>皮尔逊相关系数</h2><p>皮尔逊相关系数同样也是计算距离的一种方式</p>
 <p>通过相关系数可以计算出他们的相关程度。</p>
@@ -538,7 +539,7 @@
 </ul>
 <p>我们通过第四个公式进行计算</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -627,6 +628,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/09/10/LeetCode-Find-the-Difference-389/" rel="prev" title="LeetCode:Find the Difference(#389)">
+                LeetCode:Find the Difference(#389) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -704,7 +709,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-count">59</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -853,7 +858,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      48.4k
+      48.6k
     </span>
   
 </div>
