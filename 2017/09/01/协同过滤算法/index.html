@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
-<meta property="og:updated_time" content="2017-09-09T14:07:12.910Z">
+<meta property="og:updated_time" content="2017-09-14T04:16:22.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="协同过滤算法/未完">
 <meta name="twitter:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  905
+                  1,064
                 </span>
               
 
@@ -520,6 +520,11 @@
 <p>这样就可以根据需求来判断用户之间的相似度。</p>
 <h2 id="皮尔逊相关系数"><a href="#皮尔逊相关系数" class="headerlink" title="皮尔逊相关系数"></a>皮尔逊相关系数</h2><p>皮尔逊相关系数同样也是计算距离的一种方式</p>
 <p>通过相关系数可以计算出他们的相关程度。</p>
+<h3 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h3><p>皮尔逊相关系数是有一定的适用条件。</p>
+<blockquote>
+<p>当两个变量的标准差都不为零时，相关系数才有定义，皮尔逊相关系数适用于：<br>(1)、两个变量之间是线性关系，都是连续数据。<br>(2)、两个变量的总体是正态分布，或接近正态的单峰分布。<br>(3)、两个变量的观测值是成对的，每对观测值之间相互独立。</p>
+</blockquote>
+<p>同样这个算法也是有缺陷的,但数据越少的时候,波动性越大。当数据很少的时候不建议使用。</p>
 <p>皮尔逊相关系数公式有四个</p>
 <p>公式一：</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person1.gif" alt=""></p>
@@ -540,6 +545,7 @@
 <p>我们通过第四个公式进行计算</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1>
       
     </div>
     
@@ -820,7 +826,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似度计算"><span class="nav-number">3.</span> <span class="nav-text">相似度计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散图表示"><span class="nav-number">3.1.</span> <span class="nav-text">离散图表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得距离"><span class="nav-number">3.2.</span> <span class="nav-text">欧几里得距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#皮尔逊相关系数"><span class="nav-number">3.3.</span> <span class="nav-text">皮尔逊相关系数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似度计算"><span class="nav-number">3.</span> <span class="nav-text">相似度计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散图表示"><span class="nav-number">3.1.</span> <span class="nav-text">离散图表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得距离"><span class="nav-number">3.2.</span> <span class="nav-text">欧几里得距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#皮尔逊相关系数"><span class="nav-number">3.3.</span> <span class="nav-text">皮尔逊相关系数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适用范围"><span class="nav-number">3.3.1.</span> <span class="nav-text">适用范围</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -858,7 +864,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      48.6k
+      48.8k
     </span>
   
 </div>
