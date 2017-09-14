@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Length of Last Word(#58)]]></title>
+      <url>%2F2017%2F09%2F14%2FLeetCode-Length-of-Last-Word-58%2F</url>
+      <content type="text"><![CDATA[Length of Last Word(#58) 编号 名称 等级 58 Length of Last Word Easy 思路题目要求计算出字符串最后一个单词的长度，如果不存在就返回 0 。 首先就是要判断这个字符串中有没有字符，是否是一个空的字符串，如果是返回 0。 否则的话就是通过 split() 切割字符串。最后返回最后一个字符串的长度就好。 代码123456789class Solution &#123; public int lengthOfLastWord(String s) &#123; if (s.trim().isEmpty()) &#123; return 0; &#125; String[] args = s.split(" "); return args[args.length - 1].length(); &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[LeetCode:Add Digits(#258)]]></title>
       <url>%2F2017%2F09%2F10%2FLeetCode-Add-Digits-258%2F</url>
       <content type="text"><![CDATA[Add Digits(#258) 编号 名称 等级 258 Add Digits Easy 思路竟然还有这样的操作？？？？😥 一个非0非9的数除以9竟然就是答案，这样的规律大佬们是如何找到的？ 🤔 代码12345class Solution &#123; public int addDigits(int num) &#123; return num == 0? 0: (num% 9 == 0? 9: (num%9)); &#125;&#125;]]></content>

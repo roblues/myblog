@@ -144,7 +144,7 @@ Easy
 
 思路这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。其实是个人很垃圾。
 主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(Reverse String(#344))。但是这个试题要比之前的考虑的多">
-<meta property="og:updated_time" content="2017-08-28T10:53:39.048Z">
+<meta property="og:updated_time" content="2017-09-14T12:00:11.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Reverse Integer(#7)">
 <meta name="twitter:description" content="Reverse Integer(#7)
@@ -505,7 +505,7 @@ Easy
 </tr>
 </tbody>
 </table>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。<del>其实是个人很垃圾。</del></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。<del>其实是个人很垃圾。</del></p>
 <p>主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(<a href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/">Reverse String(#344)</a>)。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。</p>
 <ol>
 <li>判断正负，如果是负数，因为在后面进行绝对值的时候会无法进行正负判断，从而无法获取到正确的结果。</li>
@@ -514,7 +514,7 @@ Easy
 </ol>
 <p>总的来说就这个三个步骤。</p>
 <p>代码中的 <code>f</code> 是为了判断是否为负数，将传入的数转化为 <code>long</code> 类型有助于后期，防止 <code>int</code> 越界。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> f = x &lt; <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">long</span> a = x;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        a = a &lt; <span class="number">0</span> ? -a : a;</span><br><span class="line">        sb.append(a);</span><br><span class="line">        <span class="keyword">long</span> out = f ? -Long.parseLong(sb.reverse().toString()) : Long.parseLong(sb.reverse().toString());</span><br><span class="line">        <span class="keyword">if</span> (out &gt;= Integer.MAX_VALUE || out &lt;= Integer.MIN_VALUE) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) out;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> f = x &lt; <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">long</span> a = x;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        a = a &lt; <span class="number">0</span> ? -a : a;</span><br><span class="line">        sb.append(a);</span><br><span class="line">        <span class="keyword">long</span> out = f ? -Long.parseLong(sb.reverse().toString()) : Long.parseLong(sb.reverse().toString());</span><br><span class="line">        <span class="keyword">if</span> (out &gt;= Integer.MAX_VALUE || out &lt;= Integer.MIN_VALUE) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) out;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -684,7 +684,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">59</span>
+                <span class="site-state-item-count">60</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -795,7 +795,7 @@ Easy
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse-Integer-7"><span class="nav-number">1.</span> <span class="nav-text">Reverse Integer(#7)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reverse-Integer-7"><span class="nav-number">1.</span> <span class="nav-text">Reverse Integer(#7)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -833,7 +833,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      48.8k
+      48.9k
     </span>
   
 </div>
