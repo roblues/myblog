@@ -113,7 +113,7 @@
 
 所以一般是不会使用基于用户的协同过滤，但是并不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="协同过滤算法/未完">
+<meta property="og:title" content="协同过滤算法">
 <meta property="og:url" content="http://youngxhui.github.io/2017/09/01/协同过滤算法/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。
@@ -131,9 +131,9 @@
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
-<meta property="og:updated_time" content="2017-10-12T09:10:48.314Z">
+<meta property="og:updated_time" content="2017-10-12T10:49:24.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="协同过滤算法/未完">
+<meta name="twitter:title" content="协同过滤算法">
 <meta name="twitter:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。
 分类在协同过滤算法中，分为两类，基于用户的协同过滤(UserCF)和基于物品的协同过滤(ItemCF)。每个类型的适用情况不同。
 在上述的两种类型中，基于用户的协同过滤算法是不太常用的，原因如下
@@ -178,7 +178,7 @@
 
 
 
-  <title>协同过滤算法/未完 | ISLAND</title>
+  <title>协同过滤算法 | ISLAND</title>
   
 
 
@@ -375,7 +375,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">协同过滤算法/未完</h1>
+          <h1 class="post-title" itemprop="name headline">协同过滤算法</h1>
         
 
         <div class="post-meta">
@@ -417,7 +417,7 @@
 
           
           
-             <span id="/2017/09/01/协同过滤算法/" class="leancloud_visitors" data-flag-title="协同过滤算法/未完">
+             <span id="/2017/09/01/协同过滤算法/" class="leancloud_visitors" data-flag-title="协同过滤算法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -442,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,548
+                  1,907
                 </span>
               
 
@@ -581,9 +581,40 @@
 </blockquote>
 <p>通过计算出来的结果可以看出来等到的结果</p>
 <h2 id="余弦距离"><a href="#余弦距离" class="headerlink" title="余弦距离"></a>余弦距离</h2><p>余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个个体间差异的大小。余弦值越接近1，就表明夹角越接近0度，也就是两个向量越相似，这就叫”余弦相似性”。</p>
-<p>公式</p>
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>一般余弦定理这个公式运用与文本分析。</p>
+<p>分别采用下列的文本进行</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>A：这里距离北京有多远，火车多长时间</p>
+<p>B:北京离这里有多远，坐火车多长时间</p>
+<ul>
+<li>对A，B进行分词</li>
+</ul>
+<p>A:这里/距离/北京/有/多远，火车/多长/时间</p>
+<p>B:北京/离/这里/有/多远，坐/火车/多长/时间</p>
+<ul>
+<li>列出所有的词</li>
+</ul>
+<p>这里 距离 北京 有 多远 火车 多长 时间 离 坐</p>
+<ul>
+<li>进行词频统计</li>
+</ul>
+<p>A: 这里(1)距离(1)北京(1)有(1)多远(1)火车(1)多长(1)时间(1)离(0)坐(0)</p>
+<p>B: 这里(1)距离(0)北京(1)有(1)多远(1)火车(1)多长(1)时间(1)离(1)坐(1)</p>
+<ul>
+<li>计算句子的词频向量</li>
+</ul>
+<p>A (1,1,1,1,1,1,1,1,0,0)</p>
+<p>B (1,0,1,1,1,1,1,1,1,1)</p>
+<ul>
+<li>通过余弦定理计算相似度</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="comment"># 余弦定理</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cos</span><span class="params">(v1, v2)</span>:</span></span><br><span class="line">    l = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(v1)):</span><br><span class="line">        l += v1[i] * v2[i]</span><br><span class="line">    v = <span class="number">0.0</span></span><br><span class="line">    w = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(v1)):</span><br><span class="line">        v += math.pow(v1[i], <span class="number">2</span>)</span><br><span class="line">        w += math.pow(v2[i], <span class="number">2</span>)</span><br><span class="line">    cos = l / (math.sqrt(v) * math.sqrt(w))</span><br><span class="line">    <span class="keyword">return</span> cos</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    v1 = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">    v2 = [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">    l = cos(v1, v2)</span><br><span class="line">    <span class="keyword">print</span> l</span><br></pre></td></tr></table></figure>
+<p>计算出的相似度为：</p>
+<blockquote>
+<p>0.824957911384</p>
+</blockquote>
+<p>说明这两句话基本相等</p>
 <p>这是一些基本的相似度计算方法。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1>
+
       
     </div>
     
@@ -632,7 +663,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2017/09/01/协同过滤算法/" title="协同过滤算法/未完">http://youngxhui.github.io/2017/09/01/协同过滤算法/</a>
+    <a href="http://youngxhui.github.io/2017/09/01/协同过滤算法/" title="协同过滤算法">http://youngxhui.github.io/2017/09/01/协同过滤算法/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -878,7 +909,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似度计算"><span class="nav-number">3.</span> <span class="nav-text">相似度计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散图表示"><span class="nav-number">3.1.</span> <span class="nav-text">离散图表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得距离"><span class="nav-number">3.2.</span> <span class="nav-text">欧几里得距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#皮尔逊相关系数"><span class="nav-number">3.3.</span> <span class="nav-text">皮尔逊相关系数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适用范围"><span class="nav-number">3.3.1.</span> <span class="nav-text">适用范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单案例"><span class="nav-number">3.3.2.</span> <span class="nav-text">简单案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#余弦距离"><span class="nav-number">3.4.</span> <span class="nav-text">余弦距离</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似度计算"><span class="nav-number">3.</span> <span class="nav-text">相似度计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#离散图表示"><span class="nav-number">3.1.</span> <span class="nav-text">离散图表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧几里得距离"><span class="nav-number">3.2.</span> <span class="nav-text">欧几里得距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#皮尔逊相关系数"><span class="nav-number">3.3.</span> <span class="nav-text">皮尔逊相关系数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适用范围"><span class="nav-number">3.3.1.</span> <span class="nav-text">适用范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单案例"><span class="nav-number">3.3.2.</span> <span class="nav-text">简单案例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#余弦距离"><span class="nav-number">3.4.</span> <span class="nav-text">余弦距离</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公式"><span class="nav-number">3.4.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">3.4.2.</span> <span class="nav-text">示例</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -916,7 +947,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.4k
+      49.8k
     </span>
   
 </div>
