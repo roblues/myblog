@@ -110,7 +110,7 @@
 <meta property="og:url" content="http://youngxhui.github.io/2017/10/15/大创项目总结/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始的时候认为接口就是对数据库了的一个映射，不外乎 增删改查。写的多了，重构了几次，才明白了出一个接口是有很多约束的。从开始到现在，虽然项目还没有做完，就是一直拖啊拖，小伙伴也不给力啊，本来是两个人开发，可是另一个小伙伴的贡献代码估计不足十分之一，之后又重构了">
-<meta property="og:updated_time" content="2017-10-15T07:34:45.680Z">
+<meta property="og:updated_time" content="2017-10-15T08:09:22.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大创项目总结">
 <meta name="twitter:description" content="前言这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始的时候认为接口就是对数据库了的一个映射，不外乎 增删改查。写的多了，重构了几次，才明白了出一个接口是有很多约束的。从开始到现在，虽然项目还没有做完，就是一直拖啊拖，小伙伴也不给力啊，本来是两个人开发，可是另一个小伙伴的贡献代码估计不足十分之一，之后又重构了">
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  427
+                  506
                 </span>
               
 
@@ -442,6 +442,27 @@
 <h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>这是一个比赛项目，大学生创新创业大赛，这种比赛没什么难点，简单的说就是一个讲PPT比赛。但是我还是希望可以做出来，也算是对自己的一个锻炼。</p>
 <p>项目开始的时候还没有学习过关于 web 的任何开发，寒假自学了一个月从 <code>tomcat</code>，<code>jsp</code>，<code>servlet</code>，<code>spring</code>，<code>springmvc</code>虽然说没有太多的深入，但是照猫画虎的可以写出一点的东西，然后就是了解 <code>REST</code> ，都是一点一滴的慢慢积累起来的。</p>
 <p>因为从来没有项目经验，更没有合作经验，就看了很多项目合作的文章，也问了一些学长。依葫芦画瓢，在小组内制订了很多规范和标准，参考了当时的 阿里开源的 Java开发规约文档，就这样开始了迷迷糊糊的项目开发。</p>
+<h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><p>整体结构那就是 <code>mvc</code> 开发模式，刚刚开始的时候真的分不清 <code>service层</code> ，<code>controller层</code> 的具体划分，个人的理解就是 <code>controller</code> 负责请求的响应和答复，<code>service</code>  负责具体的逻辑处理。</p>
+<p>项目结构如下：</p>
+<ul>
+<li>controller</li>
+<li>service</li>
+<li><ul>
+<li>impl </li>
+</ul>
+</li>
+<li>dao</li>
+<li><ul>
+<li>impl</li>
+</ul>
+</li>
+<li><ul>
+<li>rowmapper</li>
+</ul>
+</li>
+<li>api</li>
+<li>model</li>
+</ul>
 
       
     </div>
@@ -737,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目结构"><span class="nav-number">3.</span> <span class="nav-text">项目结构</span></a></li></ol></div>
             
 
           </div>
@@ -775,7 +796,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      50.2k
+      50.3k
     </span>
   
 </div>
