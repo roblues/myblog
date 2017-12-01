@@ -555,6 +555,7 @@
   content: "\f080";
 }
 .fa-twitter-square:before {
+  color: rgb(27, 149, 224);
   content: "\f081";
 }
 .fa-facebook-square:before {
@@ -604,6 +605,7 @@
   content: "\f091";
 }
 .fa-github-square:before {
+  color: rgb(36, 41, 46);
   content: "\f092";
 }
 .fa-upload:before {
@@ -625,6 +627,7 @@
   content: "\f098";
 }
 .fa-twitter:before {
+  color: rgb(27, 149, 224);
   content: "\f099";
 }
 .fa-facebook-f:before,
@@ -632,6 +635,7 @@
   content: "\f09a";
 }
 .fa-github:before {
+  color: rgb(36, 41, 46);
   content: "\f09b";
 }
 .fa-unlock:before {
@@ -950,6 +954,7 @@
   content: "\f112";
 }
 .fa-github-alt:before {
+  color: rgb(36, 41, 46);
   content: "\f113";
 }
 .fa-folder-o:before {
@@ -1298,6 +1303,7 @@
   content: "\f189";
 }
 .fa-weibo:before {
+  color: rgb(230, 22, 45);
   content: "\f18a";
 }
 .fa-renren:before {
