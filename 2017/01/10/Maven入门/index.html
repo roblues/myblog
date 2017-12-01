@@ -758,10 +758,40 @@ Maven的安装和配置Ma">
           
   <div class="comments" id="comments">
     
-       
-         <div onclick="ShowGitment()" id="gitment-display-button">显示 Gitment 评论</div>
-         <div id="gitment-container" style="display:none"></div>
-       
+      <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
+      <div id="container" style="display:none"></div>
+      <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+      <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+      <script>
+      const myTheme = {
+        render(state, instance) {
+        const container = document.createElement('div');
+        container.lang = "en-US";
+        container.className = 'gitment-container gitment-root-container';
+        container.appendChild(instance.renderHeader(state, instance));
+        container.appendChild(instance.renderEditor(state, instance));
+        container.appendChild(instance.renderComments(state, instance));
+        container.appendChild(instance.renderFooter(state, instance));
+        return container;
+      }
+    }
+    function showGitment() {
+      $("#gitment_title").attr("style", "display:none");
+      $("#container").attr("style", "").addClass("gitment_container");
+      var gitment = new Gitment({
+        id: window.location.pathname,
+        theme: myTheme,
+        owner: '',
+        repo: 'island_comment',
+        oauth: {
+          client_id: '',
+          client_secret: ''
+        }
+      });
+      gitment.render('container');
+    }
+    </script>
+ 
     
   </div>
 
@@ -1139,32 +1169,6 @@ Maven的安装和配置Ma">
 
 
 
-
-
-
-   
-   
-   
-   
-   <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-   
-       <script type="text/javascript">
-           function ShowGitment(){
-               document.getElementById("gitment-display-button").style.display = "none";
-               document.getElementById("gitment-container").style.display = "block";
-               var gitment = new Gitment({
-                   id: document.location.href, 
-                   owner: 'youngxhui',
-                   repo: 'island_comment',
-                   oauth: {
-                       client_id: 'd3015f0dc67e9c047870',
-                       client_secret: '7bafd709be15322e1bcb3d644030f633705b9add',
-                   }});
-               gitment.render('gitment-container');
-           }
-       </script>
-   
 
 
   
