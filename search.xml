@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Number of 1 Bits(#191)]]></title>
+      <url>%2F2017%2F12%2F01%2FLeetCode-Number-of-1-Bits-191%2F</url>
+      <content type="text"><![CDATA[Number of 1 Bits(#191) 编号 名称 等级 191 Number of 1 Bits Easy 思路这个题其实就是统计一个无符号整数的二进制数中1的个数，Java 已经给我们提供了api Intger.bitCount(int n),所以一行代码解决 代码123456public class Solution &#123; // you need to treat n as an unsigned value public int hammingWeight(int n) &#123; return Integer.bitCount(n); &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[LeetCode:Self Dividing Numbers(#728)]]></title>
       <url>%2F2017%2F12%2F01%2FLeetCode-Self-Dividing-Numbers-728%2F</url>
       <content type="text"><![CDATA[Self Dividing Numbers(#728) 编号 名称 等级 728 Self Dividing Numbers Easy 思路这个题首先要把给的数字每一位进行分割，写了一个递归 foo 返回一个list，这个list是数字的每一位。 之后再写个循环对产生的结果进行遍历就好。基本没什么难点。 代码1234567891011121314151617181920212223242526272829class Solution &#123; fun selfDividingNumbers(left: Int, right: Int): List&lt;Int&gt; &#123; var result = ArrayList&lt;Int&gt;() for (i in left..right) &#123; var list = ArrayList&lt;Int&gt;() val arrayList = foo(i, list) var sum = 0 arrayList.map &#123; if (it != 0 &amp;&amp; i % it == 0) &#123; sum += 1 &#125; &#125; if (sum == arrayList.size) &#123; result.add(i) &#125; &#125; return result &#125; fun foo(num: Int, list: ArrayList&lt;Int&gt;): ArrayList&lt;Int&gt; &#123; if ((num / 10 == 0) and (num % 10 == 0)) &#123; return list &#125; list.add(num % 10) val nums = num / 10 foo(nums, list) return list &#125;&#125;]]></content>
