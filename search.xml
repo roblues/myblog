@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[LeetCode:Binary Number with Alternating Bits(#693)]]></title>
+      <url>%2F2017%2F12%2F01%2FLeetCode-Binary-Number-with-Alternating-Bits-693%2F</url>
+      <content type="text"><![CDATA[好久都没有写过博客了，大概一个月，一个字都没有写。乱七八糟的的事情有点多，再加上考试等，一个月也没有做什么。最近发现 LeetCode 上支持了 kotlin。算法的学习还是不能停止的，毕竟自己还是个渣。 估计以后的 LeetCode 上的题都是用 kotlin 刷了。 Binary Number with Alternating Bits(#693) 编号 名称 等级 693 Binary Number with Alternating Bits Easy 思路这个题是要找到带有交替位的二进制数，比如 2(10), 5(101) ,这样的数字。 我的想法应该是相对来说比较笨的，就是先把数转为二进制数，再将二进制数分割位字符数组，对字符数组进行奇数偶数的选择。通过选择后判断奇偶位中的每一位是否相同。 第一次提交的时候就是这个样子想的，当提交代码的时候发现错了因为 7(111) 这个样子的并不符合奇偶交替，而是一样，所以在后面加了一个判断，判断奇偶位的内容是否一致，如果一样代表不成立。 当再次提交的时候发现忽略了 1 因为有了判断，所以1的偶位肯定是不存在的，这样的话就会判断出错误的结果，最后在开头添加这个判断。 代码1234567891011121314151617181920212223242526272829303132333435363738394041424344class Solution &#123; fun hasAlternatingBits(n: Int): Boolean &#123; if (n ==1 )&#123; return true &#125; var flag = true val a = Integer.toBinaryString(n) val b: CharArray = a.toCharArray() val c = ArrayList&lt;Char&gt;() val d = ArrayList&lt;Char&gt;() for (i in 0 until b.size) &#123; if (i % 2 == 0) &#123; c.add(b[i]) &#125; else &#123; d.add(b[i]) &#125; &#125; var twp1 = '0' var twp2 = '1' if (c.size != 0) &#123; twp1 = c[0] for (i in 1 until c.size) &#123; if (c[i] != twp1) &#123; flag = false break &#125; &#125; &#125; if (d.size != 0) &#123; twp2 = d[0] for (i in 1 until d.size) &#123; if (d[i] != twp2) &#123; flag = false break &#125; &#125; &#125; if (twp1 == twp2) &#123; flag = false &#125; return flag &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[电影推荐系统]]></title>
+      <url>%2F2017%2F10%2F29%2F%E7%94%B5%E5%BD%B1%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%2F</url>
+      <content type="text"><![CDATA[之前一直研究协同过滤算法，这次利用协同过滤算法完成一个比较完整的推荐系统。采用了电影推荐。 准备工作 python 2.7 数据下载，选择 ml-100k.zip 思想我们采用top-N来进行推荐，就是提供一个长度为N的列表。 数据处理我们在下载的数据中仅仅采用 u.data 和 u.item 进行处理,其中我们来查看一下 u.data 和 u.item 的数据是什么。 在linux或者有着linux环境下]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[大创项目总结]]></title>
       <url>%2F2017%2F10%2F15%2F%E5%A4%A7%E5%88%9B%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93%2F</url>
       <content type="text"><![CDATA[前言这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始的时候认为接口就是对数据库了的一个映射，不外乎 增删改查。写的多了，重构了几次，才明白了出一个接口是有很多约束的。从开始到现在，虽然项目还没有做完，就是一直拖啊拖，小伙伴也不给力啊，本来是两个人开发，可是另一个小伙伴的贡献代码估计不足十分之一，之后又重构了几乎所有代码，将 Java 代码转向了 Kotlin。当然做的越多也就收获的越多。 开始这是一个比赛项目，大学生创新创业大赛，这种比赛没什么难点，简单的说就是一个讲PPT比赛。但是我还是希望可以做出来，也算是对自己的一个锻炼。 项目开始的时候还没有学习过关于 web 的任何开发，寒假自学了一个月从 tomcat，jsp，servlet，spring，springmvc虽然说没有太多的深入，但是照猫画虎的可以写出一点的东西，然后就是了解 REST ，都是一点一滴的慢慢积累起来的。 因为从来没有项目经验，更没有合作经验，就看了很多项目合作的文章，也问了一些学长。依葫芦画瓢，在小组内制订了很多规范和标准，参考了当时的 阿里开源的 Java开发规约文档，就这样开始了迷迷糊糊的项目开发。 项目结构整体结构那就是 mvc 开发模式，刚刚开始的时候真的分不清 service层 ，controller层 的具体划分，个人的理解就是 controller 负责请求的响应和答复，service 负责具体的逻辑处理。 项目结构如下： controller service impl dao impl rowmapper api model]]></content>
