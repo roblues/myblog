@@ -107,7 +107,7 @@
 <meta name="description" content="kotlin对集合问题的支持很好，有很多方法可以方便又直观的对集合进行操作。比如 map，count，reduce，filter等方法，这个博客会持续总结些方法。
 anyany 这个函数返回值是一个 boolean 类型，用于判断集合内元素是否用满足条件的，如果有任意一个集合满足该条件，则返回 true 否是为 false。
 示例代码
-1234567fun main(args: Array&amp;lt;">
+1234567fun main(args: Array&amp;lt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kotlin中Collection一些语法总结">
 <meta property="og:url" content="http://youngxhui.github.io/2017/12/23/Kotlin中Collection一些语法总结/index.html">
@@ -115,14 +115,16 @@ anyany 这个函数返回值是一个 boolean 类型，用于判断集合内元�
 <meta property="og:description" content="kotlin对集合问题的支持很好，有很多方法可以方便又直观的对集合进行操作。比如 map，count，reduce，filter等方法，这个博客会持续总结些方法。
 anyany 这个函数返回值是一个 boolean 类型，用于判断集合内元素是否用满足条件的，如果有任意一个集合满足该条件，则返回 true 否是为 false。
 示例代码
-1234567fun main(args: Array&amp;lt;">
-<meta property="og:updated_time" content="2017-12-25T03:39:16.457Z">
+1234567fun main(args: Array&amp;lt">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/1c40461a60dff3e4e24775e216e80547.png">
+<meta property="og:updated_time" content="2017-12-25T03:56:31.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin中Collection一些语法总结">
 <meta name="twitter:description" content="kotlin对集合问题的支持很好，有很多方法可以方便又直观的对集合进行操作。比如 map，count，reduce，filter等方法，这个博客会持续总结些方法。
 anyany 这个函数返回值是一个 boolean 类型，用于判断集合内元素是否用满足条件的，如果有任意一个集合满足该条件，则返回 true 否是为 false。
 示例代码
-1234567fun main(args: Array&amp;lt;">
+1234567fun main(args: Array&amp;lt">
+<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/1c40461a60dff3e4e24775e216e80547.png">
 
 
 
@@ -447,7 +449,8 @@ anyany 这个函数返回值是一个 boolean 类型，用于判断集合内元�
       
 
       
-        <p>kotlin对集合问题的支持很好，有很多方法可以方便又直观的对集合进行操作。比如 map，count，reduce，filter等方法，这个博客会持续总结些方法。</p>
+        <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/1c40461a60dff3e4e24775e216e80547.png" alt=""></p>
+<p>kotlin对集合问题的支持很好，有很多方法可以方便又直观的对集合进行操作。比如 map，count，reduce，filter等方法，这个博客会持续总结些方法。</p>
 <h1 id="any"><a href="#any" class="headerlink" title="any"></a>any</h1><p><code>any</code> 这个函数返回值是一个 <code>boolean</code> 类型，用于判断集合内元素是否用满足条件的，如果有任意一个集合满足该条件，则返回 <code>true</code> 否是为 <code>false</code>。</p>
 <p>示例代码</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>) <span class="comment">//sum = 193</span></span><br><span class="line">    <span class="keyword">val</span> l = list.any &#123;</span><br><span class="line">        it &gt; <span class="number">30</span></span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">"判断结果为 <span class="subst">$l</span>"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
