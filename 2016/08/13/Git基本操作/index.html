@@ -107,9 +107,11 @@
 <meta name="description" content="下载安装Git客户端
 git下载
 安装教程装完成后，还需要最后一步设置，在命令行输入：
-$ git config --global user.name &amp;quot;Your Name&amp;quot;
-$ git config --global user.email &amp;quot;email@example.com&amp;quot;
-因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Ema">
+
+   $ git config –global user.name “Your Name”   $ git config –global user.email “email@example.com”
+
+因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。
+创建本地仓库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git基本操作">
 <meta property="og:url" content="http://youngxhui.github.io/2016/08/13/Git基本操作/index.html">
@@ -117,19 +119,23 @@ $ git config --global user.email &amp;quot;email@example.com&amp;quot;
 <meta property="og:description" content="下载安装Git客户端
 git下载
 安装教程装完成后，还需要最后一步设置，在命令行输入：
-$ git config --global user.name &amp;quot;Your Name&amp;quot;
-$ git config --global user.email &amp;quot;email@example.com&amp;quot;
-因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Ema">
+
+   $ git config –global user.name “Your Name”   $ git config –global user.email “email@example.com”
+
+因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。
+创建本地仓库">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git.png">
-<meta property="og:updated_time" content="2017-08-27T06:59:00.210Z">
+<meta property="og:updated_time" content="2018-01-04T08:54:53.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git基本操作">
 <meta name="twitter:description" content="下载安装Git客户端
 git下载
 安装教程装完成后，还需要最后一步设置，在命令行输入：
-$ git config --global user.name &amp;quot;Your Name&amp;quot;
-$ git config --global user.email &amp;quot;email@example.com&amp;quot;
-因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Ema">
+
+   $ git config –global user.name “Your Name”   $ git config –global user.email “email@example.com”
+
+因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。
+创建本地仓库">
 <meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git.png">
 
 
@@ -458,41 +464,65 @@ $ git config --global user.email &amp;quot;email@example.com&amp;quot;
         <h2 id="下载安装Git客户端"><a href="#下载安装Git客户端" class="headerlink" title="下载安装Git客户端"></a>下载安装Git客户端</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git.png" alt="Git"></p>
 <p><a href="https://git-scm.com/download" target="_blank" rel="external">git</a>下载</p>
 <h2 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h2><p>装完成后，还需要最后一步设置，在命令行输入：</p>
-<pre><code>$ git config --global user.name &quot;Your Name&quot;
-$ git config --global user.email &quot;email@example.com&quot;
-</code></pre><p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。</p>
-<h2 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h2><pre><code>$ git init
-</code></pre><h2 id="添加-add"><a href="#添加-add" class="headerlink" title="添加 add"></a>添加 add</h2><h3 id="把文件添加到仓库："><a href="#把文件添加到仓库：" class="headerlink" title="把文件添加到仓库："></a>把文件添加到仓库：</h3><pre><code>$ git add readme.txt
-</code></pre><p>执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。</p>
-<h3 id="把文件提交到仓库："><a href="#把文件提交到仓库：" class="headerlink" title="把文件提交到仓库："></a>把文件提交到仓库：</h3><pre><code>$ git commit -m &quot;add readme&quot;
-</code></pre><p><code>git commit</code>命令，<code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。</p>
+<blockquote>
+<p>   $ git config –global user.name “Your Name”<br>   $ git config –global user.email “email@example.com”</p>
+</blockquote>
+<p>因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。</p>
+<h2 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h2><blockquote>
+<p>   $ git init</p>
+</blockquote>
+<h2 id="添加-add"><a href="#添加-add" class="headerlink" title="添加 add"></a>添加 add</h2><h3 id="把文件添加到仓库："><a href="#把文件添加到仓库：" class="headerlink" title="把文件添加到仓库："></a>把文件添加到仓库：</h3><blockquote>
+<p>   $ git add readme.txt</p>
+</blockquote>
+<p>执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。</p>
+<h3 id="把文件提交到仓库："><a href="#把文件提交到仓库：" class="headerlink" title="把文件提交到仓库："></a>把文件提交到仓库：</h3><blockquote>
+<p>   $ git commit -m “add readme”</p>
+</blockquote>
+<p><code>git commit</code>命令，<code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。</p>
 <h2 id="同步到Github"><a href="#同步到Github" class="headerlink" title="同步到Github"></a>同步到Github</h2><h3 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h3><p>例如我们给一个叫Test的仓库同步</p>
-<pre><code>$ git remote add origin git@github.com:youngxhui/Test.git
-</code></pre><p>现在可以push到你的仓库了</p>
-<pre><code>$ git push -u origin master
-</code></pre><p>第一次推送时，我们要添加<code>-u</code></p>
+<blockquote>
+<p>   $ git remote add origin git@github.com:youngxhui/Test.git</p>
+</blockquote>
+<p>现在可以push到你的仓库了</p>
+<blockquote>
+<p>   $ git push -u origin master</p>
+</blockquote>
+<p>第一次推送时，我们要添加<code>-u</code></p>
 <p>之后我们可以这条命令</p>
-<pre><code>$ git push origin master
-</code></pre><h3 id="下载到github"><a href="#下载到github" class="headerlink" title="下载到github"></a>下载到github</h3><p>从github上下载到本地</p>
+<p>?    $ git push origin master</p>
+<h3 id="下载到github"><a href="#下载到github" class="headerlink" title="下载到github"></a>下载到github</h3><p>从github上下载到本地</p>
+<blockquote>
 <pre><code>$ git clone git@github.com:youngxhui/nuc_JavaLab.git
-</code></pre><h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><h3 id="分支的创建"><a href="#分支的创建" class="headerlink" title="分支的创建"></a>分支的创建</h3><p>创建分支</p>
-<pre><code>$ git checkout -b dev
-</code></pre><p><code>-b</code> 参数表示创建并切换</p>
+</code></pre></blockquote>
+<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><h3 id="分支的创建"><a href="#分支的创建" class="headerlink" title="分支的创建"></a>分支的创建</h3><p>创建分支</p>
+<blockquote>
+<p>   $ git checkout -b dev</p>
+</blockquote>
+<p><code>-b</code> 参数表示创建并切换</p>
 <h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><p>用git branch命令查看当前分支：</p>
+<blockquote>
 <pre><code>$ git branch
 * dev
 master
-</code></pre><p>git branch命令会列出所有分支，<strong>当前分支</strong>前面会标一个<code>*</code>号。</p>
+</code></pre></blockquote>
+<p>git branch命令会列出所有分支，<strong>当前分支</strong>前面会标一个<code>*</code>号。</p>
 <p>我们就可以在dev分支上正常提交</p>
-<pre><code>$ git add readme.txt 
-
-$ git commit -m &quot;branch test&quot;
-</code></pre><h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><p>切换回master分支：</p>
-<pre><code>$ git checkout master
-</code></pre><h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>把<code>dev</code>分支合并到<code>master</code></p>
-<pre><code>$ git merge dev
-</code></pre><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><pre><code>$ git branch -d dev
-</code></pre><hr>
+<blockquote>
+<p>   $ git add readme.txt </p>
+<p>   $ git commit -m “branch test”</p>
+</blockquote>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><p>切换回master分支：</p>
+<blockquote>
+<p>   $ git checkout master</p>
+</blockquote>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>把<code>dev</code>分支合并到<code>master</code></p>
+<blockquote>
+<p>   $ git merge dev</p>
+</blockquote>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><blockquote>
+<p>   $ git branch -d dev</p>
+</blockquote>
+<hr>
 
       
     </div>
@@ -668,7 +698,7 @@ $ git commit -m &quot;branch test&quot;
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-count">68</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -840,7 +870,7 @@ $ git commit -m &quot;branch test&quot;
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      54.7k
+      49.1k
     </span>
   
 </div>
