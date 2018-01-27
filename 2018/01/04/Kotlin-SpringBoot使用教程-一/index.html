@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="生活," />
+  <meta name="keywords" content="kotlin,spring," />
 
 
 
@@ -104,18 +104,21 @@
 
 
 
-<meta name="description" content="今天是2017的最后一天，按照常理来说应该写下一个总结。仔细回想一下今年做了什么？  Java框架的学习 SSM SSH kotlin的学习 考研准备 四级考试准备 博客的持续维护  框架学习年初的时候学习了spring和spring MVC 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。学习这些框架其实会发现很多相似点，当然也会比较">
-<meta name="keywords" content="生活">
+<meta name="description" content="前言该教程主要是为了记录一下自己学习 SpringBoot 的过程。 需要软件 编译器为 IntelliJ IDEA 2017.3.2 (Ultimate Edition)  框架和语言版本kotlin 1.2.10SpringBoot  Hello World学习程序代码几乎全是从 HelloWolrd 开始，今天学习SpringBoot也是从 HelloWolrd 开始。 新建项目首先要学会如">
+<meta name="keywords" content="kotlin,spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017年终总结">
-<meta property="og:url" content="http://youngxhui.github.io/2018/01/01/2017年终总结/index.html">
+<meta property="og:title" content="Kotlin-SpringBoot使用教程(一)">
+<meta property="og:url" content="http://youngxhui.github.io/2018/01/04/Kotlin-SpringBoot使用教程-一/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="今天是2017的最后一天，按照常理来说应该写下一个总结。仔细回想一下今年做了什么？  Java框架的学习 SSM SSH kotlin的学习 考研准备 四级考试准备 博客的持续维护  框架学习年初的时候学习了spring和spring MVC 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。学习这些框架其实会发现很多相似点，当然也会比较">
+<meta property="og:description" content="前言该教程主要是为了记录一下自己学习 SpringBoot 的过程。 需要软件 编译器为 IntelliJ IDEA 2017.3.2 (Ultimate Edition)  框架和语言版本kotlin 1.2.10SpringBoot  Hello World学习程序代码几乎全是从 HelloWolrd 开始，今天学习SpringBoot也是从 HelloWolrd 开始。 新建项目首先要学会如">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-01T09:46:45.527Z">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/springboot2.png">
+<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/1_3.png">
+<meta property="og:updated_time" content="2018-01-04T14:22:18.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017年终总结">
-<meta name="twitter:description" content="今天是2017的最后一天，按照常理来说应该写下一个总结。仔细回想一下今年做了什么？  Java框架的学习 SSM SSH kotlin的学习 考研准备 四级考试准备 博客的持续维护  框架学习年初的时候学习了spring和spring MVC 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。学习这些框架其实会发现很多相似点，当然也会比较">
+<meta name="twitter:title" content="Kotlin-SpringBoot使用教程(一)">
+<meta name="twitter:description" content="前言该教程主要是为了记录一下自己学习 SpringBoot 的过程。 需要软件 编译器为 IntelliJ IDEA 2017.3.2 (Ultimate Edition)  框架和语言版本kotlin 1.2.10SpringBoot  Hello World学习程序代码几乎全是从 HelloWolrd 开始，今天学习SpringBoot也是从 HelloWolrd 开始。 新建项目首先要学会如">
+<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/springboot2.png">
 
 
 
@@ -145,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.github.io/2018/01/01/2017年终总结/"/>
+  <link rel="canonical" href="http://youngxhui.github.io/2018/01/04/Kotlin-SpringBoot使用教程-一/"/>
 
 
 
 
 
-  <title>2017年终总结 | ISLAND</title>
+  <title>Kotlin-SpringBoot使用教程(一) | ISLAND</title>
   
 
 
@@ -331,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2018/01/01/2017年终总结/">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2018/01/04/Kotlin-SpringBoot使用教程-一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="youngxhui">
@@ -348,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2017年终总结</h1>
+          <h1 class="post-title" itemprop="name headline">Kotlin-SpringBoot使用教程(一)</h1>
         
 
         <div class="post-meta">
@@ -360,8 +363,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-01T17:36:46+08:00">
-                2018-01-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T22:07:32+08:00">
+                2018-01-04
               </time>
             
 
@@ -380,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/01/2017年终总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/01/01/2017年终总结/" itemprop="commentsCount"></span>
+                <a href="/2018/01/04/Kotlin-SpringBoot使用教程-一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/01/04/Kotlin-SpringBoot使用教程-一/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -390,7 +393,7 @@
 
           
           
-             <span id="/2018/01/01/2017年终总结/" class="leancloud_visitors" data-flag-title="2017年终总结">
+             <span id="/2018/01/04/Kotlin-SpringBoot使用教程-一/" class="leancloud_visitors" data-flag-title="Kotlin-SpringBoot使用教程(一)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -415,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  611
+                  156
                 </span>
               
 
@@ -440,28 +443,19 @@
       
 
       
-        <p>今天是2017的最后一天，按照常理来说应该写下一个总结。<br>仔细回想一下今年做了什么？</p>
-<ul>
-<li>Java框架的学习 SSM SSH</li>
-<li>kotlin的学习</li>
-<li>考研准备</li>
-<li>四级考试准备</li>
-<li>博客的持续维护</li>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>该教程主要是为了记录一下自己学习 SpringBoot 的过程。</p>
+<h2 id="需要软件"><a href="#需要软件" class="headerlink" title="需要软件"></a>需要软件</h2><ul>
+<li>编译器为 IntelliJ IDEA 2017.3.2 (Ultimate Edition)</li>
 </ul>
-<h1 id="框架学习"><a href="#框架学习" class="headerlink" title="框架学习"></a>框架学习</h1><p>年初的时候学习了<code>spring</code>和<code>spring MVC</code> 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。<br>学习这些框架其实会发现很多相似点，当然也会比较出不同框架之间的优缺点。</p>
-<h1 id="kotlin的学习"><a href="#kotlin的学习" class="headerlink" title="kotlin的学习"></a>kotlin的学习</h1><p>虽然博客上的第一篇关于 <code>kotlin</code> 的文章是在8月多，但是在此之前就开始了零零碎碎的学习。之后在大三学习的 <code>struts2</code> 框架的代码全是 <code>kotlin</code>。<br>这些框架虽然没有对 <code>kotlin</code> 做出优化和适配，但是在业务逻辑方面确实可以省不少事情。<br>也给实验室安利过 <code>kotlin</code>，好像没有成功。</p>
-<p>尴尬. jpg</p>
-<h1 id="考研准备"><a href="#考研准备" class="headerlink" title="考研准备"></a>考研准备</h1><p>报了一个考研班，具体考哪里还没有仔细思考，不过是时候该考虑一下了。考研是一个漫长的过程，看着一些学长的考研经历好像也看到了自己。之前早晨跑步的时候每到图书馆门口的时候就好看到大量的学生拍着长长的队等待着图书馆开门。</p>
-<h1 id="四级"><a href="#四级" class="headerlink" title="四级"></a>四级</h1><p>今年六月份考试的时候真的没有做准备，属于裸考，再加上自己的英语比较差，没过也是在预料之中的。假期好好学了一下英语。十二月再次参加考试，希望能过吧，不想在同一件事情花费的时间太长。</p>
-<h1 id="博客维护"><a href="#博客维护" class="headerlink" title="博客维护"></a>博客维护</h1><p>博客今年主要的改变为换了好几个评论系统，多说的关闭使很多博客的评论系统受到影响，经过几次的迁移，评论也都丢失，希望现在的评论会一直保存下来。</p>
-<h1 id="新年展望"><a href="#新年展望" class="headerlink" title="新年展望"></a>新年展望</h1><p>新年要有个新的计划和准备</p>
-<ul>
-<li>四级如果没有过下次必须过</li>
-<li>算法方面继续学习</li>
-<li>认认真真的准备考研</li>
-</ul>
-<p>今天已经是2018的第一天了，之前在家一直没有带着电脑，刚刚来了学校，把总结补上。</p>
-<p>新年快乐。 </p>
+<h2 id="框架和语言版本"><a href="#框架和语言版本" class="headerlink" title="框架和语言版本"></a>框架和语言版本</h2><p>kotlin 1.2.10<br>SpringBoot </p>
+<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>学习程序代码几乎全是从 HelloWolrd 开始，今天学习SpringBoot也是从 HelloWolrd 开始。</p>
+<h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p>首先要学会如何去建立一个 <code>SpringBoot</code> 项目</p>
+<p>打开我们的 <code>IDEA</code> ，选择 <code>Create New Project</code> </p>
+<p>之后选择 <code>Spring initlalizr</code> 就按照我们的默认配置，点击 Next</p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/springboot2.png" alt=""></p>
+<p>这里会等待一会(看网络情况)。</p>
+<p>再之后的选择里 构建工具选择 <code>gradle</code> 语言选择 <code>kotlin</code> </p>
+<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/1_3.png" alt=""></p>
 
       
     </div>
@@ -516,7 +510,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2018/01/01/2017年终总结/" title="2017年终总结">http://youngxhui.github.io/2018/01/01/2017年终总结/</a>
+    <a href="http://youngxhui.github.io/2018/01/04/Kotlin-SpringBoot使用教程-一/" title="Kotlin-SpringBoot使用教程(一)">http://youngxhui.github.io/2018/01/04/Kotlin-SpringBoot使用教程-一/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -531,7 +525,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/生活/" rel="tag"><i class="fa fa-tag"></i> 生活</a>
+            <a href="/tags/kotlin/" rel="tag"><i class="fa fa-tag"></i> kotlin</a>
+          
+            <a href="/tags/spring/" rel="tag"><i class="fa fa-tag"></i> spring</a>
           
         </div>
       
@@ -544,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/28/一次神奇的课设验收/" rel="next" title="一次神奇的课设验收">
-                <i class="fa fa-chevron-left"></i> 一次神奇的课设验收
+              <a href="/2018/01/01/2017年终总结/" rel="next" title="2017年终总结">
+                <i class="fa fa-chevron-left"></i> 2017年终总结
               </a>
             
           </div>
@@ -553,10 +549,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/04/Kotlin-SpringBoot使用教程-一/" rel="prev" title="Kotlin-SpringBoot使用教程(一)">
-                Kotlin-SpringBoot使用教程(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -764,7 +756,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#框架学习"><span class="nav-number">1.</span> <span class="nav-text">框架学习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#kotlin的学习"><span class="nav-number">2.</span> <span class="nav-text">kotlin的学习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#考研准备"><span class="nav-number">3.</span> <span class="nav-text">考研准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四级"><span class="nav-number">4.</span> <span class="nav-text">四级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客维护"><span class="nav-number">5.</span> <span class="nav-text">博客维护</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新年展望"><span class="nav-number">6.</span> <span class="nav-text">新年展望</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#需要软件"><span class="nav-number">1.1.</span> <span class="nav-text">需要软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架和语言版本"><span class="nav-number">1.2.</span> <span class="nav-text">框架和语言版本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hello-World"><span class="nav-number">2.</span> <span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新建项目"><span class="nav-number">3.</span> <span class="nav-text">新建项目</span></a></li></ol></div>
             
 
           </div>
@@ -958,7 +950,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 95533, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2018/01/01/2017年终总结/"});
+		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2018/01/04/Kotlin-SpringBoot使用教程-一/"});
 		
 
 		(function() {

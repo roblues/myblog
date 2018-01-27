@@ -104,70 +104,18 @@
 
 
 
-<meta name="description" content="Two Sum(#1)
-
-
-编号
-名称
-等级
-
-
-
-
-1
-Two Sum
-Easy
-
-
-
-思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。
-这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。
-代码1234567891011121314public class Solut">
+<meta name="description" content="Two Sum(#1)   编号 名称 等级     1 Two Sum Easy    思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。 这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。 代码1234567891011121314public class Solut">
+<meta name="keywords" content="Array">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Two Sum (#1)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/01/LeetCode-Two-Sum-1/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Two Sum(#1)
-
-
-编号
-名称
-等级
-
-
-
-
-1
-Two Sum
-Easy
-
-
-
-思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。
-这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。
-代码1234567891011121314public class Solut">
-<meta property="og:updated_time" content="2017-12-01T12:28:13.987Z">
+<meta property="og:description" content="Two Sum(#1)   编号 名称 等级     1 Two Sum Easy    思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。 这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。 代码1234567891011121314public class Solut">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T12:28:13.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Two Sum (#1)">
-<meta name="twitter:description" content="Two Sum(#1)
-
-
-编号
-名称
-等级
-
-
-
-
-1
-Two Sum
-Easy
-
-
-
-思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。
-这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。
-代码1234567891011121314public class Solut">
+<meta name="twitter:description" content="Two Sum(#1)   编号 名称 等级     1 Two Sum Easy    思路题目的意思是给出一个数组 nums ，和一个 target 要求用数组内的数相加完成 target。 这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。 代码1234567891011121314public class Solut">
 
 
 
@@ -467,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  156
+                  143
                 </span>
               
 
@@ -510,7 +458,7 @@ Easy
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>题目的意思是给出一个数组 <code>nums</code> ，和一个 <code>target</code> 要求用数组内的数相加完成 <code>target</code>。</p>
 <p>这个题相对用了 暴力求解 方法不是很优。排名为 25.45% 时间复杂度有点大。看来还是要后期优化一下或者参考一下大神做法。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] sum=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j&lt;nums.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(target == nums[i] + nums [j])&#123;</span><br><span class="line">                    sum[<span class="number">0</span>] = i;</span><br><span class="line">                    sum[<span class="number">1</span>] = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        <span class="keyword">int</span>[] sum=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j&lt;nums.length;j++)&#123;</div><div class="line">                <span class="keyword">if</span>(target == nums[i] + nums [j])&#123;</div><div class="line">                    sum[<span class="number">0</span>] = i;</div><div class="line">                    sum[<span class="number">1</span>] = j;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> sum;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -686,7 +634,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -699,7 +647,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -858,7 +806,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

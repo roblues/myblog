@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Bit Manipulation,Hash Table," />
+  <meta name="keywords" content="Hash Table,Bit Manipulation," />
 
 
 
@@ -104,79 +104,18 @@
 
 
 
-<meta name="description" content="Find the Difference(#389)
-
-
-编号
-名称
-等级
-
-
-
-
-389
-Find the Difference
-Easy
-
-
-
-思路这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 #136,即
-
-N ^ N = 0N ^ 0 = 0
-
-利用这个规律可以很方便的找出那个不同的字符。
-代码1234567891011121314151617class Soluti">
+<meta name="description" content="Find the Difference(#389)   编号 名称 等级     389 Find the Difference Easy    思路这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 #136,即  N ^ N = 0N ^ 0 = 0  利用这个规律可以很方便的找出那个不同的字符。 代码1234567891011121314151617class Soluti">
+<meta name="keywords" content="Hash Table,Bit Manipulation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Find the Difference(#389)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/09/10/LeetCode-Find-the-Difference-389/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Find the Difference(#389)
-
-
-编号
-名称
-等级
-
-
-
-
-389
-Find the Difference
-Easy
-
-
-
-思路这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 #136,即
-
-N ^ N = 0N ^ 0 = 0
-
-利用这个规律可以很方便的找出那个不同的字符。
-代码1234567891011121314151617class Soluti">
-<meta property="og:updated_time" content="2017-12-01T12:26:20.529Z">
+<meta property="og:description" content="Find the Difference(#389)   编号 名称 等级     389 Find the Difference Easy    思路这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 #136,即  N ^ N = 0N ^ 0 = 0  利用这个规律可以很方便的找出那个不同的字符。 代码1234567891011121314151617class Soluti">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T12:26:20.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Find the Difference(#389)">
-<meta name="twitter:description" content="Find the Difference(#389)
-
-
-编号
-名称
-等级
-
-
-
-
-389
-Find the Difference
-Easy
-
-
-
-思路这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 #136,即
-
-N ^ N = 0N ^ 0 = 0
-
-利用这个规律可以很方便的找出那个不同的字符。
-代码1234567891011121314151617class Soluti">
+<meta name="twitter:description" content="Find the Difference(#389)   编号 名称 等级     389 Find the Difference Easy    思路这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 #136,即  N ^ N = 0N ^ 0 = 0  利用这个规律可以很方便的找出那个不同的字符。 代码1234567891011121314151617class Soluti">
 
 
 
@@ -476,7 +415,7 @@ N ^ N = 0N ^ 0 = 0
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  130
+                  114
                 </span>
               
 
@@ -522,7 +461,7 @@ N ^ N = 0N ^ 0 = 0
 <p>N ^ N = 0<br>N ^ 0 = 0</p>
 </blockquote>
 <p>利用这个规律可以很方便的找出那个不同的字符。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">findTheDifference</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] sc = s.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] tc = t.toCharArray();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> out = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: sc) &#123;</span><br><span class="line">            out ^= c;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: tc) &#123;</span><br><span class="line">            out ^= c;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>)out;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">findTheDifference</span><span class="params">(String s, String t)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] sc = s.toCharArray();</div><div class="line">        <span class="keyword">char</span>[] tc = t.toCharArray();</div><div class="line">        </div><div class="line">        <span class="keyword">int</span> out = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: sc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: tc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>)out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -591,9 +530,9 @@ N ^ N = 0N ^ 0 = 0
       
         <div class="post-tags">
           
-            <a href="/tags/Bit-Manipulation/" rel="tag"><i class="fa fa-tag"></i> Bit Manipulation</a>
-          
             <a href="/tags/Hash-Table/" rel="tag"><i class="fa fa-tag"></i> Hash Table</a>
+          
+            <a href="/tags/Bit-Manipulation/" rel="tag"><i class="fa fa-tag"></i> Bit Manipulation</a>
           
         </div>
       
@@ -699,7 +638,7 @@ N ^ N = 0N ^ 0 = 0
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -712,7 +651,7 @@ N ^ N = 0N ^ 0 = 0
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -871,7 +810,7 @@ N ^ N = 0N ^ 0 = 0
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

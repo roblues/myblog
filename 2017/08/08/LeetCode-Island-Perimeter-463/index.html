@@ -104,70 +104,18 @@
 
 
 
-<meta name="description" content="Island Perimeter(#463)
-
-
-编号
-名称
-等级
-
-
-
-
-463
-Island Perimeter
-Easy
-
-
-
-思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。
-首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。
-代码12345678">
+<meta name="description" content="Island Perimeter(#463)   编号 名称 等级     463 Island Perimeter Easy    思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。 首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。 代码12345678">
+<meta name="keywords" content="Hash Table">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Island Perimeter(#463)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/08/LeetCode-Island-Perimeter-463/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Island Perimeter(#463)
-
-
-编号
-名称
-等级
-
-
-
-
-463
-Island Perimeter
-Easy
-
-
-
-思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。
-首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。
-代码12345678">
+<meta property="og:description" content="Island Perimeter(#463)   编号 名称 等级     463 Island Perimeter Easy    思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。 首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。 代码12345678">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-01T12:22:17.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Island Perimeter(#463)">
-<meta name="twitter:description" content="Island Perimeter(#463)
-
-
-编号
-名称
-等级
-
-
-
-
-463
-Island Perimeter
-Easy
-
-
-
-思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。
-首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。
-代码12345678">
+<meta name="twitter:description" content="Island Perimeter(#463)   编号 名称 等级     463 Island Perimeter Easy    思路思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。 首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。 代码12345678">
 
 
 
@@ -467,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  195
+                  177
                 </span>
               
 
@@ -510,7 +458,7 @@ Easy
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>思考了很久无解😥，看了一下大神的解题，不得不说很巧妙。</p>
 <p>首先遍历地图，如果这个方格是选中的，那么边数加 4 。然后分别看该方块的上和左是否被选中或者越界。如果是那么在原来的情况下减 2 。这个推算一下就知道了。 只能说这个规律找的很巧妙。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">islandPerimeter</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[<span class="number">0</span>].length; j ++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(grid[i][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                    p += <span class="number">4</span>;</span><br><span class="line">                    <span class="keyword">if</span>(i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i - <span class="number">1</span>][j] == <span class="number">1</span>)&#123;</span><br><span class="line">                        p -= <span class="number">2</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i][j - <span class="number">1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">                        p -= <span class="number">2</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">islandPerimeter</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; i++)&#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[<span class="number">0</span>].length; j ++)&#123;</div><div class="line">                <span class="keyword">if</span>(grid[i][j] == <span class="number">1</span>)&#123;</div><div class="line">                    p += <span class="number">4</span>;</div><div class="line">                    <span class="keyword">if</span>(i - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i - <span class="number">1</span>][j] == <span class="number">1</span>)&#123;</div><div class="line">                        p -= <span class="number">2</span>;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">if</span>(j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; grid[i][j - <span class="number">1</span>] == <span class="number">1</span>)&#123;</div><div class="line">                        p -= <span class="number">2</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> p;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -686,7 +634,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -699,7 +647,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -858,7 +806,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

@@ -104,67 +104,18 @@
 
 
 
-<meta name="description" content="Words in a String III(#557)
-
-
-编号
-名称
-等级
-
-
-
-
-557
-Words in a String III
-Easy  
-
-
-
-思路这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  StringBuilder/StringBuffer 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。
-首先对字符串进行分割，分割为每个单词，在对么个单词">
+<meta name="description" content="Words in a String III(#557)   编号 名称 等级     557 Words in a String III Easy      思路这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  StringBuilder/StringBuffer 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。 首先对字符串进行分割，分割为每个单词，在对么个单词">
+<meta name="keywords" content="String">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Reverse Words in a String III(#557)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/02/LeetCode-Reverse-Words-in-a-String-III-557/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Words in a String III(#557)
-
-
-编号
-名称
-等级
-
-
-
-
-557
-Words in a String III
-Easy  
-
-
-
-思路这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  StringBuilder/StringBuffer 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。
-首先对字符串进行分割，分割为每个单词，在对么个单词">
-<meta property="og:updated_time" content="2017-12-01T12:27:56.608Z">
+<meta property="og:description" content="Words in a String III(#557)   编号 名称 等级     557 Words in a String III Easy      思路这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  StringBuilder/StringBuffer 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。 首先对字符串进行分割，分割为每个单词，在对么个单词">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T12:27:56.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Reverse Words in a String III(#557)">
-<meta name="twitter:description" content="Words in a String III(#557)
-
-
-编号
-名称
-等级
-
-
-
-
-557
-Words in a String III
-Easy  
-
-
-
-思路这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  StringBuilder/StringBuffer 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。
-首先对字符串进行分割，分割为每个单词，在对么个单词">
+<meta name="twitter:description" content="Words in a String III(#557)   编号 名称 等级     557 Words in a String III Easy      思路这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  StringBuilder/StringBuffer 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。 首先对字符串进行分割，分割为每个单词，在对么个单词">
 
 
 
@@ -464,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  221
+                  193
                 </span>
               
 
@@ -507,7 +458,7 @@ Easy
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题是要将给出的句子中的每个单词进行反转，这个反转的方法在  <code>StringBuilder/StringBuffer</code> 都用提供。所以整个题的难度会化简的很小。关键在知道不知道有这个方法。</p>
 <p>首先对字符串进行分割，分割为每个单词，在对么个单词进行反转。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function">fun <span class="title">selfDividingNumbers</span><span class="params">(left: Int, right: Int)</span>: List&lt;Int&gt; </span>&#123;</span><br><span class="line">        var result = ArrayList&lt;Int&gt;()</span><br><span class="line">        <span class="keyword">for</span> (i in left..right) &#123;</span><br><span class="line">            var list = ArrayList&lt;Int&gt;()</span><br><span class="line">            val arrayList = foo(i, list)</span><br><span class="line">            var sum = <span class="number">0</span></span><br><span class="line">            arrayList.map &#123;</span><br><span class="line">                <span class="keyword">if</span> (it != <span class="number">0</span> &amp;&amp; i % it == <span class="number">0</span>) &#123;</span><br><span class="line">                    sum += <span class="number">1</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (sum == arrayList.size) &#123;</span><br><span class="line">                result.add(i)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function">fun <span class="title">foo</span><span class="params">(num: Int, list: ArrayList&lt;Int&gt;)</span>: ArrayList&lt;Int&gt; </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ((num / <span class="number">10</span> == <span class="number">0</span>) and (num % <span class="number">10</span> == <span class="number">0</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> list</span><br><span class="line">        &#125;</span><br><span class="line">        list.add(num % <span class="number">10</span>)</span><br><span class="line">        val nums = num / <span class="number">10</span></span><br><span class="line">        foo(nums, list)</span><br><span class="line">        <span class="keyword">return</span> list</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function">fun <span class="title">selfDividingNumbers</span><span class="params">(left: Int, right: Int)</span>: List&lt;Int&gt; </span>&#123;</div><div class="line">        var result = ArrayList&lt;Int&gt;()</div><div class="line">        <span class="keyword">for</span> (i in left..right) &#123;</div><div class="line">            var list = ArrayList&lt;Int&gt;()</div><div class="line">            val arrayList = foo(i, list)</div><div class="line">            var sum = <span class="number">0</span></div><div class="line">            arrayList.map &#123;</div><div class="line">                <span class="keyword">if</span> (it != <span class="number">0</span> &amp;&amp; i % it == <span class="number">0</span>) &#123;</div><div class="line">                    sum += <span class="number">1</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (sum == arrayList.size) &#123;</div><div class="line">                result.add(i)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function">fun <span class="title">foo</span><span class="params">(num: Int, list: ArrayList&lt;Int&gt;)</span>: ArrayList&lt;Int&gt; </span>&#123;</div><div class="line">        <span class="keyword">if</span> ((num / <span class="number">10</span> == <span class="number">0</span>) and (num % <span class="number">10</span> == <span class="number">0</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> list</div><div class="line">        &#125;</div><div class="line">        list.add(num % <span class="number">10</span>)</div><div class="line">        val nums = num / <span class="number">10</span></div><div class="line">        foo(nums, list)</div><div class="line">        <span class="keyword">return</span> list</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -683,7 +634,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -696,7 +647,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -855,7 +806,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

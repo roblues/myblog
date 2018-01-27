@@ -104,25 +104,18 @@
 
 
 
-<meta name="description" content="前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。
-扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。
-对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。
-123456class Book(val name:">
+<meta name="description" content="前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。 扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。 对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。 123456class Book(val name:">
+<meta name="keywords" content="kotlin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kotlin 扩展函数/属性">
+<meta property="og:title" content="Kotlin 扩展函数&#x2F;属性">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/12/Kotlin-扩展函数-属性/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。
-扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。
-对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。
-123456class Book(val name:">
+<meta property="og:description" content="前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。 扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。 对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。 123456class Book(val name:">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-10-17T03:52:11.707Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kotlin 扩展函数/属性">
-<meta name="twitter:description" content="前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。
-扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。
-对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。
-123456class Book(val name:">
+<meta name="twitter:title" content="Kotlin 扩展函数&#x2F;属性">
+<meta name="twitter:description" content="前言扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。 扩展函数声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。 对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。 123456class Book(val name:">
 
 
 
@@ -422,7 +415,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  440
+                  427
                 </span>
               
 
@@ -450,22 +443,22 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>扩展函数和扩展属性在 Java 里面是没有的，这样的话很好的弥补了 Java 的缺陷。所谓扩展方法或者属性是指在原来没有的方法或者属性上进行扩展，不会改变原来的属性和方法。</p>
 <h1 id="扩展函数"><a href="#扩展函数" class="headerlink" title="扩展函数"></a>扩展函数</h1><p>声明扩展函数的方法是先写上要扩展的类名，之后在写扩展方法。</p>
 <p>对 Book 这个类进行扩展，这个类只有一个方法，在我们不修改 Book 类的前提下对其进行扩展。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span></span>(<span class="keyword">val</span> name: String, <span class="keyword">var</span> price: <span class="built_in">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">val</span> ISBN: <span class="built_in">Int</span> = <span class="number">123456789</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">add</span><span class="params">()</span></span> &#123;</span><br><span class="line">        println(<span class="string">"Add a book,name is <span class="subst">$name</span>,price is <span class="subst">$price</span>,ISBN is <span class="subst">$ISBN</span>"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> Book.<span class="title">show</span><span class="params">()</span></span> = add()</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span></span>(<span class="keyword">val</span> name: String, <span class="keyword">var</span> price: <span class="built_in">Int</span>) &#123;</div><div class="line">    <span class="keyword">val</span> ISBN: <span class="built_in">Int</span> = <span class="number">123456789</span></div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">add</span><span class="params">()</span></span> &#123;</div><div class="line">        println(<span class="string">"Add a book,name is <span class="subst">$name</span>,price is <span class="subst">$price</span>,ISBN is <span class="subst">$ISBN</span>"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> Book.<span class="title">show</span><span class="params">()</span></span> = add()</div></pre></td></tr></table></figure>
 <p>这样我们便完成了对 Book 类进行扩展。</p>
 <p>在扩展函数中，可以使用原有类的方法，变量。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> book = Book(<span class="string">"红楼梦"</span>, <span class="number">50</span>)</span><br><span class="line">    book.show()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> book = Book(<span class="string">"红楼梦"</span>, <span class="number">50</span>)</div><div class="line">    book.show()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>扩展是静态解析的</strong><br>扩展不能真正的修改他们所扩展的类。通过定义一个扩展，你并没有在一个类中插入新成员， 仅仅是可以通过该类型的变量用点表达式去调用这个新函数。</p>
 </blockquote>
 <h1 id="扩展属性"><a href="#扩展属性" class="headerlink" title="扩展属性"></a>扩展属性</h1><p>扩展属性不能初始化器,所以只能是使用显示 <code>get/set</code> 方法进行定义。</p>
 <p>任就采用上面的例子。给 <code>Book</code> 添加一个 <code>profit</code> 属性。</p>
 <p>像这个样子，我们就定义了这个类的扩展属性</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> Book.profit: <span class="built_in">Int</span></span><br><span class="line">    <span class="keyword">get</span>() = price - <span class="number">20</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> book = Book(<span class="string">"红楼梦"</span>, <span class="number">50</span>)</span><br><span class="line">    book.show()</span><br><span class="line">    println(<span class="string">"book's profit is <span class="subst">$&#123;book.profit&#125;</span>"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> Book.profit: <span class="built_in">Int</span></div><div class="line">    <span class="keyword">get</span>() = price - <span class="number">20</span></div></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> book = Book(<span class="string">"红楼梦"</span>, <span class="number">50</span>)</div><div class="line">    book.show()</div><div class="line">    println(<span class="string">"book's profit is <span class="subst">$&#123;book.profit&#125;</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>更多关于扩展函数/方法的例子可以参考官方网站</p>
-<p><a href="https://www.kotlincn.net/docs/reference/extensions.html" target="_blank" rel="external">kotlin官方文档(中文)</a></p>
-<p><a href="https://kotlinlang.org/docs/reference/extensions.html" target="_blank" rel="external">kotlin官方文档(英文)</a></p>
+<p><a href="https://www.kotlincn.net/docs/reference/extensions.html" target="_blank" rel="noopener">kotlin官方文档(中文)</a></p>
+<p><a href="https://kotlinlang.org/docs/reference/extensions.html" target="_blank" rel="noopener">kotlin官方文档(英文)</a></p>
 
       
     </div>
@@ -641,7 +634,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -654,7 +647,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -813,7 +806,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

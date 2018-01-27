@@ -104,79 +104,18 @@
 
 
 
-<meta name="description" content="Single Number(#136)
-
-
-编号
-名称
-等级
-
-
-
-
-136
-Single Number
-Easy  
-
-
-
-思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。
-按位异或
-
-N ^ N = 00 ^ N = N
-
-通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本">
+<meta name="description" content="Single Number(#136)   编号 名称 等级     136 Single Number Easy      思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。 按位异或  N ^ N = 00 ^ N = N  通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本">
+<meta name="keywords" content="Bit Manipulation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Single Number(#136)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Single Number(#136)
-
-
-编号
-名称
-等级
-
-
-
-
-136
-Single Number
-Easy  
-
-
-
-思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。
-按位异或
-
-N ^ N = 00 ^ N = N
-
-通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本">
+<meta property="og:description" content="Single Number(#136)   编号 名称 等级     136 Single Number Easy      思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。 按位异或  N ^ N = 00 ^ N = N  通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-01T12:28:09.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Single Number(#136)">
-<meta name="twitter:description" content="Single Number(#136)
-
-
-编号
-名称
-等级
-
-
-
-
-136
-Single Number
-Easy  
-
-
-
-思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。
-按位异或
-
-N ^ N = 00 ^ N = N
-
-通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本">
+<meta name="twitter:description" content="Single Number(#136)   编号 名称 等级     136 Single Number Easy      思路题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。 按位异或  N ^ N = 00 ^ N = N  通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本">
 
 
 
@@ -476,7 +415,7 @@ N ^ N = 00 ^ N = N
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  276
+                  254
                 </span>
               
 
@@ -523,9 +462,9 @@ N ^ N = 00 ^ N = N
 <p>N ^ N = 0<br>0 ^ N = N</p>
 </blockquote>
 <p>通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本事，就会直到最后的结论。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length;i++) &#123;</span><br><span class="line">            ans ^= nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length;i++) &#123;</div><div class="line">            ans ^= nums[i];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>这种方法还适用于字符串中的唯一一个元素。</p>
-<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] chars = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>&#125;;</span><br><span class="line">        System.out.println(singleChar(chars));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 该程序是判断 数字/字符/字符串。toArrayChar 中的唯一存在的字符</span></span><br><span class="line">    <span class="comment">// 主要方法位 N ^ 0 = N; N ^ N = N</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">char</span> <span class="title">singleChar</span><span class="params">(<span class="keyword">char</span>[] chars)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> aChar : chars) &#123;</span><br><span class="line">            ans ^= aChar;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>) ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] chars = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>&#125;;</div><div class="line">        System.out.println(singleChar(chars));</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 该程序是判断 数字/字符/字符串。toArrayChar 中的唯一存在的字符</span></div><div class="line">    <span class="comment">// 主要方法位 N ^ 0 = N; N ^ N = N</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">char</span> <span class="title">singleChar</span><span class="params">(<span class="keyword">char</span>[] chars)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> aChar : chars) &#123;</div><div class="line">            ans ^= aChar;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>) ans;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -701,7 +640,7 @@ N ^ N = 00 ^ N = N
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -714,7 +653,7 @@ N ^ N = 00 ^ N = N
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -873,7 +812,7 @@ N ^ N = 00 ^ N = N
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

@@ -104,67 +104,18 @@
 
 
 
-<meta name="description" content="KeyBoard Row(#500)
-
-
-编号
-名称
-等级
-
-
-
-
-500
-KeyBoard Row
-Easy  
-
-
-
-思路他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 break。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。
-代码12345678">
+<meta name="description" content="KeyBoard Row(#500)   编号 名称 等级     500 KeyBoard Row Easy      思路他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 break。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。 代码12345678">
+<meta name="keywords" content="Hash Table">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Keyboard Row(#500)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/02/LeetCode-Keyboard-Row-500/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="KeyBoard Row(#500)
-
-
-编号
-名称
-等级
-
-
-
-
-500
-KeyBoard Row
-Easy  
-
-
-
-思路他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 break。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。
-代码12345678">
-<meta property="og:updated_time" content="2017-12-01T12:26:40.745Z">
+<meta property="og:description" content="KeyBoard Row(#500)   编号 名称 等级     500 KeyBoard Row Easy      思路他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 break。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。 代码12345678">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T12:26:40.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Keyboard Row(#500)">
-<meta name="twitter:description" content="KeyBoard Row(#500)
-
-
-编号
-名称
-等级
-
-
-
-
-500
-KeyBoard Row
-Easy  
-
-
-
-思路他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 break。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。
-代码12345678">
+<meta name="twitter:description" content="KeyBoard Row(#500)   编号 名称 等级     500 KeyBoard Row Easy      思路他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 break。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。 代码12345678">
 
 
 
@@ -464,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  238
+                  214
                 </span>
               
 
@@ -506,7 +457,7 @@ Easy
 </tbody>
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>他的要是是检查输入的字符串是否是键盘的同一行。首先想到的是正则匹配。匹配是否是同一行，不是的话 <code>break</code>。是的话一直匹配。匹配结束的时候计算匹配数是否和单词长度一样。如果一样，表示匹配成功。其中正则表达式不太会写，而且运用了一个集合转换为数组的方法。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String[] findWords(String[] words) &#123;</span><br><span class="line">        Set&lt;String&gt; st = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        String[] key = <span class="keyword">new</span> String[]&#123;<span class="string">"[qwertyuiopQWERTYUIOP]"</span>, <span class="string">"[ASDFGHJKLasdfghjkl]"</span>, <span class="string">"[zxcvbnmZXCVBNM]"</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; words.length; i++) &#123;</span><br><span class="line">            <span class="keyword">char</span>[] c = words[i].toCharArray();</span><br><span class="line">            <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; key.length; k++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; c.length; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (Pattern.matches(key[k], String.valueOf(c[j]))) &#123;</span><br><span class="line">                        count++;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (count == c.length) &#123;</span><br><span class="line">                st.add(words[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        String[] str = st.toArray(<span class="keyword">new</span> String[st.size()]);</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.regex.Pattern;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> String[] findWords(String[] words) &#123;</div><div class="line">        Set&lt;String&gt; st = <span class="keyword">new</span> HashSet&lt;&gt;();</div><div class="line">        String[] key = <span class="keyword">new</span> String[]&#123;<span class="string">"[qwertyuiopQWERTYUIOP]"</span>, <span class="string">"[ASDFGHJKLasdfghjkl]"</span>, <span class="string">"[zxcvbnmZXCVBNM]"</span>&#125;;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; words.length; i++) &#123;</div><div class="line">            <span class="keyword">char</span>[] c = words[i].toCharArray();</div><div class="line">            <span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; key.length; k++) &#123;</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; c.length; j++) &#123;</div><div class="line">                    <span class="keyword">if</span> (Pattern.matches(key[k], String.valueOf(c[j]))) &#123;</div><div class="line">                        count++;</div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (count == c.length) &#123;</div><div class="line">                st.add(words[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        String[] str = st.toArray(<span class="keyword">new</span> String[st.size()]);</div><div class="line">        <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -682,7 +633,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -695,7 +646,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -854,7 +805,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

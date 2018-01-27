@@ -104,67 +104,18 @@
 
 
 
-<meta name="description" content="Number Complement(#476)
-
-
-编号
-名称
-等级
-
-
-
-
-476
-Number Complement
-Easy
-
-
-
-思路没思路
-为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
+<meta name="description" content="Number Complement(#476)   编号 名称 等级     476 Number Complement Easy    思路没思路 为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
+<meta name="keywords" content="Bit Manipulation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Number Complement(#476)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/02/LeetCode-Number-Complement-476/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Number Complement(#476)
-
-
-编号
-名称
-等级
-
-
-
-
-476
-Number Complement
-Easy
-
-
-
-思路没思路
-为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
-<meta property="og:updated_time" content="2017-12-01T12:27:37.129Z">
+<meta property="og:description" content="Number Complement(#476)   编号 名称 等级     476 Number Complement Easy    思路没思路 为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T12:27:37.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Number Complement(#476)">
-<meta name="twitter:description" content="Number Complement(#476)
-
-
-编号
-名称
-等级
-
-
-
-
-476
-Number Complement
-Easy
-
-
-
-思路没思路
-为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
+<meta name="twitter:description" content="Number Complement(#476)   编号 名称 等级     476 Number Complement Easy    思路没思路 为什么大神说这个显而易见的呢？严重怀疑我的智商。Math.pow() 是用来将二进制转化为十进制。但是为什么是 i&amp;lt;num ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 101 和 反码 010 相加为 111 为 7。 所以用相">
 
 
 
@@ -464,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  155
+                  145
                 </span>
               
 
@@ -507,8 +458,8 @@ Easy
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>没思路</p>
 <p>为什么大神说这个显而易见的呢？严重怀疑我的智商。<br><code>Math.pow()</code> 是用来将二进制转化为十进制。但是为什么是 <code>i&lt;num</code> ？ 因为i的值为 1 3 7 15 … 而原来的数的二进制 <code>101</code> 和 反码 <code>010</code> 相加为 <code>111</code> 为 7。 所以用相加的值减去原来的值就是 <strong>反码</strong> 的值</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>代码为 <a href="https://discuss.leetcode.com/topic/75605/java-very-simple-code-and-self-evident-explanation" target="_blank" rel="external">Description</a> 中的。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findComplement</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; num)&#123;</span><br><span class="line">            i += Math.pow(<span class="number">2</span>, j);</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i - num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>代码为 <a href="https://discuss.leetcode.com/topic/75605/java-very-simple-code-and-self-evident-explanation" target="_blank" rel="noopener">Description</a> 中的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findComplement</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (i &lt; num)&#123;</div><div class="line">            i += Math.pow(<span class="number">2</span>, j);</div><div class="line">            j++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> i - num;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -683,7 +634,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -696,7 +647,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -855,7 +806,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

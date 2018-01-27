@@ -104,68 +104,19 @@
 
 
 
-<meta name="description" content="Next Greater Element I(#496)
-
-
-编号
-名称
-等级
-
-
-
-
-496
-Next Greater Element I
-Easy  
-
-
-
-思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。
-代码1234567891011121314151617181920212223public class Soluti">
+<meta name="description" content="Next Greater Element I(#496)   编号 名称 等级     496 Next Greater Element I Easy      思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。 代码1234567891011121314151617181920212223public class Soluti">
+<meta name="keywords" content="Stack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Next Greater Element I(#496)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/13/LeetCode-Next-Greater-Element-I-496/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Next Greater Element I(#496)
-
-
-编号
-名称
-等级
-
-
-
-
-496
-Next Greater Element I
-Easy  
-
-
-
-思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。
-代码1234567891011121314151617181920212223public class Soluti">
+<meta property="og:description" content="Next Greater Element I(#496)   编号 名称 等级     496 Next Greater Element I Easy      思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。 代码1234567891011121314151617181920212223public class Soluti">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170813_184225.png">
 <meta property="og:updated_time" content="2017-12-01T12:27:01.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Next Greater Element I(#496)">
-<meta name="twitter:description" content="Next Greater Element I(#496)
-
-
-编号
-名称
-等级
-
-
-
-
-496
-Next Greater Element I
-Easy  
-
-
-
-思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。
-代码1234567891011121314151617181920212223public class Soluti">
+<meta name="twitter:description" content="Next Greater Element I(#496)   编号 名称 等级     496 Next Greater Element I Easy      思路刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。 代码1234567891011121314151617181920212223public class Soluti">
 <meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170813_184225.png">
 
 
@@ -466,7 +417,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  291
+                  258
                 </span>
               
 
@@ -508,12 +459,12 @@ Easy
 </tbody>
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] out = <span class="keyword">new</span> <span class="keyword">int</span>[findNums.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (findNums[i] == nums[j]) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; nums.length - j; k++) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (j + <span class="number">1</span> &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123;</span><br><span class="line">                            out[i] = nums[j + k];</span><br><span class="line">                            findNums[i] = <span class="number">0</span>;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (findNums[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                        out[i] = -<span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> out;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</div><div class="line">        <span class="keyword">int</span>[] out = <span class="keyword">new</span> <span class="keyword">int</span>[findNums.length];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (findNums[i] == nums[j]) &#123;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; nums.length - j; k++) &#123;</div><div class="line">                        <span class="keyword">if</span> (j + <span class="number">1</span> &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123;</div><div class="line">                            out[i] = nums[j + k];</div><div class="line">                            findNums[i] = <span class="number">0</span>;</div><div class="line">                            <span class="keyword">break</span>;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">if</span> (findNums[i] != <span class="number">0</span>) &#123;</div><div class="line">                        out[i] = -<span class="number">1</span>;</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这个代码在前面的测试数据可以过去，但是当测试数据到了后面的数的时候就 gg 了。</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170813_184225.png" alt=""></p>
 <p>然后又又又看大神的代码。</p>
 <p>通过 Stack 和 Map 进行操作。</p>
-<h1 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </span><br><span class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num)</span><br><span class="line">            map.put(stack.pop(), num);</span><br><span class="line">        stack.push(num);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++)</span><br><span class="line">        findNums[i] = map.getOrDefault(findNums[i], -<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> findNums;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </div><div class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</div><div class="line">        <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num)</div><div class="line">            map.put(stack.pop(), num);</div><div class="line">        stack.push(num);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++)</div><div class="line">        findNums[i] = map.getOrDefault(findNums[i], -<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> findNums;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -688,7 +639,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -701,7 +652,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -860,7 +811,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

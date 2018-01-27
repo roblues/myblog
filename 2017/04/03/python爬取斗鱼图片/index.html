@@ -104,62 +104,19 @@
 
 
 
-<meta name="description" content="介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。
-
-编辑工具：Visual Studio Code
-Python 版本：2.7
-使用的库：urllib
-
-
-Visual Studio Code插件
-
-Code Runner
-Python
-Python for VSCode
-MagicPython
-
-实现思路首先要打开地址，并且获取该网页的代码。
-从代码里获得你要图片。这里我们需要简单的">
+<meta name="description" content="介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。  编辑工具：Visual Studio Code Python 版本：2.7 使用的库：urllib   Visual Studio Code插件  Code Runner Python Python for VSCode MagicPython  实现思路首先要打开地址，并且获取该网页的代码。 从代码里获得你要图片。这里我们需要简单的">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬取斗鱼图片">
 <meta property="og:url" content="http://youngxhui.github.io/2017/04/03/python爬取斗鱼图片/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。
-
-编辑工具：Visual Studio Code
-Python 版本：2.7
-使用的库：urllib
-
-
-Visual Studio Code插件
-
-Code Runner
-Python
-Python for VSCode
-MagicPython
-
-实现思路首先要打开地址，并且获取该网页的代码。
-从代码里获得你要图片。这里我们需要简单的">
+<meta property="og:description" content="介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。  编辑工具：Visual Studio Code Python 版本：2.7 使用的库：urllib   Visual Studio Code插件  Code Runner Python Python for VSCode MagicPython  实现思路首先要打开地址，并且获取该网页的代码。 从代码里获得你要图片。这里我们需要简单的">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/%E6%96%97%E9%B1%BC%E5%9B%BE%E7%89%87.png">
-<meta property="og:updated_time" content="2017-08-27T06:59:00.630Z">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬取斗鱼图片">
-<meta name="twitter:description" content="介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。
-
-编辑工具：Visual Studio Code
-Python 版本：2.7
-使用的库：urllib
-
-
-Visual Studio Code插件
-
-Code Runner
-Python
-Python for VSCode
-MagicPython
-
-实现思路首先要打开地址，并且获取该网页的代码。
-从代码里获得你要图片。这里我们需要简单的">
+<meta name="twitter:description" content="介绍一个简单的 Python 爬虫，用于爬取斗鱼网上的图片。  编辑工具：Visual Studio Code Python 版本：2.7 使用的库：urllib   Visual Studio Code插件  Code Runner Python Python for VSCode MagicPython  实现思路首先要打开地址，并且获取该网页的代码。 从代码里获得你要图片。这里我们需要简单的">
 <meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/%E6%96%97%E9%B1%BC%E5%9B%BE%E7%89%87.png">
 
 
@@ -460,7 +417,7 @@ MagicPython
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  365
+                  340
                 </span>
               
 
@@ -505,11 +462,11 @@ MagicPython
 <p>当我们把鼠标移到地址上的时候就会出现该图片，这个就是我们要爬取的图片。</p>
 <p>这个图片是在 <code>data-original</code> 后面，我们就需要进行匹配，通过正则表达式很快就可以达到目的。</p>
 <p>网页代码片段</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-original</span>=<span class="string">"https://rpic.douyucdn.cn/a1704/03/15/1032029_170403155245.jpg"</span> <span class="attr">src</span>=<span class="string">"https://rpic.douyucdn.cn/a1704/03/15/1032029_170403155245.jpg"</span> <span class="attr">width</span>=<span class="string">"283"</span> <span class="attr">height</span>=<span class="string">"163"</span> <span class="attr">style</span>=<span class="string">"display: block;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-original</span>=<span class="string">"https://rpic.douyucdn.cn/a1704/03/15/1032029_170403155245.jpg"</span> <span class="attr">src</span>=<span class="string">"https://rpic.douyucdn.cn/a1704/03/15/1032029_170403155245.jpg"</span> <span class="attr">width</span>=<span class="string">"283"</span> <span class="attr">height</span>=<span class="string">"163"</span> <span class="attr">style</span>=<span class="string">"display: block;"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>正则表达式 <code>data-original=&quot;(.*?\.(jpg|png))</code></p>
 <p>这样我们就获取到了这个页面上所有的 jpg 和 png 图片。</p>
 <p>最后通过 urlretrieve 这个方法把图片保存到你想要放的地方。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf8</span></span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> <span class="comment"># 通过filename设置路径和名字</span></span><br><span class="line">response=urllib.urlopen(<span class="string">'https://www.douyu.com/directory/game/TVgame'</span>)</span><br><span class="line">html=response.read()</span><br><span class="line"><span class="keyword">print</span> html</span><br><span class="line">imglist=re.findall(<span class="string">r'data-original="(.*?\.(jpg|png))"'</span>,html)</span><br><span class="line"><span class="keyword">print</span> imglist</span><br><span class="line">x=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> imgurl <span class="keyword">in</span> imglist:</span><br><span class="line">    <span class="keyword">print</span> (<span class="string">'下载图片 %s'</span>%imgurl[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">if</span> imgurl[<span class="number">1</span>]==<span class="string">'gif'</span>:</span><br><span class="line">        urllib.urlretrieve(imgurl[<span class="number">0</span>],filename=<span class="string">'G:\PythonCode\pic\%d.gif'</span>%x)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        urllib.urlretrieve(imgurl[<span class="number">0</span>],filename=<span class="string">'G:\PythonCode\pic\%d.jpg'</span>%x)</span><br><span class="line">    x+=<span class="number">1</span></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf8</span></div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> time</div><div class="line"> <span class="comment"># 通过filename设置路径和名字</span></div><div class="line">response=urllib.urlopen(<span class="string">'https://www.douyu.com/directory/game/TVgame'</span>)</div><div class="line">html=response.read()</div><div class="line"><span class="keyword">print</span> html</div><div class="line">imglist=re.findall(<span class="string">r'data-original="(.*?\.(jpg|png))"'</span>,html)</div><div class="line"><span class="keyword">print</span> imglist</div><div class="line">x=<span class="number">0</span></div><div class="line"><span class="keyword">for</span> imgurl <span class="keyword">in</span> imglist:</div><div class="line">    <span class="keyword">print</span> (<span class="string">'下载图片 %s'</span>%imgurl[<span class="number">0</span>])</div><div class="line">    <span class="keyword">if</span> imgurl[<span class="number">1</span>]==<span class="string">'gif'</span>:</div><div class="line">        urllib.urlretrieve(imgurl[<span class="number">0</span>],filename=<span class="string">'G:\PythonCode\pic\%d.gif'</span>%x)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        urllib.urlretrieve(imgurl[<span class="number">0</span>],filename=<span class="string">'G:\PythonCode\pic\%d.jpg'</span>%x)</div><div class="line">    x+=<span class="number">1</span></div><div class="line">    time.sleep(<span class="number">1</span>)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -685,7 +642,7 @@ MagicPython
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -698,7 +655,7 @@ MagicPython
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -857,7 +814,7 @@ MagicPython
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

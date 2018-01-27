@@ -104,34 +104,18 @@
 
 
 
-<meta name="description" content="集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。
-
-Iterator提供的四个方法
-boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。
-Object next():返回集合里的下一个元素。
-void remove():删除集合里上一次next方法返回的元素。
-void forE">
+<meta name="description" content="集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。  Iterator提供的四个方法 boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。 Object next():返回集合里的下一个元素。 void remove():删除集合里上一次next方法返回的元素。 void forE">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java集合遍历">
 <meta property="og:url" content="http://youngxhui.github.io/2016/05/23/Java集合遍历/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。
-
-Iterator提供的四个方法
-boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。
-Object next():返回集合里的下一个元素。
-void remove():删除集合里上一次next方法返回的元素。
-void forE">
-<meta property="og:updated_time" content="2017-08-27T06:59:00.255Z">
+<meta property="og:description" content="集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。  Iterator提供的四个方法 boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。 Object next():返回集合里的下一个元素。 void remove():删除集合里上一次next方法返回的元素。 void forE">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java集合遍历">
-<meta name="twitter:description" content="集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。
-
-Iterator提供的四个方法
-boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。
-Object next():返回集合里的下一个元素。
-void remove():删除集合里上一次next方法返回的元素。
-void forE">
+<meta name="twitter:description" content="集合的遍历使用IteratorIterator主要用于遍历集合中的Collection元素，因此Iterator创建的对象是一个迭代器。  Iterator提供的四个方法 boolean hasNext(): 如果迭代器的集合还没有被遍历完，返回ture。 Object next():返回集合里的下一个元素。 void remove():删除集合里上一次next方法返回的元素。 void forE">
 
 
 
@@ -431,7 +415,7 @@ void forE">
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  586
+                  524
                 </span>
               
 
@@ -465,15 +449,15 @@ void forE">
 <li>void forEachRemaining(Consumer action)：这个是java 8为Iterator新增的默认方法，该方法可使用Lambda表达式遍历所有的集合元素。</li>
 </ul>
 <hr>
-<h3 id="next方法"><a href="#next方法" class="headerlink" title="next方法"></a>next方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by 晓辉 on 2016/5/23.</span><br><span class="line"> * 使用jdk8中的iterator遍历集合；</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteraorTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List books=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        books.add(<span class="string">"fengk"</span>);</span><br><span class="line">        books.add(<span class="string">"niaho"</span>);</span><br><span class="line">        Iterator it=books.iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">            it.next();</span><br><span class="line">            <span class="keyword">if</span>(books.equals(<span class="string">"fengk"</span>))&#123;</span><br><span class="line">                it.remove();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(it.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&gt; 输出结果</span><br><span class="line">&gt;niaho</span><br></pre></td></tr></table></figure>
+<h3 id="next方法"><a href="#next方法" class="headerlink" title="next方法"></a>next方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Iterator;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by 晓辉 on 2016/5/23.</div><div class="line"> * 使用jdk8中的iterator遍历集合；</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteraorTest</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        List books=<span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        books.add(<span class="string">"fengk"</span>);</div><div class="line">        books.add(<span class="string">"niaho"</span>);</div><div class="line">        Iterator it=books.iterator();</div><div class="line">        <span class="keyword">while</span> (it.hasNext())&#123;</div><div class="line">            it.next();</div><div class="line">            <span class="keyword">if</span>(books.equals(<span class="string">"fengk"</span>))&#123;</div><div class="line">                it.remove();</div><div class="line">            &#125;</div><div class="line">            System.out.println(it.next());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&gt; 输出结果</div><div class="line">&gt;niaho</div></pre></td></tr></table></figure>
 <p>Iterator只用于遍历集合，本身本身并不具有承装对象的能力。如果需要就要创建Iterator对象，则必须有一个被迭代的集合。Iterator必须依附于Collection对象，若有一个Iterator对象，则必然有一个与之关联的Collection对象。</p>
-<h2 id="使用Lambda表达式遍历Iterator"><a href="#使用Lambda表达式遍历Iterator" class="headerlink" title="使用Lambda表达式遍历Iterator"></a>使用Lambda表达式遍历Iterator</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by 晓辉 on 2016/5/23.</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorEach</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个集合</span></span><br><span class="line">        Collection books=<span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        books.add(<span class="string">"java"</span>);</span><br><span class="line">        books.add(<span class="string">"c#"</span>);</span><br><span class="line">        Iterator it=books.iterator();</span><br><span class="line">        <span class="comment">// 使用Lambda表达式遍历所有的集合</span></span><br><span class="line">        it.forEachRemaining(obj-&gt;System.out.println(obj));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用Lambda表达式遍历Iterator"><a href="#使用Lambda表达式遍历Iterator" class="headerlink" title="使用Lambda表达式遍历Iterator"></a>使用Lambda表达式遍历Iterator</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Collection;</div><div class="line"><span class="keyword">import</span> java.util.HashSet;</div><div class="line"><span class="keyword">import</span> java.util.Iterator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by 晓辉 on 2016/5/23.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorEach</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="comment">// 创建一个集合</span></div><div class="line">        Collection books=<span class="keyword">new</span> HashSet&lt;&gt;();</div><div class="line">        books.add(<span class="string">"java"</span>);</div><div class="line">        books.add(<span class="string">"c#"</span>);</div><div class="line">        Iterator it=books.iterator();</div><div class="line">        <span class="comment">// 使用Lambda表达式遍历所有的集合</span></div><div class="line">        it.forEachRemaining(obj-&gt;System.out.println(obj));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <p>输出结果<br>c#<br>java</p>
 </blockquote>
 <p><strong>注意：</strong>这里的输出是倒序。</p>
 <hr>
-<p>##使用foreach遍历集合元素<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Collection;</span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ForeachTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个集合</span></span><br><span class="line">        Collection books=<span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        books.add(<span class="string">"java"</span>);</span><br><span class="line">        books.add(<span class="string">"c#"</span>);</span><br><span class="line">        <span class="keyword">for</span>(Object obj:books)&#123;</span><br><span class="line"><span class="comment">//            此处的books变量也不是集合的本身元素</span></span><br><span class="line">            String book=(String)obj;</span><br><span class="line">            System.out.println(book);</span><br><span class="line">            <span class="keyword">if</span> (book.equals(<span class="string">"java"</span>))&#123;</span><br><span class="line">                books.remove(book);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(books);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##使用foreach遍历集合元素<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Collection;</div><div class="line"><span class="keyword">import</span> java.util.HashSet;</div><div class="line"><span class="keyword">import</span> java.util.Iterator;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ForeachTest</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="comment">// 创建一个集合</span></div><div class="line">        Collection books=<span class="keyword">new</span> HashSet&lt;&gt;();</div><div class="line">        books.add(<span class="string">"java"</span>);</div><div class="line">        books.add(<span class="string">"c#"</span>);</div><div class="line">        <span class="keyword">for</span>(Object obj:books)&#123;</div><div class="line"><span class="comment">//            此处的books变量也不是集合的本身元素</span></div><div class="line">            String book=(String)obj;</div><div class="line">            System.out.println(book);</div><div class="line">            <span class="keyword">if</span> (book.equals(<span class="string">"java"</span>))&#123;</div><div class="line">                books.remove(book);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        System.out.println(books);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>for循环中的迭代变量也不是集合元素本身，系统只是以此把集合元素的值赋值给迭代变量，因此for循环中修改的迭代变量的值是也是没有任何意义。</p>
 <hr>
 
@@ -651,7 +635,7 @@ void forE">
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -664,7 +648,7 @@ void forE">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -823,7 +807,7 @@ void forE">
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

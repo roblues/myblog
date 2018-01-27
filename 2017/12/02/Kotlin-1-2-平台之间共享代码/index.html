@@ -104,31 +104,24 @@
 
 
 
-<meta name="description" content="前言这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。
-原文地址Kotlin 1.2 Released: Sharing Code between Platforms
-正文今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。
-在 Kotlin 1.1 中，我们正式的">
+<meta name="description" content="前言这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。 原文地址Kotlin 1.2 Released: Sharing Code between Platforms 正文今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。 在 Kotlin 1.1 中，我们正式的">
+<meta name="keywords" content="kotlin,译文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kotlin 1.2:平台之间共享代码">
 <meta property="og:url" content="http://youngxhui.github.io/2017/12/02/Kotlin-1-2-平台之间共享代码/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="前言这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。
-原文地址Kotlin 1.2 Released: Sharing Code between Platforms
-正文今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。
-在 Kotlin 1.1 中，我们正式的">
+<meta property="og:description" content="前言这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。 原文地址Kotlin 1.2 Released: Sharing Code between Platforms 正文今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。 在 Kotlin 1.1 中，我们正式的">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/cake3-1.png">
 <meta property="og:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/MPP.png">
 <meta property="og:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/CompilationSpeed.png">
 <meta property="og:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KotlinConfUsers.jpg">
 <meta property="og:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KotlinAdoption.png">
 <meta property="og:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KUGmap.png">
-<meta property="og:updated_time" content="2017-12-02T09:45:42.148Z">
+<meta property="og:updated_time" content="2017-12-02T09:45:42.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin 1.2:平台之间共享代码">
-<meta name="twitter:description" content="前言这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。
-原文地址Kotlin 1.2 Released: Sharing Code between Platforms
-正文今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。
-在 Kotlin 1.1 中，我们正式的">
+<meta name="twitter:description" content="前言这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。 原文地址Kotlin 1.2 Released: Sharing Code between Platforms 正文今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。 在 Kotlin 1.1 中，我们正式的">
 <meta name="twitter:image" content="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/cake3-1.png">
 
 
@@ -455,22 +448,22 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。</p>
-<p>原文地址<a href="https://blog.jetbrains.com/kotlin/2017/11/kotlin-1-2-released/" target="_blank" rel="external">Kotlin 1.2 Released: Sharing Code between Platforms</a></p>
+<p>原文地址<a href="https://blog.jetbrains.com/kotlin/2017/11/kotlin-1-2-released/" target="_blank" rel="noopener">Kotlin 1.2 Released: Sharing Code between Platforms</a></p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。</p>
 <p>在 Kotlin 1.1 中，我们正式的发布了 <strong>JavaScript 目标</strong>，允许你去编译 Kotlin 代码成为 JS 并且运行在浏览器上。在 <strong>Kotlin 1.2</strong> 中，我们将要添加 <strong>JVM 和 JavaScript</strong> 的代码重用成为可能。现在你可以写一次应用程序的逻辑代码，而在你的应用程序中所有层重用它——后端，浏览器前端和Android移动应用。我们也会在库上进行工作，帮助你重用更多的代码。比如跨平台库。</p>
 <p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/cake3-1.png" alt=""></p>
-<p>Kotlin 1.2 是已经绑定在 <a href="https://www.jetbrains.com/idea/" target="_blank" rel="external">IntelliJ IDEA 2017.3</a>中，将会在本周发布。如果你正在使用的是 Android Studio 或者 一个旧版本的 Intellij IDEA，你可以从 Tools | Kotlin | Configure Kotlin Plugin 更新框中安装新的版本。</p>
+<p>Kotlin 1.2 是已经绑定在 <a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA 2017.3</a>中，将会在本周发布。如果你正在使用的是 Android Studio 或者 一个旧版本的 Intellij IDEA，你可以从 Tools | Kotlin | Configure Kotlin Plugin 更新框中安装新的版本。</p>
 <p>这个版本包括了大量外部贡献者的工作，并且我们想感谢向我们反馈，提交问题和尤其是提交了PR的每个人。</p>
 <h2 id="多平台项目"><a href="#多平台项目" class="headerlink" title="多平台项目"></a>多平台项目</h2><p>一个多平台项目允许你编译在你的应用程序的多层 —— 后端，前端和Android应用 —— 在相同的代码基础上。这样的一个项目包含了 <strong>相同模块</strong>,与平台无关以及<strong>特定平台的模块</strong>，包含了特定平台的代码( JVM 或者 JS )和使用了特定平台的库。从通用模块调用特定平台的代码，你可以指定<strong>预期的声明</strong>——所有平台特定模块需要提供<strong>实际实现</strong>声明。</p>
 <p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/MPP.png" alt=""></p>
-<p>有关该功能的更多信息，请查看这个<a href="http://kotlinlang.org/docs/reference/multiplatform.html" target="_blank" rel="external">文档</a></p>
+<p>有关该功能的更多信息，请查看这个<a href="http://kotlinlang.org/docs/reference/multiplatform.html" target="_blank" rel="noopener">文档</a></p>
 <p>如前所述，我们也在编写一组公共库允许你将更多的逻辑代码转移到公共代码：</p>
 <ul>
-<li><p><a href="http://kotlinlang.org/api/latest/kotlin.test/index.html" target="_blank" rel="external">kotlin.test</a>,包括开箱即用的Kotlin1.2，让你写一次测试并且运行在JVM 和 JS 下；</p>
+<li><p><a href="http://kotlinlang.org/api/latest/kotlin.test/index.html" target="_blank" rel="noopener">kotlin.test</a>,包括开箱即用的Kotlin1.2，让你写一次测试并且运行在JVM 和 JS 下；</p>
 </li>
-<li><p><a href="https://github.com/kotlin/kotlinx.html" target="_blank" rel="external">kotlin.html</a>支持 <strong>同构渲染</strong> — 用相同的代码渲染 HTML 在后端和在前端；</p>
+<li><p><a href="https://github.com/kotlin/kotlinx.html" target="_blank" rel="noopener">kotlin.html</a>支持 <strong>同构渲染</strong> — 用相同的代码渲染 HTML 在后端和在前端；</p>
 </li>
-<li><p><a href="https://github.com/kotlin/kotlinx.serialization" target="_blank" rel="external">kotlinx.serialization</a>允许你轻松的对 Kotlin对象编组在你的应用程序的不同的层之间，使用 JSON 或者 ProtoBuf 进行序列化格式化。</p>
+<li><p><a href="https://github.com/kotlin/kotlinx.serialization" target="_blank" rel="noopener">kotlinx.serialization</a>允许你轻松的对 Kotlin对象编组在你的应用程序的不同的层之间，使用 JSON 或者 ProtoBuf 进行序列化格式化。</p>
 </li>
 </ul>
 <p>请注意，多平台项目目前是一个实验性功能；这意味着这个功能是准备使用，但是我们也许需要去改变设计在之后的版本(并且如果我们这样做，我们将会提供代码迁移工具)。</p>
@@ -478,45 +471,45 @@
 <p>下方的图片展示了两个用Kotlin的大型JetBrains项目不同的编译时间：<br><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/CompilationSpeed.png" alt=""></p>
 <h2 id="其他语言和库的改进"><a href="#其他语言和库的改进" class="headerlink" title="其他语言和库的改进"></a>其他语言和库的改进</h2><p>我们也做了许多小的改进在语言和标准库：</p>
 <ul>
-<li><p><a href="http://kotlinlang.org/docs/reference/whatsnew12.html#array-literals-in-annotations" target="_blank" rel="external">更简洁的语法</a> 用于将多个参数传递给注解(数组 文字(literals)) <em>不知如何翻译literals 译者注</em></p>
+<li><p><a href="http://kotlinlang.org/docs/reference/whatsnew12.html#array-literals-in-annotations" target="_blank" rel="noopener">更简洁的语法</a> 用于将多个参数传递给注解(数组 文字(literals)) <em>不知如何翻译literals 译者注</em></p>
 </li>
 <li><p>支持 <code>lateinit</code> 修饰在全局属性和局部属性，以及检查一个 <code>lateinit</code> 是否被初始化；</p>
 </li>
-<li><p><a href="http://kotlinlang.org/docs/reference/whatsnew12.html#smart-cast-improvements" target="_blank" rel="external">更加聪明的智能推导</a>和<a href="http://kotlinlang.org/docs/reference/whatsnew12.html#information-from-explicit-casts-is-used-for-type-inference" target="_blank" rel="external">改进的类型推断</a>在一些情况下。</p>
+<li><p><a href="http://kotlinlang.org/docs/reference/whatsnew12.html#smart-cast-improvements" target="_blank" rel="noopener">更加聪明的智能推导</a>和<a href="http://kotlinlang.org/docs/reference/whatsnew12.html#information-from-explicit-casts-is-used-for-type-inference" target="_blank" rel="noopener">改进的类型推断</a>在一些情况下。</p>
 </li>
 <li><p>标准库和 Java9 中引入的分包限制的兼容；</p>
 </li>
 <li><p>新的 <code>kotlin.math</code>包在标准库中；</p>
 </li>
-<li><p>新的标准库函数在处理序列和集合，包含了<a href="http://kotlinlang.org/docs/reference/whatsnew12.html#windowed-chunked-zipwithnext" target="_blank" rel="external">一组函数</a> 为了拆分集合和序列为可能重叠的固定大小的组。</p>
+<li><p>新的标准库函数在处理序列和集合，包含了<a href="http://kotlinlang.org/docs/reference/whatsnew12.html#windowed-chunked-zipwithnext" target="_blank" rel="noopener">一组函数</a> 为了拆分集合和序列为可能重叠的固定大小的组。</p>
 </li>
 </ul>
-<p>更多的信息和代码示例，请看 <a href="http://kotlinlang.org/docs/reference/whatsnew12.html" target="_blank" rel="external">Kotlin1.2中新功能</a></p>
-<h2 id="世界各地的Kotlin"><a href="#世界各地的Kotlin" class="headerlink" title="世界各地的Kotlin"></a>世界各地的Kotlin</h2><p>自从今年3月发布的Kotlin1.1以来，Kotlin已经取得了巨大的收获在世界各地。这是 KotlinConf 的高潮，我们第一次全球会议，有着1200参会者在11月2，3日的旧金山。我们已经记录了所有的会谈，并且<a href="https://kotlinconf.com/talks/" target="_blank" rel="external">视频已经可以看</a>。</p>
-<p>Kotlin现在是一个Android开发官方支持的语言，开箱即用的Android Studio 3.0，已经谷歌发布了官方<a href="https://developer.android.com/samples/index.html?language=kotlin" target="_blank" rel="external">示例</a>和<a href="https://android.github.io/kotlin-guides/" target="_blank" rel="external">风格指南</a>。结果是，在Android Studio中超过了 17% 的项目使用 Kotlin，包含来自很多热门的创业公司以及财富500强公司的许多应用程序。</p>
+<p>更多的信息和代码示例，请看 <a href="http://kotlinlang.org/docs/reference/whatsnew12.html" target="_blank" rel="noopener">Kotlin1.2中新功能</a></p>
+<h2 id="世界各地的Kotlin"><a href="#世界各地的Kotlin" class="headerlink" title="世界各地的Kotlin"></a>世界各地的Kotlin</h2><p>自从今年3月发布的Kotlin1.1以来，Kotlin已经取得了巨大的收获在世界各地。这是 KotlinConf 的高潮，我们第一次全球会议，有着1200参会者在11月2，3日的旧金山。我们已经记录了所有的会谈，并且<a href="https://kotlinconf.com/talks/" target="_blank" rel="noopener">视频已经可以看</a>。</p>
+<p>Kotlin现在是一个Android开发官方支持的语言，开箱即用的Android Studio 3.0，已经谷歌发布了官方<a href="https://developer.android.com/samples/index.html?language=kotlin" target="_blank" rel="noopener">示例</a>和<a href="https://android.github.io/kotlin-guides/" target="_blank" rel="noopener">风格指南</a>。结果是，在Android Studio中超过了 17% 的项目使用 Kotlin，包含来自很多热门的创业公司以及财富500强公司的许多应用程序。</p>
 <p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KotlinConfUsers.jpg" alt=""></p>
-<p>在服务器端，<a href="https://spring.io/blog/2017/09/28/spring-framework-5-0-goes-ga" target="_blank" rel="external">Spring 5.0</a> 已经发布，有着<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/languages.html#kotlin" target="_blank" rel="external">许多Kotlin支持的功能</a>,而且 <a href="http://vertx.io/" target="_blank" rel="external">vert.x</a> 已经<a href="http://vertx.io/docs/vertx-core/kotlin/" target="_blank" rel="external">支持Kotlin</a>在3.4.0后。当然，Gradle支持开箱即用Kotlin DSL，而且 Gradle Kotlin DSL 项目正在迅速的接近1.0版本。</p>
-<p>在Github上，开源的Kotlin代码行数已经超过了2.5亿。而在 Stack Overflow，Kotlin是<a href="https://stackoverflow.blog/2017/10/31/disliked-programming-languages/" target="_blank" rel="external">增长最快的语言之一和最不反感的语言之一</a></p>
+<p>在服务器端，<a href="https://spring.io/blog/2017/09/28/spring-framework-5-0-goes-ga" target="_blank" rel="noopener">Spring 5.0</a> 已经发布，有着<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/languages.html#kotlin" target="_blank" rel="noopener">许多Kotlin支持的功能</a>,而且 <a href="http://vertx.io/" target="_blank" rel="noopener">vert.x</a> 已经<a href="http://vertx.io/docs/vertx-core/kotlin/" target="_blank" rel="noopener">支持Kotlin</a>在3.4.0后。当然，Gradle支持开箱即用Kotlin DSL，而且 Gradle Kotlin DSL 项目正在迅速的接近1.0版本。</p>
+<p>在Github上，开源的Kotlin代码行数已经超过了2.5亿。而在 Stack Overflow，Kotlin是<a href="https://stackoverflow.blog/2017/10/31/disliked-programming-languages/" target="_blank" rel="noopener">增长最快的语言之一和最不反感的语言之一</a></p>
 <p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KotlinAdoption.png" alt=""></p>
-<p>围绕Kotlin的社区建立同样也是令人吃惊的，已经有超过100用户组在全世界，我们很难追踪到所有的人 —— 但是针对我们所知道的，这个<a href="http://kotlinlang.org/community/talks.html" target="_blank" rel="external">会谈地图</a>给了你一个很好的想法，kotlin是多么广泛的使用。</p>
+<p>围绕Kotlin的社区建立同样也是令人吃惊的，已经有超过100用户组在全世界，我们很难追踪到所有的人 —— 但是针对我们所知道的，这个<a href="http://kotlinlang.org/community/talks.html" target="_blank" rel="noopener">会谈地图</a>给了你一个很好的想法，kotlin是多么广泛的使用。</p>
 <p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KUGmap.png" alt=""></p>
-<p>对于刚刚学习Kotlin的人来说，书籍的数量是不断的增长(包含我们自己的 “Kotlin in Action”,现在有<a href="https://manning.com/books/kotlin-in-action" target="_blank" rel="external">英文</a>，<a href="https://dmkpress.com/catalog/computer/programming/java/978-5-97060-497-7/" target="_blank" rel="external">俄语</a>，<a href="https://www.amazon.co.jp/Kotlin%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-Dmitry-Jemerov/dp/4839961743/ref=sr_1_2?ie=UTF8&amp;qid=1511539431&amp;sr=8-2&amp;keywords=kotlin" target="_blank" rel="external">日语</a>，<a href="https://www.amazon.com/Kotlin%E5%AE%9E%E6%88%98-Svetlana-Isakova-Dmitry-Jemerov/dp/B07568C58F/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1511539582&amp;sr=1-3" target="_blank" rel="external">中文</a>和<a href="https://novatec.com.br/livros/kotlin-em-acao/" target="_blank" rel="external">葡萄牙语</a>),线上课程，教程和<a href="http://kotlinlang.org/community/" target="_blank" rel="external">其他资源</a></p>
-<h2 id="团队见面：网络研讨会和Reddit-AMA"><a href="#团队见面：网络研讨会和Reddit-AMA" class="headerlink" title="团队见面：网络研讨会和Reddit AMA"></a>团队见面：网络研讨会和Reddit AMA</h2><p>分享你更多的信息关于新版本，我们计划组织一个<a href="https://info.jetbrains.com/Kotlin-Webinar-December2017.html" target="_blank" rel="external">网络研讨会关于Kotlin1.2多平台项目</a>在12月7日，18:00 CET。请注册；空间有限。</p>
-<p>Kotlin团队也将会举办 AMA(Ask Me Anything) 在 <a href="https://www.reddit.com/r/Kotlin/" target="_blank" rel="external">Kotlin Reddit</a> 上在12月5号。我们将开始中午开始(CET),并且我们接下来的24小时和你在一起。</p>
-<h2 id="如何升级"><a href="#如何升级" class="headerlink" title="如何升级"></a>如何升级</h2><p>一如既往，你可以<strong>在线尝试Kotlin</strong>在<a href="http://try.kotlinlang.org/" target="_blank" rel="external">try.kotlinlang.org</a></p>
+<p>对于刚刚学习Kotlin的人来说，书籍的数量是不断的增长(包含我们自己的 “Kotlin in Action”,现在有<a href="https://manning.com/books/kotlin-in-action" target="_blank" rel="noopener">英文</a>，<a href="https://dmkpress.com/catalog/computer/programming/java/978-5-97060-497-7/" target="_blank" rel="noopener">俄语</a>，<a href="https://www.amazon.co.jp/Kotlin%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-Dmitry-Jemerov/dp/4839961743/ref=sr_1_2?ie=UTF8&amp;qid=1511539431&amp;sr=8-2&amp;keywords=kotlin" target="_blank" rel="noopener">日语</a>，<a href="https://www.amazon.com/Kotlin%E5%AE%9E%E6%88%98-Svetlana-Isakova-Dmitry-Jemerov/dp/B07568C58F/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1511539582&amp;sr=1-3" target="_blank" rel="noopener">中文</a>和<a href="https://novatec.com.br/livros/kotlin-em-acao/" target="_blank" rel="noopener">葡萄牙语</a>),线上课程，教程和<a href="http://kotlinlang.org/community/" target="_blank" rel="noopener">其他资源</a></p>
+<h2 id="团队见面：网络研讨会和Reddit-AMA"><a href="#团队见面：网络研讨会和Reddit-AMA" class="headerlink" title="团队见面：网络研讨会和Reddit AMA"></a>团队见面：网络研讨会和Reddit AMA</h2><p>分享你更多的信息关于新版本，我们计划组织一个<a href="https://info.jetbrains.com/Kotlin-Webinar-December2017.html" target="_blank" rel="noopener">网络研讨会关于Kotlin1.2多平台项目</a>在12月7日，18:00 CET。请注册；空间有限。</p>
+<p>Kotlin团队也将会举办 AMA(Ask Me Anything) 在 <a href="https://www.reddit.com/r/Kotlin/" target="_blank" rel="noopener">Kotlin Reddit</a> 上在12月5号。我们将开始中午开始(CET),并且我们接下来的24小时和你在一起。</p>
+<h2 id="如何升级"><a href="#如何升级" class="headerlink" title="如何升级"></a>如何升级</h2><p>一如既往，你可以<strong>在线尝试Kotlin</strong>在<a href="http://try.kotlinlang.org/" target="_blank" rel="noopener">try.kotlinlang.org</a></p>
 <ul>
-<li><p>在 Maven，Gradle和npm中：使用<code>1.2.0</code>作为编译器和标准库的版本号。看<a href="http://kotlinlang.org/docs/reference/using-gradle.html" target="_blank" rel="external">这里</a></p>
+<li><p>在 Maven，Gradle和npm中：使用<code>1.2.0</code>作为编译器和标准库的版本号。看<a href="http://kotlinlang.org/docs/reference/using-gradle.html" target="_blank" rel="noopener">这里</a></p>
 </li>
 <li><p><strong>IntelliJ IDEA</strong>：2017.3已经和Kotlin1.2绑定，在早期版本中安装或者升级 Kotlin 插件到1.2.0版本。</p>
 </li>
 <li><p><strong>Android Studio</strong>：安装或者升级插件通过 <code>Plugin Manager</code>。</p>
 </li>
-<li><p><strong>Eclips</strong>：安装插件在 <a href="https://marketplace.eclipse.org/content/kotlin-plugin-eclipse" target="_blank" rel="external">MarketPlace</a>。</p>
+<li><p><strong>Eclips</strong>：安装插件在 <a href="https://marketplace.eclipse.org/content/kotlin-plugin-eclipse" target="_blank" rel="noopener">MarketPlace</a>。</p>
 </li>
-<li><p><strong>命令行编译</strong>可以从<a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.0" target="_blank" rel="external">Github发布页面</a>上下载。</p>
+<li><p><strong>命令行编译</strong>可以从<a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.0" target="_blank" rel="noopener">Github发布页面</a>上下载。</p>
 </li>
 </ul>
-<p><strong>兼容性</strong> 在Kotlin1.2的语言和标准库是<a href="http://kotlinlang.org/docs/reference/compatibility.html" target="_blank" rel="external">向后兼容的(模块错误)</a>:如果一些编译和运行在1.0或者1.1，将会继续在1.2上运行。帮助逐渐共享的打团队，我们将提供不使用新特性的编译开关。<a href="http://kotlinlang.org/docs/reference/compatibility.html#binary-compatibility-warnings" target="_blank" rel="external">这里</a>是一个包含可能的缺陷文档</p>
+<p><strong>兼容性</strong> 在Kotlin1.2的语言和标准库是<a href="http://kotlinlang.org/docs/reference/compatibility.html" target="_blank" rel="noopener">向后兼容的(模块错误)</a>:如果一些编译和运行在1.0或者1.1，将会继续在1.2上运行。帮助逐渐共享的打团队，我们将提供不使用新特性的编译开关。<a href="http://kotlinlang.org/docs/reference/compatibility.html#binary-compatibility-warnings" target="_blank" rel="noopener">这里</a>是一个包含可能的缺陷文档</p>
 
       
     </div>
@@ -694,7 +687,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -707,7 +700,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -866,7 +859,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

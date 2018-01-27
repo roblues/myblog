@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Kotlin-SpringBoot使用教程(一)]]></title>
+      <url>%2F2018%2F01%2F04%2FKotlin-SpringBoot%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-%E4%B8%80%2F</url>
+      <content type="text"><![CDATA[前言该教程主要是为了记录一下自己学习 SpringBoot 的过程。 需要软件 编译器为 IntelliJ IDEA 2017.3.2 (Ultimate Edition) 框架和语言版本kotlin 1.2.10SpringBoot Hello World学习程序代码几乎全是从 HelloWolrd 开始，今天学习SpringBoot也是从 HelloWolrd 开始。 新建项目首先要学会如何去建立一个 SpringBoot 项目 打开我们的 IDEA ，选择 Create New Project 之后选择 Spring initlalizr 就按照我们的默认配置，点击 Next 这里会等待一会(看网络情况)。 再之后的选择里 构建工具选择 gradle 语言选择 kotlin]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[2017年终总结]]></title>
       <url>%2F2018%2F01%2F01%2F2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%2F</url>
       <content type="text"><![CDATA[今天是2017的最后一天，按照常理来说应该写下一个总结。仔细回想一下今年做了什么？ Java框架的学习 SSM SSH kotlin的学习 考研准备 四级考试准备 博客的持续维护 框架学习年初的时候学习了spring和spring MVC 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。学习这些框架其实会发现很多相似点，当然也会比较出不同框架之间的优缺点。 kotlin的学习虽然博客上的第一篇关于 kotlin 的文章是在8月多，但是在此之前就开始了零零碎碎的学习。之后在大三学习的 struts2 框架的代码全是 kotlin。这些框架虽然没有对 kotlin 做出优化和适配，但是在业务逻辑方面确实可以省不少事情。也给实验室安利过 kotlin，好像没有成功。 尴尬. jpg 考研准备报了一个考研班，具体考哪里还没有仔细思考，不过是时候该考虑一下了。考研是一个漫长的过程，看着一些学长的考研经历好像也看到了自己。之前早晨跑步的时候每到图书馆门口的时候就好看到大量的学生拍着长长的队等待着图书馆开门。 四级今年六月份考试的时候真的没有做准备，属于裸考，再加上自己的英语比较差，没过也是在预料之中的。假期好好学了一下英语。十二月再次参加考试，希望能过吧，不想在同一件事情花费的时间太长。 博客维护博客今年主要的改变为换了好几个评论系统，多说的关闭使很多博客的评论系统受到影响，经过几次的迁移，评论也都丢失，希望现在的评论会一直保存下来。 新年展望新年要有个新的计划和准备 四级如果没有过下次必须过 算法方面继续学习 认认真真的准备考研 今天已经是2018的第一天了，之前在家一直没有带着电脑，刚刚来了学校，把总结补上。 新年快乐。]]></content>
@@ -376,7 +383,7 @@
     <entry>
       <title><![CDATA[Git基本操作]]></title>
       <url>%2F2016%2F08%2F13%2FGit%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%2F</url>
-      <content type="text"><![CDATA[下载安装Git客户端 git下载 安装教程装完成后，还需要最后一步设置，在命令行输入： $ git config –global user.name “Your Name” $ git config –global user.email “email@example.com” 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。 创建本地仓库 $ git init 添加 add把文件添加到仓库： $ git add readme.txt 执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。 把文件提交到仓库： $ git commit -m “add readme” git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。 同步到Github上传到github例如我们给一个叫Test的仓库同步 $ git remote add origin git@github.com:youngxhui/Test.git 现在可以push到你的仓库了 $ git push -u origin master 第一次推送时，我们要添加-u 之后我们可以这条命令 ? $ git push origin master 下载到github从github上下载到本地 $ git clone git@github.com:youngxhui/nuc_JavaLab.git 分支的操作分支的创建创建分支 $ git checkout -b dev -b 参数表示创建并切换 查看分支用git branch命令查看当前分支： $ git branch * dev master git branch命令会列出所有分支，当前分支前面会标一个*号。 我们就可以在dev分支上正常提交 $ git add readme.txt $ git commit -m “branch test” 切换分支切换回master分支： $ git checkout master 合并分支把dev分支合并到master $ git merge dev 删除分支 $ git branch -d dev]]></content>
+      <content type="text"><![CDATA[下载安装Git客户端 git下载 安装教程装完成后，还需要最后一步设置，在命令行输入： $ git config –global user.name “Your Name” $ git config –global user.email “email@example.com” 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。 创建本地仓库 $ git init 添加 add把文件添加到仓库： $ git add readme.txt 执行上面的命令，没有任何显示，这就对了，Unix的哲学是“没有消息就是好消息”，说明添加成功。 把文件提交到仓库： $ git commit -m “add readme” git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。 同步到Github上传到github例如我们给一个叫Test的仓库同步 $ git remote add origin git@github.com:youngxhui/Test.git 现在可以push到你的仓库了 $ git push -u origin master 第一次推送时，我们要添加-u 之后我们可以这条命令 $ git push origin master 下载到github从github上下载到本地 $ git clone git@github.com:youngxhui/nuc_JavaLab.git 分支的操作分支的创建创建分支 $ git checkout -b dev -b 参数表示创建并切换 查看分支用git branch命令查看当前分支： $ git branch * dev master git branch命令会列出所有分支，当前分支前面会标一个*号。 我们就可以在dev分支上正常提交 $ git add readme.txt $ git commit -m “branch test” 切换分支切换回master分支： $ git checkout master 合并分支把dev分支合并到master $ git merge dev 删除分支 $ git branch -d dev]]></content>
     </entry>
 
     

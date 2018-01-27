@@ -104,67 +104,18 @@
 
 
 
-<meta name="description" content="Distribute Candies(#575)
-
-
-编号
-名称
-等级
-
-
-
-
-575
-Distribute Candies
-Easy
-
-
-
-思路这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样
-代码12345678910public class Solution &amp;#123;    public int distributeCan">
+<meta name="description" content="Distribute Candies(#575)   编号 名称 等级     575 Distribute Candies Easy    思路这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样 代码12345678910public class Solution &amp;#123;    public int distributeCan">
+<meta name="keywords" content="Hash Table">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Distribute Candies(#575)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/02/LeetCode-Distribute-Candies-575/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="Distribute Candies(#575)
-
-
-编号
-名称
-等级
-
-
-
-
-575
-Distribute Candies
-Easy
-
-
-
-思路这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样
-代码12345678910public class Solution &amp;#123;    public int distributeCan">
+<meta property="og:description" content="Distribute Candies(#575)   编号 名称 等级     575 Distribute Candies Easy    思路这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样 代码12345678910public class Solution &amp;#123;    public int distributeCan">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-01T12:25:15.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Distribute Candies(#575)">
-<meta name="twitter:description" content="Distribute Candies(#575)
-
-
-编号
-名称
-等级
-
-
-
-
-575
-Distribute Candies
-Easy
-
-
-
-思路这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样
-代码12345678910public class Solution &amp;#123;    public int distributeCan">
+<meta name="twitter:description" content="Distribute Candies(#575)   编号 名称 等级     575 Distribute Candies Easy    思路这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样 代码12345678910public class Solution &amp;#123;    public int distributeCan">
 
 
 
@@ -464,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  111
+                  102
                 </span>
               
 
@@ -506,7 +457,7 @@ Easy
 </tbody>
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题就是看分蛋糕🍰，简单的说就是 种类大于上限的时候，只能拿最多，如果种类少于上限的话，那就是种类了。就是这样</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">distributeCandies</span><span class="params">(<span class="keyword">int</span>[] candies)</span> </span>&#123;</span><br><span class="line">       List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> candy : candies) &#123;</span><br><span class="line">            list.add(candy);</span><br><span class="line">        &#125;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;(list);</span><br><span class="line">        <span class="keyword">return</span> set.size() &gt; candies.length/<span class="number">2</span> ? candies.length/<span class="number">2</span> : set.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">distributeCandies</span><span class="params">(<span class="keyword">int</span>[] candies)</span> </span>&#123;</div><div class="line">       List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> candy : candies) &#123;</div><div class="line">            list.add(candy);</div><div class="line">        &#125;</div><div class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;(list);</div><div class="line">        <span class="keyword">return</span> set.size() &gt; candies.length/<span class="number">2</span> ? candies.length/<span class="number">2</span> : set.size();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -682,7 +633,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -695,7 +646,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -854,7 +805,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

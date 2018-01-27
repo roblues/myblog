@@ -104,67 +104,18 @@
 
 
 
-<meta name="description" content="LeetCode:Longest Uncommon Subsequence I(#521)
-
-
-编号
-名称
-等级
-
-
-
-
-521
-Longest Uncommon Subsequence
-Easy  
-
-
-
-思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。
-代码123456789public class Solution &amp;#123;">
+<meta name="description" content="LeetCode:Longest Uncommon Subsequence I(#521)   编号 名称 等级     521 Longest Uncommon Subsequence Easy      思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。 代码123456789public class Solution &amp;#123;">
+<meta name="keywords" content="String">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Longest Uncommon Subsequence I(#521)">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="LeetCode:Longest Uncommon Subsequence I(#521)
-
-
-编号
-名称
-等级
-
-
-
-
-521
-Longest Uncommon Subsequence
-Easy  
-
-
-
-思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。
-代码123456789public class Solution &amp;#123;">
-<meta property="og:updated_time" content="2017-12-01T12:26:49.124Z">
+<meta property="og:description" content="LeetCode:Longest Uncommon Subsequence I(#521)   编号 名称 等级     521 Longest Uncommon Subsequence Easy      思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。 代码123456789public class Solution &amp;#123;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-01T12:26:49.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:Longest Uncommon Subsequence I(#521)">
-<meta name="twitter:description" content="LeetCode:Longest Uncommon Subsequence I(#521)
-
-
-编号
-名称
-等级
-
-
-
-
-521
-Longest Uncommon Subsequence
-Easy  
-
-
-
-思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。
-代码123456789public class Solution &amp;#123;">
+<meta name="twitter:description" content="LeetCode:Longest Uncommon Subsequence I(#521)   编号 名称 等级     521 Longest Uncommon Subsequence Easy      思路没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 -1 否则输出最长的。 代码123456789public class Solution &amp;#123;">
 
 
 
@@ -464,7 +415,7 @@ Easy
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  100
+                  92
                 </span>
               
 
@@ -506,7 +457,7 @@ Easy
 </tbody>
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 <code>-1</code> 否则输出最长的。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLUSlength</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (a.equals(b))&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> a.length() &gt; b.length() ? a.length() : b.length();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLUSlength</span><span class="params">(String a, String b)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (a.equals(b))&#123;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">return</span> a.length() &gt; b.length() ? a.length() : b.length();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -682,7 +633,7 @@ Easy
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -695,7 +646,7 @@ Easy
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -854,7 +805,7 @@ Easy
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

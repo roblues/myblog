@@ -104,23 +104,19 @@
 
 
 
-<meta name="description" content="最近项目逐渐使用 Kotlin 代替 Java 。
-感受关于 Kotlin 的最大的感受就是：代码少写了很多。
-相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有去了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 Android 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 Kotlin 是什么？当然也包括我">
+<meta name="description" content="最近项目逐渐使用 Kotlin 代替 Java 。 感受关于 Kotlin 的最大的感受就是：代码少写了很多。 相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有去了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 Android 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 Kotlin 是什么？当然也包括我">
+<meta name="keywords" content="kotlin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kotlin初步学习">
 <meta property="og:url" content="http://youngxhui.github.io/2017/08/11/kotlin-初步学习/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="最近项目逐渐使用 Kotlin 代替 Java 。
-感受关于 Kotlin 的最大的感受就是：代码少写了很多。
-相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有去了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 Android 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 Kotlin 是什么？当然也包括我">
+<meta property="og:description" content="最近项目逐渐使用 Kotlin 代替 Java 。 感受关于 Kotlin 的最大的感受就是：代码少写了很多。 相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有去了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 Android 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 Kotlin 是什么？当然也包括我">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/javatokotlin.png">
 <meta property="og:updated_time" content="2018-01-04T07:32:17.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin初步学习">
-<meta name="twitter:description" content="最近项目逐渐使用 Kotlin 代替 Java 。
-感受关于 Kotlin 的最大的感受就是：代码少写了很多。
-相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有去了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 Android 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 Kotlin 是什么？当然也包括我">
+<meta name="twitter:description" content="最近项目逐渐使用 Kotlin 代替 Java 。 感受关于 Kotlin 的最大的感受就是：代码少写了很多。 相遇最开始知道这个语言是在使用 IDEA 的时候，当时只是知道，并没有过多的关心，也并没有去了解，更不要说是使用了。直到今年的 Google I/O 提出来 Kotlin 被上升到 Android 开发的一级开发语言。整个互联网沸腾了一把，大家纷纷百度 Kotlin 是什么？当然也包括我">
 <meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/javatokotlin.png">
 
 
@@ -457,14 +453,14 @@
 <p>后来开始使用 <code>Kotlin</code> 写了一下 <code>struts2</code>,表示完全兼容。</p>
 <p>尝试用 Kotlin 写了一下 <code>SpringMVC 4</code> 应该是不兼容或者是我的打开方式不对， 在 <code>Controller</code> 发生错误，不过其他层并没有错误。好的是 <code>Spring 5</code> 已经支持 <code>Kotlin</code> 。 </p>
 <p>在 Android 方面(并没有使用 Anko)，只是简单的使用了扩展。</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'Kotlin-android-extensions'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'Kotlin-android-extensions'</span></div></pre></td></tr></table></figure>
 <p>再也不用写 <code>findViewById()</code>,直接用控件 <code>id</code> 就可以完成操作。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>慢慢尝试一些 <strong>黑魔法</strong> 😝</p>
 <p>待补充(毕竟我也才开始慢慢学习)</p>
-<h1 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a>学习资源推荐</h1><p><a href="http://Kotlinlang.org/docs/reference/" target="_blank" rel="external">官方文档(英文)</a></p>
-<p><a href="https://www.Kotlincn.net/docs/reference/" target="_blank" rel="external">官方文档(中文)</a></p>
-<p><a href="http://ice1000.org/" target="_blank" rel="external">冰封博客</a></p>
-<p><a href="https://Kotliner.cn" target="_blank" rel="external">Kotlin 社区</a></p>
+<h1 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a>学习资源推荐</h1><p><a href="http://Kotlinlang.org/docs/reference/" target="_blank" rel="noopener">官方文档(英文)</a></p>
+<p><a href="https://www.Kotlincn.net/docs/reference/" target="_blank" rel="noopener">官方文档(中文)</a></p>
+<p><a href="http://ice1000.org/" target="_blank" rel="noopener">冰封博客</a></p>
+<p><a href="https://Kotliner.cn" target="_blank" rel="noopener">Kotlin 社区</a></p>
 
       
     </div>
@@ -640,7 +636,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -653,7 +649,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -812,7 +808,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>

@@ -104,28 +104,18 @@
 
 
 
-<meta name="description" content="简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。
-在 Github 的主页上写到 
-
-MyBatis SQL Mapper Framework for Java
-The MyBatis SQL mapper framework makes it easier to use a relational database with">
+<meta name="description" content="简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。 在 Github 的主页上写到   MyBatis SQL Mapper Framework for Java The MyBatis SQL mapper framework makes it easier to use a relational database with">
+<meta name="keywords" content="java,MyBatis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyBatis入门基础">
 <meta property="og:url" content="http://youngxhui.github.io/2017/04/17/Mybatis入门基础/index.html">
 <meta property="og:site_name" content="ISLAND">
-<meta property="og:description" content="简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。
-在 Github 的主页上写到 
-
-MyBatis SQL Mapper Framework for Java
-The MyBatis SQL mapper framework makes it easier to use a relational database with">
-<meta property="og:updated_time" content="2017-08-27T06:59:00.610Z">
+<meta property="og:description" content="简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。 在 Github 的主页上写到   MyBatis SQL Mapper Framework for Java The MyBatis SQL mapper framework makes it easier to use a relational database with">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-27T06:59:00.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyBatis入门基础">
-<meta name="twitter:description" content="简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。
-在 Github 的主页上写到 
-
-MyBatis SQL Mapper Framework for Java
-The MyBatis SQL mapper framework makes it easier to use a relational database with">
+<meta name="twitter:description" content="简介之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。 在 Github 的主页上写到   MyBatis SQL Mapper Framework for Java The MyBatis SQL mapper framework makes it easier to use a relational database with">
 
 
 
@@ -425,7 +415,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  428
+                  402
                 </span>
               
 
@@ -451,7 +441,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
 
       
         <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>之前学了 Spring ， Spring-MVC 按着学习路线接下来的确应该看看 MyBatis ，毕竟要 ssm 。</p>
-<p>在 <a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="external">Github</a> 的主页上写到 </p>
+<p>在 <a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">Github</a> 的主页上写到 </p>
 <blockquote>
 <p>MyBatis SQL Mapper Framework for Java</p>
 <p>The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented applications. MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or annotations. Simplicity is the biggest advantage of the MyBatis data mapper over object relational mapping tools.</p>
@@ -459,7 +449,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
 <p>之前没有学过 Hibernate 据了解是不用写 Sql 语句的，有时间会去看看。之前用过 Spring的 JdbcTemperature 充分感觉到了这些框架比起之前直接写 SQL 语句的便利性。</p>
 <h1 id="MyBatis-历史"><a href="#MyBatis-历史" class="headerlink" title="MyBatis 历史"></a>MyBatis 历史</h1><p>MyBatis项目是iBATIS 3.0的子公司，由包括iBATIS原创创始人的团队维护。<br>该项目于2010年5月19日创建，当时Apache iBATIS 3.0发布，该团队宣布，Google Code将以新名称和新主页继续发展。<br>2013年11月10日，该项目宣布迁往Github 。</p>
 <h1 id="MyBatis-配置"><a href="#MyBatis-配置" class="headerlink" title="MyBatis 配置"></a>MyBatis 配置</h1><h2 id="Jar包"><a href="#Jar包" class="headerlink" title="Jar包"></a>Jar包</h2><ul>
-<li><p>mybatis-3.x.x.jar<a href="http://mvnrepository.com/artifact/org.mybatis/mybatis" target="_blank" rel="external">Maven Repository</a><br>当前最新版本为 3.4.4</p>
+<li><p>mybatis-3.x.x.jar<a href="http://mvnrepository.com/artifact/org.mybatis/mybatis" target="_blank" rel="noopener">Maven Repository</a><br>当前最新版本为 3.4.4</p>
 </li>
 <li><p>mysql 驱动包</p>
 </li>
@@ -467,7 +457,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
 <h2 id="XML配置"><a href="#XML配置" class="headerlink" title="XML配置"></a>XML配置</h2><ul>
 <li>需要一个 xml 文件来作为 MyBatis 的全局配置文件。</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="meta">&lt;!DOCTYPE configuration</span><br><span class="line">        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"</span><br><span class="line">        "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"cacheEnabled"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"defaultStatementTimeout"</span> <span class="attr">value</span>=<span class="string">"3000"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"mapUnderscoreToCamelCase"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"useGeneratedKeys"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"development"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"development"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"Pooled"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/mysql2"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"1234"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"mapper/User.xml"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="meta">&lt;!DOCTYPE configuration</span></div><div class="line">        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"</div><div class="line">        "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</div><div class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">settings</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"cacheEnabled"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"defaultStatementTimeout"</span> <span class="attr">value</span>=<span class="string">"3000"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"mapUnderscoreToCamelCase"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"useGeneratedKeys"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"development"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"development"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"Pooled"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/mysql2"</span>/&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"1234"</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"mapper/User.xml"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div></pre></td></tr></table></figure>
 <ul>
 <li>configuration 配置<ul>
 <li>setting 设置</li>
@@ -661,7 +651,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">68</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -674,7 +664,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -833,7 +823,7 @@ The MyBatis SQL mapper framework makes it easier to use a relational database wi
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      49.1k
+      46.4k
     </span>
   
 </div>
