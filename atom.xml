@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ISLAND</title>
+  
+  <subtitle>随心随性</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://youngxhui.github.io/"/>
+  <updated>2018-02-23T12:40:35.275Z</updated>
+  <id>http://youngxhui.github.io/</id>
+  
+  <author>
+    <name>youngxhui</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RabbitMQ 和 Spring Boot 的集成</title>
+    <link href="http://youngxhui.github.io/2018/02/23/RabbitMQ-%E5%92%8C-Spring-Boot-%E7%9A%84%E9%9B%86%E6%88%90/"/>
+    <id>http://youngxhui.github.io/2018/02/23/RabbitMQ-和-Spring-Boot-的集成/</id>
+    <published>2018-02-23T10:48:51.000Z</published>
+    <updated>2018-02-23T12:40:35.275Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在最近的项目中使用了 <code>RabbitMQ</code>。 主要是用来起到一个消峰作用。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装这里分为 windows 和 linux。</p><p>我主要的开发环境是在 windows 10 上， 运行环境是 linux(centos 7)，所以讲解主要从两个系统来说。</p><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>RabbitMQ 是 erlang 开发的，所以使用之前首先要下载 <a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">erlang</a> 选择 windows 64bit 或者 windows  32bit 根据自己电脑进行选择，下载。</p><p>下载后进行安装 将 erl的安装目录下载的 bin 写入环境变量中。 如图所示：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erl.png" alt=""></p><p>在 cmd/powershell 中输入 erl 会出现 erl的一些版本信息。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erlcmd.png" alt=""></p><p>这样基本完成了 erlang 的安装。</p><p>安装完 erlang 那么就应该安装我们的主角 RabbitMQ。</p><p>首先下载RabbitMQ，在<a href="http://www.rabbitmq.com/install-windows.html" target="_blank" rel="noopener">下载页面</a> 下载对应的安装包 exe 文件。</p><p>下载完成之后进行安装</p><p>安装完成之后就是我们的 RabbitMQ 就可以进行启动了。</p><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p># </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在最近的项目中使用了 &lt;code&gt;RabbitMQ&lt;/code&gt;。 主要是用来起到一个消峰作用。&lt;/p&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a hr
+      
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="http://youngxhui.github.io/tags/SpringBoot/"/>
+    
+      <category term="RabbitMQ" scheme="http://youngxhui.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017年终总结</title>
+    <link href="http://youngxhui.github.io/2018/01/01/2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.github.io/2018/01/01/2017年终总结/</id>
+    <published>2018-01-01T09:36:46.000Z</published>
+    <updated>2018-01-01T09:46:45.527Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是2017的最后一天，按照常理来说应该写下一个总结。<br>仔细回想一下今年做了什么？</p><ul><li>Java框架的学习 SSM SSH</li><li>kotlin的学习</li><li>考研准备</li><li>四级考试准备</li><li>博客的持续维护</li></ul><h1 id="框架学习"><a href="#框架学习" class="headerlink" title="框架学习"></a>框架学习</h1><p>年初的时候学习了<code>spring</code>和<code>spring MVC</code> 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。<br>学习这些框架其实会发现很多相似点，当然也会比较出不同框架之间的优缺点。</p><h1 id="kotlin的学习"><a href="#kotlin的学习" class="headerlink" title="kotlin的学习"></a>kotlin的学习</h1><p>虽然博客上的第一篇关于 <code>kotlin</code> 的文章是在8月多，但是在此之前就开始了零零碎碎的学习。之后在大三学习的 <code>struts2</code> 框架的代码全是 <code>kotlin</code>。<br>这些框架虽然没有对 <code>kotlin</code> 做出优化和适配，但是在业务逻辑方面确实可以省不少事情。<br>也给实验室安利过 <code>kotlin</code>，好像没有成功。</p><p>尴尬. jpg</p><h1 id="考研准备"><a href="#考研准备" class="headerlink" title="考研准备"></a>考研准备</h1><p>报了一个考研班，具体考哪里还没有仔细思考，不过是时候该考虑一下了。考研是一个漫长的过程，看着一些学长的考研经历好像也看到了自己。之前早晨跑步的时候每到图书馆门口的时候就好看到大量的学生拍着长长的队等待着图书馆开门。</p><h1 id="四级"><a href="#四级" class="headerlink" title="四级"></a>四级</h1><p>今年六月份考试的时候真的没有做准备，属于裸考，再加上自己的英语比较差，没过也是在预料之中的。假期好好学了一下英语。十二月再次参加考试，希望能过吧，不想在同一件事情花费的时间太长。</p><h1 id="博客维护"><a href="#博客维护" class="headerlink" title="博客维护"></a>博客维护</h1><p>博客今年主要的改变为换了好几个评论系统，多说的关闭使很多博客的评论系统受到影响，经过几次的迁移，评论也都丢失，希望现在的评论会一直保存下来。</p><h1 id="新年展望"><a href="#新年展望" class="headerlink" title="新年展望"></a>新年展望</h1><p>新年要有个新的计划和准备</p><ul><li>四级如果没有过下次必须过</li><li>算法方面继续学习</li><li>认认真真的准备考研</li></ul><p>今天已经是2018的第一天了，之前在家一直没有带着电脑，刚刚来了学校，把总结补上。</p><p>新年快乐。 </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天是2017的最后一天，按照常理来说应该写下一个总结。&lt;br&gt;仔细回想一下今年做了什么？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java框架的学习 SSM SSH&lt;/li&gt;
+&lt;li&gt;kotlin的学习&lt;/li&gt;
+&lt;li&gt;考研准备&lt;/li&gt;
+&lt;li&gt;四级考试准备&lt;/li&gt;
+&lt;li&gt;博客
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://youngxhui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一次神奇的课设验收</title>
+    <link href="http://youngxhui.github.io/2017/12/28/%E4%B8%80%E6%AC%A1%E7%A5%9E%E5%A5%87%E7%9A%84%E8%AF%BE%E8%AE%BE%E9%AA%8C%E6%94%B6/"/>
+    <id>http://youngxhui.github.io/2017/12/28/一次神奇的课设验收/</id>
+    <published>2017-12-28T01:59:21.000Z</published>
+    <updated>2017-12-28T10:36:41.205Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？</p><p>第一句话</p><blockquote><p>你这代码是抄的吧。</p></blockquote><p>woc…………，都没有看过我的代码你就知道我的代码是抄的？这种说话无凭无据，信口开河？起码看看代码再说结论。</p><blockquote><p>画一下流程图</p><p>不用注意格式，画圈就好。</p></blockquote><p>就类似下图的样子把每个模块的都画出来，边画边解释每个圈是什么意思。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png" alt=""></p><p>之后又要画主函数的。</p><p>和他解释了无数次主函数就一个 <code>menu()</code> 结果这老师神tmd的，非要画。</p><p>你他妈的是在逗我？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"welcome\n"</span>);</div><div class="line">    menu();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>最后都画完又说，你看看你一个一个的画的，谁知道你画的什么？</p><p>WTF</p><p>难道流程图不应该是一个函数画一个</p><p>最后给出了我他的答案</p><blockquote><p>你看这样的流程图，多清晰。</p></blockquote><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE2.png" alt=""></p><p>你和谁学的？</p><p>你的老师从棺材板里爬出来，估计要找你了。</p><p><strong>谁给你的自信一本正经的胡说八道</strong></p><p>闲的无聊查了一下这个人</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/Snipaste_2017-12-28_18-21-53.png" alt=""></p><p>自己是什么样子，心里没点B数吗？</p><p>💊</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？&lt;/p&gt;
+&lt;p&gt;第一句话&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你这代码是抄的吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;woc…………，都没有看过我的代码你就知道我
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://youngxhui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kotlin中Collection一些语法总结</title>
+    <link href="http://youngxhui.github.io/2017/12/23/Kotlin%E4%B8%ADCollection%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.github.io/2017/12/23/Kotlin中Collection一些语法总结/</id>
+    <published>2017-12-23T13:08:17.000Z</published>
+    <updated>2018-01-04T07:35:05.806Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/1c40461a60dff3e4e24775e216e80547.png" alt=""></p><p><code>kotlin</code> 对集合问题的支持很好，有很多方法可以方便又直观的对集合进行操作。比如 <code>map</code>，<code>count</code>，<code>reduce</code>，<code>filter</code>等方法，这个博客会持续总结些方法。</p><h1 id="any"><a href="#any" class="headerlink" title="any"></a>any</h1><p><code>any</code> 这个函数返回值是一个 <code>boolean</code> 类型，用于判断集合内元素是否用满足条件的，如果有任意一个集合满足该条件，则返回 <code>true</code> 否是为 <code>false</code>。</p><p>示例代码</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>) <span class="comment">//sum = 193</span></div><div class="line">    <span class="keyword">val</span> l = list.any &#123;</div><div class="line">        it &gt; <span class="number">30</span></div><div class="line">    &#125;</div><div class="line">    println(<span class="string">"判断结果为 <span class="subst">$l</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>输出结果为</p><blockquote><p>判断结果为 true</p></blockquote><p>这里的 <code>it</code> 可以理解为 <code>iterator</code> 既为集合中的每个元素。之后有很多函数都是对 <code>it</code> 进行操作。</p><h1 id="all"><a href="#all" class="headerlink" title="all"></a>all</h1><p><code>all</code> 几乎和 <code>any</code> 很相似，只是用于判断每个元素，要集合内每个元素满足条件才会返回<code>ture</code>，否则为 <code>false</code></p><p>示例代码</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>) <span class="comment">//sum = 193</span></div><div class="line">    <span class="keyword">val</span> l = list.all &#123;</div><div class="line">        it &gt; <span class="number">30</span></div><div class="line">    &#125;</div><div class="line">    println(<span class="string">"判断结果为 <span class="subst">$l</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure><blockquote><p>判断结果为 false</p></blockquote><h1 id="map"><a href="#map" class="headerlink" title="map"></a>map</h1><p><code>map</code> 这个函数对集合内的每一个元素进行迭代遍历，基本可以替代<code>for</code>循环。</p><p>示例</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line"></div><div class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>)</div><div class="line"></div><div class="line">    list.map &#123;</div><div class="line">        print(<span class="string">"<span class="subst">$it</span> "</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>输出结果为：</p><blockquote><p>1 2 4 67 7 23 55 34 </p></blockquote><p>这样就完成了对集合的迭代输出。</p><h1 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h1><p>顾名思义，filter为一个过滤器，可以对我们集合元素进行一次过滤，留下我们想要的元素。<br>例如我们要集合中的偶数元素。</p><p>示例代码</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line"></div><div class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>)</div><div class="line"></div><div class="line">    list.filter &#123; it % <span class="number">2</span> == <span class="number">0</span> &#125;.map &#123; print(<span class="string">"<span class="subst">$it</span> "</span>) &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>输出</p><blockquote><p>2 4 34 </p></blockquote><p>完成了对偶数元素的过滤，结合map进行一下输出。如果我们不用filter和map进行输出，那么我们将会写下下面的这种代码，而且 IDEA 也会给我们警告，让我们及时改进。</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0</span> until list.size) &#123;</div><div class="line">    <span class="keyword">if</span> (list[i] % <span class="number">2</span> == <span class="number">0</span>) &#123;</div><div class="line">        print(<span class="string">"<span class="subst">$&#123;list[i]&#125;</span> "</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>此时就会感觉到了这些语法对于代码的简洁和易用。</p><h1 id="count"><a href="#count" class="headerlink" title="count"></a>count</h1><p>即使对集合元素进行统计，如果直接使用 <code>count()</code> 对集合元素统计和直接用 <code>size</code> 没有什么区别，所以说 <code>count</code> 有更加高级的用法。</p><p>比如对集合内的某个元素进行统计或者某种类型的元素进行统计，比如统计集合中偶数的个数。</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>)</div><div class="line">    <span class="keyword">val</span> count = list.count &#123;</div><div class="line">        it % <span class="number">2</span>== <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">    println(<span class="string">"集合中的偶数个数为 <span class="subst">$count</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>输出</p><blockquote><p>集合中的偶数个数为 3</p></blockquote><h1 id="groupBy"><a href="#groupBy" class="headerlink" title="groupBy"></a>groupBy</h1><p>这个用于分组，对元素进行按要求分组，最后的结果也会保存在两个集合中， true 和 false</p><p>示例代码</p><p>对奇偶数进行分组</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">val</span> list: List&lt;<span class="built_in">Int</span>&gt; = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">67</span>, <span class="number">7</span>, <span class="number">23</span>, <span class="number">55</span>, <span class="number">34</span>) <span class="comment">//sum = 193</span></div><div class="line">    <span class="keyword">val</span> result = list.groupBy &#123;</div><div class="line">        it % <span class="number">2</span> == <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">    println(<span class="string">"<span class="subst">$result</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>输出结果</p><blockquote><p>{false=[1, 67, 7, 23, 55], true=[2, 4, 34]}</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://7xt81u.com1.z0.glb.clouddn.com/1c40461a60dff3e4e24775e216e80547.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;kotlin&lt;/code&gt; 对集合问题的支持很好，有很多方法
+      
+    
+    </summary>
+    
+    
+      <category term="kotlin" scheme="http://youngxhui.github.io/tags/kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kotlin 1.2:平台之间共享代码</title>
+    <link href="http://youngxhui.github.io/2017/12/02/Kotlin-1-2-%E5%B9%B3%E5%8F%B0%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E4%BB%A3%E7%A0%81/"/>
+    <id>http://youngxhui.github.io/2017/12/02/Kotlin-1-2-平台之间共享代码/</id>
+    <published>2017-12-02T06:51:59.000Z</published>
+    <updated>2017-12-02T09:45:42.149Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。</p><p>原文地址<a href="https://blog.jetbrains.com/kotlin/2017/11/kotlin-1-2-released/" target="_blank" rel="noopener">Kotlin 1.2 Released: Sharing Code between Platforms</a></p><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>今天，我们将要发布 Kotlin 1.2。这是一个重要的新版本和一个大的步伐在我们朝着使用 Kotlin 在现代应用程序中的道路上。</p><p>在 Kotlin 1.1 中，我们正式的发布了 <strong>JavaScript 目标</strong>，允许你去编译 Kotlin 代码成为 JS 并且运行在浏览器上。在 <strong>Kotlin 1.2</strong> 中，我们将要添加 <strong>JVM 和 JavaScript</strong> 的代码重用成为可能。现在你可以写一次应用程序的逻辑代码，而在你的应用程序中所有层重用它——后端，浏览器前端和Android移动应用。我们也会在库上进行工作，帮助你重用更多的代码。比如跨平台库。</p><p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/cake3-1.png" alt=""></p><p>Kotlin 1.2 是已经绑定在 <a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA 2017.3</a>中，将会在本周发布。如果你正在使用的是 Android Studio 或者 一个旧版本的 Intellij IDEA，你可以从 Tools | Kotlin | Configure Kotlin Plugin 更新框中安装新的版本。</p><p>这个版本包括了大量外部贡献者的工作，并且我们想感谢向我们反馈，提交问题和尤其是提交了PR的每个人。</p><h2 id="多平台项目"><a href="#多平台项目" class="headerlink" title="多平台项目"></a>多平台项目</h2><p>一个多平台项目允许你编译在你的应用程序的多层 —— 后端，前端和Android应用 —— 在相同的代码基础上。这样的一个项目包含了 <strong>相同模块</strong>,与平台无关以及<strong>特定平台的模块</strong>，包含了特定平台的代码( JVM 或者 JS )和使用了特定平台的库。从通用模块调用特定平台的代码，你可以指定<strong>预期的声明</strong>——所有平台特定模块需要提供<strong>实际实现</strong>声明。</p><p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/MPP.png" alt=""></p><p>有关该功能的更多信息，请查看这个<a href="http://kotlinlang.org/docs/reference/multiplatform.html" target="_blank" rel="noopener">文档</a></p><p>如前所述，我们也在编写一组公共库允许你将更多的逻辑代码转移到公共代码：</p><ul><li><p><a href="http://kotlinlang.org/api/latest/kotlin.test/index.html" target="_blank" rel="noopener">kotlin.test</a>,包括开箱即用的Kotlin1.2，让你写一次测试并且运行在JVM 和 JS 下；</p></li><li><p><a href="https://github.com/kotlin/kotlinx.html" target="_blank" rel="noopener">kotlin.html</a>支持 <strong>同构渲染</strong> — 用相同的代码渲染 HTML 在后端和在前端；</p></li><li><p><a href="https://github.com/kotlin/kotlinx.serialization" target="_blank" rel="noopener">kotlinx.serialization</a>允许你轻松的对 Kotlin对象编组在你的应用程序的不同的层之间，使用 JSON 或者 ProtoBuf 进行序列化格式化。</p></li></ul><p>请注意，多平台项目目前是一个实验性功能；这意味着这个功能是准备使用，但是我们也许需要去改变设计在之后的版本(并且如果我们这样做，我们将会提供代码迁移工具)。</p><h2 id="编译性能"><a href="#编译性能" class="headerlink" title="编译性能"></a>编译性能</h2><p>在1.2的发展过程中，我们花费了很多精力来使编译过程更快。我们已经比Kotlin1.1提高了大约 25% 并且我们看见进一步改进的巨大潜力，它将会在发布在 1.2.x的更新中。</p><p>下方的图片展示了两个用Kotlin的大型JetBrains项目不同的编译时间：<br><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/CompilationSpeed.png" alt=""></p><h2 id="其他语言和库的改进"><a href="#其他语言和库的改进" class="headerlink" title="其他语言和库的改进"></a>其他语言和库的改进</h2><p>我们也做了许多小的改进在语言和标准库：</p><ul><li><p><a href="http://kotlinlang.org/docs/reference/whatsnew12.html#array-literals-in-annotations" target="_blank" rel="noopener">更简洁的语法</a> 用于将多个参数传递给注解(数组 文字(literals)) <em>不知如何翻译literals 译者注</em></p></li><li><p>支持 <code>lateinit</code> 修饰在全局属性和局部属性，以及检查一个 <code>lateinit</code> 是否被初始化；</p></li><li><p><a href="http://kotlinlang.org/docs/reference/whatsnew12.html#smart-cast-improvements" target="_blank" rel="noopener">更加聪明的智能推导</a>和<a href="http://kotlinlang.org/docs/reference/whatsnew12.html#information-from-explicit-casts-is-used-for-type-inference" target="_blank" rel="noopener">改进的类型推断</a>在一些情况下。</p></li><li><p>标准库和 Java9 中引入的分包限制的兼容；</p></li><li><p>新的 <code>kotlin.math</code>包在标准库中；</p></li><li><p>新的标准库函数在处理序列和集合，包含了<a href="http://kotlinlang.org/docs/reference/whatsnew12.html#windowed-chunked-zipwithnext" target="_blank" rel="noopener">一组函数</a> 为了拆分集合和序列为可能重叠的固定大小的组。</p></li></ul><p>更多的信息和代码示例，请看 <a href="http://kotlinlang.org/docs/reference/whatsnew12.html" target="_blank" rel="noopener">Kotlin1.2中新功能</a></p><h2 id="世界各地的Kotlin"><a href="#世界各地的Kotlin" class="headerlink" title="世界各地的Kotlin"></a>世界各地的Kotlin</h2><p>自从今年3月发布的Kotlin1.1以来，Kotlin已经取得了巨大的收获在世界各地。这是 KotlinConf 的高潮，我们第一次全球会议，有着1200参会者在11月2，3日的旧金山。我们已经记录了所有的会谈，并且<a href="https://kotlinconf.com/talks/" target="_blank" rel="noopener">视频已经可以看</a>。</p><p>Kotlin现在是一个Android开发官方支持的语言，开箱即用的Android Studio 3.0，已经谷歌发布了官方<a href="https://developer.android.com/samples/index.html?language=kotlin" target="_blank" rel="noopener">示例</a>和<a href="https://android.github.io/kotlin-guides/" target="_blank" rel="noopener">风格指南</a>。结果是，在Android Studio中超过了 17% 的项目使用 Kotlin，包含来自很多热门的创业公司以及财富500强公司的许多应用程序。</p><p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KotlinConfUsers.jpg" alt=""></p><p>在服务器端，<a href="https://spring.io/blog/2017/09/28/spring-framework-5-0-goes-ga" target="_blank" rel="noopener">Spring 5.0</a> 已经发布，有着<a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/languages.html#kotlin" target="_blank" rel="noopener">许多Kotlin支持的功能</a>,而且 <a href="http://vertx.io/" target="_blank" rel="noopener">vert.x</a> 已经<a href="http://vertx.io/docs/vertx-core/kotlin/" target="_blank" rel="noopener">支持Kotlin</a>在3.4.0后。当然，Gradle支持开箱即用Kotlin DSL，而且 Gradle Kotlin DSL 项目正在迅速的接近1.0版本。</p><p>在Github上，开源的Kotlin代码行数已经超过了2.5亿。而在 Stack Overflow，Kotlin是<a href="https://stackoverflow.blog/2017/10/31/disliked-programming-languages/" target="_blank" rel="noopener">增长最快的语言之一和最不反感的语言之一</a></p><p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KotlinAdoption.png" alt=""></p><p>围绕Kotlin的社区建立同样也是令人吃惊的，已经有超过100用户组在全世界，我们很难追踪到所有的人 —— 但是针对我们所知道的，这个<a href="http://kotlinlang.org/community/talks.html" target="_blank" rel="noopener">会谈地图</a>给了你一个很好的想法，kotlin是多么广泛的使用。</p><p><img src="https://d3nmt5vlzunoa1.cloudfront.net/kotlin/files/2017/11/KUGmap.png" alt=""></p><p>对于刚刚学习Kotlin的人来说，书籍的数量是不断的增长(包含我们自己的 “Kotlin in Action”,现在有<a href="https://manning.com/books/kotlin-in-action" target="_blank" rel="noopener">英文</a>，<a href="https://dmkpress.com/catalog/computer/programming/java/978-5-97060-497-7/" target="_blank" rel="noopener">俄语</a>，<a href="https://www.amazon.co.jp/Kotlin%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-Dmitry-Jemerov/dp/4839961743/ref=sr_1_2?ie=UTF8&amp;qid=1511539431&amp;sr=8-2&amp;keywords=kotlin" target="_blank" rel="noopener">日语</a>，<a href="https://www.amazon.com/Kotlin%E5%AE%9E%E6%88%98-Svetlana-Isakova-Dmitry-Jemerov/dp/B07568C58F/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1511539582&amp;sr=1-3" target="_blank" rel="noopener">中文</a>和<a href="https://novatec.com.br/livros/kotlin-em-acao/" target="_blank" rel="noopener">葡萄牙语</a>),线上课程，教程和<a href="http://kotlinlang.org/community/" target="_blank" rel="noopener">其他资源</a></p><h2 id="团队见面：网络研讨会和Reddit-AMA"><a href="#团队见面：网络研讨会和Reddit-AMA" class="headerlink" title="团队见面：网络研讨会和Reddit AMA"></a>团队见面：网络研讨会和Reddit AMA</h2><p>分享你更多的信息关于新版本，我们计划组织一个<a href="https://info.jetbrains.com/Kotlin-Webinar-December2017.html" target="_blank" rel="noopener">网络研讨会关于Kotlin1.2多平台项目</a>在12月7日，18:00 CET。请注册；空间有限。</p><p>Kotlin团队也将会举办 AMA(Ask Me Anything) 在 <a href="https://www.reddit.com/r/Kotlin/" target="_blank" rel="noopener">Kotlin Reddit</a> 上在12月5号。我们将开始中午开始(CET),并且我们接下来的24小时和你在一起。</p><h2 id="如何升级"><a href="#如何升级" class="headerlink" title="如何升级"></a>如何升级</h2><p>一如既往，你可以<strong>在线尝试Kotlin</strong>在<a href="http://try.kotlinlang.org/" target="_blank" rel="noopener">try.kotlinlang.org</a></p><ul><li><p>在 Maven，Gradle和npm中：使用<code>1.2.0</code>作为编译器和标准库的版本号。看<a href="http://kotlinlang.org/docs/reference/using-gradle.html" target="_blank" rel="noopener">这里</a></p></li><li><p><strong>IntelliJ IDEA</strong>：2017.3已经和Kotlin1.2绑定，在早期版本中安装或者升级 Kotlin 插件到1.2.0版本。</p></li><li><p><strong>Android Studio</strong>：安装或者升级插件通过 <code>Plugin Manager</code>。</p></li><li><p><strong>Eclips</strong>：安装插件在 <a href="https://marketplace.eclipse.org/content/kotlin-plugin-eclipse" target="_blank" rel="noopener">MarketPlace</a>。</p></li><li><p><strong>命令行编译</strong>可以从<a href="https://github.com/JetBrains/kotlin/releases/tag/v1.2.0" target="_blank" rel="noopener">Github发布页面</a>上下载。</p></li></ul><p><strong>兼容性</strong> 在Kotlin1.2的语言和标准库是<a href="http://kotlinlang.org/docs/reference/compatibility.html" target="_blank" rel="noopener">向后兼容的(模块错误)</a>:如果一些编译和运行在1.0或者1.1，将会继续在1.2上运行。帮助逐渐共享的打团队，我们将提供不使用新特性的编译开关。<a href="http://kotlinlang.org/docs/reference/compatibility.html#binary-compatibility-warnings" target="_blank" rel="noopener">这里</a>是一个包含可能的缺陷文档</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;这是一个尝试，之前没有翻译过任何技术文章，做一个尝试，也算是学习，尽管现在这个译文在网上已经是满天飞了。&lt;/p&gt;
+&lt;p&gt;原文地址&lt;a hre
+      
+    
+    </summary>
+    
+    
+      <category term="kotlin" scheme="http://youngxhui.github.io/tags/kotlin/"/>
+    
+      <category term="译文" scheme="http://youngxhui.github.io/tags/%E8%AF%91%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Number of 1 Bits(#191)</title>
+    <link href="http://youngxhui.github.io/2017/12/01/LeetCode-Number-of-1-Bits-191/"/>
+    <id>http://youngxhui.github.io/2017/12/01/LeetCode-Number-of-1-Bits-191/</id>
+    <published>2017-12-01T12:20:38.000Z</published>
+    <updated>2017-12-01T12:32:06.068Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Number-of-1-Bits-191"><a href="#Number-of-1-Bits-191" class="headerlink" title="Number of 1 Bits(#191)"></a>Number of 1 Bits(#191)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>191</td><td>Number of 1 Bits</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题其实就是统计一个无符号整数的二进制数中1的个数，<code>Java</code> 已经给我们提供了api <code>Intger.bitCount(int n)</code>,所以一行代码解决</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="comment">// you need to treat n as an unsigned value</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> Integer.bitCount(n);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Number-of-1-Bits-191&quot;&gt;&lt;a href=&quot;#Number-of-1-Bits-191&quot; class=&quot;headerlink&quot; title=&quot;Number of 1 Bits(#191)&quot;&gt;&lt;/a&gt;Number of 1 Bits(#191)&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Self Dividing Numbers(#728)</title>
+    <link href="http://youngxhui.github.io/2017/12/01/LeetCode-Self-Dividing-Numbers-728/"/>
+    <id>http://youngxhui.github.io/2017/12/01/LeetCode-Self-Dividing-Numbers-728/</id>
+    <published>2017-12-01T06:05:03.000Z</published>
+    <updated>2017-12-01T12:28:03.054Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Self-Dividing-Numbers-728"><a href="#Self-Dividing-Numbers-728" class="headerlink" title="Self Dividing Numbers(#728)"></a>Self Dividing Numbers(#728)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>728</td><td>Self Dividing Numbers</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题首先要把给的数字每一位进行分割，写了一个递归 foo 返回一个list，这个list是数字的每一位。</p><p>之后再写个循环对产生的结果进行遍历就好。基本没什么难点。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">selfDividingNumbers</span><span class="params">(left: <span class="type">Int</span>, right: <span class="type">Int</span>)</span></span>: List&lt;<span class="built_in">Int</span>&gt; &#123;</div><div class="line">        <span class="keyword">var</span> result = ArrayList&lt;<span class="built_in">Int</span>&gt;()</div><div class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> left..right) &#123;</div><div class="line">            <span class="keyword">var</span> list = ArrayList&lt;<span class="built_in">Int</span>&gt;()</div><div class="line">            <span class="keyword">val</span> arrayList = foo(i, list)</div><div class="line">            <span class="keyword">var</span> sum = <span class="number">0</span></div><div class="line">            arrayList.map &#123;</div><div class="line">                <span class="keyword">if</span> (it != <span class="number">0</span> &amp;&amp; i % it == <span class="number">0</span>) &#123;</div><div class="line">                    sum += <span class="number">1</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (sum == arrayList.size) &#123;</div><div class="line">                result.add(i)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">foo</span><span class="params">(num: <span class="type">Int</span>, list: <span class="type">ArrayList</span>&lt;<span class="type">Int</span>&gt;)</span></span>: ArrayList&lt;<span class="built_in">Int</span>&gt; &#123;</div><div class="line">        <span class="keyword">if</span> ((num / <span class="number">10</span> == <span class="number">0</span>) and (num % <span class="number">10</span> == <span class="number">0</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> list</div><div class="line">        &#125;</div><div class="line">        list.add(num % <span class="number">10</span>)</div><div class="line">        <span class="keyword">val</span> nums = num / <span class="number">10</span></div><div class="line">        foo(nums, list)</div><div class="line">        <span class="keyword">return</span> list</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Self-Dividing-Numbers-728&quot;&gt;&lt;a href=&quot;#Self-Dividing-Numbers-728&quot; class=&quot;headerlink&quot; title=&quot;Self Dividing Numbers(#728)&quot;&gt;&lt;/a&gt;Self Divi
+      
+    
+    </summary>
+    
+    
+      <category term="Math" scheme="http://youngxhui.github.io/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Binary Number with Alternating Bits(#693)</title>
+    <link href="http://youngxhui.github.io/2017/12/01/LeetCode-Binary-Number-with-Alternating-Bits-693/"/>
+    <id>http://youngxhui.github.io/2017/12/01/LeetCode-Binary-Number-with-Alternating-Bits-693/</id>
+    <published>2017-12-01T05:44:30.000Z</published>
+    <updated>2017-12-01T12:26:13.959Z</updated>
+    
+    <content type="html"><![CDATA[<p> 好久都没有写过博客了，大概一个月，一个字都没有写。乱七八糟的的事情有点多，再加上考试等，一个月也没有做什么。最近发现 <code>LeetCode</code> 上支持了 <code>kotlin</code>。算法的学习还是不能停止的，毕竟自己还是个渣。</p><p> 估计以后的 <code>LeetCode</code> 上的题都是用 <code>kotlin</code> 刷了。</p><h1 id="Binary-Number-with-Alternating-Bits-693"><a href="#Binary-Number-with-Alternating-Bits-693" class="headerlink" title="Binary Number with Alternating Bits(#693)"></a>Binary Number with Alternating Bits(#693)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>693</td><td>Binary Number with Alternating Bits</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题是要找到带有交替位的二进制数，比如 <code>2(10)</code>, <code>5(101)</code> ,这样的数字。</p><p>我的想法应该是相对来说比较笨的，就是先把数转为二进制数，再将二进制数分割位字符数组，对字符数组进行奇数偶数的选择。通过选择后判断奇偶位中的每一位是否相同。</p><p>第一次提交的时候就是这个样子想的，当提交代码的时候发现错了因为 <code>7(111)</code> 这个样子的并不符合奇偶交替，而是一样，所以在后面加了一个判断，判断奇偶位的内容是否一致，如果一样代表不成立。</p><p>当再次提交的时候发现忽略了 <code>1</code> 因为有了判断，所以1的偶位肯定是不存在的，这样的话就会判断出错误的结果，最后在开头添加这个判断。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">hasAlternatingBits</span><span class="params">(n: <span class="type">Int</span>)</span></span>: <span class="built_in">Boolean</span> &#123;</div><div class="line">        <span class="keyword">if</span> (n ==<span class="number">1</span> )&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">var</span> flag = <span class="literal">true</span></div><div class="line">        <span class="keyword">val</span> a = Integer.toBinaryString(n)</div><div class="line">        <span class="keyword">val</span> b: CharArray = a.toCharArray()</div><div class="line">        <span class="keyword">val</span> c = ArrayList&lt;<span class="built_in">Char</span>&gt;()</div><div class="line">        <span class="keyword">val</span> d = ArrayList&lt;<span class="built_in">Char</span>&gt;()</div><div class="line">        <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0</span> until b.size) &#123;</div><div class="line">            <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;</div><div class="line">                c.add(b[i])</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                d.add(b[i])</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">var</span> twp1 = <span class="string">'0'</span></div><div class="line">        <span class="keyword">var</span> twp2 = <span class="string">'1'</span></div><div class="line">        <span class="keyword">if</span> (c.size != <span class="number">0</span>) &#123;</div><div class="line">            twp1 = c[<span class="number">0</span>]</div><div class="line">            <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span> until c.size) &#123;</div><div class="line">                <span class="keyword">if</span> (c[i] != twp1) &#123;</div><div class="line">                    flag = <span class="literal">false</span></div><div class="line">                    <span class="keyword">break</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (d.size != <span class="number">0</span>) &#123;</div><div class="line">            twp2 = d[<span class="number">0</span>]</div><div class="line">            <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span> until d.size) &#123;</div><div class="line">                <span class="keyword">if</span> (d[i] != twp2) &#123;</div><div class="line">                    flag = <span class="literal">false</span></div><div class="line">                    <span class="keyword">break</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (twp1 == twp2) &#123;</div><div class="line">            flag = <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> flag</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 好久都没有写过博客了，大概一个月，一个字都没有写。乱七八糟的的事情有点多，再加上考试等，一个月也没有做什么。最近发现 &lt;code&gt;LeetCode&lt;/code&gt; 上支持了 &lt;code&gt;kotlin&lt;/code&gt;。算法的学习还是不能停止的，毕竟自己还是个渣。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大创项目总结</title>
+    <link href="http://youngxhui.github.io/2017/10/15/%E5%A4%A7%E5%88%9B%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.github.io/2017/10/15/大创项目总结/</id>
+    <published>2017-10-15T07:13:01.000Z</published>
+    <updated>2017-10-15T08:14:45.746Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始的时候认为接口就是对数据库了的一个映射，不外乎 增删改查。写的多了，重构了几次，才明白了出一个接口是有很多约束的。从开始到现在，虽然项目还没有做完，就是一直拖啊拖，小伙伴也不给力啊，本来是两个人开发，可是另一个小伙伴的贡献代码估计不足十分之一，之后又重构了几乎所有代码，将 <code>Java</code> 代码转向了 <code>Kotlin</code>。当然做的越多也就收获的越多。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>这是一个比赛项目，大学生创新创业大赛，这种比赛没什么难点，简单的说就是一个讲PPT比赛。但是我还是希望可以做出来，也算是对自己的一个锻炼。</p><p>项目开始的时候还没有学习过关于 web 的任何开发，寒假自学了一个月从 <code>tomcat</code>，<code>jsp</code>，<code>servlet</code>，<code>spring</code>，<code>springmvc</code>虽然说没有太多的深入，但是照猫画虎的可以写出一点的东西，然后就是了解 <code>REST</code> ，都是一点一滴的慢慢积累起来的。</p><p>因为从来没有项目经验，更没有合作经验，就看了很多项目合作的文章，也问了一些学长。依葫芦画瓢，在小组内制订了很多规范和标准，参考了当时的 阿里开源的 Java开发规约文档，就这样开始了迷迷糊糊的项目开发。</p><h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><p>整体结构那就是 <code>mvc</code> 开发模式，刚刚开始的时候真的分不清 <code>service层</code> ，<code>controller层</code> 的具体划分，个人的理解就是 <code>controller</code> 负责请求的响应和答复，<code>service</code>  负责具体的逻辑处理。</p><p>项目结构如下：</p><ul><li>controller</li><li>service</li><li><ul><li>impl </li></ul></li><li>dao</li><li><ul><li>impl</li></ul></li><li><ul><li>rowmapper</li></ul></li><li>api</li><li>model</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://youngxhui.github.io/tags/java/"/>
+    
+      <category term="kotlin" scheme="http://youngxhui.github.io/tags/kotlin/"/>
+    
+      <category term="Spring" scheme="http://youngxhui.github.io/tags/Spring/"/>
+    
+      <category term="数据库" scheme="http://youngxhui.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Length of Last Word(#58)</title>
+    <link href="http://youngxhui.github.io/2017/09/14/LeetCode-Length-of-Last-Word-58/"/>
+    <id>http://youngxhui.github.io/2017/09/14/LeetCode-Length-of-Last-Word-58/</id>
+    <published>2017-09-14T11:54:04.000Z</published>
+    <updated>2018-02-12T03:57:40.905Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Length-of-Last-Word-58"><a href="#Length-of-Last-Word-58" class="headerlink" title="Length of Last Word(#58)"></a>Length of Last Word(#58)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>58</td><td>Length of Last Word</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>题目要求计算出字符串最后一个单词的长度，如果不存在就返回 <code>0</code> 。 首先就是要判断这个字符串中有没有字符，是否是一个空的字符串，如果是返回 <code>0</code>。 否则的话就是通过 split() 切割字符串。最后返回最后一个字符串的长度就好。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>Java 代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLastWord</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (s.trim().isEmpty()) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        String[] args = s.split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">return</span> args[args.length - <span class="number">1</span>].length();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>Kotlin 代码</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">lengthOfLastWord</span><span class="params">(s: <span class="type">String</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> s.trim().substringAfterLast(<span class="string">' '</span>).length</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Length-of-Last-Word-58&quot;&gt;&lt;a href=&quot;#Length-of-Last-Word-58&quot; class=&quot;headerlink&quot; title=&quot;Length of Last Word(#58)&quot;&gt;&lt;/a&gt;Length of Last Wor
+      
+    
+    </summary>
+    
+    
+      <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Add Digits(#258)</title>
+    <link href="http://youngxhui.github.io/2017/09/10/LeetCode-Add-Digits-258/"/>
+    <id>http://youngxhui.github.io/2017/09/10/LeetCode-Add-Digits-258/</id>
+    <published>2017-09-10T11:34:01.000Z</published>
+    <updated>2017-12-01T12:23:02.630Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Add-Digits-258"><a href="#Add-Digits-258" class="headerlink" title="Add Digits(#258)"></a>Add Digits(#258)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>258</td><td>Add Digits</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>竟然还有这样的操作？？？？😥</p><p>一个非0非9的数除以9竟然就是答案，这样的规律大佬们是如何找到的？</p><p>🤔</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addDigits</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</div><div class="line">          <span class="keyword">return</span> num == <span class="number">0</span>? <span class="number">0</span>: (num% <span class="number">9</span> == <span class="number">0</span>? <span class="number">9</span>: (num%<span class="number">9</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Add-Digits-258&quot;&gt;&lt;a href=&quot;#Add-Digits-258&quot; class=&quot;headerlink&quot; title=&quot;Add Digits(#258)&quot;&gt;&lt;/a&gt;Add Digits(#258)&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Math" scheme="http://youngxhui.github.io/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Find the Difference(#389)</title>
+    <link href="http://youngxhui.github.io/2017/09/10/LeetCode-Find-the-Difference-389/"/>
+    <id>http://youngxhui.github.io/2017/09/10/LeetCode-Find-the-Difference-389/</id>
+    <published>2017-09-10T11:20:09.000Z</published>
+    <updated>2017-12-01T12:26:20.530Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Find-the-Difference-389"><a href="#Find-the-Difference-389" class="headerlink" title="Find the Difference(#389)"></a>Find the Difference(#389)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>389</td><td>Find the Difference</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 <a href="http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/">#136</a>,即</p><blockquote><p>N ^ N = 0<br>N ^ 0 = 0</p></blockquote><p>利用这个规律可以很方便的找出那个不同的字符。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">findTheDifference</span><span class="params">(String s, String t)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] sc = s.toCharArray();</div><div class="line">        <span class="keyword">char</span>[] tc = t.toCharArray();</div><div class="line">        </div><div class="line">        <span class="keyword">int</span> out = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: sc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: tc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>)out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Find-the-Difference-389&quot;&gt;&lt;a href=&quot;#Find-the-Difference-389&quot; class=&quot;headerlink&quot; title=&quot;Find the Difference(#389)&quot;&gt;&lt;/a&gt;Find the Differ
+      
+    
+    </summary>
+    
+    
+      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+    
+      <category term="Hash Table" scheme="http://youngxhui.github.io/tags/Hash-Table/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>协同过滤算法</title>
+    <link href="http://youngxhui.github.io/2017/09/01/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95/"/>
+    <id>http://youngxhui.github.io/2017/09/01/协同过滤算法/</id>
+    <published>2017-09-01T09:52:48.000Z</published>
+    <updated>2017-10-12T11:05:36.550Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在推荐系统中有很多算法，其中一种就是协同过滤算法。</p><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>在协同过滤算法中，分为两类，基于用户的协同过滤(UserCF)和基于物品的协同过滤(ItemCF)。每个类型的适用情况不同。</p><p>在上述的两种类型中，基于用户的协同过滤算法是不太常用的，原因如下</p><ul><li>用户的数量是远远大于物品的数量，计算用户之间的相似度计算量会很大。</li><li>对于一个新用户很难找到相似度</li></ul><p>所以一般是不会使用基于用户的协同过滤，但是并不表示不用，一般用于新闻推送等。</p><h1 id="相似度计算"><a href="#相似度计算" class="headerlink" title="相似度计算"></a>相似度计算</h1><h2 id="离散图表示"><a href="#离散图表示" class="headerlink" title="离散图表示"></a>离散图表示</h2><p>目前有五个用户对商品1和商品2的喜爱程度，分析用户之间的关系。</p><table><thead><tr><th>用户</th><th>商品1</th><th>商品2</th></tr></thead><tbody><tr><td>1</td><td>3.3</td><td>6.5</td></tr><tr><td>2</td><td>5.8</td><td>2.6</td></tr><tr><td>3</td><td>3.6</td><td>6.3</td></tr><tr><td>4</td><td>3.4</td><td>5.8 </td></tr><tr><td>5</td><td>5.2</td><td>3.1 </td></tr></tbody></table><p>寻找他们的相似度</p><p>通过离散图来进行表示</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/shopping.png" alt=""></p><p>可以看出 <code>用户1</code> <code>用户3</code> <code>用户4</code> 之间是存在关系的。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding = utf8</span></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="comment"># 散点图分析五个用户之间的相关程度</span></div><div class="line"><span class="comment"># x轴为对于商品 1 的喜欢程度</span></div><div class="line"><span class="comment"># y轴是对于商品 2 的喜欢程度</span></div><div class="line"><span class="comment"># 数据如下</span></div><div class="line"><span class="comment"># 商品1 [3.3, 5.8, 3.6, 3.4, 5.2]</span></div><div class="line"><span class="comment"># 商品2 [6.5, 2.6, 6.3, 5.8, 3.1]</span></div><div class="line"></div><div class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</div><div class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</div><div class="line">color = [<span class="string">'r'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'g'</span>, <span class="string">'y'</span>, <span class="string">'k'</span>, <span class="string">'m'</span>, <span class="string">'0xff0012'</span>]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1)):</div><div class="line">    plt.scatter(shop1[i], shop2[i], c=color[i])</div><div class="line">plt.xlim(<span class="number">0</span>, <span class="number">10</span>)</div><div class="line">plt.ylim(<span class="number">0</span>, <span class="number">10</span>)</div><div class="line">plt.ylabel(<span class="string">"shopping 2"</span>)</div><div class="line">plt.xlabel(<span class="string">"shopping 1"</span>)</div><div class="line">plt.legend(<span class="string">'12345'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure><h2 id="欧几里得距离"><a href="#欧几里得距离" class="headerlink" title="欧几里得距离"></a>欧几里得距离</h2><p>欧几里得距离是最常用的距离公式,用于计算两点之间的距离。公式如下：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/render.gif" alt=""></p><p>通过计算两点之间的距离来表示他们之间的相关程度。</p><p>我们通过 <code>python</code> 计算 欧几里得距离。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding = utf8</span></div><div class="line"></div><div class="line"><span class="comment">#        1    2     3   4   5</span></div><div class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</div><div class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1) - <span class="number">1</span>):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(shop2)):</div><div class="line">        distance = (shop1[i] - shop1[j]) ** <span class="number">2</span> + (shop2[i] - shop2[j]) ** <span class="number">2</span></div><div class="line">        correlation = <span class="number">1</span> / (<span class="number">1</span> + distance) <span class="comment"># 将范围缩小至0 ~ 1 之间</span></div><div class="line">        <span class="keyword">if</span> correlation &gt; <span class="number">0.60</span>:  <span class="comment"># 根据需求更换相关系数</span></div><div class="line">            print(<span class="string">"第 &#123;&#125; and &#123;&#125;  distance is &#123;&#125;"</span>.format(i + <span class="number">1</span>, j + <span class="number">1</span>, correlation))</div></pre></td></tr></table></figure><p>计算结果</p><hr><blockquote><p>第 1 和 2  相关系数是 0.04452359750667854</p><p>第 1 和 3  相关系数是 0.8849557522123891</p><p>第 1 和 4  相关系数是 0.6666666666666665</p><p>第 1 和 5  相关系数是 0.061842918985776124</p><p>第 2 和 3  相关系数是 0.051203277009728626</p><p>第 2 和 4  相关系数是 0.058823529411764705</p><p>第 2 和 5  相关系数是 0.6211180124223604</p><p>第 3 和 4  相关系数是 0.7751937984496123</p><p>第 3 和 5  相关系数是 0.07246376811594203</p><p>第 4 和 5  相关系数是 0.08673026886383348</p></blockquote><hr><p>得出结论，基本和离散图相似。</p><p>这样就可以根据需求来判断用户之间的相似度。</p><h2 id="皮尔逊相关系数"><a href="#皮尔逊相关系数" class="headerlink" title="皮尔逊相关系数"></a>皮尔逊相关系数</h2><p>皮尔逊相关系数同样也是计算距离的一种方式</p><p>通过相关系数可以计算出他们的相关程度。</p><h3 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h3><p>皮尔逊相关系数是有一定的适用条件。</p><blockquote><p>当两个变量的标准差都不为零时，相关系数才有定义，皮尔逊相关系数适用于：<br>(1)、两个变量之间是线性关系，都是连续数据。<br>(2)、两个变量的总体是正态分布，或接近正态的单峰分布。<br>(3)、两个变量的观测值是成对的，每对观测值之间相互独立。</p></blockquote><p>同样这个算法也是有缺陷的,但数据越少的时候,波动性越大。当数据很少的时候不建议使用。</p><p>皮尔逊相关系数公式有四个</p><p>公式一：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person1.gif" alt=""></p><p>公式二：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person2.gif" alt=""></p><p>公式三：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif" alt=""></p><p>公式四：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p><p>相关系数</p><ul><li>0.8-1.0     极强相关</li><li>0.6-0.8     强相关</li><li>0.4-0.6     中等程度相关</li><li>0.2-0.4     弱相关</li><li>0.0-0.2     极弱相关或无相关</li></ul><p>我们通过第四个公式进行计算</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p><h3 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h3><p>通过 <code>python</code> 计算出相关系数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding=utf8</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 皮尔孙相关系数计算</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">PearsonCorrelationSimilarity</span><span class="params">(vec1, vec2)</span>:</span></div><div class="line">    value = range(len(vec1))</div><div class="line"></div><div class="line">    sum_vec1 = sum([vec1[i] <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line">    sum_vec2 = sum([vec2[i] <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line"></div><div class="line">    square_sum_vec1 = sum([pow(vec1[i], <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line">    square_sum_vec2 = sum([pow(vec2[i], <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line"></div><div class="line">    product = sum([vec1[i] * vec2[i] <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line"></div><div class="line">    numerator = product - (sum_vec1 * sum_vec2 / len(vec1))</div><div class="line">    dominator = ((square_sum_vec1 - pow(sum_vec1, <span class="number">2</span>) / len(vec1)) * (</div><div class="line">        square_sum_vec2 - pow(sum_vec2, <span class="number">2</span>) / len(vec2))) ** <span class="number">0.5</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> dominator == <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    result = numerator / (dominator * <span class="number">1.0</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># 五个用户对五个商品的评价</span></div><div class="line">    user1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</div><div class="line">    user2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</div><div class="line">    user3 = [<span class="number">5.5</span>, <span class="number">3.2</span>, <span class="number">6.5</span>, <span class="number">4.7</span>, <span class="number">4.4</span>]</div><div class="line">    user4 = [<span class="number">4.4</span>, <span class="number">6.2</span>, <span class="number">2.3</span>, <span class="number">5.1</span>, <span class="number">3.3</span>]</div><div class="line">    user5 = [<span class="number">2.1</span>, <span class="number">5.2</span>, <span class="number">4.2</span>, <span class="number">2.2</span>, <span class="number">4.1</span>]</div><div class="line"></div><div class="line">    userlist = [user1, user2, user3, user4, user5]</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(userlist) - <span class="number">1</span>):</div><div class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(userlist)):</div><div class="line">            result = PearsonCorrelationSimilarity(userlist[i], userlist[j])</div><div class="line">            <span class="keyword">print</span> <span class="string">"user%d 和 user%d 的相关系数是%f"</span> % (i + <span class="number">1</span>, j + <span class="number">1</span>, result)</div></pre></td></tr></table></figure><blockquote><p>user1 和 user2 的相关系数是0.999774</p><p>user1 和 user3 的相关系数是-0.847758</p><p>user1 和 user4 的相关系数是-0.841816</p><p>user1 和 user5 的相关系数是-0.915237</p><p>user2 和 user3 的相关系数是-0.841741</p><p>user2 和 user4 的相关系数是-0.835320</p><p>user2 和 user5 的相关系数是-0.909975</p><p>user3 和 user4 的相关系数是0.998987</p><p>user3 和 user5 的相关系数是0.976272</p><p>user4 和 user5 的相关系数是0.969782</p></blockquote><p>通过计算出来的结果可以看出来等到的结果</p><h2 id="余弦距离"><a href="#余弦距离" class="headerlink" title="余弦距离"></a>余弦距离</h2><p>余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个个体间差异的大小。余弦值越接近1，就表明夹角越接近0度，也就是两个向量越相似，这就叫”余弦相似性”。</p><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>一般余弦定理这个公式运用与文本分析。</p><p>分别采用下列的文本进行</p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>A：这里距离北京有多远，火车多长时间</p><p>B:北京离这里有多远，坐火车多长时间</p><h4 id="对A，B进行分词"><a href="#对A，B进行分词" class="headerlink" title="对A，B进行分词"></a>对A，B进行分词</h4><p>A:这里/距离/北京/有/多远，火车/多长/时间</p><p>B:北京/离/这里/有/多远，坐/火车/多长/时间</p><h4 id="列出所有的词"><a href="#列出所有的词" class="headerlink" title="列出所有的词"></a>列出所有的词</h4><p>这里 距离 北京 有 多远 火车 多长 时间 离 坐</p><h4 id="进行词频统计"><a href="#进行词频统计" class="headerlink" title="进行词频统计"></a>进行词频统计</h4><p>A: 这里(1)距离(1)北京(1)有(1)多远(1)火车(1)多长(1)时间(1)离(0)坐(0)</p><p>B: 这里(1)距离(0)北京(1)有(1)多远(1)火车(1)多长(1)时间(1)离(1)坐(1)</p><h4 id="计算句子的词频向量"><a href="#计算句子的词频向量" class="headerlink" title="计算句子的词频向量"></a>计算句子的词频向量</h4><p>A (1,1,1,1,1,1,1,1,0,0)</p><p>B (1,0,1,1,1,1,1,1,1,1)</p><h4 id="通过余弦定理计算相似度"><a href="#通过余弦定理计算相似度" class="headerlink" title="通过余弦定理计算相似度"></a>通过余弦定理计算相似度</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding=utf8</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> math</div><div class="line"></div><div class="line"><span class="comment"># 余弦定理</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">cos</span><span class="params">(v1, v2)</span>:</span></div><div class="line">    l = <span class="number">0.0</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(v1)):</div><div class="line">        l += v1[i] * v2[i]</div><div class="line">    v = <span class="number">0.0</span></div><div class="line">    w = <span class="number">0.0</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(v1)):</div><div class="line">        v += math.pow(v1[i], <span class="number">2</span>)</div><div class="line">        w += math.pow(v2[i], <span class="number">2</span>)</div><div class="line">    cos = l / (math.sqrt(v) * math.sqrt(w))</div><div class="line">    <span class="keyword">return</span> cos</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    v1 = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>]</div><div class="line">    v2 = [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</div><div class="line">    l = cos(v1, v2)</div><div class="line">    <span class="keyword">print</span> l</div></pre></td></tr></table></figure><p>计算出的相似度为：</p><blockquote><p>0.824957911384</p></blockquote><p>说明这两句话基本相等</p><p>这是一些基本的相似度计算方法。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在推荐系统中有很多算法，其中一种就是协同过滤算法。&lt;/p&gt;
+&lt;h1 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerl
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://youngxhui.github.io/tags/Python/"/>
+    
+      <category term="推荐系统" scheme="http://youngxhui.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Reverse Integer(#7)</title>
+    <link href="http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/"/>
+    <id>http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/</id>
+    <published>2017-08-28T10:38:10.000Z</published>
+    <updated>2017-12-01T12:21:57.238Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Reverse-Integer-7"><a href="#Reverse-Integer-7" class="headerlink" title="Reverse Integer(#7)"></a>Reverse Integer(#7)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>7</td><td>Reverse Integer</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。<del>其实是个人很垃圾。</del></p><p>主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(<a href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/">Reverse String(#344)</a>)。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。</p><ol><li>判断正负，如果是负数，因为在后面进行绝对值的时候会无法进行正负判断，从而无法获取到正确的结果。</li><li>判断字符取绝对值后是否越界，在这里有个问题 如果使用 <code>Math.abs()</code> 这个方法的话,传入整型则返回整型，如果整型越界，则不变。</li><li>判断翻转后是否越界。</li></ol><p>总的来说就这个三个步骤。</p><p>代码中的 <code>f</code> 是为了判断是否为负数，将传入的数转化为 <code>long</code> 类型有助于后期，防止 <code>int</code> 越界。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">        <span class="keyword">boolean</span> f = x &lt; <span class="number">0</span>;</div><div class="line">        <span class="keyword">long</span> a = x;</div><div class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">        a = a &lt; <span class="number">0</span> ? -a : a;</div><div class="line">        sb.append(a);</div><div class="line">        <span class="keyword">long</span> out = f ? -Long.parseLong(sb.reverse().toString()) : Long.parseLong(sb.reverse().toString());</div><div class="line">        <span class="keyword">if</span> (out &gt;= Integer.MAX_VALUE || out &lt;= Integer.MIN_VALUE) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Reverse-Integer-7&quot;&gt;&lt;a href=&quot;#Reverse-Integer-7&quot; class=&quot;headerlink&quot; title=&quot;Reverse Integer(#7)&quot;&gt;&lt;/a&gt;Reverse Integer(#7)&lt;/h1&gt;&lt;table&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Math" scheme="http://youngxhui.github.io/tags/Math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Single Number(#136)</title>
+    <link href="http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/"/>
+    <id>http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/</id>
+    <published>2017-08-27T05:41:25.000Z</published>
+    <updated>2017-12-01T12:28:09.907Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Single-Number-136"><a href="#Single-Number-136" class="headerlink" title="Single Number(#136)"></a>Single Number(#136)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>136</td><td>Single Number</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>题目要求在给出的数组中，要求找到一个单独的数字。看了一些答案后总结出来了一个运算规律。</p><p>按位异或</p><blockquote><p>N ^ N = 0<br>0 ^ N = N</p></blockquote><p>通过这个规律，那么只要对数组里面的每个数进行按位异或就好。相同的数字按位异或就会是 0 ， 剩下的那个单独的数字按位异或还是自己本事，就会直到最后的结论。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length;i++) &#123;</div><div class="line">            ans ^= nums[i];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>这种方法还适用于字符串中的唯一一个元素。</p><h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] chars = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>&#125;;</div><div class="line">        System.out.println(singleChar(chars));</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 该程序是判断 数字/字符/字符串。toArrayChar 中的唯一存在的字符</span></div><div class="line">    <span class="comment">// 主要方法位 N ^ 0 = N; N ^ N = N</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">char</span> <span class="title">singleChar</span><span class="params">(<span class="keyword">char</span>[] chars)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> aChar : chars) &#123;</div><div class="line">            ans ^= aChar;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>) ans;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Single-Number-136&quot;&gt;&lt;a href=&quot;#Single-Number-136&quot; class=&quot;headerlink&quot; title=&quot;Single Number(#136)&quot;&gt;&lt;/a&gt;Single Number(#136)&lt;/h1&gt;&lt;table&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Move Zeroes(#283)</title>
+    <link href="http://youngxhui.github.io/2017/08/27/LeetCode-Move-Zeroes-283/"/>
+    <id>http://youngxhui.github.io/2017/08/27/LeetCode-Move-Zeroes-283/</id>
+    <published>2017-08-27T05:29:14.000Z</published>
+    <updated>2017-12-01T12:26:56.843Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Move-Zeroes-283"><a href="#Move-Zeroes-283" class="headerlink" title="Move Zeroes(#283)"></a>Move Zeroes(#283)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>283</td><td>Move Zeroes</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>该题要求如果数组中含有 <code>0</code> ，就把 <code>0</code> 放置到最后，采用简单的排序手法，只是不是在比较大小，而是判断是否为 <code>0</code> ，如果是 <code>0</code> 就与下一个发生交换。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moveZeroes</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.length; j++)&#123;</div><div class="line">                <span class="keyword">if</span>(nums[i] == <span class="number">0</span>)&#123;</div><div class="line">                    <span class="keyword">int</span> tem = nums[j];</div><div class="line">                    nums[j] = nums[i];</div><div class="line">                    nums[i] = tem;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Move-Zeroes-283&quot;&gt;&lt;a href=&quot;#Move-Zeroes-283&quot; class=&quot;headerlink&quot; title=&quot;Move Zeroes(#283)&quot;&gt;&lt;/a&gt;Move Zeroes(#283)&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Array" scheme="http://youngxhui.github.io/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Judge Route Circle(#657)</title>
+    <link href="http://youngxhui.github.io/2017/08/16/LeetCode-Judge-Route-Circle-657/"/>
+    <id>http://youngxhui.github.io/2017/08/16/LeetCode-Judge-Route-Circle-657/</id>
+    <published>2017-08-16T11:45:24.000Z</published>
+    <updated>2018-02-12T03:57:36.101Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Judge-Route-Circle-657"><a href="#Judge-Route-Circle-657" class="headerlink" title="Judge Route Circle(#657)"></a>Judge Route Circle(#657)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>657</td><td>Judge Route Circle</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题先上图</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/leetcode.png" alt=""></p><p>终于有一次 <strong>前10%</strong> 了 <del>（也许是人少而已）</del>，总体来说这个题其实很水。</p><p>判断机器人是否回到了原处。只要机器人前进和后退，左移和右移走的路一样就肯定在原点。所以只要统计一下就好。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>Java 代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">judgeCircle</span><span class="params">(String moves)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> lCount = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> rCount = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> dCount = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> uCount = <span class="number">0</span>;</div><div class="line">        <span class="keyword">char</span> step[] = moves.toCharArray();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; step.length; i++) &#123;</div><div class="line">            <span class="keyword">switch</span>(step[i]) &#123;</div><div class="line">                <span class="keyword">case</span> <span class="string">'L'</span>:</div><div class="line">                    lCount++;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'R'</span>:</div><div class="line">                    rCount++;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'U'</span>:</div><div class="line">                    uCount++;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'D'</span>:</div><div class="line">                    dCount++;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        (lCount == rCount &amp;&amp; uCount == dCount) ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>Kotlin 代码</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">judgeCircle</span><span class="params">(moves: <span class="type">String</span>)</span></span>: <span class="built_in">Boolean</span> &#123;</div><div class="line">        <span class="keyword">val</span> m = moves.toCharArray()</div><div class="line">        <span class="keyword">var</span> lSum = <span class="number">0</span></div><div class="line">        <span class="keyword">var</span> dSum = <span class="number">0</span></div><div class="line">        m.map &#123;</div><div class="line">            <span class="keyword">when</span> (it) &#123;</div><div class="line">                <span class="string">'L'</span> -&gt; lSum += <span class="number">1</span></div><div class="line">                <span class="string">'R'</span> -&gt; lSum -= <span class="number">1</span></div><div class="line">                <span class="string">'D'</span> -&gt; dSum += <span class="number">1</span></div><div class="line">                <span class="string">'U'</span> -&gt; dSum -= <span class="number">1</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (lSum == <span class="number">0</span> &amp;&amp; dSum == <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Judge-Route-Circle-657&quot;&gt;&lt;a href=&quot;#Judge-Route-Circle-657&quot; class=&quot;headerlink&quot; title=&quot;Judge Route Circle(#657)&quot;&gt;&lt;/a&gt;Judge Route Circle
+      
+    
+    </summary>
+    
+    
+      <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Longest Uncommon Subsequence I(#521)</title>
+    <link href="http://youngxhui.github.io/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/"/>
+    <id>http://youngxhui.github.io/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/</id>
+    <published>2017-08-16T10:05:18.000Z</published>
+    <updated>2017-12-01T12:26:49.125Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LeetCode-Longest-Uncommon-Subsequence-I-521"><a href="#LeetCode-Longest-Uncommon-Subsequence-I-521" class="headerlink" title="LeetCode:Longest Uncommon Subsequence I(#521)"></a>LeetCode:Longest Uncommon Subsequence I(#521)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>521</td><td>Longest Uncommon Subsequence</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>没读懂题，但是做出来了，而且这个题就是个水题，个人理解就是如果两个字符串一样，就输出 <code>-1</code> 否则输出最长的。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLUSlength</span><span class="params">(String a, String b)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (a.equals(b))&#123;</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">return</span> a.length() &gt; b.length() ? a.length() : b.length();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;LeetCode-Longest-Uncommon-Subsequence-I-521&quot;&gt;&lt;a href=&quot;#LeetCode-Longest-Uncommon-Subsequence-I-521&quot; class=&quot;headerlink&quot; title=&quot;LeetCo
+      
+    
+    </summary>
+    
+    
+      <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Next Greater Element I(#496)</title>
+    <link href="http://youngxhui.github.io/2017/08/13/LeetCode-Next-Greater-Element-I-496/"/>
+    <id>http://youngxhui.github.io/2017/08/13/LeetCode-Next-Greater-Element-I-496/</id>
+    <published>2017-08-13T10:36:09.000Z</published>
+    <updated>2017-12-01T12:27:01.196Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Next-Greater-Element-I-496"><a href="#Next-Greater-Element-I-496" class="headerlink" title="Next Greater Element I(#496)"></a>Next Greater Element I(#496)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>496</td><td>Next Greater Element I</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</div><div class="line">        <span class="keyword">int</span>[] out = <span class="keyword">new</span> <span class="keyword">int</span>[findNums.length];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (findNums[i] == nums[j]) &#123;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; nums.length - j; k++) &#123;</div><div class="line">                        <span class="keyword">if</span> (j + <span class="number">1</span> &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123;</div><div class="line">                            out[i] = nums[j + k];</div><div class="line">                            findNums[i] = <span class="number">0</span>;</div><div class="line">                            <span class="keyword">break</span>;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">if</span> (findNums[i] != <span class="number">0</span>) &#123;</div><div class="line">                        out[i] = -<span class="number">1</span>;</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>这个代码在前面的测试数据可以过去，但是当测试数据到了后面的数的时候就 gg 了。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170813_184225.png" alt=""></p><p>然后又又又看大神的代码。</p><p>通过 Stack 和 Map 进行操作。</p><h1 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </div><div class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</div><div class="line">        <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num)</div><div class="line">            map.put(stack.pop(), num);</div><div class="line">        stack.push(num);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++)</div><div class="line">        findNums[i] = map.getOrDefault(findNums[i], -<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> findNums;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Next-Greater-Element-I-496&quot;&gt;&lt;a href=&quot;#Next-Greater-Element-I-496&quot; class=&quot;headerlink&quot; title=&quot;Next Greater Element I(#496)&quot;&gt;&lt;/a&gt;Next G
+      
+    
+    </summary>
+    
+    
+      <category term="Stack" scheme="http://youngxhui.github.io/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode:Nim Game(#292)</title>
+    <link href="http://youngxhui.github.io/2017/08/13/LeetCode-Nim-Game-292/"/>
+    <id>http://youngxhui.github.io/2017/08/13/LeetCode-Nim-Game-292/</id>
+    <published>2017-08-13T09:51:03.000Z</published>
+    <updated>2017-12-01T12:27:06.628Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Nim-Game-292"><a href="#Nim-Game-292" class="headerlink" title="Nim Game(#292)"></a>Nim Game(#292)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>292</td><td>Nim Game</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题是让算几个石头的情况下会赢和会输。参考了一下大神答案，其中有一个很有趣，也很通俗易懂。</p><p>巧妙的找到了规律，只要是 <code>4</code> 的倍数，就会输。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canWinNim</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">0</span>)  <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">return</span> n % <span class="number">4</span> != <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Nim-Game-292&quot;&gt;&lt;a href=&quot;#Nim-Game-292&quot; class=&quot;headerlink&quot; title=&quot;Nim Game(#292)&quot;&gt;&lt;/a&gt;Nim Game(#292)&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="Brainteaser" scheme="http://youngxhui.github.io/tags/Brainteaser/"/>
+    
+  </entry>
+  
+</feed>
