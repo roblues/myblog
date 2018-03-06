@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[RabbitMQ 和 Spring Boot 的集成]]></title>
       <url>%2F2018%2F02%2F23%2FRabbitMQ-%E5%92%8C-Spring-Boot-%E7%9A%84%E9%9B%86%E6%88%90%2F</url>
-      <content type="text"><![CDATA[前言在最近的项目中使用了 RabbitMQ。 主要是用来起到一个消峰作用。 安装安装这里分为 windows 和 linux。 我主要的开发环境是在 windows 10 上， 运行环境是 linux(centos 7)，所以讲解主要从两个系统来说。 windowsRabbitMQ 是 erlang 开发的，所以使用之前首先要下载 erlang 选择 windows 64bit 或者 windows 32bit 根据自己电脑进行选择，下载。 下载后进行安装 将 erl的安装目录下载的 bin 写入环境变量中。 如图所示： 在 cmd/powershell 中输入 erl 会出现 erl的一些版本信息。 这样基本完成了 erlang 的安装。 安装完 erlang 那么就应该安装我们的主角 RabbitMQ。 首先下载RabbitMQ，在下载页面 下载对应的安装包 exe 文件。 下载完成之后进行安装 安装完成之后就是我们的 RabbitMQ 就可以进行启动了。 运行 linux#]]></content>
+      <content type="text"><![CDATA[前言在最近的项目中使用了 RabbitMQ。 主要是用来起到一个消峰作用。 安装安装这里分为 windows 和 linux。 我主要的开发环境是在 windows 10 上， 运行环境是 linux(ubuntu)，所以讲解主要从两个系统来说。 windowsRabbitMQ 是 erlang 开发的，所以使用之前首先要下载 erlang 选择 windows 64bit 或者 windows 32bit 根据自己电脑进行选择，下载。 下载后进行安装 将 erl 的安装目录下载的 bin 写入环境变量中。 如图所示： 在 cmd/powershell 中输入 erl 会出现 erl 的一些版本信息。 这样基本完成了 erlang 的安装。 安装完 erlang 那么就应该安装我们的主角 RabbitMQ 。 首先下载 RabbitMQ ，在下载页面 下载对应的安装包 exe 文件。 下载完成之后进行安装 安装完成之后就是我们的 RabbitMQ 就可以进行启动了。 运行 linux这里使用的是 ubuntu 16.04 STL 发行版。 首先要安装 erlang 的相关环境 sudo apt-get install erlang 当安装完成之后在控制台输入 erl ，会有erl的版本信息。 此时的 erl 就算安装成功了。 安装完成之后我们就可以开始安装 RabbitMQ 了。 在终端中输入 sudo apt-get install rabbitmq-service 此时的 rabbitmq 就算安装成功了。 我们需要安装一些插件。 sudo rabbitmq-plugins enable rabbitmq_management 就可以完成插件的安装 当我们通过浏览器访问的时候 此时的默认账户是无法登录的，因为默认 guest 是只能通过本地访问。所以我们要添加一个用户]]></content>
     </entry>
 
     

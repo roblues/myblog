@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youngxhui.github.io/"/>
-  <updated>2018-02-27T06:45:06.063Z</updated>
+  <updated>2018-03-01T11:03:53.612Z</updated>
   <id>http://youngxhui.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://youngxhui.github.io/2018/02/23/RabbitMQ-%E5%92%8C-Spring-Boot-%E7%9A%84%E9%9B%86%E6%88%90/"/>
     <id>http://youngxhui.github.io/2018/02/23/RabbitMQ-和-Spring-Boot-的集成/</id>
     <published>2018-02-23T10:48:51.000Z</published>
-    <updated>2018-02-27T06:45:06.063Z</updated>
+    <updated>2018-03-01T11:03:53.612Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在最近的项目中使用了 <code>RabbitMQ</code>。 主要是用来起到一个消峰作用。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装这里分为 windows 和 linux。</p><p>我主要的开发环境是在 windows 10 上， 运行环境是 linux(centos 7)，所以讲解主要从两个系统来说。</p><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>RabbitMQ 是 erlang 开发的，所以使用之前首先要下载 <a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">erlang</a> 选择 windows 64bit 或者 windows  32bit 根据自己电脑进行选择，下载。</p><p>下载后进行安装 将 erl的安装目录下载的 bin 写入环境变量中。 如图所示：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erl.png" alt=""></p><p>在 cmd/powershell 中输入 erl 会出现 erl的一些版本信息。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erlcmd.png" alt=""></p><p>这样基本完成了 erlang 的安装。</p><p>安装完 erlang 那么就应该安装我们的主角 RabbitMQ。</p><p>首先下载RabbitMQ，在<a href="http://www.rabbitmq.com/install-windows.html" target="_blank" rel="noopener">下载页面</a> 下载对应的安装包 exe 文件。</p><p>下载完成之后进行安装</p><p>安装完成之后就是我们的 RabbitMQ 就可以进行启动了。</p><p>运行 </p><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p># </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在最近的项目中使用了 <code>RabbitMQ</code>。 主要是用来起到一个消峰作用。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装这里分为 <code>windows</code> 和 <code>linux</code>。</p><p>我主要的开发环境是在 <code>windows 10</code> 上， 运行环境是 <code>linux(ubuntu)</code>，所以讲解主要从两个系统来说。</p><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p><code>RabbitMQ</code> 是 <code>erlang</code> 开发的，所以使用之前首先要下载 <a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">erlang</a> 选择 <code>windows 64bit</code> 或者 <code>windows 32bit</code> 根据自己电脑进行选择，下载。</p><p>下载后进行安装 将 <code>erl</code> 的安装目录下载的 <code>bin</code> 写入环境变量中。 如图所示：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erl.png" alt=""></p><p>在 <code>cmd/powershell</code> 中输入 <code>erl</code> 会出现 <code>erl</code> 的一些版本信息。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erlcmd.png" alt=""></p><p>这样基本完成了 <code>erlang</code> 的安装。</p><p>安装完 <code>erlang</code> 那么就应该安装我们的主角 <code>RabbitMQ</code> 。</p><p>首先下载 <code>RabbitMQ</code> ，在<a href="http://www.rabbitmq.com/install-windows.html" target="_blank" rel="noopener">下载页面</a> 下载对应的安装包 <code>exe</code> 文件。</p><p>下载完成之后进行安装</p><p>安装完成之后就是我们的 <code>RabbitMQ</code> 就可以进行启动了。</p><p>运行 </p><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p>这里使用的是 <code>ubuntu 16.04 STL</code> 发行版。</p><p>首先要安装 erlang 的相关环境 </p><blockquote><p>sudo apt-get install erlang</p></blockquote><p>当安装完成之后在控制台输入 erl ，会有erl的版本信息。</p><p>此时的 erl 就算安装成功了。</p><p>安装完成之后我们就可以开始安装 RabbitMQ 了。</p><p>在终端中输入 </p><blockquote><p>sudo apt-get install rabbitmq-service</p></blockquote><p>此时的 rabbitmq 就算安装成功了。</p><p>我们需要安装一些插件。</p><blockquote><p>sudo rabbitmq-plugins enable rabbitmq_management</p></blockquote><p>就可以完成插件的安装</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/linux%20rabbitmq.png" alt=""></p><p>当我们通过浏览器访问的时候</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/rabbitmqweb.png" alt=""></p><p>此时的默认账户是无法登录的，因为默认 guest 是只能通过本地访问。所以我们要添加一个用户</p>]]></content>
     
     <summary type="html">
     
