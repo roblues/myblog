@@ -76,20 +76,15 @@
     <link href="http://youngxhui.github.io/2017/12/28/%E4%B8%80%E6%AC%A1%E7%A5%9E%E5%A5%87%E7%9A%84%E8%AF%BE%E8%AE%BE%E9%AA%8C%E6%94%B6/"/>
     <id>http://youngxhui.github.io/2017/12/28/一次神奇的课设验收/</id>
     <published>2017-12-28T01:59:21.000Z</published>
-    <updated>2018-03-19T08:36:16.266Z</updated>
+    <updated>2018-03-19T08:40:05.178Z</updated>
     
-    <content type="html"><![CDATA[<p>刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？</p><p>第一句话</p><blockquote><p>你这代码是抄的吧。</p></blockquote><p>woc…………，都没有看过我的代码你就知道我的代码是抄的？这种说话无凭无据，信口开河？起码看看代码再说结论。</p><blockquote><p>画一下流程图</p><p>不用注意格式，画圈就好。</p></blockquote><p>就类似下图的样子把每个模块的都画出来，边画边解释每个圈是什么意思。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png" alt=""></p><p>之后又要画主函数的。</p><p>和他解释了无数次主函数就一个 <code>menu()</code> 结果这老师神tmd的，非要画。</p><p>你他妈的是在逗我？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"welcome\n"</span>);</div><div class="line">    menu();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>最后都画完又说，你看看你一个一个的画的，谁知道你画的什么？</p><p>WTF</p><p>难道流程图不应该是一个函数画一个</p><p>最后给出了我他的答案</p><blockquote><p>你看这样的流程图，多清晰。</p></blockquote><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE2.png" alt=""></p><p>你和谁学的？</p><p>你的老师从棺材板里爬出来，估计要找你了。</p><p><strong>谁给你的自信一本正经的胡说八道</strong></p><p>闲的无聊查了一下这个人</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/Snipaste_2017-12-28_18-21-53.png" alt=""></p><p>自己是什么样子，心里没点B数吗？</p><p>💊</p>]]></content>
+    <content type="html"><![CDATA[<p>&lt;———————————————————————————&gt;<br>&lt;———————————————————————————&gt;<br>&lt;———————————————————————————&gt;<br>&lt;——————————–文档已经加密—————————————&gt;<br>&lt;———————————————————————————&gt;<br>&lt;———————————————————————————&gt;</p><p>刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？</p><p>第一句话</p><blockquote><p>你这代码是抄的吧。</p></blockquote><p>woc…………，都没有看过我的代码你就知道我的代码是抄的？这种说话无凭无据，信口开河？起码看看代码再说结论。</p><blockquote><p>画一下流程图</p><p>不用注意格式，画圈就好。</p></blockquote><p>就类似下图的样子把每个模块的都画出来，边画边解释每个圈是什么意思。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png" alt=""></p><p>之后又要画主函数的。</p><p>和他解释了无数次主函数就一个 <code>menu()</code> 结果这老师神tmd的，非要画。</p><p>你他妈的是在逗我？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"welcome\n"</span>);</div><div class="line">    menu();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>最后都画完又说，你看看你一个一个的画的，谁知道你画的什么？</p><p>WTF</p><p>难道流程图不应该是一个函数画一个</p><p>最后给出了我他的答案</p><blockquote><p>你看这样的流程图，多清晰。</p></blockquote><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE2.png" alt=""></p><p>你和谁学的？</p><p>你的老师从棺材板里爬出来，估计要找你了。</p><p><strong>谁给你的自信一本正经的胡说八道</strong></p><p>闲的无聊查了一下这个人</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/Snipaste_2017-12-28_18-21-53.png" alt=""></p><p>自己是什么样子，心里没点B数吗？</p><p>💊</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？&lt;/p&gt;
-&lt;p&gt;第一句话&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你这代码是抄的吧。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;woc…………，都没有看过我的代码你就知道我
+        &lt;p&gt;&amp;lt;———————————————————————————&amp;gt;&lt;br&gt;&amp;lt;———————————————————————————&amp;gt;&lt;br&gt;&amp;lt;———————————————————————————&amp;gt;&lt;br&gt;&amp;lt;——————————–文档已经加
       
     
     </summary>
