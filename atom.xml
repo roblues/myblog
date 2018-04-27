@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youngxhui.github.io/"/>
-  <updated>2018-03-01T11:03:53.612Z</updated>
+  <updated>2018-04-27T08:05:25.692Z</updated>
   <id>http://youngxhui.github.io/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>大创项目总结</title>
+    <link href="http://youngxhui.github.io/2018/04/27/%E5%A4%A7%E5%88%9B%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.github.io/2018/04/27/大创项目总结/</id>
+    <published>2018-04-27T06:40:15.000Z</published>
+    <updated>2018-04-27T08:05:25.692Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>已经好久没有更新博客了，这个博客一直想写，也一直没有写。</p><p>大创是从2017年1月开始的，直到2018年4月底才结束，并不是项目难或者什么,而是项目时间就是这么长😂。然而时间长并不是一件好事情，时间越长反而对人的意志消磨就越厉害。一开始，四个人打算开始申报，现在细细想想其实就是两个人，和<a href="https://wevan.github.io/" target="_blank" rel="noopener">对象</a>一直忙前忙后，做ppt，准备小漫画……</p><p><img src="http://7xt81u.com2.z0.glb.qiniucdn.com/Attachment-1.png" alt="对象用ipad的画的漫画"></p><h1 id="项目过程"><a href="#项目过程" class="headerlink" title="项目过程"></a>项目过程</h1><p>不管怎么样，经过辛辛苦苦的准备，到最好好歹还是个校级项目，也算没有白白付出了努力。刚刚开始的时候，大家还满怀热情和希望的在做，终究没有利益关系啊，最后剩下的还是两个人。其他两个人的代码基本不能看。刚刚开始打算是原生Android写，四个人的任务剩下两个人，也开始慢慢的怠慢，进度越来越慢，到最后几乎是要停止的节奏。我俩几乎也筋疲力尽想要放弃了。</p><h1 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h1><p>一年的时间很快，在此期间和对象放弃了好几个小假期对之前的项目进行推翻重构。在去年冬天的时候，做课程设计选题为一个自动评测系统。</p><blockquote><p> 要求教师可以出题，可以对选择题，填空题，简答题和代码题进行评分，学生可以进行答题等一些功能。</p></blockquote><p>这个题和我们的大创中一些模块其实差不多。两周的时间来写这个小课设，经过两周的时间基本完成了一个小DEMO，答辩的时候老师很满意。但是老师已经很本地的一个教育机构合作开发一个系统，我的这个模块为系统内部的一个子系统。在寒假期间，该教育机构于我进行了联系，我全面负责学生端功能和自动评测模块。对课程设计的DEMO用 Kotlin 进行了重写，对项目中不完善的地方进行了完善。考虑了一些并发情况。在于该机构交流的过程中发现了该机构的水平其实一般般。目前该系统基本已经稳定的运行在学院，给大一的学生做章节测试用。🙉</p><p><img src="http://7xt81u.com2.z0.glb.qiniucdn.com/Snipaste_2018-04-27_15-39-57.png" alt=""></p><p>上面的有点扯得有点多，但是就是这个项目基本完成了我们大创的项目，加上VUE.JS的知识，进行了跨平台的开发，学生端主要是对象开发，教师端是我开发。用 vue.js开发客户端比原生开发容易多了，速度也快。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>作为一个负责人，这其中由我自己很大的错，没有能把一个团队紧密的联合起来，这是我的能力不足，但是一个团队，人有私心的时候，那么这个团队基本也要解散了。各有私心，想得到好处又不想付出。</p><p>这周二刚刚进行完答辩，目前还没有出来成绩，不够感觉还可以，毕竟当初立项了那么多，最后才有6个组进行结题答辩。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;已经好久没有更新博客了，这个博客一直想写，也一直没有写。&lt;/p&gt;
+&lt;p&gt;大创是从2017年1月开始的，直到2018年4月底才结束，并不是项目
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://youngxhui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RabbitMQ 和 Spring Boot 的集成</title>
     <link href="http://youngxhui.github.io/2018/02/23/RabbitMQ-%E5%92%8C-Spring-Boot-%E7%9A%84%E9%9B%86%E6%88%90/"/>
     <id>http://youngxhui.github.io/2018/02/23/RabbitMQ-和-Spring-Boot-的集成/</id>
     <published>2018-02-23T10:48:51.000Z</published>
-    <updated>2018-03-01T11:03:53.612Z</updated>
+    <updated>2018-04-12T06:25:00.453Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在最近的项目中使用了 <code>RabbitMQ</code>。 主要是用来起到一个消峰作用。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装这里分为 <code>windows</code> 和 <code>linux</code>。</p><p>我主要的开发环境是在 <code>windows 10</code> 上， 运行环境是 <code>linux(ubuntu)</code>，所以讲解主要从两个系统来说。</p><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p><code>RabbitMQ</code> 是 <code>erlang</code> 开发的，所以使用之前首先要下载 <a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">erlang</a> 选择 <code>windows 64bit</code> 或者 <code>windows 32bit</code> 根据自己电脑进行选择，下载。</p><p>下载后进行安装 将 <code>erl</code> 的安装目录下载的 <code>bin</code> 写入环境变量中。 如图所示：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erl.png" alt=""></p><p>在 <code>cmd/powershell</code> 中输入 <code>erl</code> 会出现 <code>erl</code> 的一些版本信息。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erlcmd.png" alt=""></p><p>这样基本完成了 <code>erlang</code> 的安装。</p><p>安装完 <code>erlang</code> 那么就应该安装我们的主角 <code>RabbitMQ</code> 。</p><p>首先下载 <code>RabbitMQ</code> ，在<a href="http://www.rabbitmq.com/install-windows.html" target="_blank" rel="noopener">下载页面</a> 下载对应的安装包 <code>exe</code> 文件。</p><p>下载完成之后进行安装</p><p>安装完成之后就是我们的 <code>RabbitMQ</code> 就可以进行启动了。</p><p>运行 </p><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p>这里使用的是 <code>ubuntu 16.04 STL</code> 发行版。</p><p>首先要安装 erlang 的相关环境 </p><blockquote><p>sudo apt-get install erlang</p></blockquote><p>当安装完成之后在控制台输入 erl ，会有erl的版本信息。</p><p>此时的 erl 就算安装成功了。</p><p>安装完成之后我们就可以开始安装 RabbitMQ 了。</p><p>在终端中输入 </p><blockquote><p>sudo apt-get install rabbitmq-service</p></blockquote><p>此时的 rabbitmq 就算安装成功了。</p><p>我们需要安装一些插件。</p><blockquote><p>sudo rabbitmq-plugins enable rabbitmq_management</p></blockquote><p>就可以完成插件的安装</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/linux%20rabbitmq.png" alt=""></p><p>当我们通过浏览器访问的时候</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/rabbitmqweb.png" alt=""></p><p>此时的默认账户是无法登录的，因为默认 guest 是只能通过本地访问。所以我们要添加一个用户</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在最近的项目中使用了 <code>RabbitMQ</code>。 主要是用来起到一个消峰作用。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装这里分为 <code>windows</code> 和 <code>linux</code>。</p><p>我主要的开发环境是在 <code>windows 10</code> 上， 运行环境是 <code>linux(ubuntu)</code>，所以讲解主要从两个系统来说。</p><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p><code>RabbitMQ</code> 是 <code>erlang</code> 开发的，所以使用之前首先要下载 <a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">erlang</a> 选择 <code>windows 64bit</code> 或者 <code>windows 32bit</code> 根据自己电脑进行选择，下载。</p><p>下载后进行安装 将 <code>erl</code> 的安装目录下载的 <code>bin</code> 写入环境变量中。 如图所示：</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erl.png" alt=""></p><p>在 <code>cmd/powershell</code> 中输入 <code>erl</code> 会出现 <code>erl</code> 的一些版本信息。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/erlcmd.png" alt=""></p><p>这样基本完成了 <code>erlang</code> 的安装。</p><p>安装完 <code>erlang</code> 那么就应该安装我们的主角 <code>RabbitMQ</code> 。</p><p>首先下载 <code>RabbitMQ</code> ，在<a href="http://www.rabbitmq.com/install-windows.html" target="_blank" rel="noopener">下载页面</a> 下载对应的安装包 <code>exe</code> 文件。</p><p>下载完成之后进行安装</p><p>安装完成之后就是我们的 <code>RabbitMQ</code> 就可以进行启动了。</p><p>运行 </p><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p>这里使用的是 <code>ubuntu 16.04 STL</code> 发行版。</p><p>首先要安装 erlang 的相关环境 </p><blockquote><p>sudo apt-get install erlang</p></blockquote><p>当安装完成之后在控制台输入 erl ，会有erl的版本信息。</p><p>此时的 erl 就算安装成功了。</p><p>安装完成之后我们就可以开始安装 RabbitMQ 了。</p><p>在终端中输入 </p><blockquote><p>sudo apt-get install rabbitmq-service</p></blockquote><p>此时的 rabbitmq 就算安装成功了。</p><p>我们需要安装一些插件。</p><blockquote><p>sudo rabbitmq-plugins enable rabbitmq_management</p></blockquote><p>就可以完成插件的安装</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/linux%20rabbitmq.png" alt=""></p><p>当我们通过浏览器访问的时候</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/rabbitmqweb.png" alt=""></p><p>此时的默认账户是无法登录的，因为默认 <code>guest</code> 是只能通过本地访问。所以我们要添加一个用户</p>]]></content>
     
     <summary type="html">
     
@@ -47,7 +71,7 @@
     <link href="http://youngxhui.github.io/2018/01/01/2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     <id>http://youngxhui.github.io/2018/01/01/2017年终总结/</id>
     <published>2018-01-01T09:36:46.000Z</published>
-    <updated>2018-02-27T07:22:19.097Z</updated>
+    <updated>2018-04-27T07:44:29.313Z</updated>
     
     <content type="html"><![CDATA[<p>今天是2017的最后一天，按照常理来说应该写下一个总结。<br>仔细回想一下今年做了什么？</p><ul><li>Java框架的学习 SSM SSH</li><li>kotlin的学习</li><li>考研准备</li><li>四级考试准备</li><li>博客的持续维护</li></ul><h1 id="框架学习"><a href="#框架学习" class="headerlink" title="框架学习"></a>框架学习</h1><p>年初的时候学习了<code>spring</code>和<code>spring MVC</code> 此时的我才了解到 Java的主要功能和作用点。因为大二就将这些框架学习完成，导致后面的很多专业课程上课很轻松。<br>学习这些框架其实会发现很多相似点，当然也会比较出不同框架之间的优缺点。</p><h1 id="kotlin的学习"><a href="#kotlin的学习" class="headerlink" title="kotlin的学习"></a>kotlin的学习</h1><p>虽然博客上的第一篇关于 <code>kotlin</code> 的文章是在8月多，但是在此之前就开始了零零碎碎的学习。之后在大三学习的 <code>struts2</code> 框架的代码全是 <code>kotlin</code>。<br>这些框架虽然没有对 <code>kotlin</code> 做出优化和适配，但是在业务逻辑方面确实可以省不少事情。<br>也给实验室安利过 <code>kotlin</code>，好像没有成功。</p><p>尴尬. jpg</p><h1 id="考研准备"><a href="#考研准备" class="headerlink" title="考研准备"></a>考研准备</h1><p>报了一个考研班，具体考哪里还没有仔细思考，不过是时候该考虑一下了。考研是一个漫长的过程，看着一些学长的考研经历好像也看到了自己。之前早晨跑步的时候每到图书馆门口的时候就好看到大量的学生拍着长长的队等待着图书馆开门。</p><h1 id="四级"><a href="#四级" class="headerlink" title="四级"></a>四级</h1><p>今年六月份考试的时候真的没有做准备，属于裸考，再加上自己的英语比较差，没过也是在预料之中的。假期好好学了一下英语。十二月再次参加考试，希望能过吧，不想在同一件事情花费的时间太长。</p><blockquote class="blockquote-center"><p>四级过了  <br> 2018年2月27日 </p></blockquote><h1 id="博客维护"><a href="#博客维护" class="headerlink" title="博客维护"></a>博客维护</h1><p>博客今年主要的改变为换了好几个评论系统，多说的关闭使很多博客的评论系统受到影响，经过几次的迁移，评论也都丢失，希望现在的评论会一直保存下来。</p><h1 id="新年展望"><a href="#新年展望" class="headerlink" title="新年展望"></a>新年展望</h1><p>新年要有个新的计划和准备</p><ul><li>四级如果没有过下次必须过</li><li>算法方面继续学习</li><li>认认真真的准备考研</li></ul><p>今天已经是2018的第一天了，之前在家一直没有带着电脑，刚刚来了学校，把总结补上。</p><p>新年快乐。 </p>]]></content>
     
@@ -76,15 +100,20 @@
     <link href="http://youngxhui.github.io/2017/12/28/%E4%B8%80%E6%AC%A1%E7%A5%9E%E5%A5%87%E7%9A%84%E8%AF%BE%E8%AE%BE%E9%AA%8C%E6%94%B6/"/>
     <id>http://youngxhui.github.io/2017/12/28/一次神奇的课设验收/</id>
     <published>2017-12-28T01:59:21.000Z</published>
-    <updated>2018-03-19T08:48:13.679Z</updated>
+    <updated>2018-04-27T06:38:31.441Z</updated>
     
-    <content type="html"><![CDATA[<p>&lt;——————————–文档已经加密—————————————&gt;<br>&lt;——————————–文档已经加密—————————————&gt;<br>&lt;——————————–文档已经加密—————————————&gt;<br>&lt;——————————–文档已经加密—————————————&gt;<br>&lt;——————————–文档已经加密—————————————&gt;</p><p>刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？</p><p>第一句话</p><blockquote><p>你这代码是抄的吧。</p></blockquote><p>woc…………，都没有看过我的代码你就知道我的代码是抄的？这种说话无凭无据，信口开河？起码看看代码再说结论。</p><blockquote><p>画一下流程图</p><p>不用注意格式，画圈就好。</p></blockquote><p>就类似下图的样子把每个模块的都画出来，边画边解释每个圈是什么意思。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png" alt=""></p><p>之后又要画主函数的。</p><p>和他解释了无数次主函数就一个 <code>menu()</code> 结果这老师神tmd的，非要画。</p><p>你他妈的是在逗我？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"welcome\n"</span>);</div><div class="line">    menu();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>最后都画完又说，你看看你一个一个的画的，谁知道你画的什么？</p><p>WTF</p><p>难道流程图不应该是一个函数画一个</p><p>最后给出了我他的答案</p><blockquote><p>你看这样的流程图，多清晰。</p></blockquote><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE2.png" alt=""></p><p>你和谁学的？</p><p>你的老师从棺材板里爬出来，估计要找你了。</p><p><strong>谁给你的自信一本正经的胡说八道</strong></p><p>闲的无聊查了一下这个人</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/Snipaste_2017-12-28_18-21-53.png" alt=""></p><p>自己是什么样子，心里没点B数吗？</p><p>💊</p>]]></content>
+    <content type="html"><![CDATA[<p>刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？</p><p>第一句话</p><blockquote><p>你这代码是抄的吧。</p></blockquote><p>woc…………，都没有看过我的代码你就知道我的代码是抄的？这种说话无凭无据，信口开河？起码看看代码再说结论。</p><blockquote><p>画一下流程图</p><p>不用注意格式，画圈就好。</p></blockquote><p>就类似下图的样子把每个模块的都画出来，边画边解释每个圈是什么意思。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE1.png" alt=""></p><p>之后又要画主函数的。</p><p>和他解释了无数次主函数就一个 <code>menu()</code> 结果这老师神tmd的，非要画。</p><p>你他妈的是在逗我？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"welcome\n"</span>);</div><div class="line">    menu();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>最后都画完又说，你看看你一个一个的画的，谁知道你画的什么？</p><p>WTF</p><p>难道流程图不应该是一个函数画一个</p><p>最后给出了我他的答案</p><blockquote><p>你看这样的流程图，多清晰。</p></blockquote><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/%E6%B5%81%E7%A8%8B%E5%9B%BE2.png" alt=""></p><p>你和谁学的？</p><p>你的老师从棺材板里爬出来，估计要找你了。</p><p><strong>谁给你的自信一本正经的胡说八道</strong></p><p>闲的无聊查了一下这个人</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/Snipaste_2017-12-28_18-21-53.png" alt=""></p><p>自己是什么样子，心里没点B数吗？</p><p>💊</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&amp;lt;——————————–文档已经加密—————————————&amp;gt;&lt;br&gt;&amp;lt;——————————–文档已经加密—————————————&amp;gt;&lt;br&gt;&amp;lt;——————————–文档已经加密—————————————&amp;gt;&lt;br&gt;&amp;lt;———————
+        &lt;p&gt;刚刚验收完课程实际，实在是压抑不住我的内心。为什么我们学校验收课程设计会找一堆不懂代码的老师过来验收？&lt;/p&gt;
+&lt;p&gt;第一句话&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你这代码是抄的吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;woc…………，都没有看过我的代码你就知道我
       
     
     </summary>
@@ -211,35 +240,6 @@
     
     
       <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大创项目总结</title>
-    <link href="http://youngxhui.github.io/2017/10/15/%E5%A4%A7%E5%88%9B%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://youngxhui.github.io/2017/10/15/大创项目总结/</id>
-    <published>2017-10-15T07:13:01.000Z</published>
-    <updated>2017-10-15T08:14:45.746Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始的时候认为接口就是对数据库了的一个映射，不外乎 增删改查。写的多了，重构了几次，才明白了出一个接口是有很多约束的。从开始到现在，虽然项目还没有做完，就是一直拖啊拖，小伙伴也不给力啊，本来是两个人开发，可是另一个小伙伴的贡献代码估计不足十分之一，之后又重构了几乎所有代码，将 <code>Java</code> 代码转向了 <code>Kotlin</code>。当然做的越多也就收获的越多。</p><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>这是一个比赛项目，大学生创新创业大赛，这种比赛没什么难点，简单的说就是一个讲PPT比赛。但是我还是希望可以做出来，也算是对自己的一个锻炼。</p><p>项目开始的时候还没有学习过关于 web 的任何开发，寒假自学了一个月从 <code>tomcat</code>，<code>jsp</code>，<code>servlet</code>，<code>spring</code>，<code>springmvc</code>虽然说没有太多的深入，但是照猫画虎的可以写出一点的东西，然后就是了解 <code>REST</code> ，都是一点一滴的慢慢积累起来的。</p><p>因为从来没有项目经验，更没有合作经验，就看了很多项目合作的文章，也问了一些学长。依葫芦画瓢，在小组内制订了很多规范和标准，参考了当时的 阿里开源的 Java开发规约文档，就这样开始了迷迷糊糊的项目开发。</p><h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><p>整体结构那就是 <code>mvc</code> 开发模式，刚刚开始的时候真的分不清 <code>service层</code> ，<code>controller层</code> 的具体划分，个人的理解就是 <code>controller</code> 负责请求的响应和答复，<code>service</code>  负责具体的逻辑处理。</p><p>项目结构如下：</p><ul><li>controller</li><li>service</li><li><ul><li>impl </li></ul></li><li>dao</li><li><ul><li>impl</li></ul></li><li><ul><li>rowmapper</li></ul></li><li>api</li><li>model</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;这个项目做了好久好久了，做了多半年了，其实没什么难点。项目一开始就决定了用SpringMvc，主要是给前端(Android)出接口，刚刚开始
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://youngxhui.github.io/tags/java/"/>
-    
-      <category term="kotlin" scheme="http://youngxhui.github.io/tags/kotlin/"/>
-    
-      <category term="Spring" scheme="http://youngxhui.github.io/tags/Spring/"/>
-    
-      <category term="数据库" scheme="http://youngxhui.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
