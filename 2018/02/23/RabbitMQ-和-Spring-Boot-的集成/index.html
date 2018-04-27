@@ -111,7 +111,7 @@
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/erlcmd.png">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/linux%20rabbitmq.png">
 <meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/rabbitmqweb.png">
-<meta property="og:updated_time" content="2018-04-12T06:25:00.453Z">
+<meta property="og:updated_time" content="2018-04-27T09:04:16.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RabbitMQ 和 Spring Boot 的集成">
 <meta name="twitter:description" content="前言在最近的项目中使用了 RabbitMQ。 主要是用来起到一个消峰作用。 安装安装这里分为 windows 和 linux。 我主要的开发环境是在 windows 10 上， 运行环境是 linux(ubuntu)，所以讲解主要从两个系统来说。 windowsRabbitMQ 是 erlang 开发的，所以使用之前首先要下载 erlang 选择 windows 64bit 或者 windows">
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  416
+                  672
                 </span>
               
 
@@ -486,7 +486,19 @@
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/linux%20rabbitmq.png" alt=""></p>
 <p>当我们通过浏览器访问的时候</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/rabbitmqweb.png" alt=""></p>
-<p>此时的默认账户是无法登录的，因为默认 <code>guest</code> 是只能通过本地访问。所以我们要添加一个用户</p>
+<p>此时的默认账户是无法登录的，因为默认 <code>guest</code> 是只能通过本地访问。所以我们要新建一个账户用来可以远程访问。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rabbitmqctl add_user admin admin <span class="comment"># 新建一个叫admin账户和密码为admin</span></div><div class="line">rabbitmqctl set_user_tags admin administrator <span class="comment"># 为admin账户设为administrator用户</span></div><div class="line">rabbitmqctl set_permissions -p <span class="string">"/"</span> admin <span class="string">".*"</span> <span class="string">".*"</span> <span class="string">".*"</span> <span class="comment"># 为账户写入权限</span></div></pre></td></tr></table></figure>
+<h1 id="与SpringBoot整合"><a href="#与SpringBoot整合" class="headerlink" title="与SpringBoot整合"></a>与SpringBoot整合</h1><p>基本的安装如上所示，下面将会将如何与 <code>SpringBoot</code> 整合</p>
+<p>说明： 项目采用 <code>.yml</code> 格式文件作为 <code>application</code> 配置文件，采用 <code>Gradle</code> 作为构建工具，语言采用 <code>kotlin</code></p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>首先我们对项目添加依赖。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">   	<span class="comment">//……</span></div><div class="line">    <span class="comment">// mq</span></div><div class="line">    compile(<span class="string">'org.springframework.boot:spring-boot-starter-amqp'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对 <code>application.yml</code> 进行配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  rabbitmq:</span></div><div class="line"><span class="attr">    host:</span> <span class="string">localhost</span></div><div class="line"><span class="attr">    port:</span> <span class="number">5672</span></div><div class="line"><span class="attr">    username:</span> <span class="string">admin</span></div><div class="line"><span class="attr">    password:</span> <span class="string">admin</span></div></pre></td></tr></table></figure>
+<p>在代码中进行配置</p>
+<p>我们新建一个类用来配置 <code>RabbitMQ</code>。</p>
+<p>在代码中新建了一个队列叫做 <code>dc_check</code>，当我们启动服务的时候就可以在 <code>RabbitMQ</code> 的控制台上看到这个队列 </p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.nuc.evaluate.config</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.amqp.core.Queue</div><div class="line"><span class="keyword">import</span> org.springframework.context.<span class="keyword">annotation</span>.Bean</div><div class="line"><span class="keyword">import</span> org.springframework.context.<span class="keyword">annotation</span>.Configuration</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * <span class="doctag">@author</span> 杨晓辉 2018/2/6 16:07</div><div class="line"> */</div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">RabbitConfig</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">checkAns</span><span class="params">()</span></span>: Queue &#123;</div><div class="line">        <span class="keyword">return</span> Queue(<span class="string">"dc_check"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样我们基本完成了配置。</p>
 
       
     </div>
@@ -806,7 +818,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows"><span class="nav-number">2.1.</span> <span class="nav-text">windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-number">2.2.</span> <span class="nav-text">linux</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows"><span class="nav-number">2.1.</span> <span class="nav-text">windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-number">2.2.</span> <span class="nav-text">linux</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与SpringBoot整合"><span class="nav-number">3.</span> <span class="nav-text">与SpringBoot整合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件"><span class="nav-number">3.1.</span> <span class="nav-text">配置文件</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -851,7 +863,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      46.6k
+      46.9k
     </span>
   
 </div>
