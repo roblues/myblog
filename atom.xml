@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://youngxhui.github.io/"/>
-  <updated>2018-05-08T10:47:41.820Z</updated>
+  <updated>2018-05-25T03:20:48.367Z</updated>
   <id>http://youngxhui.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apriori算法</title>
+    <link href="http://youngxhui.github.io/2018/05/25/Apriori%E7%AE%97%E6%B3%95/"/>
+    <id>http://youngxhui.github.io/2018/05/25/Apriori算法/</id>
+    <published>2018-05-25T01:21:51.000Z</published>
+    <updated>2018-05-25T03:20:48.367Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>下文所有内容基本总结于 《数据挖掘概念与技术 第三版》机械工业出版社</p><p>最近复习数据挖掘课程，就把复习的几个算法记录一下。</p><h1 id="什么是Apriori算法"><a href="#什么是Apriori算法" class="headerlink" title="什么是Apriori算法"></a>什么是Apriori算法</h1><p><code>Apriori</code>算法是 Agrawal 和 R.Srikant 与1994 提出的，为布尔关联规则挖掘频繁项集的原创性算法。<code>Apriori</code>算法使用一宗称为逐层搜索的迭代方法，其中 <code>k</code> 项集用于探索 <code>(k+1)</code> 项。</p><p>基本为扫描数据库，累计每个项的计数，并且收集满足最小支持度的项，找出频繁1项集的集合。该集合记为L1。然后，使用L1找出频繁2项集的集合L2，如此一直找下去，知道不能再找到频繁k项集，找出每个Lk需要一次数据库的完整扫描。</p><h1 id="寻找频繁项集"><a href="#寻找频繁项集" class="headerlink" title="寻找频繁项集"></a>寻找频繁项集</h1><h2 id="先验性质"><a href="#先验性质" class="headerlink" title="先验性质"></a>先验性质</h2><p>为了提高频繁项集逐层产生的效率，一种称为<strong>先验性质</strong>的重要性质用于压缩搜索空间。</p><blockquote><p><strong>先验性质</strong>：频繁项集的所有非空子集也一定是频繁的。</p></blockquote><p>该表是一个事务数据库D。该数据库有9个事务，即|D|=9。假设最小支持度为2</p><table><thead><tr><th><strong>TID</strong></th><th><strong>商品ID的列表</strong></th><th><strong>TID</strong></th><th><strong>商品ID的列表</strong></th></tr></thead><tbody><tr><td>T100</td><td>I1,I2,I5</td><td>T600</td><td>I2,I3</td></tr><tr><td>T200</td><td>I2,I4</td><td>T700</td><td>I1,I3</td></tr><tr><td>T300</td><td>I2,I3</td><td>T800</td><td>I1,I2,I3,I5</td></tr><tr><td>T400</td><td>I1,I2,I4</td><td>T900</td><td>I1,I2,I3</td></tr><tr><td>T500</td><td>I1,I3</td><td></td></tr></tbody></table><ol><li><p>在算法第一次迭代的时候，每个项都是候选1项集的集合C1的成员。算法扫描，统计出每个项出现的次数。</p></li><li><p>可以确定频繁1项集的集合L1，它由满足最小支持段的候选1项集组成。</p></li><li><p>为发现频繁2项集的集合L2，算法使用L1 🔗 L1产生候选2项集的集合C2。注意剪枝，没有候选的C2中删除，因为这些候选的每个子集也是频繁的。</p></li><li><p>扫描D中的事务，累计C2中的每个候选项集的支持技术。</p></li><li><p>然后确定频繁2项集的集合L2，它由C2中满足最小支持度的候选2项集组成。</p></li><li><p>…………</p></li></ol><p>重复以上步骤，直到Cn = ∅，此算法终止，找出所有的频繁项集。</p><p><img src="http://7xt81u.com2.z0.glb.qiniucdn.com/apirori.png" alt=""></p><h1 id="由频繁项集产生关联规则"><a href="#由频繁项集产生关联规则" class="headerlink" title="由频繁项集产生关联规则"></a>由频繁项集产生关联规则</h1><p>一旦由数据库D中的事务找出频繁项集，就可以直接由它们产生强关联规则。对于置信度，可以用下面的公式计算。</p><blockquote><p> confidence(A ＝&gt;B) = P（A | B）= support_count(A ∪ B) / support_count(A)</p></blockquote><p>继续使用上面的案例，该数据包含频繁项集 x = {I1,I2,I5},可有X产生哪些关联规则，并且计算{I1,I2},{I1,I5},{I1}置信度</p><p>产生的关联规则</p><p>{I1,I2},{I1,I5},{I2,I5},{I1},{I2},{I5}</p><p>{I1,I2} =&gt; I5, confidence = 2 / 4 = 50%</p><p>{I1,I5} =&gt; I2, confidence =  2 / 2 = 100%</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;下文所有内容基本总结于 《数据挖掘概念与技术 第三版》机械工业出版社&lt;/p&gt;
+&lt;p&gt;最近复习数据挖掘课程，就把复习的几个算法记录一下。&lt;/p
+      
+    
+    </summary>
+    
+    
+      <category term="数据挖掘" scheme="http://youngxhui.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+      <category term="推荐系统" scheme="http://youngxhui.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode 配置c/c++环境</title>
@@ -361,9 +387,9 @@
     </summary>
     
     
-      <category term="Python" scheme="http://youngxhui.github.io/tags/Python/"/>
-    
       <category term="推荐系统" scheme="http://youngxhui.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="Python" scheme="http://youngxhui.github.io/tags/Python/"/>
     
   </entry>
   
@@ -483,29 +509,6 @@
     
     
       <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode:Next Greater Element I(#496)</title>
-    <link href="http://youngxhui.github.io/2017/08/13/LeetCode-Next-Greater-Element-I-496/"/>
-    <id>http://youngxhui.github.io/2017/08/13/LeetCode-Next-Greater-Element-I-496/</id>
-    <published>2017-08-13T10:36:09.000Z</published>
-    <updated>2017-12-01T12:27:01.196Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Next-Greater-Element-I-496"><a href="#Next-Greater-Element-I-496" class="headerlink" title="Next Greater Element I(#496)"></a>Next Greater Element I(#496)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>496</td><td>Next Greater Element I</td><td>Easy  </td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>刚刚开始的思路是在第二个数组中寻找第一个数组的元素，如果找到并且后面还有比他大的就返回那个大数，否则就返回 -1 。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</div><div class="line">        <span class="keyword">int</span>[] out = <span class="keyword">new</span> <span class="keyword">int</span>[findNums.length];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nums.length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (findNums[i] == nums[j]) &#123;</div><div class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; nums.length - j; k++) &#123;</div><div class="line">                        <span class="keyword">if</span> (j + <span class="number">1</span> &lt; nums.length &amp;&amp; findNums[i] &lt; nums[j + k]) &#123;</div><div class="line">                            out[i] = nums[j + k];</div><div class="line">                            findNums[i] = <span class="number">0</span>;</div><div class="line">                            <span class="keyword">break</span>;</div><div class="line">                        &#125;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">if</span> (findNums[i] != <span class="number">0</span>) &#123;</div><div class="line">                        out[i] = -<span class="number">1</span>;</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>这个代码在前面的测试数据可以过去，但是当测试数据到了后面的数的时候就 gg 了。</p><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/snipaste_20170813_184225.png" alt=""></p><p>然后又又又看大神的代码。</p><p>通过 Stack 和 Map 进行操作。</p><h1 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] nextGreaterElement(<span class="keyword">int</span>[] findNums, <span class="keyword">int</span>[] nums) &#123;</div><div class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(); </div><div class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</div><div class="line">        <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; stack.peek() &lt; num)</div><div class="line">            map.put(stack.pop(), num);</div><div class="line">        stack.push(num);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; findNums.length; i++)</div><div class="line">        findNums[i] = map.getOrDefault(findNums[i], -<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> findNums;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Next-Greater-Element-I-496&quot;&gt;&lt;a href=&quot;#Next-Greater-Element-I-496&quot; class=&quot;headerlink&quot; title=&quot;Next Greater Element I(#496)&quot;&gt;&lt;/a&gt;Next G
-      
-    
-    </summary>
-    
-    
-      <category term="Stack" scheme="http://youngxhui.github.io/tags/Stack/"/>
     
   </entry>
   
