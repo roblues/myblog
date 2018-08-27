@@ -103,7 +103,7 @@
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArrayList源码分析">
-<meta property="og:url" content="http://youngxhui.github.io/2016/11/27/ArrayList源码分析/index.html">
+<meta property="og:url" content="http://youngxhui.top/2016/11/27/ArrayList源码分析/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="概况ArrayList 是我们常用的一种数据结构。仔细分析 ArrayList 这个类和类所包含的方法。 签名ArrayList继承了AbstractList 和使用了List RandomAccess Cloneable和Serializable四个接口。 AbstractList该接口的作用是用于 AbstractList 提供了 List 接口的默认实现，在AbstractList中已经使用">
 <meta property="og:locale" content="zh-Hans">
@@ -140,7 +140,7 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.github.io/2016/11/27/ArrayList源码分析/"/>
+  <link rel="canonical" href="http://youngxhui.top/2016/11/27/ArrayList源码分析/"/>
 
 
 
@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/11/27/ArrayList源码分析/">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.top/2016/11/27/ArrayList源码分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="youngxhui">
@@ -380,17 +380,16 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/11/27/ArrayList源码分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2016/11/27/ArrayList源码分析/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/11/27/ArrayList源码分析/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -587,7 +586,7 @@ const      float      native       super       while
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2016/11/27/ArrayList源码分析/" title="ArrayList源码分析">http://youngxhui.github.io/2016/11/27/ArrayList源码分析/</a>
+    <a href="http://youngxhui.top/2016/11/27/ArrayList源码分析/" title="ArrayList源码分析">http://youngxhui.top/2016/11/27/ArrayList源码分析/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -657,7 +656,12 @@ const      float      native       super       while
           
   <div class="comments" id="comments">
     
-      <div id="hypercomments_widget"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -1048,34 +1052,36 @@ const      float      native       super       while
 
   
 
+    
+      <script id="dsq-count-scr" src="https://island-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://youngxhui.top/2016/11/27/ArrayList源码分析/';
+          this.page.identifier = '2016/11/27/ArrayList源码分析/';
+          this.page.title = 'ArrayList源码分析';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://island-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
 
 
 
-	
-
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 95533, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2016/11/27/ArrayList源码分析/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95533/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
 	
 
 
+
+
+
+  
 
 
 

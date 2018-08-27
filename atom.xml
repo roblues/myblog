@@ -5,9 +5,9 @@
   <subtitle>随心随性</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://youngxhui.github.io/"/>
+  <link href="http://youngxhui.top/"/>
   <updated>2018-05-25T03:20:48.367Z</updated>
-  <id>http://youngxhui.github.io/</id>
+  <id>http://youngxhui.top/</id>
   
   <author>
     <name>youngxhui</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Apriori算法</title>
-    <link href="http://youngxhui.github.io/2018/05/25/Apriori%E7%AE%97%E6%B3%95/"/>
-    <id>http://youngxhui.github.io/2018/05/25/Apriori算法/</id>
+    <link href="http://youngxhui.top/2018/05/25/Apriori%E7%AE%97%E6%B3%95/"/>
+    <id>http://youngxhui.top/2018/05/25/Apriori算法/</id>
     <published>2018-05-25T01:21:51.000Z</published>
     <updated>2018-05-25T03:20:48.367Z</updated>
     
@@ -36,16 +36,16 @@
     </summary>
     
     
-      <category term="数据挖掘" scheme="http://youngxhui.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+      <category term="数据挖掘" scheme="http://youngxhui.top/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
     
-      <category term="推荐系统" scheme="http://youngxhui.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+      <category term="推荐系统" scheme="http://youngxhui.top/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>vscode 配置c/c++环境</title>
-    <link href="http://youngxhui.github.io/2018/05/07/vscode-%E9%85%8D%E7%BD%AEc-c-%E7%8E%AF%E5%A2%83/"/>
-    <id>http://youngxhui.github.io/2018/05/07/vscode-配置c-c-环境/</id>
+    <link href="http://youngxhui.top/2018/05/07/vscode-%E9%85%8D%E7%BD%AEc-c-%E7%8E%AF%E5%A2%83/"/>
+    <id>http://youngxhui.top/2018/05/07/vscode-配置c-c-环境/</id>
     <published>2018-05-07T12:50:56.000Z</published>
     <updated>2018-05-08T10:47:41.820Z</updated>
     
@@ -68,8 +68,8 @@
   
   <entry>
     <title>大创项目总结</title>
-    <link href="http://youngxhui.github.io/2018/04/27/%E5%A4%A7%E5%88%9B%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://youngxhui.github.io/2018/04/27/大创项目总结/</id>
+    <link href="http://youngxhui.top/2018/04/27/%E5%A4%A7%E5%88%9B%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.top/2018/04/27/大创项目总结/</id>
     <published>2018-04-27T06:40:15.000Z</published>
     <updated>2018-04-27T09:19:48.744Z</updated>
     
@@ -86,14 +86,14 @@
     </summary>
     
     
-      <category term="生活" scheme="http://youngxhui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://youngxhui.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>RabbitMQ 和 Spring Boot 的集成</title>
-    <link href="http://youngxhui.github.io/2018/02/23/RabbitMQ-%E5%92%8C-Spring-Boot-%E7%9A%84%E9%9B%86%E6%88%90/"/>
-    <id>http://youngxhui.github.io/2018/02/23/RabbitMQ-和-Spring-Boot-的集成/</id>
+    <link href="http://youngxhui.top/2018/02/23/RabbitMQ-%E5%92%8C-Spring-Boot-%E7%9A%84%E9%9B%86%E6%88%90/"/>
+    <id>http://youngxhui.top/2018/02/23/RabbitMQ-和-Spring-Boot-的集成/</id>
     <published>2018-02-23T10:48:51.000Z</published>
     <updated>2018-04-27T09:04:16.074Z</updated>
     
@@ -110,16 +110,16 @@
     </summary>
     
     
-      <category term="SpringBoot" scheme="http://youngxhui.github.io/tags/SpringBoot/"/>
+      <category term="SpringBoot" scheme="http://youngxhui.top/tags/SpringBoot/"/>
     
-      <category term="RabbitMQ" scheme="http://youngxhui.github.io/tags/RabbitMQ/"/>
+      <category term="RabbitMQ" scheme="http://youngxhui.top/tags/RabbitMQ/"/>
     
   </entry>
   
   <entry>
     <title>2017年终总结</title>
-    <link href="http://youngxhui.github.io/2018/01/01/2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
-    <id>http://youngxhui.github.io/2018/01/01/2017年终总结/</id>
+    <link href="http://youngxhui.top/2018/01/01/2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.top/2018/01/01/2017年终总结/</id>
     <published>2018-01-01T09:36:46.000Z</published>
     <updated>2018-04-27T07:44:29.313Z</updated>
     
@@ -141,14 +141,14 @@
     </summary>
     
     
-      <category term="生活" scheme="http://youngxhui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://youngxhui.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>一次神奇的课设验收</title>
-    <link href="http://youngxhui.github.io/2017/12/28/%E4%B8%80%E6%AC%A1%E7%A5%9E%E5%A5%87%E7%9A%84%E8%AF%BE%E8%AE%BE%E9%AA%8C%E6%94%B6/"/>
-    <id>http://youngxhui.github.io/2017/12/28/一次神奇的课设验收/</id>
+    <link href="http://youngxhui.top/2017/12/28/%E4%B8%80%E6%AC%A1%E7%A5%9E%E5%A5%87%E7%9A%84%E8%AF%BE%E8%AE%BE%E9%AA%8C%E6%94%B6/"/>
+    <id>http://youngxhui.top/2017/12/28/一次神奇的课设验收/</id>
     <published>2017-12-28T01:59:21.000Z</published>
     <updated>2018-04-27T06:38:31.441Z</updated>
     
@@ -169,14 +169,14 @@
     </summary>
     
     
-      <category term="生活" scheme="http://youngxhui.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://youngxhui.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>Kotlin中Collection一些语法总结</title>
-    <link href="http://youngxhui.github.io/2017/12/23/Kotlin%E4%B8%ADCollection%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
-    <id>http://youngxhui.github.io/2017/12/23/Kotlin中Collection一些语法总结/</id>
+    <link href="http://youngxhui.top/2017/12/23/Kotlin%E4%B8%ADCollection%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://youngxhui.top/2017/12/23/Kotlin中Collection一些语法总结/</id>
     <published>2017-12-23T13:08:17.000Z</published>
     <updated>2018-02-27T06:48:05.565Z</updated>
     
@@ -193,14 +193,14 @@
     </summary>
     
     
-      <category term="kotlin" scheme="http://youngxhui.github.io/tags/kotlin/"/>
+      <category term="kotlin" scheme="http://youngxhui.top/tags/kotlin/"/>
     
   </entry>
   
   <entry>
     <title>Kotlin 1.2:平台之间共享代码</title>
-    <link href="http://youngxhui.github.io/2017/12/02/Kotlin-1-2-%E5%B9%B3%E5%8F%B0%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E4%BB%A3%E7%A0%81/"/>
-    <id>http://youngxhui.github.io/2017/12/02/Kotlin-1-2-平台之间共享代码/</id>
+    <link href="http://youngxhui.top/2017/12/02/Kotlin-1-2-%E5%B9%B3%E5%8F%B0%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E4%BB%A3%E7%A0%81/"/>
+    <id>http://youngxhui.top/2017/12/02/Kotlin-1-2-平台之间共享代码/</id>
     <published>2017-12-02T06:51:59.000Z</published>
     <updated>2017-12-02T09:45:42.149Z</updated>
     
@@ -217,16 +217,16 @@
     </summary>
     
     
-      <category term="kotlin" scheme="http://youngxhui.github.io/tags/kotlin/"/>
+      <category term="kotlin" scheme="http://youngxhui.top/tags/kotlin/"/>
     
-      <category term="译文" scheme="http://youngxhui.github.io/tags/%E8%AF%91%E6%96%87/"/>
+      <category term="译文" scheme="http://youngxhui.top/tags/%E8%AF%91%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Number of 1 Bits(#191)</title>
-    <link href="http://youngxhui.github.io/2017/12/01/LeetCode-Number-of-1-Bits-191/"/>
-    <id>http://youngxhui.github.io/2017/12/01/LeetCode-Number-of-1-Bits-191/</id>
+    <link href="http://youngxhui.top/2017/12/01/LeetCode-Number-of-1-Bits-191/"/>
+    <id>http://youngxhui.top/2017/12/01/LeetCode-Number-of-1-Bits-191/</id>
     <published>2017-12-01T12:20:38.000Z</published>
     <updated>2017-12-01T12:32:06.068Z</updated>
     
@@ -242,14 +242,14 @@
     </summary>
     
     
-      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+      <category term="Bit Manipulation" scheme="http://youngxhui.top/tags/Bit-Manipulation/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Self Dividing Numbers(#728)</title>
-    <link href="http://youngxhui.github.io/2017/12/01/LeetCode-Self-Dividing-Numbers-728/"/>
-    <id>http://youngxhui.github.io/2017/12/01/LeetCode-Self-Dividing-Numbers-728/</id>
+    <link href="http://youngxhui.top/2017/12/01/LeetCode-Self-Dividing-Numbers-728/"/>
+    <id>http://youngxhui.top/2017/12/01/LeetCode-Self-Dividing-Numbers-728/</id>
     <published>2017-12-01T06:05:03.000Z</published>
     <updated>2017-12-01T12:28:03.054Z</updated>
     
@@ -265,14 +265,14 @@
     </summary>
     
     
-      <category term="Math" scheme="http://youngxhui.github.io/tags/Math/"/>
+      <category term="Math" scheme="http://youngxhui.top/tags/Math/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Binary Number with Alternating Bits(#693)</title>
-    <link href="http://youngxhui.github.io/2017/12/01/LeetCode-Binary-Number-with-Alternating-Bits-693/"/>
-    <id>http://youngxhui.github.io/2017/12/01/LeetCode-Binary-Number-with-Alternating-Bits-693/</id>
+    <link href="http://youngxhui.top/2017/12/01/LeetCode-Binary-Number-with-Alternating-Bits-693/"/>
+    <id>http://youngxhui.top/2017/12/01/LeetCode-Binary-Number-with-Alternating-Bits-693/</id>
     <published>2017-12-01T05:44:30.000Z</published>
     <updated>2017-12-01T12:26:13.959Z</updated>
     
@@ -289,14 +289,14 @@
     </summary>
     
     
-      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+      <category term="Bit Manipulation" scheme="http://youngxhui.top/tags/Bit-Manipulation/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Length of Last Word(#58)</title>
-    <link href="http://youngxhui.github.io/2017/09/14/LeetCode-Length-of-Last-Word-58/"/>
-    <id>http://youngxhui.github.io/2017/09/14/LeetCode-Length-of-Last-Word-58/</id>
+    <link href="http://youngxhui.top/2017/09/14/LeetCode-Length-of-Last-Word-58/"/>
+    <id>http://youngxhui.top/2017/09/14/LeetCode-Length-of-Last-Word-58/</id>
     <published>2017-09-14T11:54:04.000Z</published>
     <updated>2018-02-12T03:57:40.905Z</updated>
     
@@ -312,14 +312,14 @@
     </summary>
     
     
-      <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
+      <category term="String" scheme="http://youngxhui.top/tags/String/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Add Digits(#258)</title>
-    <link href="http://youngxhui.github.io/2017/09/10/LeetCode-Add-Digits-258/"/>
-    <id>http://youngxhui.github.io/2017/09/10/LeetCode-Add-Digits-258/</id>
+    <link href="http://youngxhui.top/2017/09/10/LeetCode-Add-Digits-258/"/>
+    <id>http://youngxhui.top/2017/09/10/LeetCode-Add-Digits-258/</id>
     <published>2017-09-10T11:34:01.000Z</published>
     <updated>2017-12-01T12:23:02.630Z</updated>
     
@@ -338,18 +338,18 @@
     </summary>
     
     
-      <category term="Math" scheme="http://youngxhui.github.io/tags/Math/"/>
+      <category term="Math" scheme="http://youngxhui.top/tags/Math/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Find the Difference(#389)</title>
-    <link href="http://youngxhui.github.io/2017/09/10/LeetCode-Find-the-Difference-389/"/>
-    <id>http://youngxhui.github.io/2017/09/10/LeetCode-Find-the-Difference-389/</id>
+    <link href="http://youngxhui.top/2017/09/10/LeetCode-Find-the-Difference-389/"/>
+    <id>http://youngxhui.top/2017/09/10/LeetCode-Find-the-Difference-389/</id>
     <published>2017-09-10T11:20:09.000Z</published>
     <updated>2017-12-01T12:26:20.530Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Find-the-Difference-389"><a href="#Find-the-Difference-389" class="headerlink" title="Find the Difference(#389)"></a>Find the Difference(#389)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>389</td><td>Find the Difference</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 <a href="http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/">#136</a>,即</p><blockquote><p>N ^ N = 0<br>N ^ 0 = 0</p></blockquote><p>利用这个规律可以很方便的找出那个不同的字符。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">findTheDifference</span><span class="params">(String s, String t)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] sc = s.toCharArray();</div><div class="line">        <span class="keyword">char</span>[] tc = t.toCharArray();</div><div class="line">        </div><div class="line">        <span class="keyword">int</span> out = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: sc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: tc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>)out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Find-the-Difference-389"><a href="#Find-the-Difference-389" class="headerlink" title="Find the Difference(#389)"></a>Find the Difference(#389)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>389</td><td>Find the Difference</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题主要是用于寻找两个字符串之间不同的字符，用到之前的一个规律，在 <a href="http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/" target="_blank" rel="noopener">#136</a>,即</p><blockquote><p>N ^ N = 0<br>N ^ 0 = 0</p></blockquote><p>利用这个规律可以很方便的找出那个不同的字符。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">findTheDifference</span><span class="params">(String s, String t)</span> </span>&#123;</div><div class="line">        <span class="keyword">char</span>[] sc = s.toCharArray();</div><div class="line">        <span class="keyword">char</span>[] tc = t.toCharArray();</div><div class="line">        </div><div class="line">        <span class="keyword">int</span> out = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: sc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> c: tc) &#123;</div><div class="line">            out ^= c;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> (<span class="keyword">char</span>)out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -361,16 +361,16 @@
     </summary>
     
     
-      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+      <category term="Bit Manipulation" scheme="http://youngxhui.top/tags/Bit-Manipulation/"/>
     
-      <category term="Hash Table" scheme="http://youngxhui.github.io/tags/Hash-Table/"/>
+      <category term="Hash Table" scheme="http://youngxhui.top/tags/Hash-Table/"/>
     
   </entry>
   
   <entry>
     <title>协同过滤算法</title>
-    <link href="http://youngxhui.github.io/2017/09/01/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95/"/>
-    <id>http://youngxhui.github.io/2017/09/01/协同过滤算法/</id>
+    <link href="http://youngxhui.top/2017/09/01/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95/"/>
+    <id>http://youngxhui.top/2017/09/01/协同过滤算法/</id>
     <published>2017-09-01T09:52:48.000Z</published>
     <updated>2017-10-12T11:05:36.550Z</updated>
     
@@ -387,20 +387,20 @@
     </summary>
     
     
-      <category term="推荐系统" scheme="http://youngxhui.github.io/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
+      <category term="推荐系统" scheme="http://youngxhui.top/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="Python" scheme="http://youngxhui.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://youngxhui.top/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Reverse Integer(#7)</title>
-    <link href="http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/"/>
-    <id>http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/</id>
+    <link href="http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/"/>
+    <id>http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/</id>
     <published>2017-08-28T10:38:10.000Z</published>
     <updated>2017-12-01T12:21:57.238Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Reverse-Integer-7"><a href="#Reverse-Integer-7" class="headerlink" title="Reverse Integer(#7)"></a>Reverse Integer(#7)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>7</td><td>Reverse Integer</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。<del>其实是个人很垃圾。</del></p><p>主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(<a href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/">Reverse String(#344)</a>)。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。</p><ol><li>判断正负，如果是负数，因为在后面进行绝对值的时候会无法进行正负判断，从而无法获取到正确的结果。</li><li>判断字符取绝对值后是否越界，在这里有个问题 如果使用 <code>Math.abs()</code> 这个方法的话,传入整型则返回整型，如果整型越界，则不变。</li><li>判断翻转后是否越界。</li></ol><p>总的来说就这个三个步骤。</p><p>代码中的 <code>f</code> 是为了判断是否为负数，将传入的数转化为 <code>long</code> 类型有助于后期，防止 <code>int</code> 越界。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">        <span class="keyword">boolean</span> f = x &lt; <span class="number">0</span>;</div><div class="line">        <span class="keyword">long</span> a = x;</div><div class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">        a = a &lt; <span class="number">0</span> ? -a : a;</div><div class="line">        sb.append(a);</div><div class="line">        <span class="keyword">long</span> out = f ? -Long.parseLong(sb.reverse().toString()) : Long.parseLong(sb.reverse().toString());</div><div class="line">        <span class="keyword">if</span> (out &gt;= Integer.MAX_VALUE || out &lt;= Integer.MIN_VALUE) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Reverse-Integer-7"><a href="#Reverse-Integer-7" class="headerlink" title="Reverse Integer(#7)"></a>Reverse Integer(#7)</h1><table><thead><tr><th>编号</th><th>名称</th><th>等级</th></tr></thead><tbody><tr><td>7</td><td>Reverse Integer</td><td>Easy</td></tr></tbody></table><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。<del>其实是个人很垃圾。</del></p><p>主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(<a href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/" target="_blank" rel="noopener">Reverse String(#344)</a>)。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。</p><ol><li>判断正负，如果是负数，因为在后面进行绝对值的时候会无法进行正负判断，从而无法获取到正确的结果。</li><li>判断字符取绝对值后是否越界，在这里有个问题 如果使用 <code>Math.abs()</code> 这个方法的话,传入整型则返回整型，如果整型越界，则不变。</li><li>判断翻转后是否越界。</li></ol><p>总的来说就这个三个步骤。</p><p>代码中的 <code>f</code> 是为了判断是否为负数，将传入的数转化为 <code>long</code> 类型有助于后期，防止 <code>int</code> 越界。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">        <span class="keyword">boolean</span> f = x &lt; <span class="number">0</span>;</div><div class="line">        <span class="keyword">long</span> a = x;</div><div class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">        a = a &lt; <span class="number">0</span> ? -a : a;</div><div class="line">        sb.append(a);</div><div class="line">        <span class="keyword">long</span> out = f ? -Long.parseLong(sb.reverse().toString()) : Long.parseLong(sb.reverse().toString());</div><div class="line">        <span class="keyword">if</span> (out &gt;= Integer.MAX_VALUE || out &lt;= Integer.MIN_VALUE) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) out;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -413,14 +413,14 @@
     </summary>
     
     
-      <category term="Math" scheme="http://youngxhui.github.io/tags/Math/"/>
+      <category term="Math" scheme="http://youngxhui.top/tags/Math/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Single Number(#136)</title>
-    <link href="http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/"/>
-    <id>http://youngxhui.github.io/2017/08/27/LeetCode-Single-Number-136/</id>
+    <link href="http://youngxhui.top/2017/08/27/LeetCode-Single-Number-136/"/>
+    <id>http://youngxhui.top/2017/08/27/LeetCode-Single-Number-136/</id>
     <published>2017-08-27T05:41:25.000Z</published>
     <updated>2017-12-01T12:28:09.907Z</updated>
     
@@ -437,14 +437,14 @@
     </summary>
     
     
-      <category term="Bit Manipulation" scheme="http://youngxhui.github.io/tags/Bit-Manipulation/"/>
+      <category term="Bit Manipulation" scheme="http://youngxhui.top/tags/Bit-Manipulation/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Move Zeroes(#283)</title>
-    <link href="http://youngxhui.github.io/2017/08/27/LeetCode-Move-Zeroes-283/"/>
-    <id>http://youngxhui.github.io/2017/08/27/LeetCode-Move-Zeroes-283/</id>
+    <link href="http://youngxhui.top/2017/08/27/LeetCode-Move-Zeroes-283/"/>
+    <id>http://youngxhui.top/2017/08/27/LeetCode-Move-Zeroes-283/</id>
     <published>2017-08-27T05:29:14.000Z</published>
     <updated>2017-12-01T12:26:56.843Z</updated>
     
@@ -462,14 +462,14 @@
     </summary>
     
     
-      <category term="Array" scheme="http://youngxhui.github.io/tags/Array/"/>
+      <category term="Array" scheme="http://youngxhui.top/tags/Array/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Judge Route Circle(#657)</title>
-    <link href="http://youngxhui.github.io/2017/08/16/LeetCode-Judge-Route-Circle-657/"/>
-    <id>http://youngxhui.github.io/2017/08/16/LeetCode-Judge-Route-Circle-657/</id>
+    <link href="http://youngxhui.top/2017/08/16/LeetCode-Judge-Route-Circle-657/"/>
+    <id>http://youngxhui.top/2017/08/16/LeetCode-Judge-Route-Circle-657/</id>
     <published>2017-08-16T11:45:24.000Z</published>
     <updated>2018-02-12T03:57:36.101Z</updated>
     
@@ -485,14 +485,14 @@
     </summary>
     
     
-      <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
+      <category term="String" scheme="http://youngxhui.top/tags/String/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode:Longest Uncommon Subsequence I(#521)</title>
-    <link href="http://youngxhui.github.io/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/"/>
-    <id>http://youngxhui.github.io/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/</id>
+    <link href="http://youngxhui.top/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/"/>
+    <id>http://youngxhui.top/2017/08/16/LeetCode-Longest-Uncommon-Subsequence-I-521/</id>
     <published>2017-08-16T10:05:18.000Z</published>
     <updated>2017-12-01T12:26:49.125Z</updated>
     
@@ -508,7 +508,7 @@
     </summary>
     
     
-      <category term="String" scheme="http://youngxhui.github.io/tags/String/"/>
+      <category term="String" scheme="http://youngxhui.top/tags/String/"/>
     
   </entry>
   

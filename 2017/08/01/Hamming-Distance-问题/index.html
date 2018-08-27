@@ -103,7 +103,7 @@
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hamming Distance 问题">
-<meta property="og:url" content="http://youngxhui.github.io/2017/08/01/Hamming-Distance-问题/index.html">
+<meta property="og:url" content="http://youngxhui.top/2017/08/01/Hamming-Distance-问题/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言经过了好久，终于开始学习算法，刷算法题了。从LeetCode上开始刷题。也是完成之前立下的flag。   Hamming Distance(#461)   编号 名称 等级     461 Hamming Distance Easy    思路这个试题 主要是计算 两个数源码中有几位不相同。 对于这个问题，首先我想到的是用按位异或(^)，按位异或后再用递归移位来计算。这仅仅是一个想法。但是思考">
 <meta property="og:locale" content="zh-Hans">
@@ -140,7 +140,7 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.github.io/2017/08/01/Hamming-Distance-问题/"/>
+  <link rel="canonical" href="http://youngxhui.top/2017/08/01/Hamming-Distance-问题/"/>
 
 
 
@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/01/Hamming-Distance-问题/">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.top/2017/08/01/Hamming-Distance-问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="youngxhui">
@@ -380,17 +380,16 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/08/01/Hamming-Distance-问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/01/Hamming-Distance-问题/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/01/Hamming-Distance-问题/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -541,7 +540,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2017/08/01/Hamming-Distance-问题/" title="Hamming Distance 问题">http://youngxhui.github.io/2017/08/01/Hamming-Distance-问题/</a>
+    <a href="http://youngxhui.top/2017/08/01/Hamming-Distance-问题/" title="Hamming Distance 问题">http://youngxhui.top/2017/08/01/Hamming-Distance-问题/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -611,7 +610,12 @@
           
   <div class="comments" id="comments">
     
-      <div id="hypercomments_widget"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -1002,34 +1006,36 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://island-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://youngxhui.top/2017/08/01/Hamming-Distance-问题/';
+          this.page.identifier = '2017/08/01/Hamming-Distance-问题/';
+          this.page.title = 'Hamming Distance 问题';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://island-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
 
 
 
-	
-
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 95533, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2017/08/01/Hamming-Distance-问题/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95533/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
 	
 
 
+
+
+
+  
 
 
 

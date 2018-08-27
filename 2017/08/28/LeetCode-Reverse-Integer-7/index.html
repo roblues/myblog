@@ -103,7 +103,7 @@
 <meta name="keywords" content="Math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:Reverse Integer(#7)">
-<meta property="og:url" content="http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/index.html">
+<meta property="og:url" content="http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="Reverse Integer(#7)   编号 名称 等级     7 Reverse Integer Easy    思路这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。其实是个人很垃圾。 主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(Reverse String(#344))。但是这个试题要比之前的考虑的多">
 <meta property="og:locale" content="zh-Hans">
@@ -140,7 +140,7 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/"/>
+  <link rel="canonical" href="http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/"/>
 
 
 
@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="youngxhui">
@@ -380,17 +380,16 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/08/28/LeetCode-Reverse-Integer-7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/08/28/LeetCode-Reverse-Integer-7/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/28/LeetCode-Reverse-Integer-7/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -463,7 +462,7 @@
 </tbody>
 </table>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个题可是满满的坑，测试用例个人感觉给的很好，考虑到了一些临界值的情况，提交了六次才通过，或许是代码很垃圾。<del>其实是个人很垃圾。</del></p>
-<p>主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(<a href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/">Reverse String(#344)</a>)。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。</p>
+<p>主要是判断反转，要求各个数进行反转，这让我想到了之前的字符串反转的试题(<a href="http://youngxhui.github.io/2017/08/04/LeetCode-Reverse-String-344/" target="_blank" rel="noopener">Reverse String(#344)</a>)。但是这个试题要比之前的考虑的多，因为字符串反转不需要考虑范围，而数字反转就要考虑他的范围。</p>
 <ol>
 <li>判断正负，如果是负数，因为在后面进行绝对值的时候会无法进行正负判断，从而无法获取到正确的结果。</li>
 <li>判断字符取绝对值后是否越界，在这里有个问题 如果使用 <code>Math.abs()</code> 这个方法的话,传入整型则返回整型，如果整型越界，则不变。</li>
@@ -525,7 +524,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/" title="LeetCode:Reverse Integer(#7)">http://youngxhui.github.io/2017/08/28/LeetCode-Reverse-Integer-7/</a>
+    <a href="http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/" title="LeetCode:Reverse Integer(#7)">http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -595,7 +594,12 @@
           
   <div class="comments" id="comments">
     
-      <div id="hypercomments_widget"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -986,34 +990,36 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://island-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://youngxhui.top/2017/08/28/LeetCode-Reverse-Integer-7/';
+          this.page.identifier = '2017/08/28/LeetCode-Reverse-Integer-7/';
+          this.page.title = 'LeetCode:Reverse Integer(#7)';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://island-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
 
 
 
-	
-
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 95533, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2017/08/28/LeetCode-Reverse-Integer-7/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95533/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
 	
 
 
+
+
+
+  
 
 
 

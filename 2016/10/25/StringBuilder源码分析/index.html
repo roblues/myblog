@@ -103,7 +103,7 @@
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="StringBuilder源码分析">
-<meta property="og:url" content="http://youngxhui.github.io/2016/10/25/StringBuilder源码分析/index.html">
+<meta property="og:url" content="http://youngxhui.top/2016/10/25/StringBuilder源码分析/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="#StringBuilder源码分析  作者wevanyoungxhui 概况一个可变的字符序列。此类提供一个与 StringBuffer 兼容的 API，但不保证同步。该类被设计用作 StringBuffer 的一个简易替换，用在字符串缓冲区被单个线程使用的时候（这种情况很普遍）。如果可能，建议优先采用该类，因为在大多数实现中，它比 StringBuffer 要快。  签名123public f">
 <meta property="og:locale" content="zh-Hans">
@@ -140,7 +140,7 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.github.io/2016/10/25/StringBuilder源码分析/"/>
+  <link rel="canonical" href="http://youngxhui.top/2016/10/25/StringBuilder源码分析/"/>
 
 
 
@@ -337,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2016/10/25/StringBuilder源码分析/">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.top/2016/10/25/StringBuilder源码分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="youngxhui">
@@ -380,17 +380,16 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/25/StringBuilder源码分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2016/10/25/StringBuilder源码分析/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/25/StringBuilder源码分析/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -448,7 +447,7 @@
       
         <p>#StringBuilder源码分析</p>
 <hr>
-<h2 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h2><p><a href="https://wevan.github.io/about/" target="_blank" rel="noopener">wevan</a><br><a href="http://youngxhui.github.io/about/">youngxhui</a></p>
+<h2 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h2><p><a href="https://wevan.github.io/about/" target="_blank" rel="noopener">wevan</a><br><a href="http://youngxhui.github.io/about/" target="_blank" rel="noopener">youngxhui</a></p>
 <h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>一个可变的字符序列。此类提供一个与 <code>StringBuffer</code> 兼容的 <code>API</code>，但不保证同步。该类被设计用作 <code>StringBuffer</code> 的一个简易替换，用在字符串缓冲区被单个线程使用的时候（这种情况很普遍）。如果可能，建议优先采用该类，因为在大多数实现中，它比 <code>StringBuffer</code> 要快。 </p>
 <h2 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">StringBuilder</span></span></div><div class="line"><span class="keyword">extends</span> <span class="title">AbstractStringBuilder</span></div><div class="line"><span class="keyword">implements</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span>, <span class="title">CharSequence</span></div></pre></td></tr></table></figure>
 <p>可以看到StringBuilder继承了  </p>
@@ -548,7 +547,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2016/10/25/StringBuilder源码分析/" title="StringBuilder源码分析">http://youngxhui.github.io/2016/10/25/StringBuilder源码分析/</a>
+    <a href="http://youngxhui.top/2016/10/25/StringBuilder源码分析/" title="StringBuilder源码分析">http://youngxhui.top/2016/10/25/StringBuilder源码分析/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -618,7 +617,12 @@
           
   <div class="comments" id="comments">
     
-      <div id="hypercomments_widget"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -1009,34 +1013,36 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://island-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://youngxhui.top/2016/10/25/StringBuilder源码分析/';
+          this.page.identifier = '2016/10/25/StringBuilder源码分析/';
+          this.page.title = 'StringBuilder源码分析';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://island-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
 
 
 
-	
-
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 95533, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2016/10/25/StringBuilder源码分析/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95533/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
 	
 
 
+
+
+
+  
 
 
 

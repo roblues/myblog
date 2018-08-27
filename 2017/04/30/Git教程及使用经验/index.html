@@ -103,7 +103,7 @@
 <meta name="keywords" content="GitHub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git教程及使用经验">
-<meta property="og:url" content="http://youngxhui.github.io/2017/04/30/Git教程及使用经验/index.html">
+<meta property="og:url" content="http://youngxhui.top/2017/04/30/Git教程及使用经验/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言经过一周的准备，完成了 Git 的一些使用经验及教程。 主要是从命令行的角度来讲解。 Git 是什么git 在维基百科上的解释是这样的  git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。应注意的是，这与GNU Interactive Tools（一个类似Norton Comman">
 <meta property="og:locale" content="zh-Hans">
@@ -146,7 +146,7 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.github.io/2017/04/30/Git教程及使用经验/"/>
+  <link rel="canonical" href="http://youngxhui.top/2017/04/30/Git教程及使用经验/"/>
 
 
 
@@ -343,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://youngxhui.github.io/2017/04/30/Git教程及使用经验/">
+    <link itemprop="mainEntityOfPage" href="http://youngxhui.top/2017/04/30/Git教程及使用经验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="youngxhui">
@@ -386,17 +386,16 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/30/Git教程及使用经验/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/04/30/Git教程及使用经验/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/30/Git教程及使用经验/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -459,7 +458,7 @@
 <p>git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。应注意的是，这与GNU Interactive Tools（一个类似Norton Commander界面的文件管理器）有所不同。 </p>
 </blockquote>
 <p>在我看来 Git 是一个 版本控制工具 和 团队协作 软件。</p>
-<h1 id="Git-版本控制"><a href="#Git-版本控制" class="headerlink" title="Git 版本控制"></a>Git 版本控制</h1><p>简单的使用看这个博客 <a href="http://youngxhui.github.io/2016/08/13/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">Git教程操作</a></p>
+<h1 id="Git-版本控制"><a href="#Git-版本控制" class="headerlink" title="Git 版本控制"></a>Git 版本控制</h1><p>简单的使用看这个博客 <a href="http://youngxhui.github.io/2016/08/13/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" target="_blank" rel="noopener">Git教程操作</a></p>
 <p>这个博客会在这个基础上更加详细的讲解命令行的使用，以及一些操作原理。</p>
 <h2 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h2><p>当我们通过 <code>git add</code> 命令添加文件到 git 中的时候，可以通过 <code>git status</code> 来了解当前代码库的情况。</p>
 <p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20status.png" alt=""></p>
@@ -538,7 +537,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://youngxhui.github.io/2017/04/30/Git教程及使用经验/" title="Git教程及使用经验">http://youngxhui.github.io/2017/04/30/Git教程及使用经验/</a>
+    <a href="http://youngxhui.top/2017/04/30/Git教程及使用经验/" title="Git教程及使用经验">http://youngxhui.top/2017/04/30/Git教程及使用经验/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -608,7 +607,12 @@
           
   <div class="comments" id="comments">
     
-      <div id="hypercomments_widget"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -999,34 +1003,36 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://island-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://youngxhui.top/2017/04/30/Git教程及使用经验/';
+          this.page.identifier = '2017/04/30/Git教程及使用经验/';
+          this.page.title = 'Git教程及使用经验';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://island-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
 
 
 
-	
-
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
-
-		_hcwp.push({widget:"Bloggerstream", widget_id: 95533, selector:".hc-comment-count", label: "{\%COUNT%\}" });
-
-		
-		_hcwp.push({widget:"Stream", widget_id: 95533, xid: "2017/04/30/Git教程及使用经验/"});
-		
-
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/95533/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
 	
 
 
+
+
+
+  
 
 
 
