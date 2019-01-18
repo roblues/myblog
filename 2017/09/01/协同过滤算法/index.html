@@ -107,18 +107,18 @@
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。 分类在协同过滤算法中，分为两类，基于用户的协同过滤(UserCF)和基于物品的协同过滤(ItemCF)。每个类型的适用情况不同。 在上述的两种类型中，基于用户的协同过滤算法是不太常用的，原因如下  用户的数量是远远大于物品的数量，计算用户之间的相似度计算量会很大。 对于一个新用户很难找到相似度  所以一般是不会使用基于用户的协同过滤，但是并不">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/shopping.png">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/render.gif">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person1.gif">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person2.gif">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif">
-<meta property="og:updated_time" content="2017-10-12T11:05:36.550Z">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/shopping.png">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/render.gif">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/person1.gif">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/person2.gif">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/person3.gif">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/person4.gif">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/person4.gif">
+<meta property="og:updated_time" content="2019-01-18T02:22:29.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="协同过滤算法">
 <meta name="twitter:description" content="前言在推荐系统中有很多算法，其中一种就是协同过滤算法。 分类在协同过滤算法中，分为两类，基于用户的协同过滤(UserCF)和基于物品的协同过滤(ItemCF)。每个类型的适用情况不同。 在上述的两种类型中，基于用户的协同过滤算法是不太常用的，原因如下  用户的数量是远远大于物品的数量，计算用户之间的相似度计算量会很大。 对于一个新用户很难找到相似度  所以一般是不会使用基于用户的协同过滤，但是并不">
-<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/shopping.png">
+<meta name="twitter:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/shopping.png">
 
 
 
@@ -500,11 +500,11 @@
 </table>
 <p>寻找他们的相似度</p>
 <p>通过离散图来进行表示</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/shopping.png" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/shopping.png" alt=""></p>
 <p>可以看出 <code>用户1</code> <code>用户3</code> <code>用户4</code> 之间是存在关系的。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding = utf8</span></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="comment"># 散点图分析五个用户之间的相关程度</span></div><div class="line"><span class="comment"># x轴为对于商品 1 的喜欢程度</span></div><div class="line"><span class="comment"># y轴是对于商品 2 的喜欢程度</span></div><div class="line"><span class="comment"># 数据如下</span></div><div class="line"><span class="comment"># 商品1 [3.3, 5.8, 3.6, 3.4, 5.2]</span></div><div class="line"><span class="comment"># 商品2 [6.5, 2.6, 6.3, 5.8, 3.1]</span></div><div class="line"></div><div class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</div><div class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</div><div class="line">color = [<span class="string">'r'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'g'</span>, <span class="string">'y'</span>, <span class="string">'k'</span>, <span class="string">'m'</span>, <span class="string">'0xff0012'</span>]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1)):</div><div class="line">    plt.scatter(shop1[i], shop2[i], c=color[i])</div><div class="line">plt.xlim(<span class="number">0</span>, <span class="number">10</span>)</div><div class="line">plt.ylim(<span class="number">0</span>, <span class="number">10</span>)</div><div class="line">plt.ylabel(<span class="string">"shopping 2"</span>)</div><div class="line">plt.xlabel(<span class="string">"shopping 1"</span>)</div><div class="line">plt.legend(<span class="string">'12345'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
 <h2 id="欧几里得距离"><a href="#欧几里得距离" class="headerlink" title="欧几里得距离"></a>欧几里得距离</h2><p>欧几里得距离是最常用的距离公式,用于计算两点之间的距离。公式如下：</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/render.gif" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/render.gif" alt=""></p>
 <p>通过计算两点之间的距离来表示他们之间的相关程度。</p>
 <p>我们通过 <code>python</code> 计算 欧几里得距离。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding = utf8</span></div><div class="line"></div><div class="line"><span class="comment">#        1    2     3   4   5</span></div><div class="line">shop1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</div><div class="line">shop2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(shop1) - <span class="number">1</span>):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(shop2)):</div><div class="line">        distance = (shop1[i] - shop1[j]) ** <span class="number">2</span> + (shop2[i] - shop2[j]) ** <span class="number">2</span></div><div class="line">        correlation = <span class="number">1</span> / (<span class="number">1</span> + distance) <span class="comment"># 将范围缩小至0 ~ 1 之间</span></div><div class="line">        <span class="keyword">if</span> correlation &gt; <span class="number">0.60</span>:  <span class="comment"># 根据需求更换相关系数</span></div><div class="line">            print(<span class="string">"第 &#123;&#125; and &#123;&#125;  distance is &#123;&#125;"</span>.format(i + <span class="number">1</span>, j + <span class="number">1</span>, correlation))</div></pre></td></tr></table></figure>
@@ -534,13 +534,13 @@
 <p>同样这个算法也是有缺陷的,但数据越少的时候,波动性越大。当数据很少的时候不建议使用。</p>
 <p>皮尔逊相关系数公式有四个</p>
 <p>公式一：</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person1.gif" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/person1.gif" alt=""></p>
 <p>公式二：</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person2.gif" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/person2.gif" alt=""></p>
 <p>公式三：</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person3.gif" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/person3.gif" alt=""></p>
 <p>公式四：</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/person4.gif" alt=""></p>
 <p>相关系数</p>
 <ul>
 <li>0.8-1.0     极强相关</li>
@@ -550,7 +550,7 @@
 <li>0.0-0.2     极弱相关或无相关</li>
 </ul>
 <p>我们通过第四个公式进行计算</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/person4.gif" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/person4.gif" alt=""></p>
 <h3 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h3><p>通过 <code>python</code> 计算出相关系数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding=utf8</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 皮尔孙相关系数计算</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">PearsonCorrelationSimilarity</span><span class="params">(vec1, vec2)</span>:</span></div><div class="line">    value = range(len(vec1))</div><div class="line"></div><div class="line">    sum_vec1 = sum([vec1[i] <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line">    sum_vec2 = sum([vec2[i] <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line"></div><div class="line">    square_sum_vec1 = sum([pow(vec1[i], <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line">    square_sum_vec2 = sum([pow(vec2[i], <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line"></div><div class="line">    product = sum([vec1[i] * vec2[i] <span class="keyword">for</span> i <span class="keyword">in</span> value])</div><div class="line"></div><div class="line">    numerator = product - (sum_vec1 * sum_vec2 / len(vec1))</div><div class="line">    dominator = ((square_sum_vec1 - pow(sum_vec1, <span class="number">2</span>) / len(vec1)) * (</div><div class="line">        square_sum_vec2 - pow(sum_vec2, <span class="number">2</span>) / len(vec2))) ** <span class="number">0.5</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> dominator == <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span></div><div class="line">    result = numerator / (dominator * <span class="number">1.0</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># 五个用户对五个商品的评价</span></div><div class="line">    user1 = [<span class="number">3.3</span>, <span class="number">5.8</span>, <span class="number">3.6</span>, <span class="number">3.4</span>, <span class="number">5.2</span>]</div><div class="line">    user2 = [<span class="number">6.5</span>, <span class="number">2.6</span>, <span class="number">6.3</span>, <span class="number">5.8</span>, <span class="number">3.1</span>]</div><div class="line">    user3 = [<span class="number">5.5</span>, <span class="number">3.2</span>, <span class="number">6.5</span>, <span class="number">4.7</span>, <span class="number">4.4</span>]</div><div class="line">    user4 = [<span class="number">4.4</span>, <span class="number">6.2</span>, <span class="number">2.3</span>, <span class="number">5.1</span>, <span class="number">3.3</span>]</div><div class="line">    user5 = [<span class="number">2.1</span>, <span class="number">5.2</span>, <span class="number">4.2</span>, <span class="number">2.2</span>, <span class="number">4.1</span>]</div><div class="line"></div><div class="line">    userlist = [user1, user2, user3, user4, user5]</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(userlist) - <span class="number">1</span>):</div><div class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(userlist)):</div><div class="line">            result = PearsonCorrelationSimilarity(userlist[i], userlist[j])</div><div class="line">            <span class="keyword">print</span> <span class="string">"user%d 和 user%d 的相关系数是%f"</span> % (i + <span class="number">1</span>, j + <span class="number">1</span>, result)</div></pre></td></tr></table></figure>
 <blockquote>
@@ -954,7 +954,7 @@
         <div class="copyright" >
   
   &copy;  2016 &mdash; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

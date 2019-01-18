@@ -107,16 +107,16 @@
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言经过一周的准备，完成了 Git 的一些使用经验及教程。 主要是从命令行的角度来讲解。 Git 是什么git 在维基百科上的解释是这样的  git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。应注意的是，这与GNU Interactive Tools（一个类似Norton Comman">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git%20status.png">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git%E4%BB%93%E5%BA%93.png">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git%20add%20-i.png">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git%20branch-a.png">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git%20flow.png">
-<meta property="og:updated_time" content="2017-08-27T06:59:00.222Z">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20status.png">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%E4%BB%93%E5%BA%93.png">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20add%20-i.png">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20branch-a.png">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20flow.png">
+<meta property="og:updated_time" content="2019-01-18T02:13:02.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git教程及使用经验">
 <meta name="twitter:description" content="前言经过一周的准备，完成了 Git 的一些使用经验及教程。 主要是从命令行的角度来讲解。 Git 是什么git 在维基百科上的解释是这样的  git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。应注意的是，这与GNU Interactive Tools（一个类似Norton Comman">
-<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/git%20status.png">
+<meta name="twitter:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20status.png">
 
 
 
@@ -461,28 +461,28 @@
 <h1 id="Git-版本控制"><a href="#Git-版本控制" class="headerlink" title="Git 版本控制"></a>Git 版本控制</h1><p>简单的使用看这个博客 <a href="http://youngxhui.github.io/2016/08/13/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" target="_blank" rel="noopener">Git教程操作</a></p>
 <p>这个博客会在这个基础上更加详细的讲解命令行的使用，以及一些操作原理。</p>
 <h2 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h2><p>当我们通过 <code>git add</code> 命令添加文件到 git 中的时候，可以通过 <code>git status</code> 来了解当前代码库的情况。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20status.png" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20status.png" alt=""></p>
 <p>通过 <code>git status</code>这个命令我们可以知道当前代码库的状态</p>
 <h2 id="git-add"><a href="#git-add" class="headerlink" title="git add -?"></a>git add -?</h2><p>为什么每次都要使用 <code>git add</code> 把修改文件添加，之后在提交。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%E4%BB%93%E5%BA%93.png" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%E4%BB%93%E5%BA%93.png" alt=""></p>
 <p>这就是 git 的一个原理图。</p>
 <p>git 工作时候分为工作区和版本库。工作区就是我们自己本地编辑的区域。而代码库又有一个 暂存区/缓存区。我们每次提交版本(<code>commit</code>) 都是在暂存区向代码库提交。所以我们每次都要通过 <code>add</code> 命令进行对修改的添加。</p>
 <p>在给 git 添加文件的时候，我们使用的是 <code>git add &lt;filename&gt;</code>,但是当我们要添加大量的文件的时候，采用 <code>git add</code> 不仅浪费时间，而且还容易出错。此时我们使用 <code>git add -A</code> 会把所更改(包括文件的添加，删除，修改)的文件添加到代码库中。</p>
 <p><code>git add -i</code> 会进入一个命令的子系统，提供我们选择。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20add%20-i.png" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20add%20-i.png" alt=""></p>
 <h2 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h2><p><code>git diff</code> 是一个比较代码的命令，如果不加参数表示本次和上一次的比较。我们可以添加要比较的两个版本的哈希值。</p>
 <p><code>git diff 01df58 6e1baa</code></p>
 <h1 id="Git-协作开发"><a href="#Git-协作开发" class="headerlink" title="Git 协作开发"></a>Git 协作开发</h1><p>之前的 Git 是用来用做简单的 版本控制，记录了每一个版本。下面我们进行团队协作开发。</p>
 <h2 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h2><p>当一个人开发功能 A 而另一个人开发功能 B ，之后代码进行整合的时候，使代码既有功能 A 也有功能 B 。在 Git 中，Git 给了我们分支的概念。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20branch-a.png" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20branch-a.png" alt=""></p>
 <p>分支可以使用我们快速的开发协作，并且快速的合并。</p>
 <h2 id="分支的使用"><a href="#分支的使用" class="headerlink" title="分支的使用"></a>分支的使用</h2><p>通过命令 <code>git branch</code> 来查看分支情况，当前分支会前面带 * 标识。<code>git branch &lt;branch name&gt;</code> 来创建分支。<br>分支创建会拷贝当前的内容到新的分支。通过 <code>git checkout &lt;branch name&gt;</code> 来切换到我们需要切换的分支。</p>
 <p>我们也可以通过 <code>git checkout -b &lt;filename&gt;</code> 来创建分支并且切换到该分支。</p>
 <h2 id="分支的合并"><a href="#分支的合并" class="headerlink" title="分支的合并"></a>分支的合并</h2><p>当我们创建出新的分支的时候，就可以对这个分支进行版本的迭代。当我们做完版本迭代，版本更新的时候，就会向我们的 <code>master</code> 分支上就行合并。</p>
 <p>如果我们要向 <code>master</code> 分支上合并我们新创建的分支叫 <code>dev</code> ，那么我们先切换分支到 <code>master</code>，在通过 <code>git merge dev</code> 进行合并两个分支。期间会有合并冲突，通过修改来进行保留。</p>
-<h1 id="Git-flow"><a href="#Git-flow" class="headerlink" title="Git flow"></a>Git flow</h1><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/git%20flow.png" alt=""></p>
+<h1 id="Git-flow"><a href="#Git-flow" class="headerlink" title="Git flow"></a>Git flow</h1><p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/git%20flow.png" alt=""></p>
 <p>如上图，git flow 是 <code>git</code> 给我们的一个协作的开发流程，<code>master</code> 分支一般是用于上线产品的发布，<code>develop</code> 分支使用开发， 在他的支线上我们一般会创建功能分支。我们在功能分支上开发完成后合并到 <code>develop</code> 分支上。这样就完成了我们的 git flow 开发。</p>
-<p><a href="http://7xt81u.com1.z0.glb.clouddn.com/Git&amp;Github.pptx" target="_blank" rel="noopener">PPT下载</a></p>
+<p><a href="http://island-hexo.oss-cn-beijing.aliyuncs.com/Git&amp;Github.pptx" target="_blank" rel="noopener">PPT下载</a></p>
 
       
     </div>
@@ -850,7 +850,7 @@
         <div class="copyright" >
   
   &copy;  2016 &mdash; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

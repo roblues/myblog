@@ -107,13 +107,13 @@
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="String是java程序中出现比较多的对象，分析一下String首先String是由final修饰的。因此String不可变，无法继承。  将方法或类声明为final主要目的是：确保它们不会再子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。——《Java核心">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/charsequence.png">
-<meta property="og:image" content="http://7xt81u.com1.z0.glb.clouddn.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png">
-<meta property="og:updated_time" content="2017-08-27T06:59:00.678Z">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png">
+<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png">
+<meta property="og:updated_time" content="2019-01-18T02:20:48.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String源码剖析">
 <meta name="twitter:description" content="String是java程序中出现比较多的对象，分析一下String首先String是由final修饰的。因此String不可变，无法继承。  将方法或类声明为final主要目的是：确保它们不会再子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。——《Java核心">
-<meta name="twitter:image" content="http://7xt81u.com1.z0.glb.clouddn.com/charsequence.png">
+<meta name="twitter:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png">
 
 
 
@@ -452,7 +452,7 @@
 <blockquote>
 <p>将方法或类声明为final主要目的是：确保它们不会再子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。<br>——《Java核心技术 卷I》<br>作者：R eversal<br>链接：<a href="https://www.zhihu.com/question/31345592/answer/51639967" target="_blank" rel="noopener">https://www.zhihu.com/question/31345592/answer/51639967</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
 </blockquote>
-<h1 id="String不可变性及其原因"><a href="#String不可变性及其原因" class="headerlink" title="String不可变性及其原因"></a>String不可变性及其原因</h1><h2 id="String的不可变性"><a href="#String的不可变性" class="headerlink" title="String的不可变性"></a>String的不可变性</h2><p>什么叫String的不可变性呢？让我们来看一个例子。<br>        String s=“abcd“；<br>上面的语句定义了一个字符串变量s，该变量指向字符串“abcd”，当初始化变量s时，会在堆中为s非配内容空间，当将字符串变量，赋值给另一个字符串变量时，例如：String s2=s；<br>此时，s2和s是相同的字符串对象，它们指向堆中的同一个内存空间。<br>当一个字符串连接其他字符时，他就指向了新的字符串对象，例如，s=s.concat(“ef“）， 此时，s=”abcdef”;它在内存中又指向了一个新的储存空间，存放字符串”abcdef”。<br>当一个字符串在堆中被分配内容时，它就是不可变的，任何String的方法都无法改变字符串本身，但它可以返回一个新的字符串对象。<br>由于String是不可变的，所以他们的空间可以共享。例如String str = “abc”;就和<br>JAVA<br>        char data[] = {‘a’, ‘b’, ‘c’};<br>        String str = new String(data);  </p>
+<h1 id="String不可变性及其原因"><a href="#String不可变性及其原因" class="headerlink" title="String不可变性及其原因"></a>String不可变性及其原因</h1><h2 id="String的不可变性"><a href="#String的不可变性" class="headerlink" title="String的不可变性"></a>String的不可变性</h2><p>什么叫String的不可变性呢？让我们来看一个例子。<br>​        String s=“abcd“；<br>上面的语句定义了一个字符串变量s，该变量指向字符串“abcd”，当初始化变量s时，会在堆中为s非配内容空间，当将字符串变量，赋值给另一个字符串变量时，例如：String s2=s；<br>此时，s2和s是相同的字符串对象，它们指向堆中的同一个内存空间。<br>当一个字符串连接其他字符时，他就指向了新的字符串对象，例如，s=s.concat(“ef“）， 此时，s=”abcdef”;它在内存中又指向了一个新的储存空间，存放字符串”abcdef”。<br>当一个字符串在堆中被分配内容时，它就是不可变的，任何String的方法都无法改变字符串本身，但它可以返回一个新的字符串对象。<br>由于String是不可变的，所以他们的空间可以共享。例如String str = “abc”;就和<br>JAVA<br>​        char data[] = {‘a’, ‘b’, ‘c’};<br>​        String str = new String(data);  </p>
 <p>是等价的，它们共享一个存储空间。如果需要可以修改的字符串对象，可以使用StringBuffer和StringBuilder，StringBuffer是线程安全的，由于StringBuilder不需要进行同步操作，StringBuilder是比较快速的。  </p>
 <ul>
 <li>String不可变性的原因  <ul>
@@ -473,7 +473,7 @@
 </ul>
 <h2 id="Compareable接口"><a href="#Compareable接口" class="headerlink" title="Compareable接口"></a>Compareable接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T o)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>此接口强行对实现它的每个类的对象进行整体排序。此排序被称为该类的自然排序，类的 <code>compareTo</code> 方法被称为它的自然比较方法 。</p>
-<h2 id="CharSequence接口"><a href="#CharSequence接口" class="headerlink" title="CharSequence接口"></a>CharSequence接口</h2><p><img src="http://7xt81u.com1.z0.glb.clouddn.com/charsequence.png" alt=""><br>CharSequence的所有成员变量和方法。</p>
+<h2 id="CharSequence接口"><a href="#CharSequence接口" class="headerlink" title="CharSequence接口"></a>CharSequence接口</h2><p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png" alt=""><br>CharSequence的所有成员变量和方法。</p>
 <h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><ul>
 <li>private final char value[];//这是用于存储String字符的数组  </li>
 <li>private final int offset;//这是value数组的第一个有效的字符的index  </li>
@@ -483,7 +483,7 @@
 </ul>
 <hr>
 <h1 id="源码剖析"><a href="#源码剖析" class="headerlink" title="源码剖析"></a>源码剖析</h1><h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><p><code>String</code>类的构造器有十六个，除了提供了一个无参构造函数之外，还有十五个带参构造器。</p>
-<p><img src="http://7xt81u.com1.z0.glb.clouddn.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png" alt=""></p>
+<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png" alt=""></p>
 <h3 id="String"><a href="#String" class="headerlink" title="String()"></a>String()</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">String</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">this</span>.value = <span class="string">""</span>.value;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 <p>初始化一个新创建的 String 对象，使其表示一个空字符序列。注意，由于 String 是不可变的，所以无需使用此构造方法</p>
 <h3 id="String-String"><a href="#String-String" class="headerlink" title="String(String)"></a>String(String)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">String</span><span class="params">(String original)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.value = original.value;</div><div class="line">    <span class="keyword">this</span>.hash = original.hash;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -534,7 +534,7 @@
 <p><del>### replaceAll</del></p>
 <h3 id="join-方法"><a href="#join-方法" class="headerlink" title="join()方法"></a>join()方法</h3><p>这个是jdk1.8的新方法，让我们分析一下。<br>join的作用：通过一个字符或字符串来连接其他字符<br>注释文档的例子：</p>
 <blockquote>
-<p>String message = String.join(“-“, “Java”, “is”, “cool”);<br>         // message returned is: “Java-is-cool”</p>
+<p>String message = String.join(“-“, “Java”, “is”, “cool”);<br>  ​       // message returned is: “Java-is-cool”</p>
 </blockquote>
 <p>官方文档中的注释提示</p>
 <blockquote>
@@ -916,7 +916,7 @@
         <div class="copyright" >
   
   &copy;  2016 &mdash; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
