@@ -107,13 +107,13 @@
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="String是java程序中出现比较多的对象，分析一下String首先String是由final修饰的。因此String不可变，无法继承。  将方法或类声明为final主要目的是：确保它们不会再子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。——《Java核心">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png">
-<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png">
-<meta property="og:updated_time" content="2019-01-18T02:20:48.972Z">
+<meta property="og:image" content="https://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png">
+<meta property="og:image" content="https://island-hexo.oss-cn-beijing.aliyuncs.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png">
+<meta property="og:updated_time" content="2019-01-18T02:49:19.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String源码剖析">
 <meta name="twitter:description" content="String是java程序中出现比较多的对象，分析一下String首先String是由final修饰的。因此String不可变，无法继承。  将方法或类声明为final主要目的是：确保它们不会再子类中改变语义。String类是final类，这意味着不允许任何人定义String的子类。换言之，如果有一个String的引用，它引用的一定是一个String对象，而不可能是其他类的对象。——《Java核心">
-<meta name="twitter:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png">
+<meta name="twitter:image" content="https://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png">
 
 
 
@@ -473,7 +473,7 @@
 </ul>
 <h2 id="Compareable接口"><a href="#Compareable接口" class="headerlink" title="Compareable接口"></a>Compareable接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T o)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>此接口强行对实现它的每个类的对象进行整体排序。此排序被称为该类的自然排序，类的 <code>compareTo</code> 方法被称为它的自然比较方法 。</p>
-<h2 id="CharSequence接口"><a href="#CharSequence接口" class="headerlink" title="CharSequence接口"></a>CharSequence接口</h2><p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png" alt=""><br>CharSequence的所有成员变量和方法。</p>
+<h2 id="CharSequence接口"><a href="#CharSequence接口" class="headerlink" title="CharSequence接口"></a>CharSequence接口</h2><p><img src="https://island-hexo.oss-cn-beijing.aliyuncs.com//charsequence.png" alt=""><br>CharSequence的所有成员变量和方法。</p>
 <h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><ul>
 <li>private final char value[];//这是用于存储String字符的数组  </li>
 <li>private final int offset;//这是value数组的第一个有效的字符的index  </li>
@@ -483,7 +483,7 @@
 </ul>
 <hr>
 <h1 id="源码剖析"><a href="#源码剖析" class="headerlink" title="源码剖析"></a>源码剖析</h1><h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><p><code>String</code>类的构造器有十六个，除了提供了一个无参构造函数之外，还有十五个带参构造器。</p>
-<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png" alt=""></p>
+<p><img src="https://island-hexo.oss-cn-beijing.aliyuncs.com/String%E6%9E%84%E9%80%A0%E5%99%A8.png" alt=""></p>
 <h3 id="String"><a href="#String" class="headerlink" title="String()"></a>String()</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">String</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">this</span>.value = <span class="string">""</span>.value;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 <p>初始化一个新创建的 String 对象，使其表示一个空字符序列。注意，由于 String 是不可变的，所以无需使用此构造方法</p>
 <h3 id="String-String"><a href="#String-String" class="headerlink" title="String(String)"></a>String(String)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">String</span><span class="params">(String original)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.value = original.value;</div><div class="line">    <span class="keyword">this</span>.hash = original.hash;</div><div class="line">&#125;</div></pre></td></tr></table></figure>

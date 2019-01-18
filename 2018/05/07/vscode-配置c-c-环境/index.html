@@ -106,13 +106,13 @@
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="前言 工欲善其事，必先利其器  最近重新开始了学习c语言和数据结构的过程，毕竟考研要用，所以 clon 在windows上的表现一直感觉不如在linux上，而且也重量，所以不打算使用 clon,而是打算用微软的vscode+gcc完成。 # 基于命令行运行首先肯定要下载和安装好 visual studio code 和下载 minGW。这里不在赘述，安装好 minGW 记得配置环境变量。在终端中敲">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/gcc.png">
-<meta property="og:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/vscgcc.png">
-<meta property="og:updated_time" content="2019-01-18T02:21:14.724Z">
+<meta property="og:image" content="https://island-hexo.oss-cn-beijing.aliyuncs.com/gcc.png">
+<meta property="og:image" content="https://island-hexo.oss-cn-beijing.aliyuncs.com/vscgcc.png">
+<meta property="og:updated_time" content="2019-01-18T02:49:19.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode 配置c&#x2F;c++环境">
 <meta name="twitter:description" content="前言 工欲善其事，必先利其器  最近重新开始了学习c语言和数据结构的过程，毕竟考研要用，所以 clon 在windows上的表现一直感觉不如在linux上，而且也重量，所以不打算使用 clon,而是打算用微软的vscode+gcc完成。 # 基于命令行运行首先肯定要下载和安装好 visual studio code 和下载 minGW。这里不在赘述，安装好 minGW 记得配置环境变量。在终端中敲">
-<meta name="twitter:image" content="http://island-hexo.oss-cn-beijing.aliyuncs.com/gcc.png">
+<meta name="twitter:image" content="https://island-hexo.oss-cn-beijing.aliyuncs.com/gcc.png">
 
 
 
@@ -451,9 +451,9 @@
 <p>工欲善其事，必先利其器</p>
 </blockquote>
 <p>最近重新开始了学习c语言和数据结构的过程，毕竟考研要用，所以 clon 在windows上的表现一直感觉不如在linux上，而且也重量，所以不打算使用 clon,而是打算用微软的vscode+gcc完成。</p>
-<h1 id="基于命令行运行"><a href="#基于命令行运行" class="headerlink" title="# 基于命令行运行"></a># 基于命令行运行</h1><p>首先肯定要下载和安装好 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">visual studio code</a> 和下载 <a href="http://www.mingw.org/" target="_blank" rel="noopener">minGW</a>。这里不在赘述，安装好 <code>minGW</code> 记得配置环境变量。在终端中敲入 gcc -v 查看<img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/gcc.png" alt=""></p>
+<h1 id="基于命令行运行"><a href="#基于命令行运行" class="headerlink" title="# 基于命令行运行"></a># 基于命令行运行</h1><p>首先肯定要下载和安装好 <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">visual studio code</a> 和下载 <a href="http://www.mingw.org/" target="_blank" rel="noopener">minGW</a>。这里不在赘述，安装好 <code>minGW</code> 记得配置环境变量。在终端中敲入 gcc -v 查看<img src="https://island-hexo.oss-cn-beijing.aliyuncs.com/gcc.png" alt=""></p>
 <p>然后我们新建一个文件夹并且在文件夹里新建一个 <code>Hello.cpp</code> 文件并且用 <code>vscode</code> 打开，此时 <code>vscode</code> 会提示你安装插件。</p>
-<p><img src="http://island-hexo.oss-cn-beijing.aliyuncs.com/vscgcc.png" alt=""></p>
+<p><img src="https://island-hexo.oss-cn-beijing.aliyuncs.com/vscgcc.png" alt=""></p>
 <p>此时我们在Hello.cpp中书写我们的代码</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World \n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>打开终端，使用 gcc Hello.cpp 进行编译，会形成一个a.exe的文件。然后输入 a.exe 就可以运行</p>
