@@ -382,17 +382,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/13/Git基本操作/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/08/13/Git基本操作/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -633,12 +622,7 @@ master
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      <div id="vcomments"></div>
     
   </div>
 
@@ -689,7 +673,7 @@ master
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-count">72</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -702,7 +686,7 @@ master
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -891,7 +875,7 @@ master
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      47.8k
+      49.5k
     </span>
   
 </div>
@@ -1029,26 +1013,6 @@ master
 
   
 
-    
-      <script id="dsq-count-scr" src="https://island-1.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://youngxhui.top/2016/08/13/Git基本操作/';
-          this.page.identifier = '2016/08/13/Git基本操作/';
-          this.page.title = 'Git基本操作';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://island-1.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -1064,8 +1028,27 @@ master
 
 
 
+  
 
 
+
+
+
+
+  
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine@1.1.4/dist/Valine.min.js"></script>
+  <script type="text/javascript">
+    new Valine({
+        av: AV,
+        el: '#vcomments' ,
+        verify: true,
+        notify: false,
+        app_id: 'KJrOP28KHYuX90Qe8AqbfHx1-gzGzoHsz',
+        app_key: '4MGIGqTGkgtvx4uMDXH8IRr8',
+        placeholder: '留下你的足迹'
+    });
+  </script>
 
 
   
