@@ -102,7 +102,7 @@
 <meta name="description" content="好好努力每一天">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ISLAND">
-<meta property="og:url" content="http://youngxhui.top/tags/Kotlin/index.html">
+<meta property="og:url" content="http://youngxhui.top/tags/kotlin/index.html">
 <meta property="og:site_name" content="ISLAND">
 <meta property="og:description" content="好好努力每一天">
 <meta property="og:locale" content="zh-Hans">
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://youngxhui.top/tags/Kotlin/"/>
+  <link rel="canonical" href="http://youngxhui.top/tags/kotlin/"/>
 
 
 
 
 
-  <title>标签: Kotlin | ISLAND</title>
+  <title>标签: kotlin | ISLAND</title>
   
 
 
@@ -328,7 +328,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Kotlin<small>标签</small>
+        <h1>kotlin<small>标签</small>
         </h1>
       </div>
 
@@ -353,6 +353,146 @@
               datetime="2019-02-12T22:57:31+08:00"
               content="2019-02-12" >
           02-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/02/02/Ktor-入门/" itemprop="url">
+              
+                <span itemprop="name">Ktor 入门</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-02-02T14:54:34+08:00"
+              content="2019-02-02" >
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/12/23/Kotlin中Collection一些语法总结/" itemprop="url">
+              
+                <span itemprop="name">Kotlin中Collection一些语法总结</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-12-23T21:08:17+08:00"
+              content="2017-12-23" >
+          12-23
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/12/02/Kotlin-1-2-平台之间共享代码/" itemprop="url">
+              
+                <span itemprop="name">Kotlin 1.2:平台之间共享代码</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-12-02T14:51:59+08:00"
+              content="2017-12-02" >
+          12-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/08/12/Kotlin-扩展函数-属性/" itemprop="url">
+              
+                <span itemprop="name">Kotlin 扩展函数/属性</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-12T18:37:27+08:00"
+              content="2017-08-12" >
+          08-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/08/11/kotlin-初步学习/" itemprop="url">
+              
+                <span itemprop="name">Kotlin初步学习</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-11T21:10:03+08:00"
+              content="2017-08-11" >
+          08-11
         </time>
       </div>
 
@@ -427,7 +567,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -600,7 +740,7 @@
       <span class="post-meta-item-text">总计文字&#58;</span>
     
     <span title="总计文字">
-      51.1k
+      51.9k
     </span>
   
 </div>
@@ -1145,100 +1285,6 @@
     function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
       var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-
-  
-
-</body>
-</html>
-r('id').trim();
       var title = $visitors.attr('data-flag-title').trim();
       var query = new AV.Query(Counter);
 
